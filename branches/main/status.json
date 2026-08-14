@@ -2,7 +2,7 @@
 layout: none
 ---
 
-{%- assign br = site.data.branches.main -%}
+{%- assign br = site.data.branches['main'] -%}
 {%- assign info = br.info -%}
 {%- assign commit = info.commit -%}
 {%- assign total = 0 -%}
@@ -36,7 +36,7 @@ layout: none
 {%-   assign message = passed | append: "/" | append: total -%}
 {%- endif -%}
 {%- capture label -%}
-ldms {{info.branch}} ({{info.ldmsCommitId}}) w/ ldms-test ({{info.testCommitId}}): {{info.status}}
+ldms {{info.branch}} ({{info.ldmsCommitId8}}) w/ ldms-test ({{info.testCommitId8}}): {{info.status}}
 {%- endcapture -%}
 
 {
