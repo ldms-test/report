@@ -1,6 +1,6 @@
 {%- for br in site.data.branches -%}
-{%-   assign branch = br[0] -%}
 {%-   assign info = br[1].info -%}
+{%-   assign branch = info.branch -%}
 {%    assign tests = br[1].tests %}
 
 ## {{ branch }}
