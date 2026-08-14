@@ -34,7 +34,7 @@ Tests:
 {%-     endif -%}
 {%-     if logLink > 0 -%}
 {%-       capture link -%}
-([log](branches/{{branch}}/{{test}}/{{test}}.log))
+([log](branches/{{branch}}/tests/{{test}}/{{test}}.log))
 {%-       endcapture -%}
 {%-     else -%}
 {%-       assign link = "" -%}
