@@ -1,0 +1,50 @@
+---
+layout: none
+---
+
+{%- assign br = site.data.branches.b4.5 -%}
+{%- assign info = br.info -%}
+{%- assign commit = info.commit -%}
+{%- assign total = 0 -%}
+{%- assign passed = 0 -%}
+{%- assign queued = 0 -%}
+{%- assign failed = 0 -%}
+{%- for t in br.tests -%}
+{%-   assign name = t[0] -%}
+{%-   assign obj = t[1] -%}
+{%-   assign total = total | plus: 1 -%}
+{%-   if obj.status == "passed" -%}
+{%-     assign passed = passed | plus: 1 -%}
+{%-   elsif obj.status == "queued" -%}
+{%-     assign queued = queued | plus: 1 -%}
+{%-   elsif obj.status == "failed" -%}
+{%-     assign failed = failed | plus: 1 -%}
+{%-   endif -%}
+{%- endfor -%}
+{%- if info.status == "building" -%}
+{%-   assign color = "blue" -%}
+{%-   assign message = ..." -%}
+{%- elsif queued > 0 -%}
+{%-   assign color = "blue" -%}
+{%-   assign processed = passed | plus: failed -%}
+{%-   assign message = processed | append: "/" | append: total -%}
+{%- elsif failed > 0 -%}
+{%-   assign color = "red" -%}
+{%-   assign message = passed | append: "/" | append: total -%}
+{%- else -%}
+{%-   assign color = "green" -%}
+{%-   assign message = passed | append: "/" | append: total -%}
+{%- endif -%}
+{%- capture label -%}
+ldms {{info.branch}} ({{info.ldmsCommitId}}) w/ ldms-test ({{info.testCommitId}}): {{info.status}}
+{%- endcapture -%}
+
+{
+  "schemaVersion": 1,
+  "passed": "{{passed}}",
+  "failed": "{{failed}}",
+  "queued": "{{queued}}",
+  "label": "{{label}}",
+  "message": "{{message}}",
+  "color": "{{color}}"
+}
