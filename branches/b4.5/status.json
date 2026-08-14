@@ -2,7 +2,7 @@
 layout: none
 ---
 
-{%- assign br = site.data.branches.b4.5 -%}
+{%- assign br = site.data.branches["b45"] -%}
 {%- assign info = br.info -%}
 {%- assign commit = info.commit -%}
 {%- assign total = 0 -%}
