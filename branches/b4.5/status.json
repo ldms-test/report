@@ -21,22 +21,25 @@ layout: none
 {%-     assign failed = failed | plus: 1 -%}
 {%-   endif -%}
 {%- endfor -%}
+{%- assign x = 0 -%}
 {%- if info.status == "building" -%}
 {%-   assign color = "blue" -%}
-{%-   assign message = ..." -%}
 {%- elsif queued > 0 -%}
 {%-   assign color = "blue" -%}
 {%-   assign processed = passed | plus: failed -%}
-{%-   assign message = processed | append: "/" | append: total -%}
+{%-   assign x = processed -%}
 {%- elsif failed > 0 -%}
 {%-   assign color = "red" -%}
-{%-   assign message = passed | append: "/" | append: total -%}
+{%-   assign x = passed -%}
 {%- else -%}
 {%-   assign color = "green" -%}
-{%-   assign message = passed | append: "/" | append: total -%}
+{%-   assign x = passed -%}
 {%- endif -%}
 {%- capture label -%}
-ldms {{info.branch}} ({{info.ldmsCommitId8}}) w/ ldms-test ({{info.testCommitId8}}): {{info.status}}
+ldms {{info.branch}} ({{info.ldmsCommitId8}}) w/ ldms-test ({{info.testCommitId8}})
+{%- endcapture -%}
+{%- capture message -%}
+{{info.status}} {{x}}/{{total}}
 {%- endcapture -%}
 
 {
