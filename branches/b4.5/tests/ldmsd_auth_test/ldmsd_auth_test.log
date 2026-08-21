@@ -1,0 +1,30 @@
+2026-08-20 21:41:27,498 TADA INFO starting test `ldmsd_auth_test`
+2026-08-20 21:41:27,498 TADA INFO   test-id: 91b7adbcc6e81bd33808b1bfc702256b28665218b599e4bfdb36675a3647d4f3
+2026-08-20 21:41:27,498 TADA INFO   test-suite: LDMSD
+2026-08-20 21:41:27,498 TADA INFO   test-name: ldmsd_auth_test
+2026-08-20 21:41:27,498 TADA INFO   test-user: ldms-test
+2026-08-20 21:41:27,498 TADA INFO   commit-id: 348a8ad694ebdb0ee7075df07fe483e857087499
+2026-08-20 21:41:27,499 __main__ INFO -- Get or create the cluster --
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/runtime/docker.py", line 838, in _get
+    dc = docker.from_env()
+         ^^^^^^^^^^^^^^^
+AttributeError: module 'docker' has no attribute 'from_env'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/ldmsd_auth_test", line 352, in <module>
+    cluster = LDMSDCluster.get(spec["name"], create = True, spec = spec)
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/LDMS_Test.py", line 2009, in get
+    cluster = _cls._get(name)
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/runtime/docker.py", line 841, in _get
+    except docker.errors.NotFound:
+           ^^^^^^^^^^^^^
+AttributeError: module 'docker' has no attribute 'errors'
+2026-08-20 21:41:27,501 TADA INFO assertion 1, root@agg-2(dom3) ldms_ls to agg-2:10000: skipped
+2026-08-20 21:41:27,501 TADA INFO assertion 2, user@agg-2(dom3) ldms_ls to agg-2:10000: skipped
+2026-08-20 21:41:27,501 TADA INFO assertion 3, root@headnode(dom4) ldms_ls to agg-2:10001: skipped
+2026-08-20 21:41:27,501 TADA INFO assertion 4, user@headnode(dom4) ldms_ls to agg-2:10001: skipped
+2026-08-20 21:41:27,502 TADA INFO assertion 5, root@headnode(dom4) ldms_ls to agg-11:10000: skipped
+2026-08-20 21:41:27,502 TADA INFO test ldmsd_auth_test ended
