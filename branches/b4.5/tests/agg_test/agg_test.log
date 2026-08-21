@@ -1,0 +1,102 @@
+2026-08-20 21:45:57,258 TADA INFO starting test `agg_test`
+2026-08-20 21:45:57,258 TADA INFO   test-id: 8685f123147d5a24ba3dee26fd076e42323bb223cf222bb14aec74f373341123
+2026-08-20 21:45:57,258 TADA INFO   test-suite: LDMSD
+2026-08-20 21:45:57,258 TADA INFO   test-name: agg_test
+2026-08-20 21:45:57,259 TADA INFO   test-user: ldms-test
+2026-08-20 21:45:57,259 TADA INFO   commit-id: 348a8ad694ebdb0ee7075df07fe483e857087499
+2026-08-20 21:45:57,259 __main__ INFO -- Get or create the cluster --
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localhost/v1.51/networks/ldms-test-agg_test-348a8ad
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/runtime/docker.py", line 839, in _get
+    net = dc.networks.get(name)
+  File "/usr/lib/python3.13/site-packages/docker/models/networks.py", line 182, in get
+    self.client.api.inspect_network(network_id, *args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/usr/lib/python3.13/site-packages/docker/api/network.py", line 212, in inspect_network
+    return self._result(res, json=True)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.NotFound: 404 Client Error for http+docker://localhost/v1.51/networks/ldms-test-agg_test-348a8ad: Not Found ("network ldms-test-agg_test-348a8ad not found")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/LDMS_Test.py", line 2009, in get
+    cluster = _cls._get(name)
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/runtime/docker.py", line 842, in _get
+    raise LookupError()
+LookupError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: http+docker://localhost/v1.51/nodes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/agg_test", line 242, in <module>
+    cluster = LDMSDCluster.get(spec["name"], create = True, spec = spec)
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/LDMS_Test.py", line 2016, in get
+    return _cls.create(spec)
+           ~~~~~~~~~~~^^^^^^
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/LDMS_Test.py", line 1987, in create
+    cluster = _cls._create(spec)
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/runtime/docker.py", line 514, in _create
+    return cls.__create(spec=sp, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/runtime/docker.py", line 594, in __create
+    clients = get_docker_clients()
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/runtime/docker.py", line 36, in get_docker_clients
+    nodes = dc.nodes.list()
+  File "/usr/lib/python3.13/site-packages/docker/models/nodes.py", line 106, in list
+    for n in self.client.api.nodes(*args, **kwargs)
+             ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/utils/decorators.py", line 32, in wrapper
+    return f(self, *args, **kwargs)
+  File "/usr/lib/python3.13/site-packages/docker/api/swarm.py", line 317, in nodes
+    return self._result(self._get(url, params=params), True)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 503 Server Error for http+docker://localhost/v1.51/nodes: Service Unavailable ("This node is not a swarm manager. Use "docker swarm init" or "docker swarm join" to connect this node to swarm and try again.")
+2026-08-20 21:45:57,287 TADA INFO assertion 1, ldms_ls agg-2: skipped
+2026-08-20 21:45:57,287 TADA INFO assertion 2, meminfo data verification: skipped
+2026-08-20 21:45:57,287 TADA INFO assertion 3, node-1 ldmsd terminated, sets removed from agg-11: skipped
+2026-08-20 21:45:57,287 TADA INFO assertion 4, node-1 ldmsd terminated, sets removed from agg-2: skipped
+2026-08-20 21:45:57,287 TADA INFO assertion 5, node-1 ldmsd revived, sets added to agg-11: skipped
+2026-08-20 21:45:57,287 TADA INFO assertion 6, node-1 ldmsd revived, sets added to agg-2: skipped
+2026-08-20 21:45:57,287 TADA INFO assertion 7, agg-11 ldmsd terminated, sets removed from agg-2: skipped
+2026-08-20 21:45:57,288 TADA INFO assertion 8, agg-11 ldmsd terminated, node-1 ldmsd is still running: skipped
+2026-08-20 21:45:57,288 TADA INFO assertion 9, agg-11 ldmsd terminated, node-3 ldmsd is still running: skipped
+2026-08-20 21:45:57,288 TADA INFO assertion 10, agg-11 ldmsd revived, sets added to agg-2: skipped
+2026-08-20 21:45:57,288 TADA INFO test agg_test ended
