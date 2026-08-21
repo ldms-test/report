@@ -1,6 +1,6 @@
 branch: b4.5
 ldmsCommitId: 348a8ad694ebdb0ee7075df07fe483e857087499
-testCommitId: 41e14ee80f6ee056c2d8a709fee4d8e417c1e8bf
+testCommitId: 
 ldmsCommitId8: 348a8ad6
-testCommitId8: 41e14ee8
-status: "done"
+testCommitId8: 
+status: "building"
