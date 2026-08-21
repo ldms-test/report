@@ -1,0 +1,35 @@
+2026-08-20 21:41:19,542 TADA INFO starting test `agg_test`
+2026-08-20 21:41:19,542 TADA INFO   test-id: 7ab6fbceb6a68b8578ef5e8310330477f5983b2e3f9ef99058949ca10c65ca6c
+2026-08-20 21:41:19,542 TADA INFO   test-suite: LDMSD
+2026-08-20 21:41:19,542 TADA INFO   test-name: agg_test
+2026-08-20 21:41:19,542 TADA INFO   test-user: ldms-test
+2026-08-20 21:41:19,542 TADA INFO   commit-id: 348a8ad694ebdb0ee7075df07fe483e857087499
+2026-08-20 21:41:19,542 __main__ INFO -- Get or create the cluster --
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/runtime/docker.py", line 838, in _get
+    dc = docker.from_env()
+         ^^^^^^^^^^^^^^^
+AttributeError: module 'docker' has no attribute 'from_env'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/agg_test", line 242, in <module>
+    cluster = LDMSDCluster.get(spec["name"], create = True, spec = spec)
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/LDMS_Test.py", line 2009, in get
+    cluster = _cls._get(name)
+  File "/home/ldms-test/var/b4.5/ldms-containers/ldms-test/runtime/docker.py", line 841, in _get
+    except docker.errors.NotFound:
+           ^^^^^^^^^^^^^
+AttributeError: module 'docker' has no attribute 'errors'
+2026-08-20 21:41:19,545 TADA INFO assertion 1, ldms_ls agg-2: skipped
+2026-08-20 21:41:19,545 TADA INFO assertion 2, meminfo data verification: skipped
+2026-08-20 21:41:19,545 TADA INFO assertion 3, node-1 ldmsd terminated, sets removed from agg-11: skipped
+2026-08-20 21:41:19,545 TADA INFO assertion 4, node-1 ldmsd terminated, sets removed from agg-2: skipped
+2026-08-20 21:41:19,545 TADA INFO assertion 5, node-1 ldmsd revived, sets added to agg-11: skipped
+2026-08-20 21:41:19,545 TADA INFO assertion 6, node-1 ldmsd revived, sets added to agg-2: skipped
+2026-08-20 21:41:19,545 TADA INFO assertion 7, agg-11 ldmsd terminated, sets removed from agg-2: skipped
+2026-08-20 21:41:19,545 TADA INFO assertion 8, agg-11 ldmsd terminated, node-1 ldmsd is still running: skipped
+2026-08-20 21:41:19,546 TADA INFO assertion 9, agg-11 ldmsd terminated, node-3 ldmsd is still running: skipped
+2026-08-20 21:41:19,546 TADA INFO assertion 10, agg-11 ldmsd revived, sets added to agg-2: skipped
+2026-08-20 21:41:19,546 TADA INFO test agg_test ended
