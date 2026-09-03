@@ -1,0 +1,62 @@
+2026-09-03 11:35:17,629 __main__ INFO -- Create the cluster -- 
+2026-09-03 11:35:26,982 TADA INFO starting test `ovis_json_test`
+2026-09-03 11:35:26,982 TADA INFO   test-id: aa2f0f725c1320464a52fda1d0a920adb911b39f9ccef91607cb54b474d9717a
+2026-09-03 11:35:26,982 TADA INFO   test-suite: OVIS-LIB
+2026-09-03 11:35:26,982 TADA INFO   test-name: ovis_json_test
+2026-09-03 11:35:26,982 TADA INFO   test-user: ldms-test
+2026-09-03 11:35:26,982 TADA INFO   commit-id: 570ece6d2f6c3e7c6a4ce170341c765c51c8badc
+2026-09-03 11:35:26,982 TADA INFO assertion 1, Test creating a JSON integer entity: (type is JSON_INT_VALUE) && (1 == e->value.int_), passed
+2026-09-03 11:35:26,982 TADA INFO assertion 2, Test creating a JSON boolean entity: (type is JSON_BOOL_VALUE) && (1 == e->value.bool_), passed
+2026-09-03 11:35:26,983 TADA INFO assertion 3, Test creating a JSON float entity: (type is JSON_FLOAT_VALUE) && (1.1 == e->value.double_), passed
+2026-09-03 11:35:26,983 TADA INFO assertion 4, Test creating a JSON string entity: (type is JSON_STRING_VALUE) && (foo == e->value.str_->str), passed
+2026-09-03 11:35:26,983 TADA INFO assertion 5, Test creating a JSON attribute entity: (type is JSON_ATTR_VALUE) && (name == <attr name>) && (value == <attr value>), passed
+2026-09-03 11:35:26,983 TADA INFO assertion 6, Test creating a JSON list entity: (type is JSON_LIST_VALUE) && (0 == Number of elements) && (list is empty), passed
+2026-09-03 11:35:26,983 TADA INFO assertion 7, Test creating a JSON dictionary entity: (type is JSON_DICT_VALUE) && (dict table is empty), passed
+2026-09-03 11:35:26,983 TADA INFO assertion 8, Test creating a JSON null entity: (type is JSON_NULL_VALUE) && (0 == e->value.int_), passed
+2026-09-03 11:35:26,983 TADA INFO assertion 9, Test parsing a JSON integer string: (0 == json_parse_buffer()) && is_same_entity(expected, o), passed
+2026-09-03 11:35:26,983 TADA INFO assertion 10, Test parsing a JSON false boolean string: (0 == json_parse_buffer()) && is_same_entity(expected, o), passed
+2026-09-03 11:35:26,984 TADA INFO assertion 11, Test parsing a JSON true boolean string: (0 == json_parse_buffer()) && is_same_entity(expected, o), passed
+2026-09-03 11:35:26,984 TADA INFO assertion 12, Test parsing a JSON float string: (0 == json_parse_buffer()) && is_same_entity(expected, o), passed
+2026-09-03 11:35:26,984 TADA INFO assertion 13, Test parsing a JSON string: (0 == json_parse_buffer()) && is_same_entity(expected, o), passed
+2026-09-03 11:35:26,984 TADA INFO assertion 15, Test parsing a JSON dict string: (0 == json_parse_buffer()) && is_same_entity(expected, o), passed
+2026-09-03 11:35:26,984 TADA INFO assertion 16, Test parsing a JSON null string: (0 == json_parse_buffer()) && is_same_entity(expected, o), passed
+2026-09-03 11:35:26,984 TADA INFO assertion 17, Test parsing an invalid string: (0 == json_parse_buffer()) && is_same_entity(expected, o), passed
+2026-09-03 11:35:26,984 TADA INFO assertion 17, Test parsing an invalid string: 0 != json_parse_buffer(), passed
+2026-09-03 11:35:26,984 TADA INFO assertion 18, Test dumping a JSON integer entity: 1 == 1, passed
+2026-09-03 11:35:26,985 TADA INFO assertion 19, Test dumping a JSON false boolean entity: false == false, passed
+2026-09-03 11:35:26,985 TADA INFO assertion 20, Test dumping a JSON true boolean entity: true == true, passed
+2026-09-03 11:35:26,985 TADA INFO assertion 21, Test dumping a JSON float entity: 1.100000 == 1.100000, passed
+2026-09-03 11:35:26,985 TADA INFO assertion 22, Test dumping a JSON string entity: "foo" == "foo", passed
+2026-09-03 11:35:26,985 TADA INFO assertion 23, Test dumping a JSON attr entity: "name":"foo" == jb->buf, passed
+2026-09-03 11:35:26,985 TADA INFO assertion 24, Test dumping a JSON list entity: [1,false,1.100000,"foo",[],{},null] == [1,false,1.100000,"foo",[],{},null], passed
+2026-09-03 11:35:26,985 TADA INFO assertion 25, Test dumping a JSON dict entity: {"int":1,"bool":true,"float":1.100000,"string":"foo","list":[1,false,1.100000,"foo",[],{},null],"dict":{"attr_1":"value_1"},"null":null} == {"null":null,"list":[1,false,1.100000,"foo",[],{},null],"string":"foo","float":1.100000,"bool":true,"dict":{"attr_1":"value_1"},"int":1}, passed
+2026-09-03 11:35:26,985 TADA INFO assertion 26, Test dumping a JSON null entity: null == null, passed
+2026-09-03 11:35:26,986 TADA INFO assertion 27, Test dumping a JSON entity to a non-empty jbuf: This is a book."FOO" == This is a book."FOO", passed
+2026-09-03 11:35:26,986 TADA INFO assertion 28, Test copying a JSON integer entity: is_same_entity(expected, json_entity_copy(expected), passed
+2026-09-03 11:35:26,986 TADA INFO assertion 29, Test copying a JSON false boolean entity: is_same_entity(expected, json_entity_copy(expected), passed
+2026-09-03 11:35:26,986 TADA INFO assertion 30, Test copying a JSON true boolean entity: is_same_entity(expected, json_entity_copy(expected), passed
+2026-09-03 11:35:26,986 TADA INFO assertion 31, Test copying a JSON float entity: is_same_entity(expected, json_entity_copy(expected), passed
+2026-09-03 11:35:26,986 TADA INFO assertion 32, Test copying a JSON string entity: is_same_entity(expected, json_entity_copy(expected), passed
+2026-09-03 11:35:26,986 TADA INFO assertion 33, Test copying a JSON attribute entity: is_same_entity(expected, json_entity_copy(expected), passed
+2026-09-03 11:35:26,986 TADA INFO assertion 34, Test copying a JSON list entity: is_same_entity(expected, json_entity_copy(expected), passed
+2026-09-03 11:35:26,986 TADA INFO assertion 35, Test copying a JSON dict entity: is_same_entity(expected, json_entity_copy(expected), passed
+2026-09-03 11:35:26,987 TADA INFO assertion 36, Test copying a JSON null entity: is_same_entity(expected, json_entity_copy(expected), passed
+2026-09-03 11:35:26,987 TADA INFO assertion 37, Test obtaining the number of attributes: 7 == json_attr_count(dict), passed
+2026-09-03 11:35:26,987 TADA INFO assertion 38, Test finding an existing attribute: 0 != json_attr_find(), passed
+2026-09-03 11:35:26,987 TADA INFO assertion 39, Test finding a non-existng attribute: 0 == json_attr_find(), passed
+2026-09-03 11:35:26,987 TADA INFO assertion 40, Test finding the value of an existing attribute: 0 != json_value_find(), passed
+2026-09-03 11:35:26,987 TADA INFO assertion 41, Test finding the value of a non-existing attribute: 0 == json_value_find(), passed
+2026-09-03 11:35:26,987 TADA INFO assertion 42, Test adding a new attribute to a dictionary: (0 == json_attr_add() && (0 != json_attr_find()), passed
+2026-09-03 11:35:26,987 TADA INFO assertion 43, Test replacing the value of an existing attribute: (0 == json_attr_add()) && (0 != json_value_find()) && (is_same_entity(old_v, new_v)), passed
+2026-09-03 11:35:26,988 TADA INFO assertion 44, Test removing an existing attribute: (0 = json_attr_rem()) && (0 == json_attr_find()), passed
+2026-09-03 11:35:26,988 TADA INFO assertion 45, Test removing a non-existing attribute: (ENOENT == json_attr_rem()), passed
+2026-09-03 11:35:26,988 TADA INFO assertion 46, Test creating a dictionary by json_dict_build: expected == json_dict_build(...), passed
+2026-09-03 11:35:26,988 TADA INFO assertion 47, Test adding attributes and replacing attribute values by json_dict_build: expected == json_dict_build(d, ...), passed
+2026-09-03 11:35:26,988 TADA INFO assertion 48, Test json_dict_merge(): The merged dictionary is correct., passed
+2026-09-03 11:35:26,988 TADA INFO assertion 49, Test json_list_len(): 7 == json_list_len(), passed
+2026-09-03 11:35:26,988 TADA INFO assertion 50, Test adding items to a list: 0 == strcmp(exp_str, json_entity_dump(l)->buf, passed
+2026-09-03 11:35:26,988 TADA INFO assertion 51, Test removing an existing item by json_item_rem(): 0 == json_item_rem(), passed
+2026-09-03 11:35:26,988 TADA INFO assertion 52, Test removing a non-existing item by json_item_rem(): ENOENT == json_item_rem(), passed
+2026-09-03 11:35:26,989 TADA INFO assertion 53, Test popping an existing item from a list by json_item_pop(): NULL == json_item_pop(len + 3), passed
+2026-09-03 11:35:26,989 TADA INFO assertion 54, Test popping a non-existing item from a list by json_item_pop(): NULL != json_item_pop(len - 1), passed
+2026-09-03 11:35:26,989 TADA INFO test ovis_json_test ended
