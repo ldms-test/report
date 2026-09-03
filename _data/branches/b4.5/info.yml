@@ -1,6 +1,6 @@
 branch: b4.5
 ldmsCommitId: 570ece6d2f6c3e7c6a4ce170341c765c51c8badc
-testCommitId: 
+testCommitId: 60849caaff3d62e75515228cb7931521000558c4
 ldmsCommitId8: 570ece6d
-testCommitId8: 
-status: "build failed"
+testCommitId8: 60849caa
+status: "testing"
