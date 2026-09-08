@@ -1,0 +1,17 @@
+2026-09-03 11:37:03,976 __main__ INFO -- Get or create the cluster --
+2026-09-03 11:37:03,976 TADA INFO starting test `updtr_add test`
+2026-09-03 11:37:03,976 TADA INFO   test-id: f59175e8780758c786c1a9b2309add0872de4d8a7e3aafe6a51f8ca8eda95bfc
+2026-09-03 11:37:03,976 TADA INFO   test-suite: LDMSD
+2026-09-03 11:37:03,976 TADA INFO   test-name: updtr_add test
+2026-09-03 11:37:03,976 TADA INFO   test-user: ldms-test
+2026-09-03 11:37:03,976 TADA INFO   commit-id: 570ece6d2f6c3e7c6a4ce170341c765c51c8badc
+2026-09-03 11:37:15,960 __main__ INFO -- Start daemons --
+2026-09-03 11:37:38,691 __main__ INFO Waiting ... for all LDMSDs to start
+2026-09-03 11:37:38,827 __main__ INFO All LDMSDs are up.
+2026-09-03 11:37:38,977 TADA INFO assertion 1, updtr_match_add with an invalid regex: report(rc = 22) == expect(rc = 22), passed
+2026-09-03 11:37:39,125 TADA INFO assertion 2, updtr_match_add with an invalid match: report(rc = 22) == expect(rc = 22), passed
+2026-09-03 11:37:39,269 TADA INFO assertion 3, updtr_match_add of a non-existing updater: report(rc = 2) == expect(rc = 2), passed
+2026-09-03 11:37:39,416 TADA INFO assertion 4, A success updtr_match_add: report(rc = 0) == expect(rc = 0), passed
+2026-09-03 11:37:39,567 TADA INFO assertion 5, updtr_match_add of a running updater: report(rc = 16) == expect(rc = 16), passed
+2026-09-03 11:37:39,567 __main__ INFO --- done ---
+2026-09-03 11:37:39,568 TADA INFO test updtr_add test ended

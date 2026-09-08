@@ -1,0 +1,36 @@
+2026-09-03 12:15:13,787 TADA INFO starting test `json_stream_sampler_test`
+2026-09-03 12:15:13,787 TADA INFO   test-id: 3d9d71114c5f18154387e6186fed4337af3b0c967e4869953d574a0744fea6a8
+2026-09-03 12:15:13,787 TADA INFO   test-suite: LDMSD
+2026-09-03 12:15:13,787 TADA INFO   test-name: json_stream_sampler_test
+2026-09-03 12:15:13,787 TADA INFO   test-user: ldms-test
+2026-09-03 12:15:13,787 TADA INFO   commit-id: 570ece6d2f6c3e7c6a4ce170341c765c51c8badc
+2026-09-03 12:15:13,788 __main__ INFO -- Get or create the cluster --
+2026-09-03 12:15:22,373 __main__ INFO -- Start daemons --
+2026-09-03 12:15:30,295 __main__ INFO -- Begin the test --
+2026-09-03 12:15:30,449 TADA INFO assertion config_0.1, Missing the producer attribute: Plugin reports an error., passed
+2026-09-03 12:15:30,595 TADA INFO assertion config_0.2, Missing the stream attribute: Plugin reports an error., passed
+2026-09-03 12:15:30,792 TADA INFO assertion config_1.0, Verify producer, stream, component_id, and heap_sz: Successfully send the request: config name=samp1 producer=node-1 instance_fmt=%S_set stream=stream_1 heap_sz=1MB, passed
+2026-09-03 12:15:31,109 TADA INFO assertion create_1, Correctly create a set when subscribing to a single stream: Create a set, passed
+2026-09-03 12:15:31,109 TADA INFO assertion config_1.1, Verify the default set UID: Set's UID(0) is 0., passed
+2026-09-03 12:15:31,109 TADA INFO assertion config_1.2, Verify the default set GID: Set's GID(0) is 0., passed
+2026-09-03 12:15:31,109 TADA INFO assertion config_1.3, Verify the default set Perm: Set's Perm(432) is 0660., passed
+2026-09-03 12:15:31,109 TADA INFO assertion encode_1.1, Correctly encode the metric values: Encode the metric values correctly, passed
+2026-09-03 12:15:31,109 TADA INFO assertion encode_1.2, Correctly encode the metric types: Encode the metric types correctly, passed
+2026-09-03 12:15:31,313 TADA INFO assertion config_2.0, Successfully configure the plugin with UID, GID, and perm: Successfully subscribe to the second stream, passed
+2026-09-03 12:15:31,625 TADA INFO assertion create_2, Subscribe to multiple streams: Create the set of the second stream, passed
+2026-09-03 12:15:31,625 TADA INFO assertion config_2.1, Verify the specified set UID: Set's UID(2000) is 2000., passed
+2026-09-03 12:15:31,625 TADA INFO assertion config_2.2, Verify the specified set GID: Set's GID(2000) is 2000., passed
+2026-09-03 12:15:31,625 TADA INFO assertion config_2.3, Verify the specified set Perm: Set's Perm(0400) is as expected(0400)., passed
+2026-09-03 12:15:31,625 TADA INFO assertion encode_2.1, Correctly set the S_uid meta metric: S_uid(0) is 0., passed
+2026-09-03 12:15:31,625 TADA INFO assertion encode_2.2, Correctly set the S_gid meta metric: S_gid(0) is 0., passed
+2026-09-03 12:15:31,626 TADA INFO assertion encode_2.3, Correctly set the S_perm meta metric: S_perm(400) is 400., passed
+2026-09-03 12:15:31,855 TADA INFO assertion sec_1, User who publishes the stream cannot see the sets if the set's UID/GID is different.: foo can sees the stream set., passed
+2026-09-03 12:15:31,997 TADA INFO assertion sec_2, User can access the set if the UID/GID matches the set's credential.: bar can not see any sets., passed
+2026-09-03 12:15:32,218 TADA INFO assertion sec_3, Root can access the set regardless.: Root can see all sets., passed
+2026-09-03 12:15:33,426 TADA INFO assertion invalid_no_schema, Plugin properly handles invalid stream data, no_schema.: Plugin properly reported an error message., passed
+2026-09-03 12:15:33,426 TADA INFO assertion invalid_not_dict, Plugin properly handles invalid stream data, not_dict.: Plugin properly reported an error message., passed
+2026-09-03 12:15:33,426 TADA INFO assertion invalid_array_array, Plugin properly handles invalid stream data, array_array.: Plugin properly reported an error message., passed
+2026-09-03 12:15:33,427 TADA INFO assertion invalid_array_mix, Plugin properly handles invalid stream data, array_mix.: Plugin properly reported an error message., passed
+2026-09-03 12:15:33,903 TADA INFO assertion create_3, Successfully create a set when $_max_len is given in the stream data: Create a set with specified #_max_len, passed
+2026-09-03 12:15:33,903 TADA INFO assertion encode_3, Correctly encode the metric values with #_max_len specified: Encode the metric values correctly, passed
+2026-09-03 12:15:33,905 TADA INFO test json_stream_sampler_test ended

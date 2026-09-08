@@ -1,0 +1,15 @@
+2026-09-03 11:41:30,346 __main__ INFO -- Get or create the cluster --
+2026-09-03 11:41:30,347 TADA INFO starting test `updtr_add test`
+2026-09-03 11:41:30,347 TADA INFO   test-id: 641bbf1ad39a8b42cc901ea15fdad901b38bd6962344e0b060ad97a4b7e9c991
+2026-09-03 11:41:30,347 TADA INFO   test-suite: LDMSD
+2026-09-03 11:41:30,347 TADA INFO   test-name: updtr_add test
+2026-09-03 11:41:30,347 TADA INFO   test-user: ldms-test
+2026-09-03 11:41:30,347 TADA INFO   commit-id: 570ece6d2f6c3e7c6a4ce170341c765c51c8badc
+2026-09-03 11:41:42,171 __main__ INFO -- Start daemons --
+2026-09-03 11:42:04,731 __main__ INFO Waiting ... for all LDMSDs to start
+2026-09-03 11:42:04,865 __main__ INFO All LDMSDs are up.
+2026-09-03 11:42:05,018 TADA INFO assertion 1, Send updtr_stop for a non-existing updater: report(rc = 2) == expect(rc = 2), passed
+2026-09-03 11:42:05,310 TADA INFO assertion 2, Send updtr_stop to a running updater: report(rc = 0, status = [{'name': 'running', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': [{'name': 'sampler-1', 'host': 'sampler-1', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}, {'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}]) == expect(rc = 0, status = [{'name': 'running', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': [{'name': 'sampler-1', 'host': 'sampler-1', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}, {'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}], passed
+2026-09-03 11:42:05,461 TADA INFO assertion 3, Send updtr_stop to a stopped updater: report(rc = 0) == expect(rc = 0), passed
+2026-09-03 11:42:05,461 __main__ INFO --- done ---
+2026-09-03 11:42:05,462 TADA INFO test updtr_add test ended
