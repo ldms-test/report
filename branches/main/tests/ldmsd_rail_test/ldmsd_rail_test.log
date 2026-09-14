@@ -1,0 +1,19 @@
+2026-09-14 11:09:05,183 TADA INFO starting test `ldmsd_rail_test`
+2026-09-14 11:09:05,183 TADA INFO   test-id: 6bd4ec3e96b3245f3f48e233c2c2769f94428734d61bd67e6f5a8a8a5e61cef6
+2026-09-14 11:09:05,183 TADA INFO   test-suite: LDMSD
+2026-09-14 11:09:05,183 TADA INFO   test-name: ldmsd_rail_test
+2026-09-14 11:09:05,183 TADA INFO   test-user: ldms-test
+2026-09-14 11:09:05,183 TADA INFO   commit-id: ed24f39bbca64e7a252c67b13603d146d4a0a484
+2026-09-14 11:09:05,183 __main__ INFO -- Get or create the cluster --
+2026-09-14 11:09:16,941 __main__ INFO -- Start daemons --
+2026-09-14 11:09:33,656 root INFO starting python /tada-src/python/ldmsd_rail_srv.py on ldms-test-ldmsd_rail_test-ed24f39-node-2 
+2026-09-14 11:09:35,859 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-14 11:09:38,360 TADA INFO assertion 1, agg2-srv xprt has correct number of rail endpoints (test prdcr_add 'rail' parameter: len == 4, passed
+2026-09-14 11:09:38,861 TADA INFO assertion 2, agg2-srv xprt has correct send quota (test prdcr_add 'quota' parameter): quota: {obj}, passed
+2026-09-14 11:09:40,405 TADA INFO assertion 3, srv-agg2 msg publish: OK, passed
+2026-09-14 11:09:40,906 TADA INFO assertion 4, srv-agg2 msg publish exceeding send quota: checking..., passed
+2026-09-14 11:09:42,408 TADA INFO assertion 5, srv-samp xprt has correct number of rail endpoints: len == 4, passed
+2026-09-14 11:09:42,909 TADA INFO assertion 6, srv-samp xprt has correct send quota (test ldmsd -C option): quota: {obj}, passed
+2026-09-14 11:09:44,457 TADA INFO assertion 7, srv-samp msg publish: OK, passed
+2026-09-14 11:09:44,958 TADA INFO assertion 8, srv-samp msg publish exceeding send quota: checking..., passed
+2026-09-14 11:09:44,959 TADA INFO test ldmsd_rail_test ended
