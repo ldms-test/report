@@ -1,0 +1,18 @@
+2026-09-14 16:05:16,987 TADA INFO starting test `ldms_rate_test`
+2026-09-14 16:05:16,987 TADA INFO   test-id: ac8ade1a8c93d39e4ebf0b720067c0020c61e42c6a579b86ffa97e06fd08f0e8
+2026-09-14 16:05:16,987 TADA INFO   test-suite: LDMSD
+2026-09-14 16:05:16,987 TADA INFO   test-name: ldms_rate_test
+2026-09-14 16:05:16,987 TADA INFO   test-user: ldms-test
+2026-09-14 16:05:16,987 TADA INFO   commit-id: ed24f39bbca64e7a252c67b13603d146d4a0a484
+2026-09-14 16:05:16,987 __main__ INFO -- Get or create the cluster --
+2026-09-14 16:05:25,199 __main__ INFO -- Start daemons --
+2026-09-14 16:05:25,586 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-14 16:05:27,586 root INFO starting python /tada-src/python/ldms_rate.py on ldms-test-ldms_rate_test-ed24f39-node-1 
+2026-09-14 16:05:29,789 root INFO starting python /tada-src/python/ldms_rate.py on ldms-test-ldms_rate_test-ed24f39-node-1 
+2026-09-14 16:06:03,916 TADA INFO assertion 1, Publisher cannot publish all data (rail rate limit): received msg data is limited, passed
+2026-09-14 16:06:04,417 TADA INFO assertion 2, Publisher get a rate limit error: publisher got rate limit errors, passed
+2026-09-14 16:06:04,418 TADA INFO assertion 3, After the wait, the publisher can publish: msg data received, passed
+2026-09-14 16:06:04,418 TADA INFO assertion 4, Publisher cannot publish all data (msg rate limit): received msg data is limited, passed
+2026-09-14 16:06:04,919 TADA INFO assertion 5, Publisher get a rate limit error (by channel): publisher got rate limit errors, passed
+2026-09-14 16:06:04,919 TADA INFO assertion 6, After the wait, the publisher can publish (by channel): msg data received, passed
+2026-09-14 16:06:04,920 TADA INFO test ldms_rate_test ended
