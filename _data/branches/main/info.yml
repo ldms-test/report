@@ -1,6 +1,6 @@
 branch: main
-ldmsCommitId: 7f2c7f6e281607324d54f2b75b4db04ff83937ae
-testCommitId: 
-ldmsCommitId8: 7f2c7f6e
-testCommitId8: 
-status: "build failed"
+ldmsCommitId: ed24f39bbca64e7a252c67b13603d146d4a0a484
+testCommitId: 1b9be9f1def6cb25b15a9c372718bc4b3ed23ddc
+ldmsCommitId8: ed24f39b
+testCommitId8: 1b9be9f1
+status: "testing"
