@@ -1,30 +1,30 @@
-2026-09-14 15:56:58,400 TADA INFO starting test `ldms_msg_test`
-2026-09-14 15:56:58,400 TADA INFO   test-id: ff81012db2beb0f4701d24cf80e4697664497b8649986098361a22a2fa7ab28d
-2026-09-14 15:56:58,400 TADA INFO   test-suite: LDMSD
-2026-09-14 15:56:58,400 TADA INFO   test-name: ldms_msg_test
-2026-09-14 15:56:58,400 TADA INFO   test-user: ldms-test
-2026-09-14 15:56:58,400 TADA INFO   commit-id: ed24f39bbca64e7a252c67b13603d146d4a0a484
-2026-09-14 15:56:58,400 __main__ INFO -- Get or create the cluster --
-2026-09-14 15:57:19,792 __main__ INFO -- Adding 'foo' and 'bar' users --
-2026-09-14 15:57:21,889 __main__ INFO -- Start daemons --
-2026-09-14 15:57:27,261 __main__ INFO ... wait a bit to make sure ldmsd's are up
-2026-09-14 15:57:29,262 __main__ INFO start interactive msg servers
-2026-09-14 15:57:29,262 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-7 
-2026-09-14 15:57:31,465 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-6 
-2026-09-14 15:57:33,668 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-5 
-2026-09-14 15:57:35,871 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-4 
-2026-09-14 15:57:38,074 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-3 
-2026-09-14 15:57:40,277 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-2 
-2026-09-14 15:57:42,480 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-1 
-2026-09-14 15:57:44,683 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-ed24f39-node-4 
-2026-09-14 15:57:47,387 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-ed24f39-node-5 
-2026-09-14 15:57:50,091 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-ed24f39-node-6 
-2026-09-14 15:57:52,794 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-ed24f39-node-7 
-2026-09-14 15:57:55,498 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-ed24f39-node-4 as foo
-2026-09-14 15:57:58,202 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-ed24f39-node-4 as bar
-2026-09-14 15:58:00,905 __main__ INFO starting /tada-src/python/ldms_msg_client.py on ldms-test-ldms_msg_test-ed24f39-node-8 as foo
-2026-09-14 15:58:03,611 TADA INFO assertion 1, Publishing oversize data results in an error: checking..., passed
-2026-09-14 15:58:04,113 __main__ INFO getting data from srv1
+2026-09-15 09:18:05,374 TADA INFO starting test `ldms_msg_test`
+2026-09-15 09:18:05,374 TADA INFO   test-id: fa5b1a43df985c2e652e59ffb7258202e3a818cd7a31ef0f639846f910e43f3d
+2026-09-15 09:18:05,375 TADA INFO   test-suite: LDMSD
+2026-09-15 09:18:05,375 TADA INFO   test-name: ldms_msg_test
+2026-09-15 09:18:05,375 TADA INFO   test-user: ldms-test
+2026-09-15 09:18:05,375 TADA INFO   commit-id: ed24f39bbca64e7a252c67b13603d146d4a0a484
+2026-09-15 09:18:05,375 __main__ INFO -- Get or create the cluster --
+2026-09-15 09:18:26,371 __main__ INFO -- Adding 'foo' and 'bar' users --
+2026-09-15 09:18:28,403 __main__ INFO -- Start daemons --
+2026-09-15 09:18:33,756 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-15 09:18:35,757 __main__ INFO start interactive msg servers
+2026-09-15 09:18:35,757 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-7 
+2026-09-15 09:18:37,960 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-6 
+2026-09-15 09:18:40,162 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-5 
+2026-09-15 09:18:42,365 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-4 
+2026-09-15 09:18:44,568 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-3 
+2026-09-15 09:18:46,772 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-2 
+2026-09-15 09:18:48,975 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-ed24f39-node-1 
+2026-09-15 09:18:51,178 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-ed24f39-node-4 
+2026-09-15 09:18:53,882 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-ed24f39-node-5 
+2026-09-15 09:18:56,585 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-ed24f39-node-6 
+2026-09-15 09:18:59,288 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-ed24f39-node-7 
+2026-09-15 09:19:01,992 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-ed24f39-node-4 as foo
+2026-09-15 09:19:04,696 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-ed24f39-node-4 as bar
+2026-09-15 09:19:07,399 __main__ INFO starting /tada-src/python/ldms_msg_client.py on ldms-test-ldms_msg_test-ed24f39-node-8 as foo
+2026-09-15 09:19:10,105 TADA INFO assertion 1, Publishing oversize data results in an error: checking..., passed
+2026-09-15 09:19:10,607 __main__ INFO getting data from srv1
 Traceback (most recent call last):
   File "/home/ldms-test/var/main/ldms-test/ldms_msg_test", line 872, in <module>
     all_cdata = get_all_cdata()
@@ -40,34 +40,34 @@ Traceback (most recent call last):
   File "/home/ldms-test/var/main/ldms-test/ldms_msg_test", line 581, in __init__
     raise ValueError()
 ValueError
-2026-09-14 15:58:04,617 TADA INFO assertion 2, JSON support (l3-msg): skipped
-2026-09-14 15:58:04,618 TADA INFO assertion 3, l3-msg delivery: skipped
-2026-09-14 15:58:04,618 TADA INFO assertion 301, send-quota taken: skipped
-2026-09-14 15:58:04,618 TADA INFO assertion 302, send-quota returned: skipped
-2026-09-14 15:58:04,618 TADA INFO assertion 303, msg delivery spread among rails: skipped
-2026-09-14 15:58:04,618 TADA INFO assertion 4, l2-msg delivery: skipped
-2026-09-14 15:58:04,618 TADA INFO assertion 5, l1-msg delivery: skipped
-2026-09-14 15:58:04,618 TADA INFO assertion 6, x-msg delivery: skipped
-2026-09-14 15:58:04,618 TADA INFO assertion 7, nada delivery: skipped
-2026-09-14 15:58:04,618 TADA INFO assertion 8, l3-msg by 'root' with 0400 permission: skipped
-2026-09-14 15:58:04,618 TADA INFO assertion 9, l3-msg by 'root' as 'foo' with 0400 permission: skipped
-2026-09-14 15:58:04,619 TADA INFO assertion 10, l3-msg by 'root' as 'bar' with 0400 permission: skipped
-2026-09-14 15:58:04,619 TADA INFO assertion 11, l3-msg by 'root' as 'bar' with 0440 permission: skipped
-2026-09-14 15:58:04,619 TADA INFO assertion 12, l3-msg by 'foo' as 'bar' results in an error: skipped
-2026-09-14 15:58:04,619 TADA INFO assertion 13, l3-msg by 'foo' with 0440 permission: skipped
-2026-09-14 15:58:04,619 TADA INFO assertion 14, l3-msg by 'bar' with 0440 permission: skipped
-2026-09-14 15:58:04,619 TADA INFO assertion 15, Blocking client and asynchronous client have the same data: skipped
-2026-09-14 15:58:04,619 TADA INFO assertion 16, srv-6 clean up properly after srv-3 exited: skipped
-2026-09-14 15:58:04,619 TADA INFO assertion 17, srv-7 clean up properly after srv-3 exited: skipped
-2026-09-14 15:58:04,619 TADA INFO assertion 18, srv-1 clean up properly after srv-3 exited: skipped
-2026-09-14 15:58:04,619 TADA INFO assertion 19, l3-msg successfully delivered after srv-3 restarted: skipped
-2026-09-14 15:58:04,619 TADA INFO assertion 20, l3-msg publish from L1 (srv4): skipped
-2026-09-14 15:58:04,620 TADA INFO assertion 21, nada publish from L1 (srv4): skipped
-2026-09-14 15:58:04,620 TADA INFO assertion 22, Check msg stats in each process: skipped
-2026-09-14 15:58:04,620 TADA INFO assertion 23, Check msg client stats in each process: skipped
-2026-09-14 15:58:04,620 TADA INFO assertion 24, Check forged publishing block: skipped
-2026-09-14 15:58:04,620 TADA INFO assertion 25, pub-5 publish completed with a status after srv-5 disabled msg service: skipped
-2026-09-14 15:58:04,620 TADA INFO assertion 26, no data get propagated: skipped
-2026-09-14 15:58:04,620 TADA INFO assertion 27, pub-5 synchronously failed to publish afterward: skipped
-2026-09-14 15:58:04,620 TADA INFO assertion 28, pub-5-new (new connection) synchronously failed to publish: skipped
-2026-09-14 15:58:04,620 TADA INFO test ldms_msg_test ended
+2026-09-15 09:19:11,111 TADA INFO assertion 2, JSON support (l3-msg): skipped
+2026-09-15 09:19:11,111 TADA INFO assertion 3, l3-msg delivery: skipped
+2026-09-15 09:19:11,112 TADA INFO assertion 301, send-quota taken: skipped
+2026-09-15 09:19:11,112 TADA INFO assertion 302, send-quota returned: skipped
+2026-09-15 09:19:11,112 TADA INFO assertion 303, msg delivery spread among rails: skipped
+2026-09-15 09:19:11,112 TADA INFO assertion 4, l2-msg delivery: skipped
+2026-09-15 09:19:11,112 TADA INFO assertion 5, l1-msg delivery: skipped
+2026-09-15 09:19:11,112 TADA INFO assertion 6, x-msg delivery: skipped
+2026-09-15 09:19:11,112 TADA INFO assertion 7, nada delivery: skipped
+2026-09-15 09:19:11,112 TADA INFO assertion 8, l3-msg by 'root' with 0400 permission: skipped
+2026-09-15 09:19:11,113 TADA INFO assertion 9, l3-msg by 'root' as 'foo' with 0400 permission: skipped
+2026-09-15 09:19:11,113 TADA INFO assertion 10, l3-msg by 'root' as 'bar' with 0400 permission: skipped
+2026-09-15 09:19:11,113 TADA INFO assertion 11, l3-msg by 'root' as 'bar' with 0440 permission: skipped
+2026-09-15 09:19:11,113 TADA INFO assertion 12, l3-msg by 'foo' as 'bar' results in an error: skipped
+2026-09-15 09:19:11,113 TADA INFO assertion 13, l3-msg by 'foo' with 0440 permission: skipped
+2026-09-15 09:19:11,113 TADA INFO assertion 14, l3-msg by 'bar' with 0440 permission: skipped
+2026-09-15 09:19:11,113 TADA INFO assertion 15, Blocking client and asynchronous client have the same data: skipped
+2026-09-15 09:19:11,113 TADA INFO assertion 16, srv-6 clean up properly after srv-3 exited: skipped
+2026-09-15 09:19:11,113 TADA INFO assertion 17, srv-7 clean up properly after srv-3 exited: skipped
+2026-09-15 09:19:11,114 TADA INFO assertion 18, srv-1 clean up properly after srv-3 exited: skipped
+2026-09-15 09:19:11,114 TADA INFO assertion 19, l3-msg successfully delivered after srv-3 restarted: skipped
+2026-09-15 09:19:11,114 TADA INFO assertion 20, l3-msg publish from L1 (srv4): skipped
+2026-09-15 09:19:11,114 TADA INFO assertion 21, nada publish from L1 (srv4): skipped
+2026-09-15 09:19:11,114 TADA INFO assertion 22, Check msg stats in each process: skipped
+2026-09-15 09:19:11,114 TADA INFO assertion 23, Check msg client stats in each process: skipped
+2026-09-15 09:19:11,114 TADA INFO assertion 24, Check forged publishing block: skipped
+2026-09-15 09:19:11,114 TADA INFO assertion 25, pub-5 publish completed with a status after srv-5 disabled msg service: skipped
+2026-09-15 09:19:11,115 TADA INFO assertion 26, no data get propagated: skipped
+2026-09-15 09:19:11,115 TADA INFO assertion 27, pub-5 synchronously failed to publish afterward: skipped
+2026-09-15 09:19:11,115 TADA INFO assertion 28, pub-5-new (new connection) synchronously failed to publish: skipped
+2026-09-15 09:19:11,115 TADA INFO test ldms_msg_test ended
