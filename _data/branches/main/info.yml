@@ -1,6 +1,6 @@
 branch: main
 ldmsCommitId: 32bdc5cb2a0c45c842adf960aaaefc8fb8c8a847
-testCommitId: 
+testCommitId: 380959fd2fe7be574a6d8ee6eaaf69357bf0a8c2
 ldmsCommitId8: 32bdc5cb
-testCommitId8: 
-status: "build succeeded"
+testCommitId8: 380959fd
+status: "testing"
