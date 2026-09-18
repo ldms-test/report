@@ -1,0 +1,26 @@
+2026-09-18 16:57:18,181 TADA INFO starting test `ldms_rate_test`
+2026-09-18 16:57:18,181 TADA INFO   test-id: 957f88b529fdcdcf7205525db79cf5a30c010a5fda4c7d9107b6f7a92181ddef
+2026-09-18 16:57:18,181 TADA INFO   test-suite: LDMSD
+2026-09-18 16:57:18,181 TADA INFO   test-name: ldms_rate_test
+2026-09-18 16:57:18,181 TADA INFO   test-user: ldms-test
+2026-09-18 16:57:18,181 TADA INFO   commit-id: ae40ba0c3b7b5307a8993aba2212e61af86a6cfb
+2026-09-18 16:57:18,181 __main__ INFO -- Get or create the cluster --
+2026-09-18 16:57:26,439 __main__ INFO -- Start daemons --
+2026-09-18 16:57:26,829 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-18 16:57:28,829 root INFO starting python /tada-src/python/ldms_rate.py on ldms-test-ldms_rate_test-ae40ba0-node-1 
+2026-09-18 16:57:31,032 root INFO starting python /tada-src/python/ldms_rate.py on ldms-test-ldms_rate_test-ae40ba0-node-1 
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-test/ldms_rate_test", line 172, in <module>
+    subobjs0 = [ eval(o) for o in subdata0 if o ]
+                 ~~~~^^^
+  File "<string>", line 1, in <module>
+  File "/home/ldms-test/var/b4.5/ldms-test/LDMS_Test.py", line 970, in __init__
+    raise ValueError()
+ValueError
+2026-09-18 16:57:57,155 TADA INFO assertion 1, Publisher cannot publish all data (rail rate limit): skipped
+2026-09-18 16:57:57,156 TADA INFO assertion 2, Publisher get a rate limit error: skipped
+2026-09-18 16:57:57,156 TADA INFO assertion 3, After the wait, the publisher can publish: skipped
+2026-09-18 16:57:57,156 TADA INFO assertion 4, Publisher cannot publish all data (msg rate limit): skipped
+2026-09-18 16:57:57,156 TADA INFO assertion 5, Publisher get a rate limit error (by channel): skipped
+2026-09-18 16:57:57,156 TADA INFO assertion 6, After the wait, the publisher can publish (by channel): skipped
+2026-09-18 16:57:57,156 TADA INFO test ldms_rate_test ended
