@@ -1,0 +1,497 @@
+2026-09-18 17:20:14,541 TADA INFO starting test `slurm_stream_test`
+2026-09-18 17:20:14,541 TADA INFO   test-id: 02834f5db740c2a3aec5aafb5647104e302a65fc40fef0edcbbddc80e6df5f38
+2026-09-18 17:20:14,541 TADA INFO   test-suite: LDMSD
+2026-09-18 17:20:14,541 TADA INFO   test-name: slurm_stream_test
+2026-09-18 17:20:14,541 TADA INFO   test-user: ldms-test
+2026-09-18 17:20:14,541 TADA INFO   commit-id: ae40ba0c3b7b5307a8993aba2212e61af86a6cfb
+2026-09-18 17:20:14,541 __main__ INFO -- Get or create the cluster --
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-test/slurm_stream_test", line 319, in <module>
+    raise RuntimeError("libtada build failed, output: {}".format(out))
+RuntimeError: libtada build failed, output: make: Entering directory '/tada-src/C'
+LDMSD_VERSRION 4.5.3.10-ae40b
+mkdir -p /db/tada/lib
+gcc -I /opt/ovis/include -o /db/tada/lib/test_ovis_json \
+	test_ovis_json.c -L/opt/ovis/lib -L/opt/ovis/lib64 -L/db/tada/lib \
+	-ltada -lutil \
+	-lcoll -lovis_json -ggdb3 -O0
+test_ovis_json.c: In function 'CREATE_EXPECTED_ENTITY':
+test_ovis_json.c:121:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  121 |         json_doc_t doc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:126:15: error: implicit declaration of function 'json_doc_new' [-Wimplicit-function-declaration]
+  126 |         doc = json_doc_new();
+      |               ^~~~~~~~~~~~
+test_ovis_json.c: In function 'FREE_EXPECTED_ENTITY':
+test_ovis_json.c:210:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  210 |         json_doc_t doc = (json_doc_t)(uintptr_t)exp[LAST_VALUE + 1];
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:210:27: error: 'json_doc_t' undeclared (first use in this function); did you mean 'json_loc_s'?
+  210 |         json_doc_t doc = (json_doc_t)(uintptr_t)exp[LAST_VALUE + 1];
+      |                           ^~~~~~~~~~
+      |                           json_loc_s
+test_ovis_json.c:210:27: note: each undeclared identifier is reported only once for each function it appears in
+test_ovis_json.c:210:39: error: expected expression before 'uintptr_t'
+  210 |         json_doc_t doc = (json_doc_t)(uintptr_t)exp[LAST_VALUE + 1];
+      |                                       ^~~~~~~~~
+test_ovis_json.c:210:49: error: expected ',' or ';' before 'exp'
+  210 |         json_doc_t doc = (json_doc_t)(uintptr_t)exp[LAST_VALUE + 1];
+      |                                                 ^~~
+test_ovis_json.c:211:9: error: implicit declaration of function 'json_doc_free'; did you mean 'json_dict_merge'? [-Wimplicit-function-declaration]
+  211 |         json_doc_free(doc);
+      |         ^~~~~~~~~~~~~
+      |         json_dict_merge
+test_ovis_json.c: In function 'is_same_entity':
+test_ovis_json.c:377:33: error: passing argument 1 of 'strcmp' from incompatible pointer type [-Wincompatible-pointer-types]
+  377 |                 if (0 != strcmp(json_attr_name(l), json_attr_name(r)))
+      |                                 ^~~~~~~~~~~~~~~~~
+      |                                 |
+      |                                 json_str_t {aka struct json_str_s *}
+In file included from /opt/ovis/include/ovis_json/ovis_json.h:52,
+                 from test_ovis_json.c:8:
+/usr/include/string.h:171:32: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  171 | extern int strcmp (const char *__s1, const char *__s2)
+      |                    ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c:377:52: error: passing argument 2 of 'strcmp' from incompatible pointer type [-Wincompatible-pointer-types]
+  377 |                 if (0 != strcmp(json_attr_name(l), json_attr_name(r)))
+      |                                                    ^~~~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    json_str_t {aka struct json_str_s *}
+/usr/include/string.h:171:50: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  171 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c:394:48: error: passing argument 2 of 'json_value_find' from incompatible pointer type [-Wincompatible-pointer-types]
+  394 |                         b = json_value_find(r, json_attr_name(a));
+      |                                                ^~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:274:67: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  274 | extern json_entity_t json_value_find(json_entity_t d, const char *name);
+      |                                                       ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c:404:48: error: passing argument 2 of 'json_value_find' from incompatible pointer type [-Wincompatible-pointer-types]
+  404 |                         a = json_value_find(l, json_attr_name(b));
+      |                                                ^~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:274:67: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  274 | extern json_entity_t json_value_find(json_entity_t d, const char *name);
+      |                                                       ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c: In function 'test_json_entity_new':
+test_ovis_json.c:425:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  425 |         json_doc_t tdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c: In function 'test_json_entity_dump':
+test_ovis_json.c:555:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  555 |         json_doc_t ddoc = json_doc_new();
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c: In function 'test_json_parse_buffer':
+test_ovis_json.c:575:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  575 |         json_doc_t pdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:605:22: error: assignment to 'int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+  605 |                 pdoc = NULL;
+      |                      ^
+test_ovis_json.c:606:43: error: passing argument 1 of 'json_parse_buffer' from incompatible pointer type [-Wincompatible-pointer-types]
+  606 |                 rc = json_parse_buffer(txt[type], strlen(txt[type]), &pdoc);
+      |                                        ~~~^~~~~~
+      |                                           |
+      |                                           char *
+/opt/ovis/include/ovis_json/ovis_json.h:139:44: note: expected 'json_parser_t' {aka 'struct json_parser_s *'} but argument is of type 'char *'
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                              ~~~~~~~~~~~~~~^
+/opt/ovis/include/ovis_json/ovis_json.h:124:4: note: 'json_parser_t' declared here
+  124 | } *json_parser_t;
+      |    ^~~~~~~~~~~~~
+test_ovis_json.c:606:51: error: passing argument 2 of 'json_parse_buffer' makes pointer from integer without a cast [-Wint-conversion]
+  606 |                 rc = json_parse_buffer(txt[type], strlen(txt[type]), &pdoc);
+      |                                                   ^~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   size_t {aka long unsigned int}
+/opt/ovis/include/ovis_json/ovis_json.h:139:53: note: expected 'char *' but argument is of type 'size_t' {aka 'long unsigned int'}
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                                               ~~~~~~^~~
+test_ovis_json.c:606:70: error: passing argument 3 of 'json_parse_buffer' makes integer from pointer without a cast [-Wint-conversion]
+  606 |                 rc = json_parse_buffer(txt[type], strlen(txt[type]), &pdoc);
+      |                                                                      ^~~~~
+      |                                                                      |
+      |                                                                      int *
+/opt/ovis/include/ovis_json/ovis_json.h:139:65: note: expected 'size_t' {aka 'long unsigned int'} but argument is of type 'int *'
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                                                          ~~~~~~~^~~~~~~
+test_ovis_json.c:606:22: error: too few arguments to function 'json_parse_buffer'; expected 4, have 3
+  606 |                 rc = json_parse_buffer(txt[type], strlen(txt[type]), &pdoc);
+      |                      ^~~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:139:12: note: declared here
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |            ^~~~~~~~~~~~~~~~~
+test_ovis_json.c:607:28: error: implicit declaration of function 'json_doc_root' [-Wimplicit-function-declaration]
+  607 |                 o = pdoc ? json_doc_root(pdoc) : NULL;
+      |                            ^~~~~~~~~~~~~
+test_ovis_json.c:607:48: error: pointer/integer type mismatch in conditional expression [-Wint-conversion]
+  607 |                 o = pdoc ? json_doc_root(pdoc) : NULL;
+      |                                                ^
+test_ovis_json.c:615:22: error: assignment to 'int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+  615 |                 pdoc = NULL;
+      |                      ^
+test_ovis_json.c:622:14: error: assignment to 'int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+  622 |         pdoc = NULL;
+      |              ^
+test_ovis_json.c:623:32: error: passing argument 1 of 'json_parse_buffer' from incompatible pointer type [-Wincompatible-pointer-types]
+  623 |         rc = json_parse_buffer(inval_str, strlen(inval_str), &pdoc);
+      |                                ^~~~~~~~~
+      |                                |
+      |                                char *
+/opt/ovis/include/ovis_json/ovis_json.h:139:44: note: expected 'json_parser_t' {aka 'struct json_parser_s *'} but argument is of type 'char *'
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                              ~~~~~~~~~~~~~~^
+/opt/ovis/include/ovis_json/ovis_json.h:124:4: note: 'json_parser_t' declared here
+  124 | } *json_parser_t;
+      |    ^~~~~~~~~~~~~
+test_ovis_json.c:623:43: error: passing argument 2 of 'json_parse_buffer' makes pointer from integer without a cast [-Wint-conversion]
+  623 |         rc = json_parse_buffer(inval_str, strlen(inval_str), &pdoc);
+      |                                           ^~~~~~~~~~~~~~~~~
+      |                                           |
+      |                                           size_t {aka long unsigned int}
+/opt/ovis/include/ovis_json/ovis_json.h:139:53: note: expected 'char *' but argument is of type 'size_t' {aka 'long unsigned int'}
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                                               ~~~~~~^~~
+test_ovis_json.c:623:62: error: passing argument 3 of 'json_parse_buffer' makes integer from pointer without a cast [-Wint-conversion]
+  623 |         rc = json_parse_buffer(inval_str, strlen(inval_str), &pdoc);
+      |                                                              ^~~~~
+      |                                                              |
+      |                                                              int *
+/opt/ovis/include/ovis_json/ovis_json.h:139:65: note: expected 'size_t' {aka 'long unsigned int'} but argument is of type 'int *'
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                                                          ~~~~~~~^~~~~~~
+test_ovis_json.c:623:14: error: too few arguments to function 'json_parse_buffer'; expected 4, have 3
+  623 |         rc = json_parse_buffer(inval_str, strlen(inval_str), &pdoc);
+      |              ^~~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:139:12: note: declared here
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |            ^~~~~~~~~~~~~~~~~
+test_ovis_json.c: In function 'test_json_entity_copy':
+test_ovis_json.c:632:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  632 |         json_doc_t cdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:641:38: error: passing argument 1 of 'json_entity_copy' makes pointer from integer without a cast [-Wint-conversion]
+  641 |                 c = json_entity_copy(cdoc, exp[type]);
+      |                                      ^~~~
+      |                                      |
+      |                                      int
+/opt/ovis/include/ovis_json/ovis_json.h:186:53: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                                       ~~~~~~~~~~~~~~^
+test_ovis_json.c:641:21: error: too many arguments to function 'json_entity_copy'; expected 1, have 2
+  641 |                 c = json_entity_copy(cdoc, exp[type]);
+      |                     ^~~~~~~~~~~~~~~~       ~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:186:22: note: declared here
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                      ^~~~~~~~~~~~~~~~
+test_ovis_json.c: In function 'test_dict_apis':
+test_ovis_json.c:654:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  654 |         json_doc_t wdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c: In function 'test_dict_build':
+test_ovis_json.c:725:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  725 |         json_doc_t wdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:743:51: error: 'JSON_EOL_VALUE' undeclared (first use in this function); did you mean 'JSON_BOOL_VALUE'?
+  743 |                                 JSON_LIST_VALUE,  JSON_EOL_VALUE,
+      |                                                   ^~~~~~~~~~~~~~
+      |                                                   JSON_BOOL_VALUE
+test_ovis_json.c:733:29: error: passing argument 1 of 'json_dict_build' makes pointer from integer without a cast [-Wint-conversion]
+  733 |         d = json_dict_build(wdoc,
+      |                             ^~~~
+      |                             |
+      |                             int
+/opt/ovis/include/ovis_json/ovis_json.h:245:52: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  245 | extern json_entity_t json_dict_build(json_entity_t d, ...);
+      |                                      ~~~~~~~~~~~~~~^
+test_ovis_json.c:765:44: error: passing argument 1 of 'json_dict_build' makes pointer from integer without a cast [-Wint-conversion]
+  765 |         json_entity_t d2 = json_dict_build(wdoc,
+      |                                            ^~~~
+      |                                            |
+      |                                            int
+/opt/ovis/include/ovis_json/ovis_json.h:245:52: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  245 | extern json_entity_t json_dict_build(json_entity_t d, ...);
+      |                                      ~~~~~~~~~~~~~~^
+test_ovis_json.c:776:50: error: passing argument 1 of 'json_entity_copy' makes pointer from integer without a cast [-Wint-conversion]
+  776 |                                 json_entity_copy(wdoc, json_attr_value(attr)));
+      |                                                  ^~~~
+      |                                                  |
+      |                                                  int
+/opt/ovis/include/ovis_json/ovis_json.h:186:53: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                                       ~~~~~~~~~~~~~~^
+test_ovis_json.c:776:33: error: too many arguments to function 'json_entity_copy'; expected 1, have 2
+  776 |                                 json_entity_copy(wdoc, json_attr_value(attr)));
+      |                                 ^~~~~~~~~~~~~~~~       ~~~~~~~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:186:22: note: declared here
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                      ^~~~~~~~~~~~~~~~
+test_ovis_json.c:775:39: error: passing argument 2 of 'json_attr_add' from incompatible pointer type [-Wincompatible-pointer-types]
+  775 |                 rc = json_attr_add(d, json_attr_name(attr),
+      |                                       ^~~~~~~~~~~~~~~~~~~~
+      |                                       |
+      |                                       json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:297:55: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  297 | extern int json_attr_add(json_entity_t d, const char *name, json_entity_t v);
+      |                                           ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c: In function 'test_dict_merge':
+test_ovis_json.c:790:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  790 |         json_doc_t wdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:806:33: error: 'JSON_EOL_VALUE' undeclared (first use in this function); did you mean 'JSON_BOOL_VALUE'?
+  806 |                                 JSON_EOL_VALUE,
+      |                                 ^~~~~~~~~~~~~~
+      |                                 JSON_BOOL_VALUE
+test_ovis_json.c:797:30: error: passing argument 1 of 'json_dict_build' makes pointer from integer without a cast [-Wint-conversion]
+  797 |         d2 = json_dict_build(wdoc,
+      |                              ^~~~
+      |                              |
+      |                              int
+/opt/ovis/include/ovis_json/ovis_json.h:245:52: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  245 | extern json_entity_t json_dict_build(json_entity_t d, ...);
+      |                                      ~~~~~~~~~~~~~~^
+test_ovis_json.c:824:33: error: passing argument 2 of 'json_attr_add' from incompatible pointer type [-Wincompatible-pointer-types]
+  824 |                                 json_attr_name(a),
+      |                                 ^~~~~~~~~~~~~~~~~
+      |                                 |
+      |                                 json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:297:55: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  297 | extern int json_attr_add(json_entity_t d, const char *name, json_entity_t v);
+      |                                           ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c:829:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  829 |         json_doc_t cdoc = json_doc_new();
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:831:31: error: passing argument 1 of 'json_entity_copy' makes pointer from integer without a cast [-Wint-conversion]
+  831 |         d1 = json_entity_copy(cdoc, exp[DICT_VALUE]);
+      |                               ^~~~
+      |                               |
+      |                               int
+/opt/ovis/include/ovis_json/ovis_json.h:186:53: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                                       ~~~~~~~~~~~~~~^
+test_ovis_json.c:831:14: error: too many arguments to function 'json_entity_copy'; expected 1, have 2
+  831 |         d1 = json_entity_copy(cdoc, exp[DICT_VALUE]);
+      |              ^~~~~~~~~~~~~~~~       ~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:186:22: note: declared here
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                      ^~~~~~~~~~~~~~~~
+test_ovis_json.c:837:38: error: passing argument 1 of 'json_entity_copy' makes pointer from integer without a cast [-Wint-conversion]
+  837 |                 v = json_entity_copy(cdoc, json_attr_value(a));
+      |                                      ^~~~
+      |                                      |
+      |                                      int
+/opt/ovis/include/ovis_json/ovis_json.h:186:53: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                                       ~~~~~~~~~~~~~~^
+test_ovis_json.c:837:21: error: too many arguments to function 'json_entity_copy'; expected 1, have 2
+  837 |                 v = json_entity_copy(cdoc, json_attr_value(a));
+      |                     ^~~~~~~~~~~~~~~~       ~~~~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:186:22: note: declared here
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                      ^~~~~~~~~~~~~~~~
+test_ovis_json.c:839:40: error: passing argument 2 of 'json_attr_add' from incompatible pointer type [-Wincompatible-pointer-types]
+  839 |                 rc = json_attr_add(d1, json_attr_name(a), v);
+      |                                        ^~~~~~~~~~~~~~~~~
+      |                                        |
+      |                                        json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:297:55: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  297 | extern int json_attr_add(json_entity_t d, const char *name, json_entity_t v);
+      |                                           ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c: In function 'test_list_apis':
+test_ovis_json.c:855:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  855 |         json_doc_t wdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+make: *** [Makefile:73: /db/tada/lib/test_ovis_json] Error 1
+make: Leaving directory '/tada-src/C'
+
+2026-09-18 17:20:24,629 TADA INFO assertion 1, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,629 TADA INFO assertion 2, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,629 TADA INFO assertion 3, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,629 TADA INFO assertion 4, task_pid correctly represented: skipped
+2026-09-18 17:20:24,629 TADA INFO assertion 5, task_pid correctly represented: skipped
+2026-09-18 17:20:24,630 TADA INFO assertion 6, task_pid correctly represented: skipped
+2026-09-18 17:20:24,630 TADA INFO assertion 7, task_pid correctly represented: skipped
+2026-09-18 17:20:24,630 TADA INFO assertion 8, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,630 TADA INFO assertion 9, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,630 TADA INFO assertion 10, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,630 TADA INFO assertion 11, task_pid correctly represented: skipped
+2026-09-18 17:20:24,630 TADA INFO assertion 12, task_pid correctly represented: skipped
+2026-09-18 17:20:24,630 TADA INFO assertion 13, task_pid correctly represented: skipped
+2026-09-18 17:20:24,631 TADA INFO assertion 14, task_pid correctly represented: skipped
+2026-09-18 17:20:24,631 TADA INFO assertion 15, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,631 TADA INFO assertion 16, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,631 TADA INFO assertion 17, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,631 TADA INFO assertion 18, task_pid correctly represented: skipped
+2026-09-18 17:20:24,631 TADA INFO assertion 19, task_pid correctly represented: skipped
+2026-09-18 17:20:24,631 TADA INFO assertion 20, task_pid correctly represented: skipped
+2026-09-18 17:20:24,631 TADA INFO assertion 21, task_pid correctly represented: skipped
+2026-09-18 17:20:24,631 TADA INFO assertion 22, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,632 TADA INFO assertion 23, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,632 TADA INFO assertion 24, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,632 TADA INFO assertion 25, task_pid correctly represented: skipped
+2026-09-18 17:20:24,632 TADA INFO assertion 26, task_pid correctly represented: skipped
+2026-09-18 17:20:24,632 TADA INFO assertion 27, task_pid correctly represented: skipped
+2026-09-18 17:20:24,632 TADA INFO assertion 28, task_pid correctly represented: skipped
+2026-09-18 17:20:24,632 TADA INFO assertion 29, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,632 TADA INFO assertion 30, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,633 TADA INFO assertion 31, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,633 TADA INFO assertion 32, task_pid correctly represented: skipped
+2026-09-18 17:20:24,633 TADA INFO assertion 33, task_pid correctly represented: skipped
+2026-09-18 17:20:24,633 TADA INFO assertion 34, task_pid correctly represented: skipped
+2026-09-18 17:20:24,633 TADA INFO assertion 35, task_pid correctly represented: skipped
+2026-09-18 17:20:24,633 TADA INFO assertion 36, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,633 TADA INFO assertion 37, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,633 TADA INFO assertion 38, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,633 TADA INFO assertion 39, task_pid correctly represented: skipped
+2026-09-18 17:20:24,634 TADA INFO assertion 40, task_pid correctly represented: skipped
+2026-09-18 17:20:24,634 TADA INFO assertion 41, task_pid correctly represented: skipped
+2026-09-18 17:20:24,634 TADA INFO assertion 42, task_pid correctly represented: skipped
+2026-09-18 17:20:24,634 TADA INFO assertion 43, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,634 TADA INFO assertion 44, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,634 TADA INFO assertion 45, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,634 TADA INFO assertion 46, task_pid correctly represented: skipped
+2026-09-18 17:20:24,634 TADA INFO assertion 47, task_pid correctly represented: skipped
+2026-09-18 17:20:24,635 TADA INFO assertion 48, task_pid correctly represented: skipped
+2026-09-18 17:20:24,635 TADA INFO assertion 49, task_pid correctly represented: skipped
+2026-09-18 17:20:24,635 TADA INFO assertion 50, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,635 TADA INFO assertion 51, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,635 TADA INFO assertion 52, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,635 TADA INFO assertion 53, task_pid correctly represented: skipped
+2026-09-18 17:20:24,635 TADA INFO assertion 54, task_pid correctly represented: skipped
+2026-09-18 17:20:24,635 TADA INFO assertion 55, task_pid correctly represented: skipped
+2026-09-18 17:20:24,636 TADA INFO assertion 56, task_pid correctly represented: skipped
+2026-09-18 17:20:24,636 TADA INFO assertion 57, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,636 TADA INFO assertion 58, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,636 TADA INFO assertion 59, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,636 TADA INFO assertion 60, task_pid correctly represented: skipped
+2026-09-18 17:20:24,636 TADA INFO assertion 61, task_pid correctly represented: skipped
+2026-09-18 17:20:24,636 TADA INFO assertion 62, task_pid correctly represented: skipped
+2026-09-18 17:20:24,636 TADA INFO assertion 63, task_pid correctly represented: skipped
+2026-09-18 17:20:24,636 TADA INFO assertion 64, task_pid correctly represented: skipped
+2026-09-18 17:20:24,637 TADA INFO assertion 65, task_pid correctly represented: skipped
+2026-09-18 17:20:24,637 TADA INFO assertion 66, task_pid correctly represented: skipped
+2026-09-18 17:20:24,637 TADA INFO assertion 67, task_pid correctly represented: skipped
+2026-09-18 17:20:24,637 TADA INFO assertion 68, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,637 TADA INFO assertion 69, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,637 TADA INFO assertion 70, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,637 TADA INFO assertion 71, task_pid correctly represented: skipped
+2026-09-18 17:20:24,637 TADA INFO assertion 72, task_pid correctly represented: skipped
+2026-09-18 17:20:24,638 TADA INFO assertion 73, task_pid correctly represented: skipped
+2026-09-18 17:20:24,638 TADA INFO assertion 74, task_pid correctly represented: skipped
+2026-09-18 17:20:24,638 TADA INFO assertion 75, task_pid correctly represented: skipped
+2026-09-18 17:20:24,638 TADA INFO assertion 76, task_pid correctly represented: skipped
+2026-09-18 17:20:24,638 TADA INFO assertion 77, task_pid correctly represented: skipped
+2026-09-18 17:20:24,638 TADA INFO assertion 78, task_pid correctly represented: skipped
+2026-09-18 17:20:24,638 TADA INFO assertion 79, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,638 TADA INFO assertion 80, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,638 TADA INFO assertion 81, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,639 TADA INFO assertion 82, task_pid correctly represented: skipped
+2026-09-18 17:20:24,639 TADA INFO assertion 83, task_pid correctly represented: skipped
+2026-09-18 17:20:24,639 TADA INFO assertion 84, task_pid correctly represented: skipped
+2026-09-18 17:20:24,639 TADA INFO assertion 85, task_pid correctly represented: skipped
+2026-09-18 17:20:24,639 TADA INFO assertion 86, task_pid correctly represented: skipped
+2026-09-18 17:20:24,639 TADA INFO assertion 87, task_pid correctly represented: skipped
+2026-09-18 17:20:24,639 TADA INFO assertion 88, task_pid correctly represented: skipped
+2026-09-18 17:20:24,639 TADA INFO assertion 89, task_pid correctly represented: skipped
+2026-09-18 17:20:24,640 TADA INFO assertion 90, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,640 TADA INFO assertion 91, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,640 TADA INFO assertion 92, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,640 TADA INFO assertion 93, task_pid correctly represented: skipped
+2026-09-18 17:20:24,640 TADA INFO assertion 94, task_pid correctly represented: skipped
+2026-09-18 17:20:24,640 TADA INFO assertion 95, task_pid correctly represented: skipped
+2026-09-18 17:20:24,640 TADA INFO assertion 96, task_pid correctly represented: skipped
+2026-09-18 17:20:24,640 TADA INFO assertion 97, task_pid correctly represented: skipped
+2026-09-18 17:20:24,641 TADA INFO assertion 98, task_pid correctly represented: skipped
+2026-09-18 17:20:24,641 TADA INFO assertion 99, task_pid correctly represented: skipped
+2026-09-18 17:20:24,641 TADA INFO assertion 100, task_pid correctly represented: skipped
+2026-09-18 17:20:24,641 TADA INFO assertion 101, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,641 TADA INFO assertion 102, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,641 TADA INFO assertion 103, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,641 TADA INFO assertion 104, task_pid correctly represented: skipped
+2026-09-18 17:20:24,641 TADA INFO assertion 105, task_pid correctly represented: skipped
+2026-09-18 17:20:24,641 TADA INFO assertion 106, task_pid correctly represented: skipped
+2026-09-18 17:20:24,642 TADA INFO assertion 107, task_pid correctly represented: skipped
+2026-09-18 17:20:24,642 TADA INFO assertion 108, task_pid correctly represented: skipped
+2026-09-18 17:20:24,642 TADA INFO assertion 109, task_pid correctly represented: skipped
+2026-09-18 17:20:24,642 TADA INFO assertion 110, task_pid correctly represented: skipped
+2026-09-18 17:20:24,642 TADA INFO assertion 111, task_pid correctly represented: skipped
+2026-09-18 17:20:24,642 TADA INFO assertion 112, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,642 TADA INFO assertion 113, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,642 TADA INFO assertion 114, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,643 TADA INFO assertion 115, task_pid correctly represented: skipped
+2026-09-18 17:20:24,643 TADA INFO assertion 116, task_pid correctly represented: skipped
+2026-09-18 17:20:24,643 TADA INFO assertion 117, task_pid correctly represented: skipped
+2026-09-18 17:20:24,643 TADA INFO assertion 118, task_pid correctly represented: skipped
+2026-09-18 17:20:24,643 TADA INFO assertion 119, task_pid correctly represented: skipped
+2026-09-18 17:20:24,643 TADA INFO assertion 120, task_pid correctly represented: skipped
+2026-09-18 17:20:24,643 TADA INFO assertion 121, task_pid correctly represented: skipped
+2026-09-18 17:20:24,643 TADA INFO assertion 122, task_pid correctly represented: skipped
+2026-09-18 17:20:24,644 TADA INFO assertion 123, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,644 TADA INFO assertion 124, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,644 TADA INFO assertion 125, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,644 TADA INFO assertion 126, task_pid correctly represented: skipped
+2026-09-18 17:20:24,644 TADA INFO assertion 127, task_pid correctly represented: skipped
+2026-09-18 17:20:24,644 TADA INFO assertion 128, task_pid correctly represented: skipped
+2026-09-18 17:20:24,644 TADA INFO assertion 129, task_pid correctly represented: skipped
+2026-09-18 17:20:24,644 TADA INFO assertion 130, task_pid correctly represented: skipped
+2026-09-18 17:20:24,645 TADA INFO assertion 131, task_pid correctly represented: skipped
+2026-09-18 17:20:24,645 TADA INFO assertion 132, task_pid correctly represented: skipped
+2026-09-18 17:20:24,645 TADA INFO assertion 133, task_pid correctly represented: skipped
+2026-09-18 17:20:24,645 TADA INFO assertion 134, Job properly assigned to correct slot: skipped
+2026-09-18 17:20:24,645 TADA INFO assertion 135, job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,645 TADA INFO assertion 136, job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,645 TADA INFO assertion 137, task_pid correctly represented: skipped
+2026-09-18 17:20:24,645 TADA INFO assertion 138, task_pid correctly represented: skipped
+2026-09-18 17:20:24,645 TADA INFO assertion 139, task_pid correctly represented: skipped
+2026-09-18 17:20:24,646 TADA INFO assertion 140, task_pid correctly represented: skipped
+2026-09-18 17:20:24,646 TADA INFO assertion 141, task_pid correctly represented: skipped
+2026-09-18 17:20:24,646 TADA INFO assertion 142, task_pid correctly represented: skipped
+2026-09-18 17:20:24,646 TADA INFO assertion 143, task_pid correctly represented: skipped
+2026-09-18 17:20:24,646 TADA INFO assertion 144, task_pid correctly represented: skipped
+2026-09-18 17:20:24,646 TADA INFO assertion 145, new job correctly replaces oldest slot: skipped
+2026-09-18 17:20:24,646 TADA INFO assertion 146, new job_start correctly represented in metric set: skipped
+2026-09-18 17:20:24,646 TADA INFO assertion 147, new job_end correctly represented in metric set: skipped
+2026-09-18 17:20:24,647 TADA INFO assertion 148, new job's task replaces oldest slot: skipped
+2026-09-18 17:20:24,647 TADA INFO assertion 149, new job's task replaces oldest slot: skipped
+2026-09-18 17:20:24,647 TADA INFO assertion 150, new job's task replaces oldest slot: skipped
+2026-09-18 17:20:24,647 TADA INFO assertion 151, new job's task replaces oldest slot: skipped
+2026-09-18 17:20:24,647 TADA INFO assertion 152, new job's task replaces oldest slot: skipped
+2026-09-18 17:20:24,647 TADA INFO assertion 153, new job's task replaces oldest slot: skipped
+2026-09-18 17:20:24,647 TADA INFO assertion 154, new job's task replaces oldest slot: skipped
+2026-09-18 17:20:24,647 TADA INFO assertion 155, new job's task replaces oldest slot: skipped
+2026-09-18 17:20:24,648 TADA INFO test slurm_stream_test ended
