@@ -1,0 +1,555 @@
+/home/ldms-test/var/b4.5/ldms-test/libovis_log_test:811: SyntaxWarning: invalid escape sequence '\/'
+  prog = "ovis_log_close_prog"
+2026-09-18 17:00:06,230 TADA INFO starting test `libovis_log_test`
+2026-09-18 17:00:06,230 TADA INFO   test-id: af514d907295b266f04146be436c072e1a75638c7800c3214934e0292a94f835
+2026-09-18 17:00:06,230 TADA INFO   test-suite: LDMSD
+2026-09-18 17:00:06,230 TADA INFO   test-name: libovis_log_test
+2026-09-18 17:00:06,230 TADA INFO   test-user: ldms-test
+2026-09-18 17:00:06,230 TADA INFO   commit-id: ae40ba0c3b7b5307a8993aba2212e61af86a6cfb
+2026-09-18 17:00:06,231 __main__ INFO -- Create the cluster -- 
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-test/libovis_log_test", line 310, in <module>
+    raise RuntimeError("libtada build failed, output: {}".format(out))
+RuntimeError: libtada build failed, output: make: Entering directory '/tada-src/C'
+LDMSD_VERSRION 4.5.3.10-ae40b
+mkdir -p /data/tada/lib
+gcc -o /data/tada/lib/libutil.so -fPIC -shared util.c util.h -ggdb3 -O0
+mkdir -p /data/tada/lib
+gcc -o /data/tada/lib/libtada.so -fPIC -shared tada.c tada.h -ldl -pthread -lcrypto -ggdb3 -O0
+mkdir -p /data/tada/lib
+gcc -I /opt/ovis/include -o /data/tada/lib/libtest_stream_sampler.so -fPIC -shared \
+    test_stream_sampler.c -L/opt/ovis/lib -L/data/tada/lib -L/opt/ovis/lib64 \
+    -lldmsd_stream -lovis_util -lcoll -pthread -lovis_json -lovis_log -ltada \
+    -ggdb3 -O0
+ln -fs /data/tada/lib/libtest_stream_sampler.so /data/tada/lib/libtest_stream_sampler.so.0
+mkdir -p /data/tada/lib
+gcc -I /opt/ovis/include -o /data/tada/lib/test_ovis_ev \
+	test_ovis_ev.c -L/opt/ovis/lib -L/opt/ovis/lib64 -L/data/tada/lib \
+	-ltada -lutil \
+	-lovis_ev -pthread -ggdb3 -O0
+mkdir -p /data/tada/lib
+gcc -I /opt/ovis/include -o /data/tada/lib/test_ovis_json \
+	test_ovis_json.c -L/opt/ovis/lib -L/opt/ovis/lib64 -L/data/tada/lib \
+	-ltada -lutil \
+	-lcoll -lovis_json -ggdb3 -O0
+test_ovis_json.c: In function 'CREATE_EXPECTED_ENTITY':
+test_ovis_json.c:121:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  121 |         json_doc_t doc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:126:15: error: implicit declaration of function 'json_doc_new' [-Wimplicit-function-declaration]
+  126 |         doc = json_doc_new();
+      |               ^~~~~~~~~~~~
+test_ovis_json.c: In function 'FREE_EXPECTED_ENTITY':
+test_ovis_json.c:210:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  210 |         json_doc_t doc = (json_doc_t)(uintptr_t)exp[LAST_VALUE + 1];
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:210:27: error: 'json_doc_t' undeclared (first use in this function); did you mean 'json_loc_s'?
+  210 |         json_doc_t doc = (json_doc_t)(uintptr_t)exp[LAST_VALUE + 1];
+      |                           ^~~~~~~~~~
+      |                           json_loc_s
+test_ovis_json.c:210:27: note: each undeclared identifier is reported only once for each function it appears in
+test_ovis_json.c:210:39: error: expected expression before 'uintptr_t'
+  210 |         json_doc_t doc = (json_doc_t)(uintptr_t)exp[LAST_VALUE + 1];
+      |                                       ^~~~~~~~~
+test_ovis_json.c:210:49: error: expected ',' or ';' before 'exp'
+  210 |         json_doc_t doc = (json_doc_t)(uintptr_t)exp[LAST_VALUE + 1];
+      |                                                 ^~~
+test_ovis_json.c:211:9: error: implicit declaration of function 'json_doc_free'; did you mean 'json_dict_merge'? [-Wimplicit-function-declaration]
+  211 |         json_doc_free(doc);
+      |         ^~~~~~~~~~~~~
+      |         json_dict_merge
+test_ovis_json.c: In function 'is_same_entity':
+test_ovis_json.c:377:33: error: passing argument 1 of 'strcmp' from incompatible pointer type [-Wincompatible-pointer-types]
+  377 |                 if (0 != strcmp(json_attr_name(l), json_attr_name(r)))
+      |                                 ^~~~~~~~~~~~~~~~~
+      |                                 |
+      |                                 json_str_t {aka struct json_str_s *}
+In file included from /opt/ovis/include/ovis_json/ovis_json.h:52,
+                 from test_ovis_json.c:8:
+/usr/include/string.h:171:32: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  171 | extern int strcmp (const char *__s1, const char *__s2)
+      |                    ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c:377:52: error: passing argument 2 of 'strcmp' from incompatible pointer type [-Wincompatible-pointer-types]
+  377 |                 if (0 != strcmp(json_attr_name(l), json_attr_name(r)))
+      |                                                    ^~~~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    json_str_t {aka struct json_str_s *}
+/usr/include/string.h:171:50: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  171 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c:394:48: error: passing argument 2 of 'json_value_find' from incompatible pointer type [-Wincompatible-pointer-types]
+  394 |                         b = json_value_find(r, json_attr_name(a));
+      |                                                ^~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:274:67: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  274 | extern json_entity_t json_value_find(json_entity_t d, const char *name);
+      |                                                       ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c:404:48: error: passing argument 2 of 'json_value_find' from incompatible pointer type [-Wincompatible-pointer-types]
+  404 |                         a = json_value_find(l, json_attr_name(b));
+      |                                                ^~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:274:67: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  274 | extern json_entity_t json_value_find(json_entity_t d, const char *name);
+      |                                                       ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c: In function 'test_json_entity_new':
+test_ovis_json.c:425:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  425 |         json_doc_t tdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c: In function 'test_json_entity_dump':
+test_ovis_json.c:555:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  555 |         json_doc_t ddoc = json_doc_new();
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c: In function 'test_json_parse_buffer':
+test_ovis_json.c:575:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  575 |         json_doc_t pdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:605:22: error: assignment to 'int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+  605 |                 pdoc = NULL;
+      |                      ^
+test_ovis_json.c:606:43: error: passing argument 1 of 'json_parse_buffer' from incompatible pointer type [-Wincompatible-pointer-types]
+  606 |                 rc = json_parse_buffer(txt[type], strlen(txt[type]), &pdoc);
+      |                                        ~~~^~~~~~
+      |                                           |
+      |                                           char *
+/opt/ovis/include/ovis_json/ovis_json.h:139:44: note: expected 'json_parser_t' {aka 'struct json_parser_s *'} but argument is of type 'char *'
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                              ~~~~~~~~~~~~~~^
+/opt/ovis/include/ovis_json/ovis_json.h:124:4: note: 'json_parser_t' declared here
+  124 | } *json_parser_t;
+      |    ^~~~~~~~~~~~~
+test_ovis_json.c:606:51: error: passing argument 2 of 'json_parse_buffer' makes pointer from integer without a cast [-Wint-conversion]
+  606 |                 rc = json_parse_buffer(txt[type], strlen(txt[type]), &pdoc);
+      |                                                   ^~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   size_t {aka long unsigned int}
+/opt/ovis/include/ovis_json/ovis_json.h:139:53: note: expected 'char *' but argument is of type 'size_t' {aka 'long unsigned int'}
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                                               ~~~~~~^~~
+test_ovis_json.c:606:70: error: passing argument 3 of 'json_parse_buffer' makes integer from pointer without a cast [-Wint-conversion]
+  606 |                 rc = json_parse_buffer(txt[type], strlen(txt[type]), &pdoc);
+      |                                                                      ^~~~~
+      |                                                                      |
+      |                                                                      int *
+/opt/ovis/include/ovis_json/ovis_json.h:139:65: note: expected 'size_t' {aka 'long unsigned int'} but argument is of type 'int *'
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                                                          ~~~~~~~^~~~~~~
+test_ovis_json.c:606:22: error: too few arguments to function 'json_parse_buffer'; expected 4, have 3
+  606 |                 rc = json_parse_buffer(txt[type], strlen(txt[type]), &pdoc);
+      |                      ^~~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:139:12: note: declared here
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |            ^~~~~~~~~~~~~~~~~
+test_ovis_json.c:607:28: error: implicit declaration of function 'json_doc_root' [-Wimplicit-function-declaration]
+  607 |                 o = pdoc ? json_doc_root(pdoc) : NULL;
+      |                            ^~~~~~~~~~~~~
+test_ovis_json.c:607:48: error: pointer/integer type mismatch in conditional expression [-Wint-conversion]
+  607 |                 o = pdoc ? json_doc_root(pdoc) : NULL;
+      |                                                ^
+test_ovis_json.c:615:22: error: assignment to 'int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+  615 |                 pdoc = NULL;
+      |                      ^
+test_ovis_json.c:622:14: error: assignment to 'int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+  622 |         pdoc = NULL;
+      |              ^
+test_ovis_json.c:623:32: error: passing argument 1 of 'json_parse_buffer' from incompatible pointer type [-Wincompatible-pointer-types]
+  623 |         rc = json_parse_buffer(inval_str, strlen(inval_str), &pdoc);
+      |                                ^~~~~~~~~
+      |                                |
+      |                                char *
+/opt/ovis/include/ovis_json/ovis_json.h:139:44: note: expected 'json_parser_t' {aka 'struct json_parser_s *'} but argument is of type 'char *'
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                              ~~~~~~~~~~~~~~^
+/opt/ovis/include/ovis_json/ovis_json.h:124:4: note: 'json_parser_t' declared here
+  124 | } *json_parser_t;
+      |    ^~~~~~~~~~~~~
+test_ovis_json.c:623:43: error: passing argument 2 of 'json_parse_buffer' makes pointer from integer without a cast [-Wint-conversion]
+  623 |         rc = json_parse_buffer(inval_str, strlen(inval_str), &pdoc);
+      |                                           ^~~~~~~~~~~~~~~~~
+      |                                           |
+      |                                           size_t {aka long unsigned int}
+/opt/ovis/include/ovis_json/ovis_json.h:139:53: note: expected 'char *' but argument is of type 'size_t' {aka 'long unsigned int'}
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                                               ~~~~~~^~~
+test_ovis_json.c:623:62: error: passing argument 3 of 'json_parse_buffer' makes integer from pointer without a cast [-Wint-conversion]
+  623 |         rc = json_parse_buffer(inval_str, strlen(inval_str), &pdoc);
+      |                                                              ^~~~~
+      |                                                              |
+      |                                                              int *
+/opt/ovis/include/ovis_json/ovis_json.h:139:65: note: expected 'size_t' {aka 'long unsigned int'} but argument is of type 'int *'
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                                                          ~~~~~~~^~~~~~~
+test_ovis_json.c:623:14: error: too few arguments to function 'json_parse_buffer'; expected 4, have 3
+  623 |         rc = json_parse_buffer(inval_str, strlen(inval_str), &pdoc);
+      |              ^~~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:139:12: note: declared here
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |            ^~~~~~~~~~~~~~~~~
+test_ovis_json.c: In function 'test_json_entity_copy':
+test_ovis_json.c:632:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  632 |         json_doc_t cdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:641:38: error: passing argument 1 of 'json_entity_copy' makes pointer from integer without a cast [-Wint-conversion]
+  641 |                 c = json_entity_copy(cdoc, exp[type]);
+      |                                      ^~~~
+      |                                      |
+      |                                      int
+/opt/ovis/include/ovis_json/ovis_json.h:186:53: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                                       ~~~~~~~~~~~~~~^
+test_ovis_json.c:641:21: error: too many arguments to function 'json_entity_copy'; expected 1, have 2
+  641 |                 c = json_entity_copy(cdoc, exp[type]);
+      |                     ^~~~~~~~~~~~~~~~       ~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:186:22: note: declared here
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                      ^~~~~~~~~~~~~~~~
+test_ovis_json.c: In function 'test_dict_apis':
+test_ovis_json.c:654:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  654 |         json_doc_t wdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c: In function 'test_dict_build':
+test_ovis_json.c:725:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  725 |         json_doc_t wdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:743:51: error: 'JSON_EOL_VALUE' undeclared (first use in this function); did you mean 'JSON_BOOL_VALUE'?
+  743 |                                 JSON_LIST_VALUE,  JSON_EOL_VALUE,
+      |                                                   ^~~~~~~~~~~~~~
+      |                                                   JSON_BOOL_VALUE
+test_ovis_json.c:733:29: error: passing argument 1 of 'json_dict_build' makes pointer from integer without a cast [-Wint-conversion]
+  733 |         d = json_dict_build(wdoc,
+      |                             ^~~~
+      |                             |
+      |                             int
+/opt/ovis/include/ovis_json/ovis_json.h:245:52: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  245 | extern json_entity_t json_dict_build(json_entity_t d, ...);
+      |                                      ~~~~~~~~~~~~~~^
+test_ovis_json.c:765:44: error: passing argument 1 of 'json_dict_build' makes pointer from integer without a cast [-Wint-conversion]
+  765 |         json_entity_t d2 = json_dict_build(wdoc,
+      |                                            ^~~~
+      |                                            |
+      |                                            int
+/opt/ovis/include/ovis_json/ovis_json.h:245:52: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  245 | extern json_entity_t json_dict_build(json_entity_t d, ...);
+      |                                      ~~~~~~~~~~~~~~^
+test_ovis_json.c:776:50: error: passing argument 1 of 'json_entity_copy' makes pointer from integer without a cast [-Wint-conversion]
+  776 |                                 json_entity_copy(wdoc, json_attr_value(attr)));
+      |                                                  ^~~~
+      |                                                  |
+      |                                                  int
+/opt/ovis/include/ovis_json/ovis_json.h:186:53: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                                       ~~~~~~~~~~~~~~^
+test_ovis_json.c:776:33: error: too many arguments to function 'json_entity_copy'; expected 1, have 2
+  776 |                                 json_entity_copy(wdoc, json_attr_value(attr)));
+      |                                 ^~~~~~~~~~~~~~~~       ~~~~~~~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:186:22: note: declared here
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                      ^~~~~~~~~~~~~~~~
+test_ovis_json.c:775:39: error: passing argument 2 of 'json_attr_add' from incompatible pointer type [-Wincompatible-pointer-types]
+  775 |                 rc = json_attr_add(d, json_attr_name(attr),
+      |                                       ^~~~~~~~~~~~~~~~~~~~
+      |                                       |
+      |                                       json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:297:55: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  297 | extern int json_attr_add(json_entity_t d, const char *name, json_entity_t v);
+      |                                           ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c: In function 'test_dict_merge':
+test_ovis_json.c:790:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  790 |         json_doc_t wdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:806:33: error: 'JSON_EOL_VALUE' undeclared (first use in this function); did you mean 'JSON_BOOL_VALUE'?
+  806 |                                 JSON_EOL_VALUE,
+      |                                 ^~~~~~~~~~~~~~
+      |                                 JSON_BOOL_VALUE
+test_ovis_json.c:797:30: error: passing argument 1 of 'json_dict_build' makes pointer from integer without a cast [-Wint-conversion]
+  797 |         d2 = json_dict_build(wdoc,
+      |                              ^~~~
+      |                              |
+      |                              int
+/opt/ovis/include/ovis_json/ovis_json.h:245:52: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  245 | extern json_entity_t json_dict_build(json_entity_t d, ...);
+      |                                      ~~~~~~~~~~~~~~^
+test_ovis_json.c:824:33: error: passing argument 2 of 'json_attr_add' from incompatible pointer type [-Wincompatible-pointer-types]
+  824 |                                 json_attr_name(a),
+      |                                 ^~~~~~~~~~~~~~~~~
+      |                                 |
+      |                                 json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:297:55: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  297 | extern int json_attr_add(json_entity_t d, const char *name, json_entity_t v);
+      |                                           ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c:829:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  829 |         json_doc_t cdoc = json_doc_new();
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:831:31: error: passing argument 1 of 'json_entity_copy' makes pointer from integer without a cast [-Wint-conversion]
+  831 |         d1 = json_entity_copy(cdoc, exp[DICT_VALUE]);
+      |                               ^~~~
+      |                               |
+      |                               int
+/opt/ovis/include/ovis_json/ovis_json.h:186:53: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                                       ~~~~~~~~~~~~~~^
+test_ovis_json.c:831:14: error: too many arguments to function 'json_entity_copy'; expected 1, have 2
+  831 |         d1 = json_entity_copy(cdoc, exp[DICT_VALUE]);
+      |              ^~~~~~~~~~~~~~~~       ~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:186:22: note: declared here
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                      ^~~~~~~~~~~~~~~~
+test_ovis_json.c:837:38: error: passing argument 1 of 'json_entity_copy' makes pointer from integer without a cast [-Wint-conversion]
+  837 |                 v = json_entity_copy(cdoc, json_attr_value(a));
+      |                                      ^~~~
+      |                                      |
+      |                                      int
+/opt/ovis/include/ovis_json/ovis_json.h:186:53: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                                       ~~~~~~~~~~~~~~^
+test_ovis_json.c:837:21: error: too many arguments to function 'json_entity_copy'; expected 1, have 2
+  837 |                 v = json_entity_copy(cdoc, json_attr_value(a));
+      |                     ^~~~~~~~~~~~~~~~       ~~~~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:186:22: note: declared here
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                      ^~~~~~~~~~~~~~~~
+test_ovis_json.c:839:40: error: passing argument 2 of 'json_attr_add' from incompatible pointer type [-Wincompatible-pointer-types]
+  839 |                 rc = json_attr_add(d1, json_attr_name(a), v);
+      |                                        ^~~~~~~~~~~~~~~~~
+      |                                        |
+      |                                        json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:297:55: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  297 | extern int json_attr_add(json_entity_t d, const char *name, json_entity_t v);
+      |                                           ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c: In function 'test_list_apis':
+test_ovis_json.c:855:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  855 |         json_doc_t wdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+make: *** [Makefile:73: /data/tada/lib/test_ovis_json] Error 1
+make: Leaving directory '/tada-src/C'
+
+2026-09-18 17:00:15,123 TADA INFO assertion 1, Call ovis_log_init() with valid arguments: skipped
+2026-09-18 17:00:15,123 TADA INFO assertion 2, Call ovis_log_init() with name = NULL: skipped
+2026-09-18 17:00:15,123 TADA INFO assertion 3, Call ovis_log_init() with an invalid level: skipped
+2026-09-18 17:00:15,123 TADA INFO assertion 4, Call ovis_log_init() with an invalid mode: skipped
+2026-09-18 17:00:15,124 TADA INFO assertion 7, Open the log file at a non-existing path: skipped
+2026-09-18 17:00:15,124 TADA INFO assertion 6, Log messages to a file: skipped
+2026-09-18 17:00:15,124 TADA INFO assertion 5, Log messages to stdout: skipped
+2026-09-18 17:00:15,124 TADA INFO assertion 8, Reopen the log file at another path: skipped
+2026-09-18 17:00:15,124 TADA INFO assertion 9, Convert 'DEBUG,INFO' integer to a string: skipped
+2026-09-18 17:00:15,124 TADA INFO assertion 10, Convert 'DEBUG,WARNING' integer to a string: skipped
+2026-09-18 17:00:15,124 TADA INFO assertion 11, Convert 'DEBUG,ERROR' integer to a string: skipped
+2026-09-18 17:00:15,124 TADA INFO assertion 12, Convert 'DEBUG,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,124 TADA INFO assertion 13, Convert 'INFO,WARNING' integer to a string: skipped
+2026-09-18 17:00:15,124 TADA INFO assertion 14, Convert 'INFO,ERROR' integer to a string: skipped
+2026-09-18 17:00:15,125 TADA INFO assertion 15, Convert 'INFO,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,125 TADA INFO assertion 16, Convert 'WARNING,ERROR' integer to a string: skipped
+2026-09-18 17:00:15,125 TADA INFO assertion 17, Convert 'WARNING,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,125 TADA INFO assertion 18, Convert 'ERROR,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,125 TADA INFO assertion 19, Convert 'DEBUG,INFO,WARNING' integer to a string: skipped
+2026-09-18 17:00:15,125 TADA INFO assertion 20, Convert 'DEBUG,INFO,ERROR' integer to a string: skipped
+2026-09-18 17:00:15,125 TADA INFO assertion 21, Convert 'DEBUG,INFO,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,125 TADA INFO assertion 22, Convert 'DEBUG,WARNING,ERROR' integer to a string: skipped
+2026-09-18 17:00:15,125 TADA INFO assertion 23, Convert 'DEBUG,WARNING,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,125 TADA INFO assertion 24, Convert 'DEBUG,ERROR,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,126 TADA INFO assertion 25, Convert 'INFO,WARNING,ERROR' integer to a string: skipped
+2026-09-18 17:00:15,126 TADA INFO assertion 26, Convert 'INFO,WARNING,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,126 TADA INFO assertion 27, Convert 'INFO,ERROR,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,126 TADA INFO assertion 28, Convert 'WARNING,ERROR,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,126 TADA INFO assertion 29, Convert 'DEBUG,INFO,WARNING,ERROR' integer to a string: skipped
+2026-09-18 17:00:15,126 TADA INFO assertion 30, Convert 'DEBUG,INFO,WARNING,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,126 TADA INFO assertion 31, Convert 'DEBUG,INFO,ERROR,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,126 TADA INFO assertion 32, Convert 'DEBUG,WARNING,ERROR,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,126 TADA INFO assertion 33, Convert 'INFO,WARNING,ERROR,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,126 TADA INFO assertion 34, Convert 'DEBUG,INFO,WARNING,ERROR,CRITICAL' integer to a string: skipped
+2026-09-18 17:00:15,126 TADA INFO assertion 35, Convert 'DEBUG,' integer to a string: skipped
+2026-09-18 17:00:15,127 TADA INFO assertion 36, Convert 'INFO,' integer to a string: skipped
+2026-09-18 17:00:15,127 TADA INFO assertion 37, Convert 'WARNING,' integer to a string: skipped
+2026-09-18 17:00:15,127 TADA INFO assertion 38, Convert 'ERROR,' integer to a string: skipped
+2026-09-18 17:00:15,127 TADA INFO assertion 39, Convert 'CRITICAL,' integer to a string: skipped
+2026-09-18 17:00:15,127 TADA INFO assertion 40, Convert an invalid integer to a level string: skipped
+2026-09-18 17:00:15,127 TADA INFO assertion 41, Convert the 'DEBUG,INFO' to an integer: skipped
+2026-09-18 17:00:15,127 TADA INFO assertion 42, Convert the 'DEBUG,WARNING' to an integer: skipped
+2026-09-18 17:00:15,127 TADA INFO assertion 43, Convert the 'DEBUG,ERROR' to an integer: skipped
+2026-09-18 17:00:15,127 TADA INFO assertion 44, Convert the 'DEBUG,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,127 TADA INFO assertion 45, Convert the 'INFO,WARNING' to an integer: skipped
+2026-09-18 17:00:15,128 TADA INFO assertion 46, Convert the 'INFO,ERROR' to an integer: skipped
+2026-09-18 17:00:15,128 TADA INFO assertion 47, Convert the 'INFO,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,128 TADA INFO assertion 48, Convert the 'WARNING,ERROR' to an integer: skipped
+2026-09-18 17:00:15,128 TADA INFO assertion 49, Convert the 'WARNING,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,128 TADA INFO assertion 50, Convert the 'ERROR,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,128 TADA INFO assertion 51, Convert the 'DEBUG,INFO,WARNING' to an integer: skipped
+2026-09-18 17:00:15,128 TADA INFO assertion 52, Convert the 'DEBUG,INFO,ERROR' to an integer: skipped
+2026-09-18 17:00:15,128 TADA INFO assertion 53, Convert the 'DEBUG,INFO,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,128 TADA INFO assertion 54, Convert the 'DEBUG,WARNING,ERROR' to an integer: skipped
+2026-09-18 17:00:15,128 TADA INFO assertion 55, Convert the 'DEBUG,WARNING,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,128 TADA INFO assertion 56, Convert the 'DEBUG,ERROR,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,129 TADA INFO assertion 57, Convert the 'INFO,WARNING,ERROR' to an integer: skipped
+2026-09-18 17:00:15,129 TADA INFO assertion 58, Convert the 'INFO,WARNING,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,129 TADA INFO assertion 59, Convert the 'INFO,ERROR,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,129 TADA INFO assertion 60, Convert the 'WARNING,ERROR,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,129 TADA INFO assertion 61, Convert the 'DEBUG,INFO,WARNING,ERROR' to an integer: skipped
+2026-09-18 17:00:15,129 TADA INFO assertion 62, Convert the 'DEBUG,INFO,WARNING,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,129 TADA INFO assertion 63, Convert the 'DEBUG,INFO,ERROR,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,129 TADA INFO assertion 64, Convert the 'DEBUG,WARNING,ERROR,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,129 TADA INFO assertion 65, Convert the 'INFO,WARNING,ERROR,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,129 TADA INFO assertion 66, Convert the 'DEBUG,INFO,WARNING,ERROR,CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,130 TADA INFO assertion 67, Convert the 'DEBUG,' to an integer: skipped
+2026-09-18 17:00:15,130 TADA INFO assertion 68, Convert the 'INFO,' to an integer: skipped
+2026-09-18 17:00:15,130 TADA INFO assertion 69, Convert the 'WARNING,' to an integer: skipped
+2026-09-18 17:00:15,130 TADA INFO assertion 70, Convert the 'ERROR,' to an integer: skipped
+2026-09-18 17:00:15,130 TADA INFO assertion 71, Convert the 'CRITICAL,' to an integer: skipped
+2026-09-18 17:00:15,130 TADA INFO assertion 72, Convert the 'DEBUG' to an integer: skipped
+2026-09-18 17:00:15,130 TADA INFO assertion 73, Convert the 'INFO' to an integer: skipped
+2026-09-18 17:00:15,130 TADA INFO assertion 74, Convert the 'WARNING' to an integer: skipped
+2026-09-18 17:00:15,130 TADA INFO assertion 75, Convert the 'ERROR' to an integer: skipped
+2026-09-18 17:00:15,130 TADA INFO assertion 76, Convert the 'CRITICAL' to an integer: skipped
+2026-09-18 17:00:15,130 TADA INFO assertion 77, Convert an invalid level string to an integer: skipped
+2026-09-18 17:00:15,131 TADA INFO assertion 78, Verify that no messages were printed when the level is QUIET.: skipped
+2026-09-18 17:00:15,131 TADA INFO assertion 79, Verify that messages of DEBUG,INFO were reported.: skipped
+2026-09-18 17:00:15,131 TADA INFO assertion 80, Verify that messages of DEBUG,WARNING were reported.: skipped
+2026-09-18 17:00:15,131 TADA INFO assertion 81, Verify that messages of DEBUG,ERROR were reported.: skipped
+2026-09-18 17:00:15,131 TADA INFO assertion 82, Verify that messages of DEBUG,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,131 TADA INFO assertion 83, Verify that messages of INFO,WARNING were reported.: skipped
+2026-09-18 17:00:15,131 TADA INFO assertion 84, Verify that messages of INFO,ERROR were reported.: skipped
+2026-09-18 17:00:15,131 TADA INFO assertion 85, Verify that messages of INFO,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,131 TADA INFO assertion 86, Verify that messages of WARNING,ERROR were reported.: skipped
+2026-09-18 17:00:15,131 TADA INFO assertion 87, Verify that messages of WARNING,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,132 TADA INFO assertion 88, Verify that messages of ERROR,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,132 TADA INFO assertion 89, Verify that messages of DEBUG,INFO,WARNING were reported.: skipped
+2026-09-18 17:00:15,132 TADA INFO assertion 90, Verify that messages of DEBUG,INFO,ERROR were reported.: skipped
+2026-09-18 17:00:15,132 TADA INFO assertion 91, Verify that messages of DEBUG,INFO,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,132 TADA INFO assertion 92, Verify that messages of DEBUG,WARNING,ERROR were reported.: skipped
+2026-09-18 17:00:15,132 TADA INFO assertion 93, Verify that messages of DEBUG,WARNING,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,132 TADA INFO assertion 94, Verify that messages of DEBUG,ERROR,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,132 TADA INFO assertion 95, Verify that messages of INFO,WARNING,ERROR were reported.: skipped
+2026-09-18 17:00:15,132 TADA INFO assertion 96, Verify that messages of INFO,WARNING,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,132 TADA INFO assertion 97, Verify that messages of INFO,ERROR,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,133 TADA INFO assertion 98, Verify that messages of WARNING,ERROR,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,133 TADA INFO assertion 99, Verify that messages of DEBUG,INFO,WARNING,ERROR were reported.: skipped
+2026-09-18 17:00:15,133 TADA INFO assertion 100, Verify that messages of DEBUG,INFO,WARNING,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,133 TADA INFO assertion 101, Verify that messages of DEBUG,INFO,ERROR,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,133 TADA INFO assertion 102, Verify that messages of DEBUG,WARNING,ERROR,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,133 TADA INFO assertion 103, Verify that messages of INFO,WARNING,ERROR,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,133 TADA INFO assertion 104, Verify that messages of DEBUG,INFO,WARNING,ERROR,CRITICAL were reported.: skipped
+2026-09-18 17:00:15,133 TADA INFO assertion 105, Verify that messages of DEBUG, were reported.: skipped
+2026-09-18 17:00:15,133 TADA INFO assertion 106, Verify that messages of INFO, were reported.: skipped
+2026-09-18 17:00:15,133 TADA INFO assertion 107, Verify that messages of WARNING, were reported.: skipped
+2026-09-18 17:00:15,134 TADA INFO assertion 108, Verify that messages of ERROR, were reported.: skipped
+2026-09-18 17:00:15,134 TADA INFO assertion 109, Verify that messages of CRITICAL, were reported.: skipped
+2026-09-18 17:00:15,134 TADA INFO assertion 110, Verify that messages of DEBUG were reported.: skipped
+2026-09-18 17:00:15,134 TADA INFO assertion 111, Verify that messages of INFO were reported.: skipped
+2026-09-18 17:00:15,134 TADA INFO assertion 112, Verify that messages of WARNING were reported.: skipped
+2026-09-18 17:00:15,134 TADA INFO assertion 113, Verify that messages of ERROR were reported.: skipped
+2026-09-18 17:00:15,134 TADA INFO assertion 114, Verify that messages of CRITICAL were reported.: skipped
+2026-09-18 17:00:15,134 TADA INFO assertion 116, Verify that ovis_log_close() works properly: skipped
+2026-09-18 17:00:15,134 TADA INFO assertion 115, Verify that applications can open, rename, and reopen log files to perform log rotation.: skipped
+2026-09-18 17:00:15,134 TADA INFO assertion 117, Test a ovis_log_register() call with valid arguments: skipped
+2026-09-18 17:00:15,135 TADA INFO assertion 118, Test a ovis_log_register() call with NULL name: skipped
+2026-09-18 17:00:15,135 TADA INFO assertion 119, Test a ovis_log_register() call with NULL desc: skipped
+2026-09-18 17:00:15,135 TADA INFO assertion 120, Test a ovis_log_register() call with an existing subsystem: skipped
+2026-09-18 17:00:15,135 TADA INFO assertion 122, Verify that messages of DEBUG,INFO were reported from a subsystem.: skipped
+2026-09-18 17:00:15,135 TADA INFO assertion 123, Verify that messages of DEBUG,WARNING were reported from a subsystem.: skipped
+2026-09-18 17:00:15,135 TADA INFO assertion 124, Verify that messages of DEBUG,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,135 TADA INFO assertion 125, Verify that messages of DEBUG,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,135 TADA INFO assertion 126, Verify that messages of INFO,WARNING were reported from a subsystem.: skipped
+2026-09-18 17:00:15,135 TADA INFO assertion 127, Verify that messages of INFO,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,135 TADA INFO assertion 128, Verify that messages of INFO,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,135 TADA INFO assertion 129, Verify that messages of WARNING,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,136 TADA INFO assertion 130, Verify that messages of WARNING,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,136 TADA INFO assertion 131, Verify that messages of ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,136 TADA INFO assertion 132, Verify that messages of DEBUG,INFO,WARNING were reported from a subsystem.: skipped
+2026-09-18 17:00:15,136 TADA INFO assertion 133, Verify that messages of DEBUG,INFO,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,136 TADA INFO assertion 134, Verify that messages of DEBUG,INFO,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,136 TADA INFO assertion 135, Verify that messages of DEBUG,WARNING,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,136 TADA INFO assertion 136, Verify that messages of DEBUG,WARNING,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,136 TADA INFO assertion 137, Verify that messages of DEBUG,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,136 TADA INFO assertion 138, Verify that messages of INFO,WARNING,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,136 TADA INFO assertion 139, Verify that messages of INFO,WARNING,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,137 TADA INFO assertion 140, Verify that messages of INFO,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,137 TADA INFO assertion 141, Verify that messages of WARNING,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,137 TADA INFO assertion 142, Verify that messages of DEBUG,INFO,WARNING,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,137 TADA INFO assertion 143, Verify that messages of DEBUG,INFO,WARNING,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,137 TADA INFO assertion 144, Verify that messages of DEBUG,INFO,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,137 TADA INFO assertion 145, Verify that messages of DEBUG,WARNING,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,137 TADA INFO assertion 146, Verify that messages of INFO,WARNING,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,137 TADA INFO assertion 147, Verify that messages of DEBUG,INFO,WARNING,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,137 TADA INFO assertion 148, Verify that messages of DEBUG, were reported from a subsystem.: skipped
+2026-09-18 17:00:15,137 TADA INFO assertion 149, Verify that messages of INFO, were reported from a subsystem.: skipped
+2026-09-18 17:00:15,137 TADA INFO assertion 150, Verify that messages of WARNING, were reported from a subsystem.: skipped
+2026-09-18 17:00:15,138 TADA INFO assertion 151, Verify that messages of ERROR, were reported from a subsystem.: skipped
+2026-09-18 17:00:15,138 TADA INFO assertion 152, Verify that messages of CRITICAL, were reported from a subsystem.: skipped
+2026-09-18 17:00:15,138 TADA INFO assertion 153, Verify that messages of DEBUG were reported from a subsystem.: skipped
+2026-09-18 17:00:15,138 TADA INFO assertion 154, Verify that messages of INFO were reported from a subsystem.: skipped
+2026-09-18 17:00:15,138 TADA INFO assertion 155, Verify that messages of WARNING were reported from a subsystem.: skipped
+2026-09-18 17:00:15,138 TADA INFO assertion 156, Verify that messages of ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,138 TADA INFO assertion 157, Verify that messages of CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,138 TADA INFO assertion 158, Verify that messages of DEBUG,INFO were reported from a subsystem.: skipped
+2026-09-18 17:00:15,138 TADA INFO assertion 159, Verify that messages of DEBUG,WARNING were reported from a subsystem.: skipped
+2026-09-18 17:00:15,138 TADA INFO assertion 160, Verify that messages of DEBUG,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,139 TADA INFO assertion 161, Verify that messages of DEBUG,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,139 TADA INFO assertion 162, Verify that messages of INFO,WARNING were reported from a subsystem.: skipped
+2026-09-18 17:00:15,139 TADA INFO assertion 163, Verify that messages of INFO,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,139 TADA INFO assertion 164, Verify that messages of INFO,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,139 TADA INFO assertion 165, Verify that messages of WARNING,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,139 TADA INFO assertion 166, Verify that messages of WARNING,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,139 TADA INFO assertion 167, Verify that messages of ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,139 TADA INFO assertion 168, Verify that messages of DEBUG,INFO,WARNING were reported from a subsystem.: skipped
+2026-09-18 17:00:15,139 TADA INFO assertion 169, Verify that messages of DEBUG,INFO,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,139 TADA INFO assertion 170, Verify that messages of DEBUG,INFO,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,140 TADA INFO assertion 171, Verify that messages of DEBUG,WARNING,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,140 TADA INFO assertion 172, Verify that messages of DEBUG,WARNING,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,140 TADA INFO assertion 173, Verify that messages of DEBUG,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,140 TADA INFO assertion 174, Verify that messages of INFO,WARNING,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,140 TADA INFO assertion 175, Verify that messages of INFO,WARNING,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,140 TADA INFO assertion 176, Verify that messages of INFO,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,140 TADA INFO assertion 177, Verify that messages of WARNING,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,140 TADA INFO assertion 178, Verify that messages of DEBUG,INFO,WARNING,ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,140 TADA INFO assertion 179, Verify that messages of DEBUG,INFO,WARNING,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,140 TADA INFO assertion 180, Verify that messages of DEBUG,INFO,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,141 TADA INFO assertion 181, Verify that messages of DEBUG,WARNING,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,141 TADA INFO assertion 182, Verify that messages of INFO,WARNING,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,141 TADA INFO assertion 183, Verify that messages of DEBUG,INFO,WARNING,ERROR,CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,141 TADA INFO assertion 184, Verify that messages of DEBUG, were reported from a subsystem.: skipped
+2026-09-18 17:00:15,141 TADA INFO assertion 185, Verify that messages of INFO, were reported from a subsystem.: skipped
+2026-09-18 17:00:15,141 TADA INFO assertion 186, Verify that messages of WARNING, were reported from a subsystem.: skipped
+2026-09-18 17:00:15,141 TADA INFO assertion 187, Verify that messages of ERROR, were reported from a subsystem.: skipped
+2026-09-18 17:00:15,141 TADA INFO assertion 188, Verify that messages of CRITICAL, were reported from a subsystem.: skipped
+2026-09-18 17:00:15,141 TADA INFO assertion 189, Verify that messages of DEBUG were reported from a subsystem.: skipped
+2026-09-18 17:00:15,141 TADA INFO assertion 190, Verify that messages of INFO were reported from a subsystem.: skipped
+2026-09-18 17:00:15,141 TADA INFO assertion 191, Verify that messages of WARNING were reported from a subsystem.: skipped
+2026-09-18 17:00:15,142 TADA INFO assertion 192, Verify that messages of ERROR were reported from a subsystem.: skipped
+2026-09-18 17:00:15,142 TADA INFO assertion 193, Verify that messages of CRITICAL were reported from a subsystem.: skipped
+2026-09-18 17:00:15,142 TADA INFO assertion 195, Verify that ovis_log_set_level_by_regex() returns an error when the given regular expression string is invalid.: skipped
+2026-09-18 17:00:15,142 TADA INFO assertion 194, Verify that ovis_log_set_level_by_regex() returns ENOENT when the given regular expression string doesn't match any logs.: skipped
+2026-09-18 17:00:15,142 TADA INFO assertion 196, Verify that ovis_log_set_level_by_regex() sets the level of the matched log subsystems to the given value.: skipped
+2026-09-18 17:00:15,142 TADA INFO assertion 197, Verify that ovis_log_list() works correctly.: skipped
+2026-09-18 17:00:15,142 TADA INFO test libovis_log_test ended
