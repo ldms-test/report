@@ -1,0 +1,370 @@
+/home/ldms-test/var/b4.5/ldms-test/ldmsd_stream_test:220: SyntaxWarning: invalid escape sequence '\<'
+  grep ':\<{port:04x}\>' /proc/net/tcp
+2026-09-18 16:46:37,481 TADA INFO starting test `ldmsd_stream_test`
+2026-09-18 16:46:37,481 TADA INFO   test-id: 9d658e9bd8510cdb46b9ca60d48fb4e58c0d0fa4054fdef9b1e317e0468cfb49
+2026-09-18 16:46:37,481 TADA INFO   test-suite: LDMSD
+2026-09-18 16:46:37,481 TADA INFO   test-name: ldmsd_stream_test
+2026-09-18 16:46:37,481 TADA INFO   test-user: ldms-test
+2026-09-18 16:46:37,481 TADA INFO   commit-id: ae40ba0c3b7b5307a8993aba2212e61af86a6cfb
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-test/ldmsd_stream_test", line 326, in <module>
+    raise RuntimeError("libtada build failed, output: {}".format(out))
+RuntimeError: libtada build failed, output: make: Entering directory '/tada-src/C'
+LDMSD_VERSRION 4.5.3.10-ae40b
+mkdir -p /data/tada/lib
+gcc -o /data/tada/lib/libutil.so -fPIC -shared util.c util.h -ggdb3 -O0
+mkdir -p /data/tada/lib
+gcc -o /data/tada/lib/libtada.so -fPIC -shared tada.c tada.h -ldl -pthread -lcrypto -ggdb3 -O0
+mkdir -p /data/tada/lib
+gcc -I /opt/ovis/include -o /data/tada/lib/libtest_stream_sampler.so -fPIC -shared \
+    test_stream_sampler.c -L/opt/ovis/lib -L/data/tada/lib -L/opt/ovis/lib64 \
+    -lldmsd_stream -lovis_util -lcoll -pthread -lovis_json -lovis_log -ltada \
+    -ggdb3 -O0
+ln -fs /data/tada/lib/libtest_stream_sampler.so /data/tada/lib/libtest_stream_sampler.so.0
+mkdir -p /data/tada/lib
+gcc -I /opt/ovis/include -o /data/tada/lib/test_ovis_ev \
+	test_ovis_ev.c -L/opt/ovis/lib -L/opt/ovis/lib64 -L/data/tada/lib \
+	-ltada -lutil \
+	-lovis_ev -pthread -ggdb3 -O0
+mkdir -p /data/tada/lib
+gcc -I /opt/ovis/include -o /data/tada/lib/test_ovis_json \
+	test_ovis_json.c -L/opt/ovis/lib -L/opt/ovis/lib64 -L/data/tada/lib \
+	-ltada -lutil \
+	-lcoll -lovis_json -ggdb3 -O0
+test_ovis_json.c: In function 'CREATE_EXPECTED_ENTITY':
+test_ovis_json.c:121:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  121 |         json_doc_t doc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:126:15: error: implicit declaration of function 'json_doc_new' [-Wimplicit-function-declaration]
+  126 |         doc = json_doc_new();
+      |               ^~~~~~~~~~~~
+test_ovis_json.c: In function 'FREE_EXPECTED_ENTITY':
+test_ovis_json.c:210:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  210 |         json_doc_t doc = (json_doc_t)(uintptr_t)exp[LAST_VALUE + 1];
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:210:27: error: 'json_doc_t' undeclared (first use in this function); did you mean 'json_loc_s'?
+  210 |         json_doc_t doc = (json_doc_t)(uintptr_t)exp[LAST_VALUE + 1];
+      |                           ^~~~~~~~~~
+      |                           json_loc_s
+test_ovis_json.c:210:27: note: each undeclared identifier is reported only once for each function it appears in
+test_ovis_json.c:210:39: error: expected expression before 'uintptr_t'
+  210 |         json_doc_t doc = (json_doc_t)(uintptr_t)exp[LAST_VALUE + 1];
+      |                                       ^~~~~~~~~
+test_ovis_json.c:210:49: error: expected ',' or ';' before 'exp'
+  210 |         json_doc_t doc = (json_doc_t)(uintptr_t)exp[LAST_VALUE + 1];
+      |                                                 ^~~
+test_ovis_json.c:211:9: error: implicit declaration of function 'json_doc_free'; did you mean 'json_dict_merge'? [-Wimplicit-function-declaration]
+  211 |         json_doc_free(doc);
+      |         ^~~~~~~~~~~~~
+      |         json_dict_merge
+test_ovis_json.c: In function 'is_same_entity':
+test_ovis_json.c:377:33: error: passing argument 1 of 'strcmp' from incompatible pointer type [-Wincompatible-pointer-types]
+  377 |                 if (0 != strcmp(json_attr_name(l), json_attr_name(r)))
+      |                                 ^~~~~~~~~~~~~~~~~
+      |                                 |
+      |                                 json_str_t {aka struct json_str_s *}
+In file included from /opt/ovis/include/ovis_json/ovis_json.h:52,
+                 from test_ovis_json.c:8:
+/usr/include/string.h:171:32: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  171 | extern int strcmp (const char *__s1, const char *__s2)
+      |                    ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c:377:52: error: passing argument 2 of 'strcmp' from incompatible pointer type [-Wincompatible-pointer-types]
+  377 |                 if (0 != strcmp(json_attr_name(l), json_attr_name(r)))
+      |                                                    ^~~~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    json_str_t {aka struct json_str_s *}
+/usr/include/string.h:171:50: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  171 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c:394:48: error: passing argument 2 of 'json_value_find' from incompatible pointer type [-Wincompatible-pointer-types]
+  394 |                         b = json_value_find(r, json_attr_name(a));
+      |                                                ^~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:274:67: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  274 | extern json_entity_t json_value_find(json_entity_t d, const char *name);
+      |                                                       ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c:404:48: error: passing argument 2 of 'json_value_find' from incompatible pointer type [-Wincompatible-pointer-types]
+  404 |                         a = json_value_find(l, json_attr_name(b));
+      |                                                ^~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:274:67: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  274 | extern json_entity_t json_value_find(json_entity_t d, const char *name);
+      |                                                       ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c: In function 'test_json_entity_new':
+test_ovis_json.c:425:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  425 |         json_doc_t tdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c: In function 'test_json_entity_dump':
+test_ovis_json.c:555:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  555 |         json_doc_t ddoc = json_doc_new();
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c: In function 'test_json_parse_buffer':
+test_ovis_json.c:575:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  575 |         json_doc_t pdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:605:22: error: assignment to 'int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+  605 |                 pdoc = NULL;
+      |                      ^
+test_ovis_json.c:606:43: error: passing argument 1 of 'json_parse_buffer' from incompatible pointer type [-Wincompatible-pointer-types]
+  606 |                 rc = json_parse_buffer(txt[type], strlen(txt[type]), &pdoc);
+      |                                        ~~~^~~~~~
+      |                                           |
+      |                                           char *
+/opt/ovis/include/ovis_json/ovis_json.h:139:44: note: expected 'json_parser_t' {aka 'struct json_parser_s *'} but argument is of type 'char *'
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                              ~~~~~~~~~~~~~~^
+/opt/ovis/include/ovis_json/ovis_json.h:124:4: note: 'json_parser_t' declared here
+  124 | } *json_parser_t;
+      |    ^~~~~~~~~~~~~
+test_ovis_json.c:606:51: error: passing argument 2 of 'json_parse_buffer' makes pointer from integer without a cast [-Wint-conversion]
+  606 |                 rc = json_parse_buffer(txt[type], strlen(txt[type]), &pdoc);
+      |                                                   ^~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   size_t {aka long unsigned int}
+/opt/ovis/include/ovis_json/ovis_json.h:139:53: note: expected 'char *' but argument is of type 'size_t' {aka 'long unsigned int'}
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                                               ~~~~~~^~~
+test_ovis_json.c:606:70: error: passing argument 3 of 'json_parse_buffer' makes integer from pointer without a cast [-Wint-conversion]
+  606 |                 rc = json_parse_buffer(txt[type], strlen(txt[type]), &pdoc);
+      |                                                                      ^~~~~
+      |                                                                      |
+      |                                                                      int *
+/opt/ovis/include/ovis_json/ovis_json.h:139:65: note: expected 'size_t' {aka 'long unsigned int'} but argument is of type 'int *'
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                                                          ~~~~~~~^~~~~~~
+test_ovis_json.c:606:22: error: too few arguments to function 'json_parse_buffer'; expected 4, have 3
+  606 |                 rc = json_parse_buffer(txt[type], strlen(txt[type]), &pdoc);
+      |                      ^~~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:139:12: note: declared here
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |            ^~~~~~~~~~~~~~~~~
+test_ovis_json.c:607:28: error: implicit declaration of function 'json_doc_root' [-Wimplicit-function-declaration]
+  607 |                 o = pdoc ? json_doc_root(pdoc) : NULL;
+      |                            ^~~~~~~~~~~~~
+test_ovis_json.c:607:48: error: pointer/integer type mismatch in conditional expression [-Wint-conversion]
+  607 |                 o = pdoc ? json_doc_root(pdoc) : NULL;
+      |                                                ^
+test_ovis_json.c:615:22: error: assignment to 'int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+  615 |                 pdoc = NULL;
+      |                      ^
+test_ovis_json.c:622:14: error: assignment to 'int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+  622 |         pdoc = NULL;
+      |              ^
+test_ovis_json.c:623:32: error: passing argument 1 of 'json_parse_buffer' from incompatible pointer type [-Wincompatible-pointer-types]
+  623 |         rc = json_parse_buffer(inval_str, strlen(inval_str), &pdoc);
+      |                                ^~~~~~~~~
+      |                                |
+      |                                char *
+/opt/ovis/include/ovis_json/ovis_json.h:139:44: note: expected 'json_parser_t' {aka 'struct json_parser_s *'} but argument is of type 'char *'
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                              ~~~~~~~~~~~~~~^
+/opt/ovis/include/ovis_json/ovis_json.h:124:4: note: 'json_parser_t' declared here
+  124 | } *json_parser_t;
+      |    ^~~~~~~~~~~~~
+test_ovis_json.c:623:43: error: passing argument 2 of 'json_parse_buffer' makes pointer from integer without a cast [-Wint-conversion]
+  623 |         rc = json_parse_buffer(inval_str, strlen(inval_str), &pdoc);
+      |                                           ^~~~~~~~~~~~~~~~~
+      |                                           |
+      |                                           size_t {aka long unsigned int}
+/opt/ovis/include/ovis_json/ovis_json.h:139:53: note: expected 'char *' but argument is of type 'size_t' {aka 'long unsigned int'}
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                                               ~~~~~~^~~
+test_ovis_json.c:623:62: error: passing argument 3 of 'json_parse_buffer' makes integer from pointer without a cast [-Wint-conversion]
+  623 |         rc = json_parse_buffer(inval_str, strlen(inval_str), &pdoc);
+      |                                                              ^~~~~
+      |                                                              |
+      |                                                              int *
+/opt/ovis/include/ovis_json/ovis_json.h:139:65: note: expected 'size_t' {aka 'long unsigned int'} but argument is of type 'int *'
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |                                                          ~~~~~~~^~~~~~~
+test_ovis_json.c:623:14: error: too few arguments to function 'json_parse_buffer'; expected 4, have 3
+  623 |         rc = json_parse_buffer(inval_str, strlen(inval_str), &pdoc);
+      |              ^~~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:139:12: note: declared here
+  139 | extern int json_parse_buffer(json_parser_t p, char *buf, size_t buf_len, json_entity_t *e);
+      |            ^~~~~~~~~~~~~~~~~
+test_ovis_json.c: In function 'test_json_entity_copy':
+test_ovis_json.c:632:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  632 |         json_doc_t cdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:641:38: error: passing argument 1 of 'json_entity_copy' makes pointer from integer without a cast [-Wint-conversion]
+  641 |                 c = json_entity_copy(cdoc, exp[type]);
+      |                                      ^~~~
+      |                                      |
+      |                                      int
+/opt/ovis/include/ovis_json/ovis_json.h:186:53: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                                       ~~~~~~~~~~~~~~^
+test_ovis_json.c:641:21: error: too many arguments to function 'json_entity_copy'; expected 1, have 2
+  641 |                 c = json_entity_copy(cdoc, exp[type]);
+      |                     ^~~~~~~~~~~~~~~~       ~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:186:22: note: declared here
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                      ^~~~~~~~~~~~~~~~
+test_ovis_json.c: In function 'test_dict_apis':
+test_ovis_json.c:654:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  654 |         json_doc_t wdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c: In function 'test_dict_build':
+test_ovis_json.c:725:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  725 |         json_doc_t wdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:743:51: error: 'JSON_EOL_VALUE' undeclared (first use in this function); did you mean 'JSON_BOOL_VALUE'?
+  743 |                                 JSON_LIST_VALUE,  JSON_EOL_VALUE,
+      |                                                   ^~~~~~~~~~~~~~
+      |                                                   JSON_BOOL_VALUE
+test_ovis_json.c:733:29: error: passing argument 1 of 'json_dict_build' makes pointer from integer without a cast [-Wint-conversion]
+  733 |         d = json_dict_build(wdoc,
+      |                             ^~~~
+      |                             |
+      |                             int
+/opt/ovis/include/ovis_json/ovis_json.h:245:52: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  245 | extern json_entity_t json_dict_build(json_entity_t d, ...);
+      |                                      ~~~~~~~~~~~~~~^
+test_ovis_json.c:765:44: error: passing argument 1 of 'json_dict_build' makes pointer from integer without a cast [-Wint-conversion]
+  765 |         json_entity_t d2 = json_dict_build(wdoc,
+      |                                            ^~~~
+      |                                            |
+      |                                            int
+/opt/ovis/include/ovis_json/ovis_json.h:245:52: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  245 | extern json_entity_t json_dict_build(json_entity_t d, ...);
+      |                                      ~~~~~~~~~~~~~~^
+test_ovis_json.c:776:50: error: passing argument 1 of 'json_entity_copy' makes pointer from integer without a cast [-Wint-conversion]
+  776 |                                 json_entity_copy(wdoc, json_attr_value(attr)));
+      |                                                  ^~~~
+      |                                                  |
+      |                                                  int
+/opt/ovis/include/ovis_json/ovis_json.h:186:53: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                                       ~~~~~~~~~~~~~~^
+test_ovis_json.c:776:33: error: too many arguments to function 'json_entity_copy'; expected 1, have 2
+  776 |                                 json_entity_copy(wdoc, json_attr_value(attr)));
+      |                                 ^~~~~~~~~~~~~~~~       ~~~~~~~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:186:22: note: declared here
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                      ^~~~~~~~~~~~~~~~
+test_ovis_json.c:775:39: error: passing argument 2 of 'json_attr_add' from incompatible pointer type [-Wincompatible-pointer-types]
+  775 |                 rc = json_attr_add(d, json_attr_name(attr),
+      |                                       ^~~~~~~~~~~~~~~~~~~~
+      |                                       |
+      |                                       json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:297:55: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  297 | extern int json_attr_add(json_entity_t d, const char *name, json_entity_t v);
+      |                                           ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c: In function 'test_dict_merge':
+test_ovis_json.c:790:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  790 |         json_doc_t wdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:806:33: error: 'JSON_EOL_VALUE' undeclared (first use in this function); did you mean 'JSON_BOOL_VALUE'?
+  806 |                                 JSON_EOL_VALUE,
+      |                                 ^~~~~~~~~~~~~~
+      |                                 JSON_BOOL_VALUE
+test_ovis_json.c:797:30: error: passing argument 1 of 'json_dict_build' makes pointer from integer without a cast [-Wint-conversion]
+  797 |         d2 = json_dict_build(wdoc,
+      |                              ^~~~
+      |                              |
+      |                              int
+/opt/ovis/include/ovis_json/ovis_json.h:245:52: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  245 | extern json_entity_t json_dict_build(json_entity_t d, ...);
+      |                                      ~~~~~~~~~~~~~~^
+test_ovis_json.c:824:33: error: passing argument 2 of 'json_attr_add' from incompatible pointer type [-Wincompatible-pointer-types]
+  824 |                                 json_attr_name(a),
+      |                                 ^~~~~~~~~~~~~~~~~
+      |                                 |
+      |                                 json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:297:55: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  297 | extern int json_attr_add(json_entity_t d, const char *name, json_entity_t v);
+      |                                           ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c:829:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  829 |         json_doc_t cdoc = json_doc_new();
+      |         ^~~~~~~~~~
+      |         json_dict_t
+test_ovis_json.c:831:31: error: passing argument 1 of 'json_entity_copy' makes pointer from integer without a cast [-Wint-conversion]
+  831 |         d1 = json_entity_copy(cdoc, exp[DICT_VALUE]);
+      |                               ^~~~
+      |                               |
+      |                               int
+/opt/ovis/include/ovis_json/ovis_json.h:186:53: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                                       ~~~~~~~~~~~~~~^
+test_ovis_json.c:831:14: error: too many arguments to function 'json_entity_copy'; expected 1, have 2
+  831 |         d1 = json_entity_copy(cdoc, exp[DICT_VALUE]);
+      |              ^~~~~~~~~~~~~~~~       ~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:186:22: note: declared here
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                      ^~~~~~~~~~~~~~~~
+test_ovis_json.c:837:38: error: passing argument 1 of 'json_entity_copy' makes pointer from integer without a cast [-Wint-conversion]
+  837 |                 v = json_entity_copy(cdoc, json_attr_value(a));
+      |                                      ^~~~
+      |                                      |
+      |                                      int
+/opt/ovis/include/ovis_json/ovis_json.h:186:53: note: expected 'json_entity_t' {aka 'struct json_entity_s *'} but argument is of type 'int'
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                                       ~~~~~~~~~~~~~~^
+test_ovis_json.c:837:21: error: too many arguments to function 'json_entity_copy'; expected 1, have 2
+  837 |                 v = json_entity_copy(cdoc, json_attr_value(a));
+      |                     ^~~~~~~~~~~~~~~~       ~~~~~~~~~~~~~~~~~~
+/opt/ovis/include/ovis_json/ovis_json.h:186:22: note: declared here
+  186 | extern json_entity_t json_entity_copy(json_entity_t e);
+      |                      ^~~~~~~~~~~~~~~~
+test_ovis_json.c:839:40: error: passing argument 2 of 'json_attr_add' from incompatible pointer type [-Wincompatible-pointer-types]
+  839 |                 rc = json_attr_add(d1, json_attr_name(a), v);
+      |                                        ^~~~~~~~~~~~~~~~~
+      |                                        |
+      |                                        json_str_t {aka struct json_str_s *}
+/opt/ovis/include/ovis_json/ovis_json.h:297:55: note: expected 'const char *' but argument is of type 'json_str_t' {aka 'struct json_str_s *'}
+  297 | extern int json_attr_add(json_entity_t d, const char *name, json_entity_t v);
+      |                                           ~~~~~~~~~~~~^~~~
+/opt/ovis/include/ovis_json/ovis_json.h:57:28: note: 'json_str_t' declared here
+   57 | typedef struct json_str_s *json_str_t;
+      |                            ^~~~~~~~~~
+test_ovis_json.c: In function 'test_list_apis':
+test_ovis_json.c:855:9: error: unknown type name 'json_doc_t'; did you mean 'json_dict_t'?
+  855 |         json_doc_t wdoc;
+      |         ^~~~~~~~~~
+      |         json_dict_t
+make: *** [Makefile:73: /data/tada/lib/test_ovis_json] Error 1
+make: Leaving directory '/tada-src/C'
+
+2026-09-18 16:46:51,798 TADA INFO assertion 1, ldmsd_stream_subscribe receives large json streams: skipped
+2026-09-18 16:46:51,798 TADA INFO assertion 2, samplerd receives large json streams: skipped
+2026-09-18 16:46:51,798 TADA INFO assertion 3, agg receives large json streams: skipped
+2026-09-18 16:46:51,798 TADA INFO assertion 4, ldmsd_stream_subscribe receives small json streams: skipped
+2026-09-18 16:46:51,798 TADA INFO assertion 5, samplerd receives small json streams: skipped
+2026-09-18 16:46:51,798 TADA INFO assertion 6, agg receives small json streams: skipped
+2026-09-18 16:46:51,798 TADA INFO assertion 7, ldmsd_stream_subscribe receives large string streams: skipped
+2026-09-18 16:46:51,798 TADA INFO assertion 8, samplerd receives large string streams: skipped
+2026-09-18 16:46:51,798 TADA INFO assertion 9, agg receives large string streams: skipped
+2026-09-18 16:46:51,799 TADA INFO assertion 10, ldmsd_stream_subscribe receives small string streams: skipped
+2026-09-18 16:46:51,799 TADA INFO assertion 11, samplerd receives small string streams: skipped
+2026-09-18 16:46:51,799 TADA INFO assertion 12, agg receives small string streams: skipped
+2026-09-18 16:46:51,799 TADA INFO test ldmsd_stream_test ended
