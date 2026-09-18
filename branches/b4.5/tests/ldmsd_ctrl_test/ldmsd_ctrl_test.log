@@ -1,0 +1,33 @@
+/home/ldms-test/var/b4.5/ldms-test/ldmsd_ctrl_test:381: SyntaxWarning: invalid escape sequence '\s'
+  if not re.match(".*\sCONNECTED.*", out[3]) \
+/home/ldms-test/var/b4.5/ldms-test/ldmsd_ctrl_test:382: SyntaxWarning: invalid escape sequence '\s'
+  or not re.match("node-1/meminfo\s.*\sREADY\s*.*", out[4]):
+/home/ldms-test/var/b4.5/ldms-test/ldmsd_ctrl_test:389: SyntaxWarning: invalid escape sequence '\s'
+  if not re.match("updtr\s+.*\sRUNNING\s*.*", out[3]) \
+/home/ldms-test/var/b4.5/ldms-test/ldmsd_ctrl_test:390: SyntaxWarning: invalid escape sequence '\s'
+  or not re.match("prdcr\s+.*\sCONNECTED.*", out[4]):
+2026-09-18 16:23:29,035 TADA INFO starting test `ldmsd_ctrl_test`
+2026-09-18 16:23:29,035 TADA INFO   test-id: 84b2b60b19f80fc309de630023add4b3ca3e53f68bbfe59a5b42550b26e55a89
+2026-09-18 16:23:29,035 TADA INFO   test-suite: LDMSD
+2026-09-18 16:23:29,035 TADA INFO   test-name: ldmsd_ctrl_test
+2026-09-18 16:23:29,035 TADA INFO   test-user: ldms-test
+2026-09-18 16:23:29,035 TADA INFO   commit-id: ae40ba0c3b7b5307a8993aba2212e61af86a6cfb
+2026-09-18 16:23:29,035 __main__ INFO -- Get or create the cluster --
+2026-09-18 16:23:42,601 __main__ INFO -- Start daemons --
+2026-09-18 16:24:05,584 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-18 16:24:11,688 TADA INFO assertion 1, ldmsd_controller interactive session: connected, passed
+2026-09-18 16:24:12,791 TADA INFO assertion 2, ldmsctl interactive session: connected, passed
+2026-09-18 16:24:13,391 TADA INFO assertion 3, ldmsd_controller start bogus producer: Unexpected output: prdcr_start name=bogus
+Error starting prdcr bogus: The producer specified does not exist.
+sock:agg-11:10000> , failed
+2026-09-18 16:24:13,992 TADA INFO assertion 4, ldmsctl start bogus producer: expected output verified, passed
+2026-09-18 16:24:14,593 TADA INFO assertion 5, ldmsd_controller bogus command: expected output verified, passed
+2026-09-18 16:24:15,193 TADA INFO assertion 6, ldmsctl bogus command: expected output verified, passed
+2026-09-18 16:24:15,794 TADA INFO assertion 7, ldmsd_controller load bogus plugin: Unexpected output: load name=bogus
+Error 2 plugin 'bogus': failed to load the plugin, dlerror: /opt/ovis/lib64/ovis-ldms/libbogus.so: cannot open shared object file: No such file or directory
+
+sock:agg-11:10000> , failed
+2026-09-18 16:24:16,394 TADA INFO assertion 8, ldmsctl load bogus plugin: expected output verified, passed
+2026-09-18 16:24:33,513 TADA INFO assertion 9, ldmsd_controller prdcr/updtr: verified, passed
+2026-09-18 16:24:50,631 TADA INFO assertion 10, ldmsctl prdcr/updtr: verified, passed
+2026-09-18 16:24:50,632 TADA INFO test ldmsd_ctrl_test ended
