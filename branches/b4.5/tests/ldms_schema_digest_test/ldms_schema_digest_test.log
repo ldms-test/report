@@ -1,0 +1,18 @@
+2026-09-21 10:53:10,418 TADA INFO starting test `ldms_schema_digest_test`
+2026-09-21 10:53:10,419 TADA INFO   test-id: 419030e37d18d627590e1c5ecc04f7e480727ff4681349c5ee9c299339fb22ad
+2026-09-21 10:53:10,419 TADA INFO   test-suite: LDMSD
+2026-09-21 10:53:10,419 TADA INFO   test-name: ldms_schema_digest_test
+2026-09-21 10:53:10,419 TADA INFO   test-user: ldms-test
+2026-09-21 10:53:10,419 TADA INFO   commit-id: ae40ba0c3b7b5307a8993aba2212e61af86a6cfb
+2026-09-21 10:53:10,419 __main__ INFO -- Get or create the cluster --
+2026-09-21 10:53:22,194 __main__ INFO -- Start daemons --
+2026-09-21 10:53:37,660 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-21 10:53:42,752 TADA INFO assertion 1, No schema digest from ldms_ls -v sampler: verified, passed
+2026-09-21 10:53:42,839 TADA INFO assertion 2, Schema digest from ldms_ls -vv sampler is not empty: verified, passed
+2026-09-21 10:53:42,927 TADA INFO assertion 3, Schema digest from ldms_ls -vv agg-1 is not empty: verified, passed
+2026-09-21 10:53:43,046 TADA INFO assertion 4, Schema digest from Python ldms dir agg-1 is not empty: verified, passed
+2026-09-21 10:53:43,047 TADA INFO assertion 5, Schema digest from Python ldms lokoup agg-1 is not empty: verified, passed
+2026-09-21 10:53:43,047 TADA INFO assertion 6, All digests of the same set are the same: , passed
+2026-09-21 10:53:45,399 TADA INFO assertion 7, Sets of same schema yield the same digest: check, passed
+2026-09-21 10:53:45,399 TADA INFO assertion 8, Different schema (1-off metric) yield different digest: check, passed
+2026-09-21 10:53:45,400 TADA INFO test ldms_schema_digest_test ended
