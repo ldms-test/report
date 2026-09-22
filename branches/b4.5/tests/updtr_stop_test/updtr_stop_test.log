@@ -1,0 +1,23 @@
+2026-09-22 04:59:08,280 __main__ INFO -- Get or create the cluster --
+2026-09-22 04:59:08,280 TADA INFO starting test `updtr_add test`
+2026-09-22 04:59:08,280 TADA INFO   test-id: 83eab999cc29c32ad85a2e707d32726e1ebc5289ebd66f50b033edc5f4b8bc4c
+2026-09-22 04:59:08,280 TADA INFO   test-suite: LDMSD
+2026-09-22 04:59:08,280 TADA INFO   test-name: updtr_add test
+2026-09-22 04:59:08,280 TADA INFO   test-user: ldms-test
+2026-09-22 04:59:08,280 TADA INFO   commit-id: ae40ba0c3b7b5307a8993aba2212e61af86a6cfb
+2026-09-22 04:59:08,310 __main__ INFO -- Start daemons --
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-test/updtr_stop_test", line 242, in <module>
+    cluster.make_known_hosts()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ldms-test/var/b4.5/ldms-test/LDMS_Test.py", line 2242, in make_known_hosts
+    ks = self.ssh_keyscan()
+  File "/home/ldms-test/var/b4.5/ldms-test/LDMS_Test.py", line 2232, in ssh_keyscan
+    hosts = reduce(lambda x,y: x+y,
+                     ([c.hostname, c.ip_addr] + c.aliases \
+                                         for c in self.containers) )
+TypeError: reduce() of empty iterable with no initial value
+2026-09-22 04:59:08,313 TADA INFO assertion 1, Send updtr_stop for a non-existing updater: skipped
+2026-09-22 04:59:08,313 TADA INFO assertion 2, Send updtr_stop to a running updater: skipped
+2026-09-22 04:59:08,313 TADA INFO assertion 3, Send updtr_stop to a stopped updater: skipped
+2026-09-22 04:59:08,313 TADA INFO test updtr_add test ended
