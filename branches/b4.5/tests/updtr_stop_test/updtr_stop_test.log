@@ -1,10 +1,10 @@
-2026-09-22 07:37:12,190 __main__ INFO -- Get or create the cluster --
-2026-09-22 07:37:12,190 TADA INFO starting test `updtr_add test`
-2026-09-22 07:37:12,190 TADA INFO   test-id: f1aacc81b20f5b69130dbccc90aae95b73f9793734c4bb78018b859ede838d1d
-2026-09-22 07:37:12,190 TADA INFO   test-suite: LDMSD
-2026-09-22 07:37:12,190 TADA INFO   test-name: updtr_add test
-2026-09-22 07:37:12,190 TADA INFO   test-user: ldms-test
-2026-09-22 07:37:12,190 TADA INFO   commit-id: ae40ba0c3b7b5307a8993aba2212e61af86a6cfb
+2026-09-22 07:53:06,102 __main__ INFO -- Get or create the cluster --
+2026-09-22 07:53:06,102 TADA INFO starting test `updtr_add test`
+2026-09-22 07:53:06,102 TADA INFO   test-id: e3cc30add20bdb1111bba783a783e0441f6d2df9709672e0240f63d7c1e8856b
+2026-09-22 07:53:06,102 TADA INFO   test-suite: LDMSD
+2026-09-22 07:53:06,102 TADA INFO   test-name: updtr_add test
+2026-09-22 07:53:06,102 TADA INFO   test-user: ldms-test
+2026-09-22 07:53:06,102 TADA INFO   commit-id: ae40ba0c3b7b5307a8993aba2212e61af86a6cfb
 Traceback (most recent call last):
   File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
     response.raise_for_status()
@@ -87,7 +87,7 @@ Traceback (most recent call last):
   File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
     raise cls(e, response=response, explanation=explanation) from e
 docker.errors.APIError: 409 Client Error for http+docker://localhost/v1.51/containers/create?name=ldms-test-updtr_stop_test-ae40ba0-sampler-1: Conflict ("Conflict. The container name "/ldms-test-updtr_stop_test-ae40ba0-sampler-1" is already in use by container "2f368c82dc3c555fcf09cbaf5856d6daae390337e6b3e88b0aaf226da5dcd799". You have to remove (or rename) that container to be able to reuse that name.")
-2026-09-22 07:37:17,639 TADA INFO assertion 1, Send updtr_stop for a non-existing updater: skipped
-2026-09-22 07:37:17,639 TADA INFO assertion 2, Send updtr_stop to a running updater: skipped
-2026-09-22 07:37:17,639 TADA INFO assertion 3, Send updtr_stop to a stopped updater: skipped
-2026-09-22 07:37:17,639 TADA INFO test updtr_add test ended
+2026-09-22 07:53:11,528 TADA INFO assertion 1, Send updtr_stop for a non-existing updater: skipped
+2026-09-22 07:53:11,528 TADA INFO assertion 2, Send updtr_stop to a running updater: skipped
+2026-09-22 07:53:11,528 TADA INFO assertion 3, Send updtr_stop to a stopped updater: skipped
+2026-09-22 07:53:11,528 TADA INFO test updtr_add test ended
