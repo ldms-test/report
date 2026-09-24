@@ -1,0 +1,26 @@
+2026-09-24 04:34:57,925 TADA INFO starting test `prdcr_subscribe_test`
+2026-09-24 04:34:57,926 TADA INFO   test-id: a2971a39aa570c871811e70184dcff77cb10fcd91d19a14c4bdaae6c8c11d9a8
+2026-09-24 04:34:57,926 TADA INFO   test-suite: LDMSD
+2026-09-24 04:34:57,926 TADA INFO   test-name: prdcr_subscribe_test
+2026-09-24 04:34:57,926 TADA INFO   test-user: ldms-test
+2026-09-24 04:34:57,926 TADA INFO   commit-id: 8a74b02e2d0901168e9b3e25b9256dd50602b2db
+2026-09-24 04:35:50,863 TADA INFO assertion 0, ldmsd_stream_publish of JSON data to stream-sampler-1 succeeds: verify JSON data, passed
+2026-09-24 04:35:50,863 TADA INFO assertion 1, ldmsd_stream_publish of STRING data to stream-sampler-1 succeeds: verify STRING data, passed
+2026-09-24 04:35:50,863 TADA INFO assertion 2, ldmsd_stream_publish to JSON data to stream-sampler-2 succeeds: verify JSON data, passed
+2026-09-24 04:35:50,864 TADA INFO assertion 3, ldmsd_stream_publish of STRING data to stream-sampler-2 succeeds: verify STRING data, passed
+2026-09-24 04:35:50,864 TADA INFO assertion 4, ldmsd_stream data check on agg-2: agg2 stream data verification, passed
+2026-09-24 04:35:51,014 TADA INFO assertion 5, Stopping the producers succeeds: rc == 0, passed
+2026-09-24 04:35:51,161 TADA INFO assertion 6, Restarting the producers succeeds: rc == 0, passed
+2026-09-24 04:35:58,758 TADA INFO assertion 7, JSON stream data resumes after producer restart on stream-sampler-1: verify JSON data, passed
+2026-09-24 04:35:58,759 TADA INFO assertion 8, STRING stream data resumes after producer rerestart on stream-sampler-1: verify STRING data, passed
+2026-09-24 04:35:58,759 TADA INFO assertion 9, JSON stream data resumes after producer restart on stream-sampler-2: verify JSON data, passed
+2026-09-24 04:35:58,759 TADA INFO assertion 10, STRING stream data resumes after producer rerestart on stream-sampler-2: verify STRING data, passed
+2026-09-24 04:35:58,759 TADA INFO assertion 11, ldmsd_stream data resume check on agg-2: agg2 stream data verification, passed
+2026-09-24 04:35:59,854 TADA INFO assertion 12, stream-sampler-1 is not running: (running == False), passed
+2026-09-24 04:36:03,086 TADA INFO assertion 13, stream-sampler-1 has restarted: (running == True), passed
+2026-09-24 04:36:10,399 TADA INFO assertion 14, JSON stream data resumes after stream-sampler-1 restart: verify JSON data, passed
+2026-09-24 04:36:10,399 TADA INFO assertion 15, STRING stream data resumes after stream-sampler-1 restart: verify STRING data, passed
+2026-09-24 04:36:10,399 TADA INFO assertion 16, ldmsd_stream data check on agg-2 after stream-sampler-1 restart: agg2 stream data verification, passed
+2026-09-24 04:36:10,542 TADA INFO assertion 17, agg-1 unsubscribes stream-sampler-1: rc == 0, passed
+2026-09-24 04:36:13,270 TADA INFO assertion 18, agg-1 receives data only from stream-sampler-2: data verified, passed
+2026-09-24 04:36:13,272 TADA INFO test prdcr_subscribe_test ended
