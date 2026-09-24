@@ -1,0 +1,23 @@
+2026-09-24 05:06:52,579 TADA INFO starting test `ldms_set_info_test`
+2026-09-24 05:06:52,579 TADA INFO   test-id: 479bde7702b9fac22b108f20a14ce490003e72b0604adb2fc31339b280ee2675
+2026-09-24 05:06:52,579 TADA INFO   test-suite: LDMSD
+2026-09-24 05:06:52,579 TADA INFO   test-name: ldms_set_info_test
+2026-09-24 05:06:52,579 TADA INFO   test-user: ldms-test
+2026-09-24 05:06:52,579 TADA INFO   commit-id: 8a74b02e2d0901168e9b3e25b9256dd50602b2db
+2026-09-24 05:06:52,579 TADA INFO assertion 1, Adding set info key value pairs : -, passed
+2026-09-24 05:06:52,579 TADA INFO assertion 2, Reset value of an existing pair : -, passed
+2026-09-24 05:06:52,579 TADA INFO assertion 3, Get a value : -, passed
+2026-09-24 05:06:52,580 TADA INFO assertion 4, Unset a pair : -, passed
+2026-09-24 05:06:52,580 TADA INFO assertion 5, Traverse the local set info : -, passed
+2026-09-24 05:06:52,580 TADA INFO assertion 6, Verifying the set info at the 1st level : -, passed
+2026-09-24 05:06:52,580 TADA INFO assertion 7, Server resetting a key : -, passed
+2026-09-24 05:06:52,580 TADA INFO assertion 8, Server unset a key : -, passed
+2026-09-24 05:06:52,580 TADA INFO assertion 9, Server add a key : -, passed
+2026-09-24 05:06:52,580 TADA INFO assertion 10, Adding a key : -, passed
+2026-09-24 05:06:52,580 TADA INFO assertion 11, Add a key that is already in the remote list : -, passed
+2026-09-24 05:06:52,581 TADA INFO assertion 12, Unset a key that appears in both local and remote list : -, passed
+2026-09-24 05:06:52,581 TADA INFO assertion 13, Verifying the set_info at the 2nd level : -, passed
+2026-09-24 05:06:52,581 TADA INFO assertion 14, Test set info propagation: resetting a key on the set origin : -, passed
+2026-09-24 05:06:52,581 TADA INFO assertion 15, Test set info propagation: unsetting a key on the set origin : -, passed
+2026-09-24 05:06:52,581 TADA INFO assertion 16, Test set info propagation: adding a key on the set origin : -, passed
+2026-09-24 05:06:52,582 TADA INFO test ldms_set_info_test ended
