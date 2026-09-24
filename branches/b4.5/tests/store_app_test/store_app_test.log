@@ -1,0 +1,16 @@
+2026-09-24 04:10:56,749 TADA INFO starting test `store_app_test`
+2026-09-24 04:10:56,749 TADA INFO   test-id: 061f68060159dfcd0c33a82ff9486b165ce36176e92521cdc450437822388815
+2026-09-24 04:10:56,749 TADA INFO   test-suite: LDMSD
+2026-09-24 04:10:56,749 TADA INFO   test-name: store_app_test
+2026-09-24 04:10:56,749 TADA INFO   test-user: ldms-test
+2026-09-24 04:10:56,749 TADA INFO   commit-id: 8a74b02e2d0901168e9b3e25b9256dd50602b2db
+2026-09-24 04:10:56,750 __main__ INFO -- Get or create the cluster --
+2026-09-24 04:11:14,273 __main__ INFO -- Preparing job script & programs --
+2026-09-24 04:11:14,453 __main__ INFO -- Start daemons --
+2026-09-24 04:11:54,263 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-24 04:11:59,264 __main__ INFO -- Submitting jobs --
+2026-09-24 04:11:59,328 __main__ INFO job_one: 1
+2026-09-24 04:12:04,437 __main__ INFO job_two: 2
+2026-09-24 04:12:12,970 __main__ INFO Verifying data ...
+2026-09-24 04:13:07,137 TADA INFO assertion 1, Verify data: sos data is not empty and sos data < ldms_ls data, passed
+2026-09-24 04:13:07,138 TADA INFO test store_app_test ended
