@@ -1,0 +1,25 @@
+/home/ldms-test/var/main/ldms-test/ldmsd_decomp_static_op_test:519: SyntaxWarning: invalid escape sequence '\['
+  VA_RE = re.compile('([^[]+)\[(.*)\]')
+2026-09-24 02:20:48,829 TADA INFO starting test `ldmsd_decomp_static_op_test`
+2026-09-24 02:20:48,829 TADA INFO   test-id: 0b65a35115503556a5e172c356ae2c73e6b74b3933ae210fce7506b9ac098355
+2026-09-24 02:20:48,829 TADA INFO   test-suite: LDMSD
+2026-09-24 02:20:48,829 TADA INFO   test-name: ldmsd_decomp_static_op_test
+2026-09-24 02:20:48,829 TADA INFO   test-user: ldms-test
+2026-09-24 02:20:48,829 TADA INFO   commit-id: 87ef88cb365b92a06e50a1b7972c20cc6266c822
+2026-09-24 02:20:48,829 __main__ INFO -- Get or create the cluster --
+2026-09-24 02:21:07,796 __main__ INFO -- Start daemons --
+2026-09-24 02:21:47,925 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-24 02:22:25,860 TADA INFO assertion 1, `static` decomposition, ldms_test_op sos schema check: OK, passed
+2026-09-24 02:22:25,860 TADA INFO assertion 2, `static` decomposition, record_op sos schema check: OK, passed
+2026-09-24 02:22:25,860 TADA INFO assertion 3, `static` decomposition, ldms_test_op csv schema check: OK, passed
+2026-09-24 02:22:25,860 TADA INFO assertion 4, `static` decomposition, record_op csv schema check: OK, passed
+2026-09-24 02:22:25,861 TADA INFO assertion 5, `static` decomposition, ldms_test_op kafka schema check: OK, passed
+2026-09-24 02:22:25,861 TADA INFO assertion 6, `static` decomposition, record_op kafka schema check: OK, passed
+2026-09-24 02:22:25,863 TADA INFO assertion 7, `static` decomposition, ldms_test_op sos data check: OK, passed
+2026-09-24 02:22:25,867 TADA INFO assertion 8, `static` decomposition, record_op sos data check: OK, passed
+2026-09-24 02:22:25,868 TADA INFO assertion 9, `static` decomposition, ldms_test_op csv data check: OK, passed
+2026-09-24 02:22:25,872 TADA INFO assertion 10, `static` decomposition, record_op csv data check: OK, passed
+2026-09-24 02:22:25,873 TADA INFO assertion 11, `static` decomposition, ldms_test_op kafka data check: OK, passed
+2026-09-24 02:22:25,875 TADA INFO assertion 12, `static` decomposition, record_op kafka data check: OK, passed
+2026-09-24 02:22:25,875 TADA INFO test ldmsd_decomp_static_op_test ended
+2026-09-24 02:22:25,876 TADA INFO test ldmsd_decomp_static_op_test ended
