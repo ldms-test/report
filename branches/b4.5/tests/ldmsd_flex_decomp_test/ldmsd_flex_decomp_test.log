@@ -1,0 +1,53 @@
+2026-09-24 05:04:47,257 TADA INFO starting test `ldmsd_flex_decomp_test`
+2026-09-24 05:04:47,257 TADA INFO   test-id: 16484f2702df5c1976f87320ddf849c99e33497cb61b944b81be0ca9fddaa37c
+2026-09-24 05:04:47,257 TADA INFO   test-suite: LDMSD
+2026-09-24 05:04:47,257 TADA INFO   test-name: ldmsd_flex_decomp_test
+2026-09-24 05:04:47,257 TADA INFO   test-user: ldms-test
+2026-09-24 05:04:47,257 TADA INFO   commit-id: 8a74b02e2d0901168e9b3e25b9256dd50602b2db
+2026-09-24 05:04:47,258 __main__ INFO -- Get or create the cluster --
+2026-09-24 05:05:06,615 __main__ INFO -- Start daemons --
+2026-09-24 05:05:46,881 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-24 05:06:28,505 TADA INFO assertion 1, test_sampler_95772b6 sos schema check: OK, passed
+2026-09-24 05:06:28,506 TADA INFO assertion 2, record_sampler_e1f021f sos schema check: OK, passed
+2026-09-24 05:06:28,506 TADA INFO assertion 3, fill sos schema check: OK, passed
+2026-09-24 05:06:28,506 TADA INFO assertion 4, filter sos schema check: OK, passed
+2026-09-24 05:06:28,506 TADA INFO assertion 5, record sos schema check: OK, passed
+2026-09-24 05:06:28,506 TADA INFO assertion 6, meta_test sos schema check: OK, passed
+2026-09-24 05:06:28,506 TADA INFO assertion 7, meta_record sos schema check: OK, passed
+2026-09-24 05:06:28,506 TADA INFO assertion 8, test_sampler_95772b6 csv schema check: OK, passed
+2026-09-24 05:06:28,507 TADA INFO assertion 9, record_sampler_e1f021f csv schema check: OK, passed
+2026-09-24 05:06:28,507 TADA INFO assertion 10, fill csv schema check: OK, passed
+2026-09-24 05:06:28,507 TADA INFO assertion 11, filter csv schema check: OK, passed
+2026-09-24 05:06:28,507 TADA INFO assertion 12, record csv schema check: OK, passed
+2026-09-24 05:06:28,507 TADA INFO assertion 13, meta_test csv schema check: OK, passed
+2026-09-24 05:06:28,507 TADA INFO assertion 14, meta_record csv schema check: OK, passed
+2026-09-24 05:06:28,507 TADA INFO assertion 15, test_sampler_95772b6 kafka schema check: OK, passed
+2026-09-24 05:06:28,507 TADA INFO assertion 16, record_sampler_e1f021f kafka schema check: OK, passed
+2026-09-24 05:06:28,508 TADA INFO assertion 17, fill kafka schema check: OK, passed
+2026-09-24 05:06:28,508 TADA INFO assertion 18, filter kafka schema check: OK, passed
+2026-09-24 05:06:28,508 TADA INFO assertion 19, record kafka schema check: OK, passed
+2026-09-24 05:06:28,508 TADA INFO assertion 20, meta_test kafka schema check: OK, passed
+2026-09-24 05:06:28,508 TADA INFO assertion 21, meta_record kafka schema check: OK, passed
+2026-09-24 05:06:28,509 TADA INFO assertion 22, test_sampler_95772b6 sos data check: OK, passed
+2026-09-24 05:06:28,528 TADA INFO assertion 23, record_sampler_e1f021f sos data check: OK, passed
+2026-09-24 05:06:28,529 TADA INFO assertion 24, fill sos data check: OK, passed
+2026-09-24 05:06:28,530 TADA INFO assertion 25, filter sos data check: OK, passed
+2026-09-24 05:06:28,532 TADA INFO assertion 26, record sos data check: OK, passed
+2026-09-24 05:06:28,533 TADA INFO assertion 27, meta_test sos data check: OK, passed
+2026-09-24 05:06:28,534 TADA INFO assertion 28, meta_record sos data check: OK, passed
+2026-09-24 05:06:28,534 TADA INFO assertion 29, test_sampler_95772b6 csv data check: OK, passed
+2026-09-24 05:06:28,552 TADA INFO assertion 30, record_sampler_e1f021f csv data check: OK, passed
+2026-09-24 05:06:28,553 TADA INFO assertion 31, fill csv data check: OK, passed
+2026-09-24 05:06:28,553 TADA INFO assertion 32, filter csv data check: OK, passed
+2026-09-24 05:06:28,555 TADA INFO assertion 33, record csv data check: OK, passed
+2026-09-24 05:06:28,556 TADA INFO assertion 34, meta_test csv data check: OK, passed
+2026-09-24 05:06:28,557 TADA INFO assertion 35, meta_record csv data check: OK, passed
+2026-09-24 05:06:28,557 TADA INFO assertion 36, test_sampler_95772b6 kafka data check: OK, passed
+2026-09-24 05:06:28,563 TADA INFO assertion 37, record_sampler_e1f021f kafka data check: OK, passed
+2026-09-24 05:06:28,563 TADA INFO assertion 38, fill kafka data check: OK, passed
+2026-09-24 05:06:28,563 TADA INFO assertion 39, filter kafka data check: OK, passed
+2026-09-24 05:06:28,564 TADA INFO assertion 40, record kafka data check: OK, passed
+2026-09-24 05:06:28,564 TADA INFO assertion 41, meta_test kafka data check: OK, passed
+2026-09-24 05:06:28,565 TADA INFO assertion 42, meta_record kafka data check: OK, passed
+2026-09-24 05:06:28,565 TADA INFO test ldmsd_flex_decomp_test ended
+2026-09-24 05:06:28,567 TADA INFO test ldmsd_flex_decomp_test ended
