@@ -55,7 +55,7 @@ details[open] summary::after {
 
 {% assign status_url = r.url | replace: "report.html", "status.json" %}
 
-[![status](https://img.shields.io/endpoint?url={{io_url}}{{status_url}})]({{r.url}})
+[![status](https://img.shields.io/endpoint?url={{io_url}}{{status_url}})]({{r.url | relative_path}})
 
 {%- capture summary -%}
 Total passed: <b><span style="color:{{color}}">{{passed}}</span> / {{total}}</b>
