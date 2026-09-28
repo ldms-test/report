@@ -3,11 +3,11 @@ layout: none
 type: status_json
 branch: b4.5
 ldmsCommitId: 8a74b02e2d0901168e9b3e25b9256dd50602b2db
-testCommitId: 
+testCommitId: 87039354b5fd9b996c947569561b15a45a3ea28c
 ldmsCommitId8: 8a74b02e
-testCommitId8: 
-status: "build succeeded"
-ts: 1790607377
+testCommitId8: 87039354
+status: "testing"
+ts: 1790607385
 ---
 
 {% include status.json %}
