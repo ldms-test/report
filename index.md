@@ -76,7 +76,7 @@ Total passed: <b><span style="color:{{color}}">{{passed}}</span> / {{total}}</b>
 {%-   endif -%}
 {%-   if logLink > 0 -%}
 {%-     capture link -%}
-([log](reports/{{t.branch}}/{{t.ldmsCommitId8}}/tests/{{t.name}}/{{t.name}}.log))
+([log]({{t.url | relative_url | replace: "info.html", t.name | append: ".log"}}))
 {%-    endcapture -%}
 {%-   else -%}
 {%-     assign link = "" -%}
