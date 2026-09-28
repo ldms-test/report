@@ -32,7 +32,7 @@
 {%   assign color = "green" %}
 {% endif %}
 * \[{{r.ts | date: "%Y-%m-%d %H:%M:%S"}}\]
-  [{{r.ldmsCommitId8}}]({{r.url}})
+  [{{r.ldmsCommitId8}}]({{r.url | relative_url}})
   <span style="color:{{color}}">**{{passed}}**</span> / **{{total}}**
 
 {% endfor %}
