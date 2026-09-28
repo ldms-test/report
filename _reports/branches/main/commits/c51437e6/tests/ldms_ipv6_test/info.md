@@ -1,7 +1,0 @@
----
-type: test
-branch: main
-ldmsCommitId8: c51437e6
-name: ldms_ipv6_test
-status: passed
----
