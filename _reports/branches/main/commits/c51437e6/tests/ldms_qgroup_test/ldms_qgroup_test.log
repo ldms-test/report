@@ -1,0 +1,42 @@
+2026-09-27 22:27:47,790 TADA INFO starting test `ldms_qgroup_test`
+2026-09-27 22:27:47,790 TADA INFO   test-id: 24bdc54d6dcdec24ebfe891dd1af317a0304ad2c634590977e90f1d37c8a54bd
+2026-09-27 22:27:47,790 TADA INFO   test-suite: LDMSD
+2026-09-27 22:27:47,790 TADA INFO   test-name: ldms_qgroup_test
+2026-09-27 22:27:47,790 TADA INFO   test-user: narate
+2026-09-27 22:27:47,790 TADA INFO   commit-id: c51437e64a06b49add408dfc43b181d386383e5b
+2026-09-27 22:27:47,790 __main__ INFO -- Get or create the cluster --
+2026-09-27 22:28:10,320 __main__ INFO -- Start daemons --
+2026-09-27 22:28:13,741 __main__ INFO ... wait a bit to make sure daemons are up
+2026-09-27 22:28:15,741 root INFO starting python /tada-src/python/ldms_qgroup_samp.py on narate-ldms_qgroup_test-c51437e-samp1 
+2026-09-27 22:28:17,943 root INFO starting python /tada-src/python/ldms_qgroup_samp.py on narate-ldms_qgroup_test-c51437e-samp2 
+2026-09-27 22:28:20,145 root INFO starting python /tada-src/python/ldms_qgroup_samp.py on narate-ldms_qgroup_test-c51437e-samp3 
+2026-09-27 22:28:22,346 root INFO starting python /tada-src/python/ldms_qgroup_samp.py on narate-ldms_qgroup_test-c51437e-samp4 
+2026-09-27 22:28:24,548 root INFO starting python /tada-src/python/ldms_qgroup_samp.py on narate-ldms_qgroup_test-c51437e-samp5 
+2026-09-27 22:28:26,750 root INFO starting python /tada-src/python/ldms_qgroup_samp.py on narate-ldms_qgroup_test-c51437e-samp6 
+2026-09-27 22:28:29,952 root INFO starting python /tada-src/python/ldms_qgroup_agg1.py on narate-ldms_qgroup_test-c51437e-agg11 
+2026-09-27 22:28:32,154 root INFO starting python /tada-src/python/ldms_qgroup_agg1.py on narate-ldms_qgroup_test-c51437e-agg12 
+2026-09-27 22:28:34,355 root INFO starting python /tada-src/python/ldms_qgroup_agg1.py on narate-ldms_qgroup_test-c51437e-agg13 
+2026-09-27 22:28:37,557 root INFO starting python /tada-src/python/ldms_qgroup_agg2.py on narate-ldms_qgroup_test-c51437e-agg2 
+2026-09-27 22:28:40,759 root INFO starting python /tada-src/python/ldms_qgroup_app.py on narate-ldms_qgroup_test-c51437e-samp1 
+2026-09-27 22:28:42,962 root INFO starting python /tada-src/python/ldms_qgroup_app.py on narate-ldms_qgroup_test-c51437e-samp2 
+2026-09-27 22:28:45,163 root INFO starting python /tada-src/python/ldms_qgroup_app.py on narate-ldms_qgroup_test-c51437e-samp3 
+2026-09-27 22:28:47,365 root INFO starting python /tada-src/python/ldms_qgroup_app.py on narate-ldms_qgroup_test-c51437e-samp4 
+2026-09-27 22:28:49,567 root INFO starting python /tada-src/python/ldms_qgroup_app.py on narate-ldms_qgroup_test-c51437e-samp5 
+2026-09-27 22:28:51,769 root INFO starting python /tada-src/python/ldms_qgroup_app.py on narate-ldms_qgroup_test-c51437e-samp6 
+2026-09-27 22:28:54,971 __main__ INFO -- starting app publisher --
+2026-09-27 22:28:57,973 __main__ INFO -- Wait a minute to get data flow (without limit) --
+2026-09-27 22:30:02,978 __main__ INFO -- Wait a minute to get data flow (with limit) --
+2026-09-27 22:31:33,479 __main__ INFO -- stopping app publisher --
+2026-09-27 22:31:36,481 __main__ INFO -- wait a bit to make sure the published data is flushed --
+2026-09-27 22:31:41,482 __main__ INFO -- collecting logs --
+2026-09-27 22:31:41,702 TADA INFO assertion 1, Throughput without limit: bps: 1741.9333333333334, OK, passed
+2026-09-27 22:31:41,702 TADA INFO assertion 2, Data received after quota: OK, passed
+2026-09-27 22:31:41,703 TADA INFO assertion 3, Throughput with limit: bps: 615.7666666666667, limit: 768.0, OK, passed
+2026-09-27 22:31:41,703 TADA INFO assertion 4, Check data loss: No data missing, passed
+2026-09-27 22:31:41,703 TADA INFO assertion 5, Check starvation: OK, passed
+2026-09-27 22:31:41,703 __main__ INFO -- ramp up app1 for saturation test --
+2026-09-27 22:31:42,203 __main__ INFO -- starting app1 publisher again (for saturation test) --
+2026-09-27 22:31:42,704 __main__ INFO -- Wait a minute to get data flow (with limit) --
+2026-09-27 22:32:43,204 __main__ INFO -- stopping app1 publisher --
+2026-09-27 22:32:43,705 TADA INFO assertion 6, Single publisher saturation test: good saturation bps: 462.0 in expected range [409.6, 512.0] (cfg_bps: 768.0), passed
+2026-09-27 22:32:43,706 TADA INFO test ldms_qgroup_test ended
