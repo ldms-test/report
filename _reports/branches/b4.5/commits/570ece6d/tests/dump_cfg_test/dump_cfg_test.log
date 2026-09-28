@@ -1,0 +1,19 @@
+2026-09-03 12:05:47,097 TADA INFO starting test `dump_cfg_test`
+2026-09-03 12:05:47,097 TADA INFO   test-id: 7d5c4caa0aab528cf54d9ff51cb503b105f9ff5f163e001754dbde9f108349b8
+2026-09-03 12:05:47,097 TADA INFO   test-suite: LDMSD
+2026-09-03 12:05:47,097 TADA INFO   test-name: dump_cfg_test
+2026-09-03 12:05:47,097 TADA INFO   test-user: ldms-test
+2026-09-03 12:05:47,098 TADA INFO   commit-id: 570ece6d2f6c3e7c6a4ce170341c765c51c8badc
+2026-09-03 12:05:47,098 __main__ INFO -- Get or create the cluster --
+2026-09-03 12:06:00,738 __main__ INFO -- Start daemons --
+2026-09-03 12:06:26,649 __main__ INFO -- Begin the test --
+2026-09-03 12:06:28,994 TADA INFO assertion 1.1, Specify the command-line options: The generated configuration is as expected., passed
+2026-09-03 12:06:31,378 TADA INFO assertion 1.2, Specify host at the command-line: The generated configuration is as expected., passed
+2026-09-03 12:06:33,760 TADA INFO assertion 1.3, Specify auth_opt at the command-line: The generated configuration is as expected., passed
+2026-09-03 12:06:36,197 TADA INFO assertion 2.1, Specify the command-line options in a configuration file: The generated configuration is as expected., passed
+2026-09-03 12:06:38,636 TADA INFO assertion 3.1, Sampler configuration commands: The generated configuration is as expected., passed
+2026-09-03 12:06:41,073 TADA INFO assertion 3.2, Sampler configuration commands with plugin-specific attributes: The generated configuration is as expected., passed
+2026-09-03 12:06:43,556 TADA INFO assertion 4.1, Simple aggregator configuration commands: The generated configuration is as expected., passed
+2026-09-03 12:06:45,993 TADA INFO assertion 5.1, prdcr_subscribe configuration commands: The generated configuration is as expected., passed
+2026-09-03 12:06:46,036 __main__ INFO --- done ---
+2026-09-03 12:06:46,038 TADA INFO test dump_cfg_test ended

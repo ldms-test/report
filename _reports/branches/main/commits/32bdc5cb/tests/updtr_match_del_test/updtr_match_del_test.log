@@ -1,0 +1,19 @@
+2026-09-18 15:26:01,200 __main__ INFO -- Get or create the cluster --
+2026-09-18 15:26:01,200 TADA INFO starting test `updtr_add test`
+2026-09-18 15:26:01,200 TADA INFO   test-id: 4c7862da4a0cb1c29b2bbbe09fdb52d517662758e5a4e1964d2fe36aba7d22f7
+2026-09-18 15:26:01,200 TADA INFO   test-suite: LDMSD
+2026-09-18 15:26:01,200 TADA INFO   test-name: updtr_add test
+2026-09-18 15:26:01,200 TADA INFO   test-user: ldms-test
+2026-09-18 15:26:01,200 TADA INFO   commit-id: 32bdc5cb2a0c45c842adf960aaaefc8fb8c8a847
+2026-09-18 15:26:12,935 __main__ INFO -- Start daemons --
+2026-09-18 15:26:35,576 __main__ INFO Waiting ... for all LDMSDs to start
+2026-09-18 15:26:35,706 __main__ INFO All LDMSDs are up.
+2026-09-18 15:26:35,852 TADA INFO assertion 1, Send updtr_match_del with an invalid regex: report(rc = 2) == expect(rc = 22), passed
+2026-09-18 15:26:35,994 TADA INFO assertion 2, Send updtr_match_del to a non-existing updater: report(rc = 2) == expect(rc = 2), passed
+2026-09-18 15:26:36,136 TADA INFO assertion 3, Send updtr_match_del with a non-existing inst match: report(rc = 2) == expect(rc = 2), passed
+2026-09-18 15:26:36,277 TADA INFO assertion 4, Send updtr_match_del with a non-existing schema match: report(rc = 2) == expect(rc = 2), passed
+2026-09-18 15:26:36,421 TADA INFO assertion 5, Send updater_match_del with an invalid match type: report(rc = 22) == expect(rc = 22), passed
+2026-09-18 15:26:36,562 TADA INFO assertion 6, Send updater_match_del with a valid regex of the inst type: report(rc = 0) == expect(rc = 0), passed
+2026-09-18 15:26:36,705 TADA INFO assertion 7, Send updater_match_del with a valid regex of the schema type: report(rc = 0) == expect(rc = 0), passed
+2026-09-18 15:26:36,705 __main__ INFO --- done ---
+2026-09-18 15:26:36,706 TADA INFO test updtr_add test ended

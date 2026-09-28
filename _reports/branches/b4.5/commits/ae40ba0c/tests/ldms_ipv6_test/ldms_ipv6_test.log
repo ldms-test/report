@@ -1,0 +1,21 @@
+/home/ldms-test/var/b4.5/ldms-test/ldms_ipv6_test:277: SyntaxWarning: invalid escape sequence '\s'
+  ADDR_RE = re.compile("Address\s+:\s+([^\n]+)\n")
+2026-09-22 05:26:22,507 TADA INFO starting test `ldms_ipv6_test`
+2026-09-22 05:26:22,507 TADA INFO   test-id: 5830ce0d5176bfe58184b3d452e448567794fd8a2e450e155e443bf9a62e4cb5
+2026-09-22 05:26:22,507 TADA INFO   test-suite: LDMSD
+2026-09-22 05:26:22,507 TADA INFO   test-name: ldms_ipv6_test
+2026-09-22 05:26:22,507 TADA INFO   test-user: ldms-test
+2026-09-22 05:26:22,507 TADA INFO   commit-id: ae40ba0c3b7b5307a8993aba2212e61af86a6cfb
+2026-09-22 05:26:22,507 __main__ INFO -- Get or create the cluster --
+2026-09-22 05:26:34,689 __main__ INFO -- Start daemons --
+2026-09-22 05:26:58,227 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-22 05:27:00,228 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldms_ipv6_test-ae40ba0-samp 
+2026-09-22 05:27:02,430 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldms_ipv6_test-ae40ba0-agg-2 
+2026-09-22 05:27:06,717 TADA INFO assertion 1, ldms_ls to samp using IPv6: expecting ['fdf9:db0c:4963::5'], got ['fdf9:db0c:4963::5'], passed
+2026-09-22 05:27:06,806 TADA INFO assertion 2, ldms_ls to agg-2 using IPv6: expecting ['fdf9:db0c:4963::5'], got ['fdf9:db0c:4963::5'], passed
+2026-09-22 05:27:06,806 TADA INFO assertion 3, ldms_ls to agg-2 contains 'samp/meminfo': samp/meminfo found, passed
+2026-09-22 05:27:09,807 TADA INFO assertion 4, python msg publish using IPv6: verified, passed
+2026-09-22 05:27:12,809 TADA INFO assertion 5, python msg subscribe using IPv6: verified, passed
+2026-09-22 05:27:13,310 TADA INFO assertion 6, steam data contain IPv6 addressing: expecting fdf9:db0c:4963::5, got fdf9:db0c:4963::5, passed
+2026-09-22 05:27:13,478 TADA INFO assertion 7, msg stats reported IPv6 addresses: Expecting fdf9:db0c:4963::3, got fdf9:db0c:4963::3, passed
+2026-09-22 05:27:13,479 TADA INFO test ldms_ipv6_test ended

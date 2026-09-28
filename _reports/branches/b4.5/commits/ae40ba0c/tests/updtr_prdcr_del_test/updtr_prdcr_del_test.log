@@ -1,0 +1,16 @@
+2026-09-22 04:56:55,625 __main__ INFO -- Get or create the cluster --
+2026-09-22 04:56:55,625 TADA INFO starting test `updtr_add test`
+2026-09-22 04:56:55,625 TADA INFO   test-id: da9ee03759ea4d842af13ec39359e09e2461ff05b2491d4ca6167829f74b8c13
+2026-09-22 04:56:55,625 TADA INFO   test-suite: LDMSD
+2026-09-22 04:56:55,625 TADA INFO   test-name: updtr_add test
+2026-09-22 04:56:55,625 TADA INFO   test-user: ldms-test
+2026-09-22 04:56:55,625 TADA INFO   commit-id: ae40ba0c3b7b5307a8993aba2212e61af86a6cfb
+2026-09-22 04:57:07,449 __main__ INFO -- Start daemons --
+2026-09-22 04:57:30,098 __main__ INFO Waiting ... for all LDMSDs to start
+2026-09-22 04:57:30,243 __main__ INFO All LDMSDs are up.
+2026-09-22 04:57:30,386 TADA INFO assertion 1, Send updtr_prdcr_del with an invalid regex: report(rc = 22) == expect(rc = 22), passed
+2026-09-22 04:57:30,530 TADA INFO assertion 2, Send updtr_prdcr_del to a running updater: report(rc = 16) == expect(rc = 16), passed
+2026-09-22 04:57:30,670 TADA INFO assertion 3, Send updtr_prdcr_del to a non-existing updater: report(rc = 2) == expect(rc = 2), passed
+2026-09-22 04:57:30,953 TADA INFO assertion 4, Send updtr_prdcr_del successfully: report(rc = 0, status = [{'name': 'all', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': [{'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}]) == expect(rc = 0, status = [{'name': 'all', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': [{'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}], passed
+2026-09-22 04:57:30,953 __main__ INFO --- done ---
+2026-09-22 04:57:30,954 TADA INFO test updtr_add test ended
