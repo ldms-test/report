@@ -53,7 +53,7 @@ details[open] summary::after {
 
 ## {{r.branch}} ({{r.ldmsCommitId8}})
 
-{% assign status_url = r.url | replace: "report.html", "status.json" | relative_url %}
+{% assign status_url = r.url | replace: "report.html", "status.json" %}
 
 [![status](https://img.shields.io/endpoint?url={{io_url}}{{status_url}})]({{r.url}})
 
