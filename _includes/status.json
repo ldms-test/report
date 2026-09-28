@@ -1,0 +1,51 @@
+{%-
+  assign tests = site.reports
+    | where: "branch", page.branch
+    | where: "ldmsCommitId8", page.ldmsCommitId8
+    | where: "type", "test"
+-%}
+{%- assign passed = 0 -%}
+{%- assign failed = 0 -%}
+{%- assign queued = 0 -%}
+{%- assign total = 0 -%}
+{%- for t in tests -%}
+{%-   assign total = total | plus: 1 -%}
+{%-   if t.status == "passed" -%}
+{%-     assign passed = passed | plus: 1 -%}
+{%-   elsif t.status == "queued" -%}
+{%-     assign queued = queued | plus: 1 -%}
+{%-   elsif t.status == "failed" -%}
+{%-     assign failed = failed | plus: 1 -%}
+{%-   endif -%}
+{%- endfor -%}
+
+{%- assign x = 0 -%}
+{%- if page.status == "building" -%}
+{%-   assign color = "blue" -%}
+{%- elsif queued > 0 -%}
+{%-   assign color = "blue" -%}
+{%-   assign processed = passed | plus: failed -%}
+{%-   assign x = processed -%}
+{%- elsif failed > 0 -%}
+{%-   assign color = "red" -%}
+{%-   assign x = passed -%}
+{%- else -%}
+{%-   assign color = "green" -%}
+{%-   assign x = passed -%}
+{%- endif -%}
+{%- capture label -%}
+ldms {{page.branch}} ({{page.ldmsCommitId8}}) w/ ldms-test ({{page.testCommitId8}})
+{%- endcapture -%}
+{%- capture message -%}
+{{page.status}} {{x}}/{{total}}
+{%- endcapture -%}
+
+{
+  "schemaVersion": 1,
+  "passed": "{{passed}}",
+  "failed": "{{failed}}",
+  "queued": "{{queued}}",
+  "label": "{{label}}",
+  "message": "{{message}}",
+  "color": "{{color}}"
+}
