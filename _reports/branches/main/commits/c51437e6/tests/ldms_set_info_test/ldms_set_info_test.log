@@ -1,0 +1,36 @@
+2026-09-27 22:37:34,217 TADA INFO starting test `ldms_set_info_test`
+2026-09-27 22:37:34,217 TADA INFO   test-id: cab3f45c80a9ee9b01293aedc618319465c3c3ce1640731e7afd569be8096c3c
+2026-09-27 22:37:34,217 TADA INFO   test-suite: LDMSD
+2026-09-27 22:37:34,217 TADA INFO   test-name: ldms_set_info_test
+2026-09-27 22:37:34,217 TADA INFO   test-user: narate
+2026-09-27 22:37:34,217 TADA INFO   commit-id: c51437e64a06b49add408dfc43b181d386383e5b
+2026-09-27 22:37:34,218 TADA INFO assertion 1, Adding set info key value pairs : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 2, Reset value of an existing pair : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 3, Get a value : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 4, Unset a pair : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 5, Traverse the local set info : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 6, Verifying the set info at the 1st level : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 7, Server resetting a key : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 8, Server unset a key : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 9, Server add a key : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 10, Adding a key : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 11, Add a key that is already in the remote list : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 12, Unset a key that appears in both local and remote list : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 13, Verifying the set_info at the 2nd level : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 14, Test set info propagation: resetting a key on the set origin : -, passed
+2026-09-27 22:37:34,218 TADA INFO assertion 15, Test set info propagation: unsetting a key on the set origin : -, passed
+2026-09-27 22:37:34,219 TADA INFO assertion 16, Test set info propagation: adding a key on the set origin : -, passed
+2026-09-27 22:37:34,219 TADA INFO test ldms_set_info_test ended
+Exception ignored in atexit callback <function at_exit at 0x7fe1aca4e340>:
+Traceback (most recent call last):
+  File "/home/narate/docker/ogcoci/home/narate/ogcoci/var/main/ldms-test/ldms_set_info_test", line 67, in at_exit
+    shutil.rmtree(args.data_root)
+  File "/usr/lib/python3.13/shutil.py", line 763, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/usr/lib/python3.13/shutil.py", line 707, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/usr/lib/python3.13/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/usr/lib/python3.13/shutil.py", line 696, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+PermissionError: [Errno 13] Permission denied: '/home/narate/ogcoci/var/main/ldms-test/data/ldms_set_info_test'
