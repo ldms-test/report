@@ -53,7 +53,7 @@ details[open] summary::after {
 
 ## {{r.branch}} ({{r.ldmsCommitId8}})
 
-{% assign status_url = r.url | replace: "report.html", "status.json" %}
+{% assign status_url = r.url | replace: "report.html", "status.json" | relative_url %}
 
 [![status](https://img.shields.io/endpoint?url={{io_url}}{{status_url}})]({{r.url}})
 
@@ -169,6 +169,6 @@ Total passed: <b><span style="color:{{color}}">{{passed}}</span> / {{total}}</b>
   <summary>{{ summary }}  </summary>
   {{details}}
   </details>
-* [See previous tests ...]({{hist.url}})
+* [See previous tests ...]({{hist.url | relative_url}})
 
 {% endfor %} <!-- hist -->
