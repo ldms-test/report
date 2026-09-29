@@ -1,0 +1,55 @@
+2026-09-29 02:03:08,253 TADA INFO starting test `ldms_rail_test`
+2026-09-29 02:03:08,253 TADA INFO   test-id: 75e699c29d830e2b2c9da78fd67944efd2b9ad2978a1caa158d7bb1b6a6a3072
+2026-09-29 02:03:08,253 TADA INFO   test-suite: LDMSD
+2026-09-29 02:03:08,253 TADA INFO   test-name: ldms_rail_test
+2026-09-29 02:03:08,253 TADA INFO   test-user: ldms-test
+2026-09-29 02:03:08,253 TADA INFO   commit-id: c51437e64a06b49add408dfc43b181d386383e5b
+2026-09-29 02:03:08,253 __main__ INFO -- Get or create the cluster --
+2026-09-29 02:03:19,989 __main__ INFO -- Start daemons --
+2026-09-29 02:03:22,055 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-29 02:03:24,055 __main__ INFO start ldms_rail_server.py and ldms_rail_client.py interactive sessions
+2026-09-29 02:03:26,259 TADA INFO assertion 1, Start interactive LDMS server: OK, passed
+2026-09-29 02:03:28,462 TADA INFO assertion 2, Start interactive LDMS client: OK, passed
+2026-09-29 02:03:29,663 TADA INFO assertion 3, Client rail has 8 endpoints on 8 thread pools: OK, passed
+2026-09-29 02:03:30,864 TADA INFO assertion 4, Server rail has 8 endpoints on 8 thread pools: OK, passed
+2026-09-29 02:03:32,065 TADA INFO assertion 5, Sets on client are processed by different threads: OK, passed
+2026-09-29 02:03:33,265 TADA INFO assertion 6, Verify sets on the client: OK, passed
+2026-09-29 02:03:35,469 TADA INFO assertion 7, Start interactive LDMS client2: OK, passed
+2026-09-29 02:03:36,670 TADA INFO assertion 8, Client2 rail has 8 endpoints on 4 thread pools: OK, passed
+2026-09-29 02:03:38,873 TADA INFO assertion 9, Client3 (wrong auth) cannot connect: OK, passed
+2026-09-29 02:03:41,076 TADA INFO assertion 10, Start interactive client4 (for push mode): OK, passed
+2026-09-29 02:03:41,076 __main__ INFO waiting push ...
+2026-09-29 02:03:41,476 __main__ INFO server: sampling new data (2)
+2026-09-29 02:03:42,877 __main__ INFO client4: set pushes received
+2026-09-29 02:03:42,877 __main__ INFO client4: verifying data in sets
+2026-09-29 02:03:44,078 __main__ INFO client4: verifying threads-sets-endpoints spread
+2026-09-29 02:03:47,680 TADA INFO assertion 11, Client4 got push callback from the corresponding thread: OK, passed
+2026-09-29 02:03:49,884 TADA INFO assertion 12, Client5 started (for clean-up path test): OK, passed
+2026-09-29 02:03:49,884 __main__ INFO xprt close by client1
+2026-09-29 02:03:55,487 TADA INFO assertion 13, Active-side close: client1 clean up: OK, passed
+2026-09-29 02:03:56,687 TADA INFO assertion 14, Active-side close: server-side clean up: OK, passed
+2026-09-29 02:04:03,490 TADA INFO assertion 15, Passive-side close: client2 clean up: OK, passed
+2026-09-29 02:04:03,490 TADA INFO assertion 16, Passive-side close: server-side clean up: OK, passed
+2026-09-29 02:04:06,691 TADA INFO assertion 17, Active-side term: server-side clean up: OK, passed
+2026-09-29 02:04:09,093 TADA INFO assertion 18, Passive-side term: client5 clean up: OK, passed
+2026-09-29 02:04:18,310 TADA INFO assertion 37, Passive endpoint recv_quota override: verified on both cli and srv, passed
+2026-09-29 02:04:20,712 TADA INFO assertion 38, Passive endpoint recv_rate_limit override: verified on both cli and srv, passed
+2026-09-29 02:04:24,314 TADA INFO assertion 19, server -> client overspending send: error message verified, passed
+2026-09-29 02:04:27,916 TADA INFO assertion 20, client -> server overspending send: error message verified, passed
+2026-09-29 02:04:29,117 TADA INFO assertion 21, verify send quota on the server: OK, passed
+2026-09-29 02:04:30,318 TADA INFO assertion 22, verify send quota on the client: OK, passed
+2026-09-29 02:04:33,620 TADA INFO assertion 23, server unblock, verify recv data: recv data verified, passed
+2026-09-29 02:04:36,922 TADA INFO assertion 24, client unblock, verify recv data: recv data verified, passed
+2026-09-29 02:04:38,123 TADA INFO assertion 25, verify send quota on the server: OK, passed
+2026-09-29 02:04:39,324 TADA INFO assertion 26, verify send quota on the client: OK, passed
+2026-09-29 02:04:40,525 TADA INFO assertion 27, server -> client send after get quota back: OK, passed
+2026-09-29 02:04:41,726 TADA INFO assertion 28, client -> server send after get quota back: OK, passed
+2026-09-29 02:04:42,926 TADA INFO assertion 29, verify send quota on the server: OK, passed
+2026-09-29 02:04:44,127 TADA INFO assertion 30, verify send quota on the client: OK, passed
+2026-09-29 02:04:45,328 TADA INFO assertion 31, server unblock, verify recv data: OK, passed
+2026-09-29 02:04:46,529 TADA INFO assertion 32, client unblock, verify recv data: OK, passed
+2026-09-29 02:04:47,730 TADA INFO assertion 33, verify send quota on the server: OK, passed
+2026-09-29 02:04:48,931 TADA INFO assertion 34, verify send quota on the client: OK, passed
+2026-09-29 02:04:50,132 TADA INFO assertion 35, verify send-quota deposits on the server: expected [16, 32, 32], got [16, 32, 32], passed
+2026-09-29 02:04:51,333 TADA INFO assertion 36, verify send-quota deposits on the client: expected [16, 32, 32], got [16, 32, 32], passed
+2026-09-29 02:04:51,334 TADA INFO test ldms_rail_test ended
