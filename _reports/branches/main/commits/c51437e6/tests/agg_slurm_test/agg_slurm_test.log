@@ -1,0 +1,25 @@
+2026-09-29 01:01:06,586 TADA INFO starting test `agg_slurm_test`
+2026-09-29 01:01:06,586 TADA INFO   test-id: 39b80de264d6ab95e06e473749d292f38492ecfef10de13042bd42aedc1868df
+2026-09-29 01:01:06,586 TADA INFO   test-suite: LDMSD
+2026-09-29 01:01:06,586 TADA INFO   test-name: agg_slurm_test
+2026-09-29 01:01:06,587 TADA INFO   test-user: ldms-test
+2026-09-29 01:01:06,587 TADA INFO   commit-id: c51437e64a06b49add408dfc43b181d386383e5b
+2026-09-29 01:01:06,587 __main__ INFO -- Get or create the cluster --
+2026-09-29 01:01:28,917 __main__ INFO -- Preparing syspapi JSON file --
+2026-09-29 01:01:28,962 __main__ INFO -- Preparing jobpapi JSON file --
+2026-09-29 01:01:29,010 __main__ INFO -- Preparing job script & programs --
+2026-09-29 01:01:29,648 __main__ INFO -- Start daemons --
+2026-09-29 01:02:09,915 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-29 01:02:14,915 __main__ INFO -- ldms_ls to agg-2 --
+2026-09-29 01:02:15,008 TADA INFO assertion 1, ldms_ls agg-2: dir result verified, passed
+2026-09-29 01:02:15,058 __main__ INFO -- Give syspapi some time to work before submitting job --
+2026-09-29 01:02:20,058 __main__ INFO -- Submitting jobs --
+2026-09-29 01:02:20,112 __main__ INFO job_one: 1
+2026-09-29 01:02:20,161 __main__ INFO job_two: 2
+2026-09-29 01:02:30,162 __main__ INFO -- Cancelling jobs --
+2026-09-29 01:02:30,162 __main__ INFO job_one: 1
+2026-09-29 01:02:30,216 __main__ INFO job_two: 2
+2026-09-29 01:03:41,004 TADA INFO assertion 2, slurm data verification: get expected data from store, passed
+2026-09-29 01:03:41,004 TADA INFO assertion 3, meminfo data verification: checked, passed
+2026-09-29 01:03:41,005 TADA INFO assertion 4, (SYS/JOB) PAPI data verification: No data missing, passed
+2026-09-29 01:03:41,006 TADA INFO test agg_slurm_test ended
