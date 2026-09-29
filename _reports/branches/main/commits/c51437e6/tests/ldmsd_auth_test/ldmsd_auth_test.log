@@ -1,0 +1,15 @@
+2026-09-29 01:07:52,740 TADA INFO starting test `ldmsd_auth_test`
+2026-09-29 01:07:52,740 TADA INFO   test-id: 1f165375169082dc8bf0f4fe3e8ed91a959757099d7c954551ea8ad46f478b3e
+2026-09-29 01:07:52,740 TADA INFO   test-suite: LDMSD
+2026-09-29 01:07:52,740 TADA INFO   test-name: ldmsd_auth_test
+2026-09-29 01:07:52,740 TADA INFO   test-user: ldms-test
+2026-09-29 01:07:52,740 TADA INFO   commit-id: c51437e64a06b49add408dfc43b181d386383e5b
+2026-09-29 01:07:52,741 __main__ INFO -- Get or create the cluster --
+2026-09-29 01:08:13,438 __main__ INFO -- Start daemons --
+2026-09-29 01:09:10,883 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-29 01:09:15,976 TADA INFO assertion 1, root@agg-2(dom3) ldms_ls to agg-2:10000: see all sets, passed
+2026-09-29 01:09:16,070 TADA INFO assertion 2, user@agg-2(dom3) ldms_ls to agg-2:10000: see only meminfo, passed
+2026-09-29 01:09:16,158 TADA INFO assertion 3, root@headnode(dom4) ldms_ls to agg-2:10001: see all sets, passed
+2026-09-29 01:09:16,248 TADA INFO assertion 4, user@headnode(dom4) ldms_ls to agg-2:10001: see only meminfo, passed
+2026-09-29 01:09:16,296 TADA INFO assertion 5, root@headnode(dom4) ldms_ls to agg-11:10000: connection rejected, passed
+2026-09-29 01:09:16,297 TADA INFO test ldmsd_auth_test ended
