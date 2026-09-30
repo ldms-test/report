@@ -1,0 +1,24 @@
+2026-09-30 01:38:24,235 __main__ INFO -- Get or create the cluster --
+2026-09-30 01:38:24,235 TADA INFO starting test `ldmsd_stream_status`
+2026-09-30 01:38:24,235 TADA INFO   test-id: edeb6dae4a6aa0683a4a95a04ada77cb2b233120e7c3d552cf4cbc45bf6500a1
+2026-09-30 01:38:24,235 TADA INFO   test-suite: LDMSD
+2026-09-30 01:38:24,235 TADA INFO   test-name: ldmsd_stream_status
+2026-09-30 01:38:24,235 TADA INFO   test-user: ldms-test
+2026-09-30 01:38:24,235 TADA INFO   commit-id: b5b4efdc2c3990a64984bbff9545a137ded799b6
+2026-09-30 01:38:36,427 __main__ INFO -- Start daemons --
+2026-09-30 01:38:59,106 __main__ INFO waiting ... for all LDMSDs to start
+2026-09-30 01:38:59,250 __main__ INFO All LDMSDs are up.
+2026-09-30 01:38:59,403 TADA INFO assertion 1, No Stream data: {} == {}, passed
+2026-09-30 01:38:59,644 TADA INFO assertion 2, stream_status -- one stream message: {'foo': {'mode': 'not subscribed', 'pub': {}, 'recv': {'first_ts': 1790750339, 'last_ts': 1790750339, 'count': 1, 'total_bytes': 6}, 'publishers': {}}, '_OVERALL_': {'pub': {}, 'recv': {'first_ts': 1790750339, 'last_ts': 1790750339, 'count': 1, 'total_bytes': 6}}} == {'foo': {'mode': 'not subscribed', 'recv': {'count': 1, 'total_bytes': 6, 'first_ts': 1790750339, 'last_ts': 1790750339}, 'pub': {}, 'publishers': {}}, '_OVERALL_': {'recv': {'count': 1, 'total_bytes': 6, 'first_ts': 1790750339, 'last_ts': 1790750339}, 'pub': {}}}, passed
+2026-09-30 01:39:00,974 TADA INFO assertion 3, stream_status --  multiple stream messages: {'foo': {'mode': 'not subscribed', 'pub': {}, 'recv': {'first_ts': 1790750339, 'last_ts': 1790750340, 'count': 3, 'total_bytes': 18, 'count/sec': 3.0, 'bytes/sec': 18.0}, 'publishers': {}}, '_OVERALL_': {'pub': {}, 'recv': {'first_ts': 1790750339, 'last_ts': 1790750340, 'count': 3, 'total_bytes': 18, 'count/sec': 3.0, 'bytes/sec': 18.0}}} == {'foo': {'mode': 'not subscribed', 'recv': {'count': 3, 'total_bytes': 18, 'first_ts': 1790750339, 'last_ts': 1790750340, 'bytes/sec': 18.0, 'count/sec': 3.0}, 'pub': {}, 'publishers': {}}, '_OVERALL_': {'recv': {'count': 3, 'total_bytes': 18, 'first_ts': 1790750339, 'last_ts': 1790750340, 'bytes/sec': 18.0, 'count/sec': 3.0}, 'pub': {}}}, passed
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/ldmsd_stream_status_test", line 353, in <module>
+    assert(rc == 0)
+           ^^^^^^^
+AssertionError
+2026-09-30 01:39:01,474 TADA INFO assertion 4, prdcr_stream_status to agg -- one producer: skipped
+2026-09-30 01:39:01,475 TADA INFO assertion 5, stream_status -- mulitple streams: skipped
+2026-09-30 01:39:01,475 TADA INFO assertion 6, prdcr_stream_status to agg -- two producers: skipped
+2026-09-30 01:39:01,475 TADA INFO assertion 7, stream_status to agg after one producer republished stream: skipped
+2026-09-30 01:39:01,475 TADA INFO assertion 8, stream_status to agg after two producers republished stream: skipped
+2026-09-30 01:39:01,475 TADA INFO test ldmsd_stream_status ended
