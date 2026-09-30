@@ -1,0 +1,16 @@
+2026-09-30 02:30:43,168 TADA INFO starting test `set_array_hang_test`
+2026-09-30 02:30:43,168 TADA INFO   test-id: 6949ce12f66a97a05ee9f62206340b9ef72e54182f7e3764aee24e2e4b3b052c
+2026-09-30 02:30:43,168 TADA INFO   test-suite: LDMSD
+2026-09-30 02:30:43,168 TADA INFO   test-name: set_array_hang_test
+2026-09-30 02:30:43,168 TADA INFO   test-user: ldms-test
+2026-09-30 02:30:43,168 TADA INFO   commit-id: b5b4efdc2c3990a64984bbff9545a137ded799b6
+2026-09-30 02:30:43,169 __main__ INFO -- Get or create the cluster --
+2026-09-30 02:30:51,443 __main__ INFO -- Start processes --
+2026-09-30 02:30:51,443 __main__ INFO starting interactive set_array_samp.py
+2026-09-30 02:30:53,647 TADA INFO assertion 1, start set_array_samp.py: data verified, passed
+2026-09-30 02:30:55,850 TADA INFO assertion 2, start set_array_agg.py: data verified, passed
+2026-09-30 02:30:58,252 TADA INFO assertion 3, agg update before the 1st sample: data verified, passed
+2026-09-30 02:31:00,653 TADA INFO assertion 4, sampling 2 times then agg update: data verified, passed
+2026-09-30 02:31:01,855 TADA INFO assertion 5, agg update w/o new sampling: data verified, passed
+2026-09-30 02:31:04,256 TADA INFO assertion 6, sampling 5 times then agg update: data verified, passed
+2026-09-30 02:31:04,258 TADA INFO test set_array_hang_test ended
