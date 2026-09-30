@@ -3,5 +3,5 @@ type: test
 branch: b4.5
 ldmsCommitId8: 5e7e4944
 name: ldmsd_sampler_exclusive_thread_test
-status: queued
+status: passed
 ---
