@@ -1,0 +1,19 @@
+2026-09-30 01:47:06,759 TADA INFO starting test `ldms_ipv6_test`
+2026-09-30 01:47:06,760 TADA INFO   test-id: 8ee7b88bbd1ebe0ac3936691e817ec500786c660ebfbbef17c8070d25dc2516c
+2026-09-30 01:47:06,760 TADA INFO   test-suite: LDMSD
+2026-09-30 01:47:06,760 TADA INFO   test-name: ldms_ipv6_test
+2026-09-30 01:47:06,760 TADA INFO   test-user: ldms-test
+2026-09-30 01:47:06,760 TADA INFO   commit-id: b5b4efdc2c3990a64984bbff9545a137ded799b6
+2026-09-30 01:47:06,760 __main__ INFO -- Get or create the cluster --
+2026-09-30 01:47:18,915 __main__ INFO -- Start daemons --
+2026-09-30 01:47:42,265 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-09-30 01:47:44,266 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldms_ipv6_test-b5b4efd-samp 
+2026-09-30 01:47:46,469 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldms_ipv6_test-b5b4efd-agg-2 
+2026-09-30 01:47:50,763 TADA INFO assertion 1, ldms_ls to samp using IPv6: expecting ['fdf9:db0c:4963::5'], got ['fdf9:db0c:4963::5'], passed
+2026-09-30 01:47:50,851 TADA INFO assertion 2, ldms_ls to agg-2 using IPv6: expecting ['fdf9:db0c:4963::5'], got ['fdf9:db0c:4963::5'], passed
+2026-09-30 01:47:50,851 TADA INFO assertion 3, ldms_ls to agg-2 contains 'samp/meminfo': samp/meminfo found, passed
+2026-09-30 01:47:53,853 TADA INFO assertion 4, python msg publish using IPv6: verified, passed
+2026-09-30 01:47:56,855 TADA INFO assertion 5, python msg subscribe using IPv6: verified, passed
+2026-09-30 01:47:57,356 TADA INFO assertion 6, steam data contain IPv6 addressing: expecting fdf9:db0c:4963::5, got fdf9:db0c:4963::5, passed
+2026-09-30 01:47:57,533 TADA INFO assertion 7, msg stats reported IPv6 addresses: Expecting fdf9:db0c:4963::3, got fdf9:db0c:4963::3, passed
+2026-09-30 01:47:57,534 TADA INFO test ldms_ipv6_test ended
