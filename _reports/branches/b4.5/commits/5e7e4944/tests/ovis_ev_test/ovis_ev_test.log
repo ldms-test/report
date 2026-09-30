@@ -1,0 +1,18 @@
+2026-09-30 04:34:44,895 __main__ INFO -- Create the cluster -- 
+2026-09-30 04:34:57,430 TADA INFO starting test `ovis_ev_test`
+2026-09-30 04:34:57,431 TADA INFO   test-id: 93aeede40357aa067a5dff46c542a86a6812ff10c0f95903d05159f24eead4ea
+2026-09-30 04:34:57,431 TADA INFO   test-suite: test_ovis_ev
+2026-09-30 04:34:57,431 TADA INFO   test-name: ovis_ev_test
+2026-09-30 04:34:57,431 TADA INFO   test-user: ldms-test
+2026-09-30 04:34:57,431 TADA INFO   commit-id: 5e7e494449609b5758d18797ee03ad62b6612802
+2026-09-30 04:34:57,431 TADA INFO assertion 1, Test posting an event without timeout: ovis_ev delivered the expected event., passed
+2026-09-30 04:34:57,431 TADA INFO assertion 2, Test posting an event with a current timeout: ovis_ev delivered the expected event., passed
+2026-09-30 04:34:57,432 TADA INFO assertion 3, Test posting an event with a future timeout: ovis_ev delivered the expected event., passed
+2026-09-30 04:34:57,432 TADA INFO assertion 4, Test reposting a posted event: ev_post returned EBUSY when posted an already posted event, passed
+2026-09-30 04:34:57,432 TADA INFO assertion 5, Test canceling a posted event: ovis_ev delivered the expected event., passed
+2026-09-30 04:34:57,432 TADA INFO assertion 6, Test rescheduling a posted event: ovis_ev delivered the expected event., passed
+2026-09-30 04:34:57,432 TADA INFO assertion 7, Test event deliver order: The event delivery order was correct., passed
+2026-09-30 04:34:57,432 TADA INFO assertion 8, Test flushing events: Expected status (1) == delivered status (1), passed
+2026-09-30 04:34:57,432 TADA INFO assertion 9, Test posting event on a flushed worker: Expected status (0) == delivered status (0), passed
+2026-09-30 04:34:57,432 TADA INFO assertion 10, Test the case that multiple threads post the same event: ev_post returned the expected return code., passed
+2026-09-30 04:34:57,433 TADA INFO test ovis_ev_test ended
