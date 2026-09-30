@@ -3,5 +3,5 @@ type: test
 branch: main
 ldmsCommitId8: b5b4efdc
 name: agg_slurm_test
-status: queued
+status: passed
 ---
