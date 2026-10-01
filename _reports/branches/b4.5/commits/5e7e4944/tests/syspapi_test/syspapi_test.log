@@ -1,0 +1,9 @@
+/home/ldms-test/var/b4.5/ldms-test/syspapi_test:525: SyntaxWarning: invalid escape sequence '\<'
+  rc, out = comp4.exec_run("grep 'syspapi_sampler.* \<{}\>' /var/log/ldmsd.log".format(k))
+2026-10-01 12:54:19,331 TADA INFO starting test `syspapi_test`
+2026-10-01 12:54:19,331 TADA INFO   test-id: c37bd3cf427accffea3556def5baa9f50dd3bce2bd14dcbb349a24d452a7c4ed
+2026-10-01 12:54:19,331 TADA INFO   test-suite: LDMSD
+2026-10-01 12:54:19,332 TADA INFO   test-name: syspapi_test
+2026-10-01 12:54:19,332 TADA INFO   test-user: ldms-test
+2026-10-01 12:54:19,332 TADA INFO   commit-id: 5e7e494449609b5758d18797ee03ad62b6612802
+2026-10-01 12:54:19,332 __main__ INFO -- Get or create the cluster --
