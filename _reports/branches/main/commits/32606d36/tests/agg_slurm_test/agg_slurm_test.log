@@ -1,0 +1,44 @@
+2026-10-01 01:10:20,641 TADA INFO starting test `agg_slurm_test`
+2026-10-01 01:10:20,641 TADA INFO   test-id: 83da58283b3a42520f4772c9b2c37c96b9fe1f6446ee51af496bb6e7ed0aea29
+2026-10-01 01:10:20,641 TADA INFO   test-suite: LDMSD
+2026-10-01 01:10:20,641 TADA INFO   test-name: agg_slurm_test
+2026-10-01 01:10:20,641 TADA INFO   test-user: ldms-test
+2026-10-01 01:10:20,641 TADA INFO   commit-id: 32606d3661862f0ce492bb0276e761ae134f6ed8
+2026-10-01 01:10:20,642 __main__ INFO -- Get or create the cluster --
+2026-10-01 01:11:40,040 __main__ INFO -- Preparing syspapi JSON file --
+2026-10-01 01:11:40,086 __main__ INFO -- Preparing jobpapi JSON file --
+2026-10-01 01:11:40,134 __main__ INFO -- Preparing job script & programs --
+2026-10-01 01:11:41,113 __main__ INFO -- Start daemons --
+2026-10-01 01:12:29,426 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-10-01 01:12:34,426 __main__ INFO -- ldms_ls to agg-2 --
+2026-10-01 01:12:34,522 TADA INFO assertion 1, ldms_ls agg-2: dir result verified, passed
+2026-10-01 01:12:34,780 __main__ INFO -- Give syspapi some time to work before submitting job --
+2026-10-01 01:12:39,781 __main__ INFO -- Submitting jobs --
+2026-10-01 01:12:39,893 __main__ INFO job_one: 1
+2026-10-01 01:12:39,950 __main__ INFO job_two: 2
+2026-10-01 01:12:49,951 __main__ INFO -- Cancelling jobs --
+2026-10-01 01:12:49,951 __main__ INFO job_one: 1
+2026-10-01 01:12:50,003 __main__ INFO job_two: 2
+2026-10-01 01:14:05,022 TADA INFO assertion 2, slurm data verification: get expected data from store, passed
+2026-10-01 01:14:05,023 TADA INFO assertion 3, meminfo data verification: checked, passed
+2026-10-01 01:14:05,023 TADA INFO assertion 4, (SYS/JOB) PAPI data verification: No data missing, passed
+2026-10-01 01:14:05,024 TADA INFO test agg_slurm_test ended
+Exception ignored in atexit callback <function at_exit at 0x7fac1729d3a0>:
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/agg_slurm_test", line 394, in at_exit
+    cluster.remove()
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 922, in remove
+    self.net.remove()
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 420, in remove
+    self.obj.remove()
+  File "/usr/lib/python3.13/site-packages/docker/models/networks.py", line 91, in remove
+    return self.client.api.remove_network(self.id)
+  File "/usr/lib/python3.13/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/usr/lib/python3.13/site-packages/docker/api/network.py", line 186, in remove_network
+    self._raise_for_status(res)
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+  File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 400 Client Error for http+docker://localhost/v1.51/networks/zii75zpxwtnsxmnzxe5br24u7: Bad Request ("rpc error: code = FailedPrecondition desc = network zii75zpxwtnsxmnzxe5br24u7 is in use by task 7r5mwv7t6mm8psuwottlp3u15")
