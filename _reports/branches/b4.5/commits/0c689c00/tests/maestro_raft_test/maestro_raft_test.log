@@ -1,0 +1,21 @@
+2026-10-01 13:52:54,301 TADA INFO starting test `maestro_raft_test`
+2026-10-01 13:52:54,301 TADA INFO   test-id: 978e42b6ca08f949337c9bbc151f8a18d249e745459772f48230fa1ab8e9cca2
+2026-10-01 13:52:54,301 TADA INFO   test-suite: LDMSD
+2026-10-01 13:52:54,301 TADA INFO   test-name: maestro_raft_test
+2026-10-01 13:52:54,301 TADA INFO   test-user: ldms-test
+2026-10-01 13:52:54,301 TADA INFO   commit-id: 0c689c008d68772864b2bfaab3b255ddb82a8cb2
+2026-10-01 13:53:05,018 __main__ INFO -- Get or create cluster --
+2026-10-01 13:53:40,129 __main__ INFO -- Start daemons --
+2026-10-01 13:55:09,555 __main__ INFO -- making known hosts (ssh) --
+2026-10-01 13:55:13,022 __main__ INFO ... make sure ldmsd's are up
+2026-10-01 13:55:20,131 __main__ INFO Wait a bit for all maestro daemons to sync...
+2026-10-01 13:55:30,412 TADA INFO assertion 1, Statuses of maestros, 1 leader + 2 followers: [('FOLLOWER', 2), ('LEADER', 1)], passed
+2026-10-01 13:55:42,191 TADA INFO assertion 2, All ldmsds are up and configured: sets verified, passed
+2026-10-01 13:55:42,459 TADA INFO assertion 3, Data are being stored: data check, passed
+2026-10-01 13:55:46,862 TADA INFO assertion 4, New leader elected: checked, passed
+2026-10-01 13:55:54,096 __main__ INFO Wait a bit for agg4 reconfiguration ...
+2026-10-01 13:56:55,869 TADA INFO assertion 5, Restarted ldmsd is configured: sets verified, passed
+2026-10-01 13:56:56,166 TADA INFO assertion 6, New data are presented in the store: data check, passed
+2026-10-01 13:57:06,616 TADA INFO assertion 7, The restarted maestro becomes a follower: checked, passed
+---Wait for config to write to file---
+2026-10-01 13:57:06,618 TADA INFO test maestro_raft_test ended
