@@ -1,0 +1,27 @@
+2026-10-01 14:06:29,121 TADA INFO starting test `slurm_sampler2_test`
+2026-10-01 14:06:29,122 TADA INFO   test-id: 011c5d9e556436aab56cba16ec9c9ef9a5a9bc20744897220a1057826013ff04
+2026-10-01 14:06:29,122 TADA INFO   test-suite: LDMSD
+2026-10-01 14:06:29,122 TADA INFO   test-name: slurm_sampler2_test
+2026-10-01 14:06:29,122 TADA INFO   test-user: ldms-test
+2026-10-01 14:06:29,122 TADA INFO   commit-id: 0c689c008d68772864b2bfaab3b255ddb82a8cb2
+2026-10-01 14:06:29,122 __main__ INFO -- Get or create the cluster --
+2026-10-01 14:06:46,380 __main__ INFO -- Add users --
+2026-10-01 14:06:47,904 __main__ INFO -- Preparing job script & programs --
+2026-10-01 14:06:48,172 __main__ INFO -- Start daemons --
+2026-10-01 14:07:36,439 TADA INFO assertion 1, Processing the stream data from slurm_notifier: The metric values are as expected on all nodes., passed
+2026-10-01 14:07:41,763 TADA INFO assertion 2.1, Deleting completed jobs -- job_init: The metric values are as expected on all nodes., passed
+2026-10-01 14:07:45,084 TADA INFO assertion 2.2, Deleting completed jobs -- step_init: The metric values are as expected on all nodes., passed
+2026-10-01 14:07:48,411 TADA INFO assertion 2.3, Deleting completed jobs -- task_init: The metric values are as expected on all nodes., passed
+2026-10-01 14:07:51,729 TADA INFO assertion 2.4, Deleting completed jobs -- task_exit: The metric values are as expected on all nodes., passed
+2026-10-01 14:07:55,039 TADA INFO assertion 2.5, Deleting completed jobs -- job_exit: The metric values are as expected on all nodes., passed
+2026-10-01 14:08:00,377 TADA INFO assertion 3.1, Expanding the set heap -- job_init: The metric values are as expected on all nodes., passed
+2026-10-01 14:08:03,685 TADA INFO assertion 3.2, Expanding the set heap -- step_init: The metric values are as expected on all nodes., passed
+2026-10-01 14:08:07,597 TADA INFO assertion 3.3, Expanding the set heap -- task_init: The metric values are as expected on all nodes., passed
+2026-10-01 14:08:11,555 TADA INFO assertion 3.4, Expanding the set heap -- task_exit: The metric values are as expected on all nodes., passed
+2026-10-01 14:08:14,877 TADA INFO assertion 3.5, Expanding the set heap -- job_exit: The metric values are as expected on all nodes., passed
+2026-10-01 14:08:19,405 TADA INFO assertion 4.1, Multi-tenant -- job_init: The metric values are as expected on all nodes., passed
+2026-10-01 14:08:20,736 TADA INFO assertion 4.2, Multi-tenant -- step_init: The metric values are as expected on all nodes., passed
+2026-10-01 14:08:22,445 TADA INFO assertion 4.3, Multi-tenant -- task_init: The metric values are as expected on all nodes., passed
+2026-10-01 14:08:24,156 TADA INFO assertion 4.4, Multi-tenant -- task_exit: The metric values are as expected on all nodes., passed
+2026-10-01 14:08:25,474 TADA INFO assertion 4.5, Multi-tenant -- job_exit: The metric values are as expected on all nodes., passed
+2026-10-01 14:08:25,475 TADA INFO test slurm_sampler2_test ended
