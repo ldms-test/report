@@ -1,0 +1,20 @@
+2026-10-04 02:09:06,444 TADA INFO starting test `maestro_cfg_test`
+2026-10-04 02:09:06,444 TADA INFO   test-id: 942f476c041ef313a2ee164227d365360cd695e23c1c28cae6b2de863567f703
+2026-10-04 02:09:06,444 TADA INFO   test-suite: LDMSD
+2026-10-04 02:09:06,444 TADA INFO   test-name: maestro_cfg_test
+2026-10-04 02:09:06,444 TADA INFO   test-user: ldms-test
+2026-10-04 02:09:06,444 TADA INFO   commit-id: f112c2243f6c36b81e087e6844cc2a2839e1b360
+2026-10-04 02:09:17,138 __main__ INFO -- Get or create cluster --
+2026-10-04 02:09:45,228 __main__ INFO -- Start daemons --
+2026-10-04 02:11:16,262 __main__ INFO ... make sure ldmsd's are up
+2026-10-04 02:11:21,571 TADA INFO assertion 1, load maestro etcd cluster: Unexpected output: etcd connection failed 51
+Error saving ldms cluster configuration to etcd cluster.
+, failed
+2026-10-04 02:11:33,574 TADA INFO assertion 2, config ldmsd cluster with maestro: Unexpected output: Unable to connect to etcd: etcd connection failed
+, failed
+2026-10-04 02:11:33,721 TADA INFO assertion 3, verify sampler daemons: Expecting [ ['samp-1/meminfo'] ], but got [ [] ], failed
+2026-10-04 02:11:33,873 TADA INFO assertion 4, verify L1 aggregator daemons: Expecting [ ['samp-1/meminfo', 'samp-2/meminfo', 'samp-3/meminfo'] ], but got [ [] ], failed
+2026-10-04 02:11:34,018 TADA INFO assertion 5, verify L2 aggregator daemon: Expecting [ ['samp-1/meminfo', 'samp-2/meminfo', 'samp-3/meminfo', 'samp-4/meminfo', 'samp-5/meminfo', 'samp-6/meminfo', 'samp-7/meminfo', 'samp-8/meminfo'] ], but got [ [] ], failed
+2026-10-04 02:11:34,228 TADA INFO assertion 6, verify data storage: OK, passed
+---Wait for config to write to file---
+2026-10-04 02:11:34,230 TADA INFO test maestro_cfg_test ended
