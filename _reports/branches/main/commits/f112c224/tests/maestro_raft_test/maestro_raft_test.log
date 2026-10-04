@@ -1,0 +1,25 @@
+2026-10-04 02:11:45,040 TADA INFO starting test `maestro_raft_test`
+2026-10-04 02:11:45,040 TADA INFO   test-id: dfa4a931aef17da90231df1706812df1066abfb3368ab7713412fb38abd45a87
+2026-10-04 02:11:45,040 TADA INFO   test-suite: LDMSD
+2026-10-04 02:11:45,040 TADA INFO   test-name: maestro_raft_test
+2026-10-04 02:11:45,040 TADA INFO   test-user: ldms-test
+2026-10-04 02:11:45,040 TADA INFO   commit-id: f112c2243f6c36b81e087e6844cc2a2839e1b360
+2026-10-04 02:11:55,741 __main__ INFO -- Get or create cluster --
+2026-10-04 02:12:30,694 __main__ INFO -- Start daemons --
+2026-10-04 02:13:59,766 __main__ INFO -- making known hosts (ssh) --
+2026-10-04 02:14:03,086 __main__ INFO ... make sure ldmsd's are up
+2026-10-04 02:14:08,487 __main__ INFO Wait a bit for all maestro daemons to sync...
+2026-10-04 02:14:18,728 TADA INFO assertion 1, Statuses of maestros, 1 leader + 2 followers: [('FOLLOWER', 1), ('LEADER', 1), ('NOT_RUNNING', 1)], failed
+2026-10-04 02:14:28,872 TADA INFO assertion 2, All ldmsds are up and configured: samp1: expecting ['samp1/meminfo'], but got [], failed
+2026-10-04 02:14:29,176 TADA INFO assertion 3, Data are being stored: data check, failed
+---Wait for config to write to file---
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/maestro_raft_test", line 497, in <module>
+    new_ldr_cont = maestro_tbl["LEADER"][0]
+                   ~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'LEADER'
+2026-10-04 02:14:33,511 TADA INFO assertion 4, New leader elected: skipped
+2026-10-04 02:14:33,511 TADA INFO assertion 5, Restarted ldmsd is configured: skipped
+2026-10-04 02:14:33,511 TADA INFO assertion 6, New data are presented in the store: skipped
+2026-10-04 02:14:33,511 TADA INFO assertion 7, The restarted maestro becomes a follower: skipped
+2026-10-04 02:14:33,511 TADA INFO test maestro_raft_test ended
