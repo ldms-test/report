@@ -1,0 +1,14 @@
+2026-10-04 01:07:23,448 TADA INFO starting test `ldmsd_auth_ovis_test`
+2026-10-04 01:07:23,448 TADA INFO   test-id: 644dcca232d0cbfd0b07b68d90a72f00737d0b2a0c4de298e7b0ddc3253250b4
+2026-10-04 01:07:23,448 TADA INFO   test-suite: LDMSD
+2026-10-04 01:07:23,448 TADA INFO   test-name: ldmsd_auth_ovis_test
+2026-10-04 01:07:23,448 TADA INFO   test-user: ldms-test
+2026-10-04 01:07:23,448 TADA INFO   commit-id: f112c2243f6c36b81e087e6844cc2a2839e1b360
+2026-10-04 01:07:23,448 __main__ INFO -- Get or create the cluster --
+2026-10-04 01:07:33,639 __main__ INFO -- Start daemons --
+2026-10-04 01:07:41,560 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-10-04 01:07:46,614 TADA INFO assertion 1, ldms_ls with auth none: verified, passed
+2026-10-04 01:07:46,674 TADA INFO assertion 2, ldms_ls with wrong secret: verified, passed
+2026-10-04 01:07:46,780 TADA INFO assertion 3, ldms_ls 'dir' with right secret: verified, passed
+2026-10-04 01:07:46,951 TADA INFO assertion 4, ldms_ls 'read' with right secret: verified, passed
+2026-10-04 01:07:46,953 TADA INFO test ldmsd_auth_ovis_test ended
