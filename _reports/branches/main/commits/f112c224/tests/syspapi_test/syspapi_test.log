@@ -1,0 +1,23 @@
+2026-10-04 02:37:18,699 TADA INFO starting test `syspapi_test`
+2026-10-04 02:37:18,699 TADA INFO   test-id: 072e7f8ed4e757ff8357706343a4a7a25e37986db0ecb4d3d1493e573dd24195
+2026-10-04 02:37:18,699 TADA INFO   test-suite: LDMSD
+2026-10-04 02:37:18,699 TADA INFO   test-name: syspapi_test
+2026-10-04 02:37:18,699 TADA INFO   test-user: ldms-test
+2026-10-04 02:37:18,699 TADA INFO   commit-id: f112c2243f6c36b81e087e6844cc2a2839e1b360
+2026-10-04 02:37:18,700 __main__ INFO -- Get or create the cluster --
+2026-10-04 02:37:34,041 __main__ INFO -- Write syspapi JSON config files --
+2026-10-04 02:37:34,041 __main__ INFO    - db/syspapi-1.json
+2026-10-04 02:37:34,045 __main__ INFO    - db/syspapi-bad.json
+2026-10-04 02:37:34,050 __main__ INFO -- Start daemons --
+2026-10-04 02:38:01,568 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-10-04 02:38:06,569 __main__ INFO -- Verifying --
+2026-10-04 02:38:06,743 TADA INFO assertion 1, verify set creation by cfg_file: set existed (with correct instance name), passed
+2026-10-04 02:38:06,743 TADA INFO assertion 2, verify schema name by cfg_file: verify schema name, passed
+2026-10-04 02:38:06,794 TADA INFO assertion 3, verify metrics (events) by cfg_file: verify events (metrics), passed
+2026-10-04 02:38:08,969 TADA INFO assertion 4, verify increment counters: verify increment of supported counters, passed
+2026-10-04 02:38:09,018 TADA INFO assertion 5, verify cfg_file syntax error report: verify JSON parse error, passed
+2026-10-04 02:38:09,064 TADA INFO assertion 6, verify cfg_file unsupported events report: verify unsupported event report, passed
+2026-10-04 02:38:18,092 TADA INFO assertion 7, verify cfg_file for many events: each event has either 'sucees' or 'failed' report, passed
+2026-10-04 02:38:18,092 __main__ INFO  events succeeded: 0
+2026-10-04 02:38:18,092 __main__ INFO  events failed: 191
+2026-10-04 02:38:18,093 TADA INFO test syspapi_test ended
