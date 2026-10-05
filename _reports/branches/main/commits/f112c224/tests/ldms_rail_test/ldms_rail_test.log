@@ -1,0 +1,130 @@
+2026-10-05 01:04:48,476 TADA INFO starting test `ldms_rail_test`
+2026-10-05 01:04:48,476 TADA INFO   test-id: 9cce90282e8eb5db28cfd10c79a9af6993c30da45da07922621636e74b5e810e
+2026-10-05 01:04:48,476 TADA INFO   test-suite: LDMSD
+2026-10-05 01:04:48,476 TADA INFO   test-name: ldms_rail_test
+2026-10-05 01:04:48,476 TADA INFO   test-user: ldms-test
+2026-10-05 01:04:48,476 TADA INFO   commit-id: f112c2243f6c36b81e087e6844cc2a2839e1b360
+2026-10-05 01:04:48,477 __main__ INFO -- Get or create the cluster --
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localhost/v1.51/networks/ldms-test-ldms_rail_test-f112c22
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 857, in _get
+    net = dc.networks.get(name)
+  File "/usr/lib/python3.13/site-packages/docker/models/networks.py", line 182, in get
+    self.client.api.inspect_network(network_id, *args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/usr/lib/python3.13/site-packages/docker/api/network.py", line 212, in inspect_network
+    return self._result(res, json=True)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.NotFound: 404 Client Error for http+docker://localhost/v1.51/networks/ldms-test-ldms_rail_test-f112c22: Not Found ("network ldms-test-ldms_rail_test-f112c22 not found")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 2012, in get
+    cluster = _cls._get(name)
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 860, in _get
+    raise LookupError()
+LookupError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: http+docker://localhost/v1.51/nodes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/ldms_rail_test", line 174, in <module>
+    cluster = LDMSDCluster.get(spec["name"], create = True, spec = spec)
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 2019, in get
+    return _cls.create(spec)
+           ~~~~~~~~~~~^^^^^^
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 1990, in create
+    cluster = _cls._create(spec)
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 516, in _create
+    return cls.__create(spec=sp, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 596, in __create
+    clients = get_docker_clients()
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 38, in get_docker_clients
+    nodes = dc.nodes.list()
+  File "/usr/lib/python3.13/site-packages/docker/models/nodes.py", line 106, in list
+    for n in self.client.api.nodes(*args, **kwargs)
+             ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/utils/decorators.py", line 32, in wrapper
+    return f(self, *args, **kwargs)
+  File "/usr/lib/python3.13/site-packages/docker/api/swarm.py", line 317, in nodes
+    return self._result(self._get(url, params=params), True)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 503 Server Error for http+docker://localhost/v1.51/nodes: Service Unavailable ("This node is not a swarm manager. Use "docker swarm init" or "docker swarm join" to connect this node to swarm and try again.")
+2026-10-05 01:04:48,835 TADA INFO assertion 1, Start interactive LDMS server: skipped
+2026-10-05 01:04:48,835 TADA INFO assertion 2, Start interactive LDMS client: skipped
+2026-10-05 01:04:48,835 TADA INFO assertion 3, Client rail has 8 endpoints on 8 thread pools: skipped
+2026-10-05 01:04:48,835 TADA INFO assertion 4, Server rail has 8 endpoints on 8 thread pools: skipped
+2026-10-05 01:04:48,836 TADA INFO assertion 5, Sets on client are processed by different threads: skipped
+2026-10-05 01:04:48,836 TADA INFO assertion 6, Verify sets on the client: skipped
+2026-10-05 01:04:48,836 TADA INFO assertion 7, Start interactive LDMS client2: skipped
+2026-10-05 01:04:48,836 TADA INFO assertion 8, Client2 rail has 8 endpoints on 4 thread pools: skipped
+2026-10-05 01:04:48,836 TADA INFO assertion 9, Client3 (wrong auth) cannot connect: skipped
+2026-10-05 01:04:48,836 TADA INFO assertion 10, Start interactive client4 (for push mode): skipped
+2026-10-05 01:04:48,836 TADA INFO assertion 11, Client4 got push callback from the corresponding thread: skipped
+2026-10-05 01:04:48,837 TADA INFO assertion 12, Client5 started (for clean-up path test): skipped
+2026-10-05 01:04:48,837 TADA INFO assertion 13, Active-side close: client1 clean up: skipped
+2026-10-05 01:04:48,837 TADA INFO assertion 14, Active-side close: server-side clean up: skipped
+2026-10-05 01:04:48,837 TADA INFO assertion 15, Passive-side close: client2 clean up: skipped
+2026-10-05 01:04:48,837 TADA INFO assertion 16, Passive-side close: server-side clean up: skipped
+2026-10-05 01:04:48,837 TADA INFO assertion 17, Active-side term: server-side clean up: skipped
+2026-10-05 01:04:48,837 TADA INFO assertion 18, Passive-side term: client5 clean up: skipped
+2026-10-05 01:04:48,837 TADA INFO assertion 19, server -> client overspending send: skipped
+2026-10-05 01:04:48,837 TADA INFO assertion 20, client -> server overspending send: skipped
+2026-10-05 01:04:48,838 TADA INFO assertion 21, verify send quota on the server: skipped
+2026-10-05 01:04:48,838 TADA INFO assertion 22, verify send quota on the client: skipped
+2026-10-05 01:04:48,838 TADA INFO assertion 23, server unblock, verify recv data: skipped
+2026-10-05 01:04:48,838 TADA INFO assertion 24, client unblock, verify recv data: skipped
+2026-10-05 01:04:48,838 TADA INFO assertion 25, verify send quota on the server: skipped
+2026-10-05 01:04:48,838 TADA INFO assertion 26, verify send quota on the client: skipped
+2026-10-05 01:04:48,838 TADA INFO assertion 27, server -> client send after get quota back: skipped
+2026-10-05 01:04:48,838 TADA INFO assertion 28, client -> server send after get quota back: skipped
+2026-10-05 01:04:48,839 TADA INFO assertion 29, verify send quota on the server: skipped
+2026-10-05 01:04:48,839 TADA INFO assertion 30, verify send quota on the client: skipped
+2026-10-05 01:04:48,839 TADA INFO assertion 31, server unblock, verify recv data: skipped
+2026-10-05 01:04:48,839 TADA INFO assertion 32, client unblock, verify recv data: skipped
+2026-10-05 01:04:48,839 TADA INFO assertion 33, verify send quota on the server: skipped
+2026-10-05 01:04:48,839 TADA INFO assertion 34, verify send quota on the client: skipped
+2026-10-05 01:04:48,839 TADA INFO assertion 35, verify send-quota deposits on the server: skipped
+2026-10-05 01:04:48,839 TADA INFO assertion 36, verify send-quota deposits on the client: skipped
+2026-10-05 01:04:48,840 TADA INFO assertion 37, Passive endpoint recv_quota override: skipped
+2026-10-05 01:04:48,840 TADA INFO assertion 38, Passive endpoint recv_rate_limit override: skipped
+2026-10-05 01:04:48,840 TADA INFO test ldms_rail_test ended
