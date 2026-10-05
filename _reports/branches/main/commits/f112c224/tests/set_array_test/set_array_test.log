@@ -1,0 +1,13 @@
+2026-10-05 09:29:46,583 TADA INFO starting test `set_array_test`
+2026-10-05 09:29:46,583 TADA INFO   test-id: 966a404cd09d5aae169407618720a35a3d254cf93784aa45cef824c05450f1e8
+2026-10-05 09:29:46,583 TADA INFO   test-suite: LDMSD
+2026-10-05 09:29:46,583 TADA INFO   test-name: set_array_test
+2026-10-05 09:29:46,583 TADA INFO   test-user: ldms-test
+2026-10-05 09:29:46,583 TADA INFO   commit-id: f112c2243f6c36b81e087e6844cc2a2839e1b360
+2026-10-05 09:29:46,583 __main__ INFO -- Get or create the cluster --
+2026-10-05 09:29:56,663 __main__ INFO -- Start daemons --
+2026-10-05 09:30:04,629 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-10-05 09:30:30,555 TADA INFO assertion 1, 1st update got some callbacks: verified hunk of 3 snapshots, passed
+2026-10-05 09:30:30,555 TADA INFO assertion 2, 2nd update got N callbacks: verified hunk of 5 snapshots, passed
+2026-10-05 09:30:30,555 TADA INFO assertion 3, 3nd update got N callbacks: verified hunk of 5 snapshots, passed
+2026-10-05 09:30:30,556 TADA INFO test set_array_test ended
