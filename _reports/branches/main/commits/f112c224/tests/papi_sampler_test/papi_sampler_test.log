@@ -1,0 +1,115 @@
+2026-10-05 01:06:44,028 TADA INFO starting test `papi_sampler_test`
+2026-10-05 01:06:44,028 TADA INFO   test-id: 6842c9f289f06c71a8ecea077754033ad270e9bf175f23a6b8b08cbff8fae912
+2026-10-05 01:06:44,028 TADA INFO   test-suite: LDMSD
+2026-10-05 01:06:44,028 TADA INFO   test-name: papi_sampler_test
+2026-10-05 01:06:44,028 TADA INFO   test-user: ldms-test
+2026-10-05 01:06:44,028 TADA INFO   commit-id: f112c2243f6c36b81e087e6844cc2a2839e1b360
+2026-10-05 01:06:44,028 __main__ INFO -- Get or create the cluster --
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localhost/v1.51/networks/ldms-test-papi_sampler_test-f112c22
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 857, in _get
+    net = dc.networks.get(name)
+  File "/usr/lib/python3.13/site-packages/docker/models/networks.py", line 182, in get
+    self.client.api.inspect_network(network_id, *args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/usr/lib/python3.13/site-packages/docker/api/network.py", line 212, in inspect_network
+    return self._result(res, json=True)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.NotFound: 404 Client Error for http+docker://localhost/v1.51/networks/ldms-test-papi_sampler_test-f112c22: Not Found ("network ldms-test-papi_sampler_test-f112c22 not found")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 2012, in get
+    cluster = _cls._get(name)
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 860, in _get
+    raise LookupError()
+LookupError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: http+docker://localhost/v1.51/nodes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/papi_sampler_test", line 247, in <module>
+    cluster = LDMSDCluster.get(spec["name"], create = True, spec = spec)
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 2019, in get
+    return _cls.create(spec)
+           ~~~~~~~~~~~^^^^^^
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 1990, in create
+    cluster = _cls._create(spec)
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 516, in _create
+    return cls.__create(spec=sp, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 596, in __create
+    clients = get_docker_clients()
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 38, in get_docker_clients
+    nodes = dc.nodes.list()
+  File "/usr/lib/python3.13/site-packages/docker/models/nodes.py", line 106, in list
+    for n in self.client.api.nodes(*args, **kwargs)
+             ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/utils/decorators.py", line 32, in wrapper
+    return f(self, *args, **kwargs)
+  File "/usr/lib/python3.13/site-packages/docker/api/swarm.py", line 317, in nodes
+    return self._result(self._get(url, params=params), True)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 503 Server Error for http+docker://localhost/v1.51/nodes: Service Unavailable ("This node is not a swarm manager. Use "docker swarm init" or "docker swarm join" to connect this node to swarm and try again.")
+2026-10-05 01:06:44,389 __main__ INFO -- Finishing Test --
+2026-10-05 01:06:44,389 TADA INFO assertion 0, ldmsd has started: skipped
+2026-10-05 01:06:44,389 TADA INFO assertion 1, Non-papi job does not create set: skipped
+2026-10-05 01:06:44,389 TADA INFO assertion 1.1, Non-papi job is submitted: skipped
+2026-10-05 01:06:44,389 TADA INFO assertion 1.2, Non-papi job is running before ldms_ls: skipped
+2026-10-05 01:06:44,389 TADA INFO assertion 1.3, Non-papi job is running after ldms_ls: skipped
+2026-10-05 01:06:44,389 TADA INFO assertion 2, papi job creates set: skipped
+2026-10-05 01:06:44,390 TADA INFO assertion 2.1, Events in papi job set created according to config file: skipped
+2026-10-05 01:06:44,390 TADA INFO assertion 2.2, Schema name is set accordingly: skipped
+2026-10-05 01:06:44,390 TADA INFO assertion 2.3, PAPI set has correct job_id: skipped
+2026-10-05 01:06:44,390 TADA INFO assertion 2.4, PAPI set has correct task_pids: skipped
+2026-10-05 01:06:44,390 TADA INFO assertion 3, papi job creates set: skipped
+2026-10-05 01:06:44,390 TADA INFO assertion 3.1, Events in papi job set created according to config file: skipped
+2026-10-05 01:06:44,390 TADA INFO assertion 3.2, Schema name is set accordingly: skipped
+2026-10-05 01:06:44,390 TADA INFO assertion 3.3, PAPI set has correct job_id: skipped
+2026-10-05 01:06:44,390 TADA INFO assertion 3.4, PAPI set has correct task_pids: skipped
+2026-10-05 01:06:44,390 TADA INFO assertion 4, Multiple, concurrent jobs results in concurrent, multiple sets: skipped
+2026-10-05 01:06:44,391 TADA INFO assertion 6, PAPI set persists within `job_expiry` after job exited: skipped
+2026-10-05 01:06:44,391 TADA INFO assertion 7, PAPI set is deleted after `2.2 x job_expiry` since job exited: skipped
+2026-10-05 01:06:44,391 TADA INFO assertion 8, Missing config file attribute is logged: skipped
+2026-10-05 01:06:44,391 TADA INFO assertion 9, Bad config file is logged: skipped
+2026-10-05 01:06:44,391 TADA INFO test papi_sampler_test ended
+2026-10-05 01:06:44,391 __main__ INFO -- Cleaning up files --
+2026-10-05 01:06:44,394 __main__ INFO -- Removing the virtual cluster --
