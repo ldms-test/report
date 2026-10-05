@@ -1,0 +1,122 @@
+2026-10-05 01:02:15,977 TADA INFO starting test `ldmsd_decomp__no_fill_test`
+2026-10-05 01:02:15,977 TADA INFO   test-id: b44a327931b6aa73a659b52432cc6b4e5229b5f4a99773e512c751df615d8ba5
+2026-10-05 01:02:15,977 TADA INFO   test-suite: LDMSD
+2026-10-05 01:02:15,977 TADA INFO   test-name: ldmsd_decomp__no_fill_test
+2026-10-05 01:02:15,977 TADA INFO   test-user: ldms-test
+2026-10-05 01:02:15,977 TADA INFO   commit-id: f112c2243f6c36b81e087e6844cc2a2839e1b360
+2026-10-05 01:02:15,977 __main__ INFO -- Get or create the cluster --
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localhost/v1.51/networks/ldms-test-ldmsd_decomp_no_fill_test-f112c22
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 857, in _get
+    net = dc.networks.get(name)
+  File "/usr/lib/python3.13/site-packages/docker/models/networks.py", line 182, in get
+    self.client.api.inspect_network(network_id, *args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/usr/lib/python3.13/site-packages/docker/api/network.py", line 212, in inspect_network
+    return self._result(res, json=True)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.NotFound: 404 Client Error for http+docker://localhost/v1.51/networks/ldms-test-ldmsd_decomp_no_fill_test-f112c22: Not Found ("network ldms-test-ldmsd_decomp_no_fill_test-f112c22 not found")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 2012, in get
+    cluster = _cls._get(name)
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 860, in _get
+    raise LookupError()
+LookupError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: http+docker://localhost/v1.51/nodes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/ldmsd_decomp_no_fill_test", line 359, in <module>
+    cluster = LDMSDCluster.get(spec["name"], create = True, spec = spec)
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 2019, in get
+    return _cls.create(spec)
+           ~~~~~~~~~~~^^^^^^
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 1990, in create
+    cluster = _cls._create(spec)
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 516, in _create
+    return cls.__create(spec=sp, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 596, in __create
+    clients = get_docker_clients()
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 38, in get_docker_clients
+    nodes = dc.nodes.list()
+  File "/usr/lib/python3.13/site-packages/docker/models/nodes.py", line 106, in list
+    for n in self.client.api.nodes(*args, **kwargs)
+             ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/utils/decorators.py", line 32, in wrapper
+    return f(self, *args, **kwargs)
+  File "/usr/lib/python3.13/site-packages/docker/api/swarm.py", line 317, in nodes
+    return self._result(self._get(url, params=params), True)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 503 Server Error for http+docker://localhost/v1.51/nodes: Service Unavailable ("This node is not a swarm manager. Use "docker swarm init" or "docker swarm join" to connect this node to swarm and try again.")
+2026-10-05 01:02:16,339 TADA INFO assertion 1, `as_is` decomposition, test_sampler_28da463 sos schema check: skipped
+2026-10-05 01:02:16,339 TADA INFO assertion 2, `as_is` decomposition, record_sampler_e1f021f sos schema check: skipped
+2026-10-05 01:02:16,339 TADA INFO assertion 3, `as_is` decomposition, fill sos schema check: skipped
+2026-10-05 01:02:16,339 TADA INFO assertion 4, `static` decomposition, filter sos schema check: skipped
+2026-10-05 01:02:16,339 TADA INFO assertion 5, `static` decomposition, record sos schema check: skipped
+2026-10-05 01:02:16,339 TADA INFO assertion 6, `as_is` decomposition, test_sampler_28da463 csv schema check: skipped
+2026-10-05 01:02:16,339 TADA INFO assertion 7, `as_is` decomposition, record_sampler_e1f021f csv schema check: skipped
+2026-10-05 01:02:16,340 TADA INFO assertion 8, `as_is` decomposition, fill csv schema check: skipped
+2026-10-05 01:02:16,340 TADA INFO assertion 9, `static` decomposition, filter csv schema check: skipped
+2026-10-05 01:02:16,340 TADA INFO assertion 10, `static` decomposition, record csv schema check: skipped
+2026-10-05 01:02:16,340 TADA INFO assertion 11, `as_is` decomposition, test_sampler_28da463 kafka schema check: skipped
+2026-10-05 01:02:16,340 TADA INFO assertion 12, `as_is` decomposition, record_sampler_e1f021f kafka schema check: skipped
+2026-10-05 01:02:16,340 TADA INFO assertion 13, `as_is` decomposition, fill kafka schema check: skipped
+2026-10-05 01:02:16,340 TADA INFO assertion 14, `static` decomposition, filter kafka schema check: skipped
+2026-10-05 01:02:16,340 TADA INFO assertion 15, `static` decomposition, record kafka schema check: skipped
+2026-10-05 01:02:16,340 TADA INFO assertion 16, `as_is` decomposition, test_sampler_28da463 sos data check: skipped
+2026-10-05 01:02:16,340 TADA INFO assertion 17, `as_is` decomposition, record_sampler_e1f021f sos data check: skipped
+2026-10-05 01:02:16,341 TADA INFO assertion 18, `as_is` decomposition, fill sos data check: skipped
+2026-10-05 01:02:16,341 TADA INFO assertion 19, `static` decomposition, filter sos data check: skipped
+2026-10-05 01:02:16,341 TADA INFO assertion 20, `static` decomposition, record sos data check: skipped
+2026-10-05 01:02:16,341 TADA INFO assertion 21, `as_is` decomposition, test_sampler_28da463 csv data check: skipped
+2026-10-05 01:02:16,341 TADA INFO assertion 22, `as_is` decomposition, record_sampler_e1f021f csv data check: skipped
+2026-10-05 01:02:16,341 TADA INFO assertion 23, `as_is` decomposition, fill csv data check: skipped
+2026-10-05 01:02:16,341 TADA INFO assertion 24, `static` decomposition, filter csv data check: skipped
+2026-10-05 01:02:16,341 TADA INFO assertion 25, `static` decomposition, record csv data check: skipped
+2026-10-05 01:02:16,341 TADA INFO assertion 26, `as_is` decomposition, test_sampler_28da463 kafka data check: skipped
+2026-10-05 01:02:16,341 TADA INFO assertion 27, `as_is` decomposition, record_sampler_e1f021f kafka data check: skipped
+2026-10-05 01:02:16,341 TADA INFO assertion 28, `as_is` decomposition, fill kafka data check: skipped
+2026-10-05 01:02:16,342 TADA INFO assertion 29, `static` decomposition, filter kafka data check: skipped
+2026-10-05 01:02:16,342 TADA INFO assertion 30, `static` decomposition, record kafka data check: skipped
+2026-10-05 01:02:16,342 TADA INFO test ldmsd_decomp__no_fill_test ended
