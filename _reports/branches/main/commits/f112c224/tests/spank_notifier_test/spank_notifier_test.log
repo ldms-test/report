@@ -1,0 +1,123 @@
+2026-10-05 01:08:19,546 TADA INFO starting test `spank_notifier_test`
+2026-10-05 01:08:19,546 TADA INFO   test-id: 7c6b54e054e2e5105c6addd0097ac57ed6b41d940639c87773c15530419a02fc
+2026-10-05 01:08:19,546 TADA INFO   test-suite: Slurm_Plugins
+2026-10-05 01:08:19,546 TADA INFO   test-name: spank_notifier_test
+2026-10-05 01:08:19,546 TADA INFO   test-user: ldms-test
+2026-10-05 01:08:19,546 TADA INFO   commit-id: f112c2243f6c36b81e087e6844cc2a2839e1b360
+2026-10-05 01:08:19,546 __main__ INFO -- Create the cluster --
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localhost/v1.51/networks/ldms-test-spank_notifier_test-f112c22
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 857, in _get
+    net = dc.networks.get(name)
+  File "/usr/lib/python3.13/site-packages/docker/models/networks.py", line 182, in get
+    self.client.api.inspect_network(network_id, *args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/usr/lib/python3.13/site-packages/docker/api/network.py", line 212, in inspect_network
+    return self._result(res, json=True)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.NotFound: 404 Client Error for http+docker://localhost/v1.51/networks/ldms-test-spank_notifier_test-f112c22: Not Found ("network ldms-test-spank_notifier_test-f112c22 not found")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 2012, in get
+    cluster = _cls._get(name)
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 860, in _get
+    raise LookupError()
+LookupError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: http+docker://localhost/v1.51/nodes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/spank_notifier_test", line 295, in <module>
+    cluster = LDMSDCluster.get(spec["name"], create=True, spec = spec)
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 2019, in get
+    return _cls.create(spec)
+           ~~~~~~~~~~~^^^^^^
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 1990, in create
+    cluster = _cls._create(spec)
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 516, in _create
+    return cls.__create(spec=sp, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 596, in __create
+    clients = get_docker_clients()
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 38, in get_docker_clients
+    nodes = dc.nodes.list()
+  File "/usr/lib/python3.13/site-packages/docker/models/nodes.py", line 106, in list
+    for n in self.client.api.nodes(*args, **kwargs)
+             ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/utils/decorators.py", line 32, in wrapper
+    return f(self, *args, **kwargs)
+  File "/usr/lib/python3.13/site-packages/docker/api/swarm.py", line 317, in nodes
+    return self._result(self._get(url, params=params), True)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 503 Server Error for http+docker://localhost/v1.51/nodes: Service Unavailable ("This node is not a swarm manager. Use "docker swarm init" or "docker swarm join" to connect this node to swarm and try again.")
+2026-10-05 01:08:19,895 TADA INFO assertion 0, Missing stream listener on node-1 does not affect job execution: skipped
+2026-10-05 01:08:19,895 TADA INFO assertion 1, Missing stream listener on node-2 does not affect job execution: skipped
+2026-10-05 01:08:19,895 TADA INFO assertion 2, 1-task job: first event is 'init': skipped
+2026-10-05 01:08:19,895 TADA INFO assertion 3, 1-task job: 'step_init' event contains subscriber data: skipped
+2026-10-05 01:08:19,896 TADA INFO assertion 4, 1-task job: second event is 'task_init_priv': skipped
+2026-10-05 01:08:19,896 TADA INFO assertion 5, 1-task job: third event is 'task_exit': skipped
+2026-10-05 01:08:19,896 TADA INFO assertion 6, 1-task job: fourth event is 'exit': skipped
+2026-10-05 01:08:19,896 TADA INFO assertion 7, 2-task job: first event is 'init': skipped
+2026-10-05 01:08:19,896 TADA INFO assertion 8, 2-task job: 'step_init' event contains subscriber data: skipped
+2026-10-05 01:08:19,896 TADA INFO assertion 9, 2-task job: second event is 'task_init_priv': skipped
+2026-10-05 01:08:19,896 TADA INFO assertion 10, 2-task job: third event is 'task_exit': skipped
+2026-10-05 01:08:19,896 TADA INFO assertion 11, 2-task job: fourth event is 'exit': skipped
+2026-10-05 01:08:19,896 TADA INFO assertion 12, 4-task job: first event is 'init': skipped
+2026-10-05 01:08:19,896 TADA INFO assertion 13, 4-task job: 'step_init' event contains subscriber data: skipped
+2026-10-05 01:08:19,897 TADA INFO assertion 14, 4-task job: second event is 'task_init_priv': skipped
+2026-10-05 01:08:19,897 TADA INFO assertion 15, 4-task job: third event is 'task_exit': skipped
+2026-10-05 01:08:19,897 TADA INFO assertion 16, 4-task job: fourth event is 'exit': skipped
+2026-10-05 01:08:19,897 TADA INFO assertion 17, 8-task job: first event is 'init': skipped
+2026-10-05 01:08:19,897 TADA INFO assertion 18, 8-task job: 'step_init' event contains subscriber data: skipped
+2026-10-05 01:08:19,897 TADA INFO assertion 19, 8-task job: second event is 'task_init_priv': skipped
+2026-10-05 01:08:19,897 TADA INFO assertion 20, 8-task job: third event is 'task_exit': skipped
+2026-10-05 01:08:19,897 TADA INFO assertion 21, 8-task job: fourth event is 'exit': skipped
+2026-10-05 01:08:19,897 TADA INFO assertion 22, 27-task job: first event is 'init': skipped
+2026-10-05 01:08:19,897 TADA INFO assertion 23, 27-task job: 'step_init' event contains subscriber data: skipped
+2026-10-05 01:08:19,898 TADA INFO assertion 24, 27-task job: second event is 'task_init_priv': skipped
+2026-10-05 01:08:19,898 TADA INFO assertion 25, 27-task job: third event is 'task_exit': skipped
+2026-10-05 01:08:19,898 TADA INFO assertion 26, 27-task job: fourth event is 'exit': skipped
+2026-10-05 01:08:19,898 TADA INFO assertion 50, Multi-tenant verification: skipped
+2026-10-05 01:08:19,898 TADA INFO assertion 51, Killing stream listener does not affect job execution on node-1: skipped
+2026-10-05 01:08:19,898 TADA INFO assertion 52, Killing stream listener does not affect job execution on node-2: skipped
+2026-10-05 01:08:19,898 TADA INFO assertion 60, Bad config does not affect jobs: skipped
+2026-10-05 01:08:19,898 TADA INFO test spank_notifier_test ended
