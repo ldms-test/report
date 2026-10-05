@@ -3,5 +3,5 @@ type: test
 branch: b4.5
 ldmsCommitId8: 1bae85ff
 name: spank_notifier_test
-status: queued
+status: failed
 ---
