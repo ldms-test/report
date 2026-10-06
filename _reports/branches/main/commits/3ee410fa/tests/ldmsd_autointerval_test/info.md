@@ -3,5 +3,5 @@ type: test
 branch: main
 ldmsCommitId8: 3ee410fa
 name: ldmsd_autointerval_test
-status: queued
+status: passed
 ---
