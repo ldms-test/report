@@ -1,11 +1,11 @@
-2026-10-06 09:18:30,869 TADA INFO starting test `ldmsd_msg_test`
-2026-10-06 09:18:30,870 TADA INFO   test-id: 56f751d1117fc83249e0ccad0674988e2d019896f952c6cb88a4e9358a7576b9
-2026-10-06 09:18:30,870 TADA INFO   test-suite: LDMSD
-2026-10-06 09:18:30,870 TADA INFO   test-name: ldmsd_msg_test
-2026-10-06 09:18:30,870 TADA INFO   test-user: ldms-test
-2026-10-06 09:18:30,870 TADA INFO   commit-id: 3ee410fafc43e0243da4e2873dcaca379cb17269
-2026-10-06 09:18:30,870 __main__ INFO -- Get or create the cluster --
-2026-10-06 09:18:30,901 __main__ INFO -- Start daemons --
+2026-10-06 09:22:55,710 TADA INFO starting test `ldmsd_msg_test`
+2026-10-06 09:22:55,710 TADA INFO   test-id: 38096ad212c1dd809215214ba0d208600a71c6bda53bbc3ed472f4e987998142
+2026-10-06 09:22:55,710 TADA INFO   test-suite: LDMSD
+2026-10-06 09:22:55,710 TADA INFO   test-name: ldmsd_msg_test
+2026-10-06 09:22:55,710 TADA INFO   test-user: ldms-test
+2026-10-06 09:22:55,710 TADA INFO   commit-id: 3ee410fafc43e0243da4e2873dcaca379cb17269
+2026-10-06 09:22:55,710 __main__ INFO -- Get or create the cluster --
+2026-10-06 09:22:55,740 __main__ INFO -- Start daemons --
 Traceback (most recent call last):
   File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
     response.raise_for_status()
@@ -63,25 +63,25 @@ Traceback (most recent call last):
   File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
     raise cls(e, response=response, explanation=explanation) from e
 docker.errors.APIError: 409 Client Error for http+docker://localhost/v1.51/containers/1cebfb8f44c0ac9c7394153c8ebc918e00146f6d9964a696f4bf1be2d12ac1f2/exec: Conflict ("container 1cebfb8f44c0ac9c7394153c8ebc918e00146f6d9964a696f4bf1be2d12ac1f2 is not running")
-2026-10-06 09:18:40,928 TADA INFO assertion 1, Check data from old ldmsd_stream at agg-1: skipped
-2026-10-06 09:18:40,928 TADA INFO assertion 2, Check data from old ldmsd_stream at agg-2: skipped
-2026-10-06 09:18:40,928 TADA INFO assertion 3, Check data from old ldmsd_stream at the last subscriber: skipped
-2026-10-06 09:18:40,928 TADA INFO assertion 4, Check data from the matching new ldms msg at agg-1: skipped
-2026-10-06 09:18:40,928 TADA INFO assertion 5, Check data from the matching new ldms msg at agg-2: skipped
-2026-10-06 09:18:40,928 TADA INFO assertion 6, Check data from the matching new ldms msg at the last subscriber: skipped
-2026-10-06 09:18:40,929 TADA INFO assertion 7, Check data from the non-matching new ldms stream at agg-1: skipped
-2026-10-06 09:18:40,929 TADA INFO assertion 8, Check data from the non-matching new ldms stream at agg-2: skipped
-2026-10-06 09:18:40,929 TADA INFO assertion 9, Check data from the non-matching new ldms stream at last subscriber: skipped
-2026-10-06 09:18:40,929 TADA INFO assertion 10, Check msg_stats before stream data transfer: skipped
-2026-10-06 09:18:40,929 TADA INFO assertion 11, Check msg_client_stats before stream data transfer: skipped
-2026-10-06 09:18:40,929 TADA INFO assertion 12, Check msg_stats after stream data transfer: skipped
-2026-10-06 09:18:40,929 TADA INFO assertion 13, Check msg_client_stats after stream data transfer: skipped
-2026-10-06 09:18:40,929 TADA INFO assertion 14, Publishing completed with a status after msg_disable: skipped
-2026-10-06 09:18:40,929 TADA INFO assertion 15, No data is propagated after msg_disable: skipped
-2026-10-06 09:18:40,929 TADA INFO assertion 16, Publisher synchronously failed afterward: skipped
-2026-10-06 09:18:40,930 TADA INFO assertion 17, New publisher synchronously failed: skipped
-2026-10-06 09:18:40,930 TADA INFO test ldmsd_msg_test ended
-Exception ignored in atexit callback <function at_exit at 0x7fa0a1ae4cc0>:
+2026-10-06 09:23:05,766 TADA INFO assertion 1, Check data from old ldmsd_stream at agg-1: skipped
+2026-10-06 09:23:05,766 TADA INFO assertion 2, Check data from old ldmsd_stream at agg-2: skipped
+2026-10-06 09:23:05,766 TADA INFO assertion 3, Check data from old ldmsd_stream at the last subscriber: skipped
+2026-10-06 09:23:05,767 TADA INFO assertion 4, Check data from the matching new ldms msg at agg-1: skipped
+2026-10-06 09:23:05,767 TADA INFO assertion 5, Check data from the matching new ldms msg at agg-2: skipped
+2026-10-06 09:23:05,767 TADA INFO assertion 6, Check data from the matching new ldms msg at the last subscriber: skipped
+2026-10-06 09:23:05,767 TADA INFO assertion 7, Check data from the non-matching new ldms stream at agg-1: skipped
+2026-10-06 09:23:05,767 TADA INFO assertion 8, Check data from the non-matching new ldms stream at agg-2: skipped
+2026-10-06 09:23:05,767 TADA INFO assertion 9, Check data from the non-matching new ldms stream at last subscriber: skipped
+2026-10-06 09:23:05,767 TADA INFO assertion 10, Check msg_stats before stream data transfer: skipped
+2026-10-06 09:23:05,767 TADA INFO assertion 11, Check msg_client_stats before stream data transfer: skipped
+2026-10-06 09:23:05,767 TADA INFO assertion 12, Check msg_stats after stream data transfer: skipped
+2026-10-06 09:23:05,767 TADA INFO assertion 13, Check msg_client_stats after stream data transfer: skipped
+2026-10-06 09:23:05,768 TADA INFO assertion 14, Publishing completed with a status after msg_disable: skipped
+2026-10-06 09:23:05,768 TADA INFO assertion 15, No data is propagated after msg_disable: skipped
+2026-10-06 09:23:05,768 TADA INFO assertion 16, Publisher synchronously failed afterward: skipped
+2026-10-06 09:23:05,768 TADA INFO assertion 17, New publisher synchronously failed: skipped
+2026-10-06 09:23:05,768 TADA INFO test ldmsd_msg_test ended
+Exception ignored in atexit callback <function at_exit at 0x7f595f070cc0>:
 Traceback (most recent call last):
   File "/home/ldms-test/var/main/ldms-test/ldmsd_msg_test", line 300, in at_exit
     cluster.remove()
