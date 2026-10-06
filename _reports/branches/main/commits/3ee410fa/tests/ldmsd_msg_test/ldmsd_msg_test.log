@@ -1,0 +1,107 @@
+2026-10-06 01:28:15,916 TADA INFO starting test `ldmsd_msg_test`
+2026-10-06 01:28:15,916 TADA INFO   test-id: 906c1a176195eb76da0ea9d7394a13c536473e57a64ee9eb16956d7fdac75f0b
+2026-10-06 01:28:15,916 TADA INFO   test-suite: LDMSD
+2026-10-06 01:28:15,916 TADA INFO   test-name: ldmsd_msg_test
+2026-10-06 01:28:15,916 TADA INFO   test-user: ldms-test
+2026-10-06 01:28:15,916 TADA INFO   commit-id: 3ee410fafc43e0243da4e2873dcaca379cb17269
+2026-10-06 01:28:15,916 __main__ INFO -- Get or create the cluster --
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localhost/v1.51/networks/ldms-test-ldmsd_msg_test-3ee410f
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 857, in _get
+    net = dc.networks.get(name)
+  File "/usr/lib/python3.13/site-packages/docker/models/networks.py", line 182, in get
+    self.client.api.inspect_network(network_id, *args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/usr/lib/python3.13/site-packages/docker/api/network.py", line 212, in inspect_network
+    return self._result(res, json=True)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.NotFound: 404 Client Error for http+docker://localhost/v1.51/networks/ldms-test-ldmsd_msg_test-3ee410f: Not Found ("network ldms-test-ldmsd_msg_test-3ee410f not found")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 2012, in get
+    cluster = _cls._get(name)
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 860, in _get
+    raise LookupError()
+LookupError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localhost/v1.51/containers/create?name=ldms-test-ldmsd_msg_test-3ee410f-old
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ldms-test/var/main/ldms-test/ldmsd_msg_test", line 304, in <module>
+    cluster = LDMSDCluster.get(spec["name"], create = True, spec = spec)
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 2019, in get
+    return _cls.create(spec)
+           ~~~~~~~~~~~^^^^^^
+  File "/home/ldms-test/var/main/ldms-test/LDMS_Test.py", line 1990, in create
+    cluster = _cls._create(spec)
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 516, in _create
+    return cls.__create(spec=sp, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/ldms-test/var/main/ldms-test/runtime/docker.py", line 713, in __create
+    cont = cl.containers.create(**params)
+  File "/usr/lib/python3.13/site-packages/docker/models/containers.py", line 935, in create
+    resp = self.client.api.create_container(**create_kwargs)
+  File "/usr/lib/python3.13/site-packages/docker/api/container.py", line 440, in create_container
+    return self.create_container_from_config(config, name, platform)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/container.py", line 457, in create_container_from_config
+    return self._result(res, True)
+           ~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.ImageNotFound: 404 Client Error for http+docker://localhost/v1.51/containers/create?name=ldms-test-ldmsd_msg_test-3ee410f-old: Not Found ("No such image: ovishpc/ldms-samp:4.3.10")
+2026-10-06 01:28:26,852 TADA INFO assertion 1, Check data from old ldmsd_stream at agg-1: skipped
+2026-10-06 01:28:26,852 TADA INFO assertion 2, Check data from old ldmsd_stream at agg-2: skipped
+2026-10-06 01:28:26,852 TADA INFO assertion 3, Check data from old ldmsd_stream at the last subscriber: skipped
+2026-10-06 01:28:26,852 TADA INFO assertion 4, Check data from the matching new ldms msg at agg-1: skipped
+2026-10-06 01:28:26,852 TADA INFO assertion 5, Check data from the matching new ldms msg at agg-2: skipped
+2026-10-06 01:28:26,852 TADA INFO assertion 6, Check data from the matching new ldms msg at the last subscriber: skipped
+2026-10-06 01:28:26,852 TADA INFO assertion 7, Check data from the non-matching new ldms stream at agg-1: skipped
+2026-10-06 01:28:26,852 TADA INFO assertion 8, Check data from the non-matching new ldms stream at agg-2: skipped
+2026-10-06 01:28:26,853 TADA INFO assertion 9, Check data from the non-matching new ldms stream at last subscriber: skipped
+2026-10-06 01:28:26,853 TADA INFO assertion 10, Check msg_stats before stream data transfer: skipped
+2026-10-06 01:28:26,853 TADA INFO assertion 11, Check msg_client_stats before stream data transfer: skipped
+2026-10-06 01:28:26,853 TADA INFO assertion 12, Check msg_stats after stream data transfer: skipped
+2026-10-06 01:28:26,853 TADA INFO assertion 13, Check msg_client_stats after stream data transfer: skipped
+2026-10-06 01:28:26,853 TADA INFO assertion 14, Publishing completed with a status after msg_disable: skipped
+2026-10-06 01:28:26,853 TADA INFO assertion 15, No data is propagated after msg_disable: skipped
+2026-10-06 01:28:26,853 TADA INFO assertion 16, Publisher synchronously failed afterward: skipped
+2026-10-06 01:28:26,854 TADA INFO assertion 17, New publisher synchronously failed: skipped
+2026-10-06 01:28:26,854 TADA INFO test ldmsd_msg_test ended
