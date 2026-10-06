@@ -1,0 +1,421 @@
+2026-10-06 05:08:37,782 TADA INFO starting test `ldms_msg_test`
+2026-10-06 05:08:37,782 TADA INFO   test-id: e9b4d7fbf02b38196a1fab0b35da6fc009de33f6e6ce633c8d94fc2ceeb99b35
+2026-10-06 05:08:37,782 TADA INFO   test-suite: LDMSD
+2026-10-06 05:08:37,782 TADA INFO   test-name: ldms_msg_test
+2026-10-06 05:08:37,782 TADA INFO   test-user: ldms-test
+2026-10-06 05:08:37,782 TADA INFO   commit-id: 1bae85ff4f1a062d3c94f82cd60fc0a8d3253e9b
+2026-10-06 05:08:37,782 __main__ INFO -- Get or create the cluster --
+2026-10-06 05:08:58,439 __main__ INFO -- Adding 'foo' and 'bar' users --
+2026-10-06 05:09:00,444 __main__ INFO -- Start daemons --
+2026-10-06 05:09:05,942 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-10-06 05:09:07,943 __main__ INFO start interactive msg servers
+2026-10-06 05:09:07,943 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-1bae85f-node-7 
+2026-10-06 05:09:10,146 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-1bae85f-node-6 
+2026-10-06 05:09:12,349 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-1bae85f-node-5 
+2026-10-06 05:09:14,553 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-1bae85f-node-4 
+2026-10-06 05:09:16,756 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-1bae85f-node-3 
+2026-10-06 05:09:18,959 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-1bae85f-node-2 
+2026-10-06 05:09:21,162 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-1bae85f-node-1 
+2026-10-06 05:09:23,365 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-1bae85f-node-4 
+2026-10-06 05:09:26,069 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-1bae85f-node-5 
+2026-10-06 05:09:28,773 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-1bae85f-node-6 
+2026-10-06 05:09:31,478 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-1bae85f-node-7 
+2026-10-06 05:09:34,182 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-1bae85f-node-4 as foo
+2026-10-06 05:09:36,886 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-1bae85f-node-4 as bar
+2026-10-06 05:09:39,590 __main__ INFO starting /tada-src/python/ldms_msg_client.py on ldms-test-ldms_msg_test-1bae85f-node-8 as foo
+2026-10-06 05:09:42,296 TADA INFO assertion 1, Publishing oversize data results in an error: checking..., passed
+2026-10-06 05:09:42,799 __main__ INFO getting data from srv1
+2026-10-06 05:09:45,302 __main__ INFO getting data from srv2
+2026-10-06 05:09:47,806 __main__ INFO getting data from srv3
+2026-10-06 05:09:50,309 __main__ INFO getting data from srv4
+2026-10-06 05:09:52,812 __main__ INFO getting data from srv5
+2026-10-06 05:09:55,316 __main__ INFO getting data from srv6
+2026-10-06 05:09:57,819 __main__ INFO getting data from srv7
+2026-10-06 05:10:00,322 __main__ INFO getting data from cli8foo
+2026-10-06 05:10:02,826 TADA INFO assertion 2, JSON support (l3-msg): client data verified, passed
+2026-10-06 05:10:02,826 __main__ INFO publishing 'four' on l3-msg by pub4
+2026-10-06 05:10:03,327 __main__ INFO publishing 'five' on l3-msg by pub5
+2026-10-06 05:10:03,828 __main__ INFO publishing 'six' on l3-msg by pub6
+2026-10-06 05:10:04,329 __main__ INFO publishing 'seven' on l3-msg by pub7
+2026-10-06 05:10:04,831 TADA INFO assertion 301, send-quota taken: quota: [117], passed
+2026-10-06 05:10:04,831 __main__ INFO obtaining all client data (0)
+2026-10-06 05:10:04,831 __main__ INFO getting data from srv1
+2026-10-06 05:10:07,335 __main__ INFO getting data from srv2
+2026-10-06 05:10:09,838 __main__ INFO getting data from srv3
+2026-10-06 05:10:12,342 __main__ INFO getting data from srv4
+2026-10-06 05:10:14,846 __main__ INFO getting data from srv5
+2026-10-06 05:10:17,350 __main__ INFO getting data from srv6
+2026-10-06 05:10:19,854 __main__ INFO getting data from srv7
+2026-10-06 05:10:22,358 __main__ INFO getting data from cli8foo
+2026-10-06 05:10:24,861 __main__ INFO obtaining all client data (1)
+2026-10-06 05:10:24,862 __main__ INFO getting data from srv1
+2026-10-06 05:10:27,365 __main__ INFO getting data from srv2
+2026-10-06 05:10:29,869 __main__ INFO getting data from srv3
+2026-10-06 05:10:32,373 __main__ INFO getting data from srv4
+2026-10-06 05:10:34,876 __main__ INFO getting data from srv5
+2026-10-06 05:10:37,380 __main__ INFO getting data from srv6
+2026-10-06 05:10:39,883 __main__ INFO getting data from srv7
+2026-10-06 05:10:42,386 __main__ INFO getting data from cli8foo
+2026-10-06 05:10:44,890 __main__ INFO obtaining all client data (2)
+2026-10-06 05:10:44,890 __main__ INFO getting data from srv1
+2026-10-06 05:10:47,393 __main__ INFO getting data from srv2
+2026-10-06 05:10:49,896 __main__ INFO getting data from srv3
+2026-10-06 05:10:52,399 __main__ INFO getting data from srv4
+2026-10-06 05:10:54,903 __main__ INFO getting data from srv5
+2026-10-06 05:10:57,405 __main__ INFO getting data from srv6
+2026-10-06 05:10:59,909 __main__ INFO getting data from srv7
+2026-10-06 05:11:02,412 __main__ INFO getting data from cli8foo
+2026-10-06 05:11:04,916 __main__ INFO obtaining all client data (3)
+2026-10-06 05:11:04,916 __main__ INFO getting data from srv1
+2026-10-06 05:11:07,420 __main__ INFO getting data from srv2
+2026-10-06 05:11:09,923 __main__ INFO getting data from srv3
+2026-10-06 05:11:12,427 __main__ INFO getting data from srv4
+2026-10-06 05:11:14,930 __main__ INFO getting data from srv5
+2026-10-06 05:11:17,433 __main__ INFO getting data from srv6
+2026-10-06 05:11:19,937 __main__ INFO getting data from srv7
+2026-10-06 05:11:22,440 __main__ INFO getting data from cli8foo
+2026-10-06 05:11:25,445 TADA INFO assertion 302, send-quota returned: quota: [128], passed
+2026-10-06 05:11:25,446 TADA INFO assertion 303, msg delivery spread among rails: tids: {211, 212, 214}, passed
+2026-10-06 05:11:25,446 TADA INFO assertion 3, l3-msg delivery: client data verified, passed
+2026-10-06 05:11:25,446 __main__ INFO publishing 'four' on l2-msg by pub4
+2026-10-06 05:11:25,947 __main__ INFO publishing 'five' on l2-msg by pub5
+2026-10-06 05:11:26,448 __main__ INFO publishing 'six' on l2-msg by pub6
+2026-10-06 05:11:26,949 __main__ INFO publishing 'seven' on l2-msg by pub7
+2026-10-06 05:11:27,450 __main__ INFO obtaining all client data (0)
+2026-10-06 05:11:27,450 __main__ INFO getting data from srv1
+2026-10-06 05:11:29,954 __main__ INFO getting data from srv2
+2026-10-06 05:11:32,458 __main__ INFO getting data from srv3
+2026-10-06 05:11:34,962 __main__ INFO getting data from srv4
+2026-10-06 05:11:37,466 __main__ INFO getting data from srv5
+2026-10-06 05:11:39,970 __main__ INFO getting data from srv6
+2026-10-06 05:11:42,473 __main__ INFO getting data from srv7
+2026-10-06 05:11:44,977 __main__ INFO getting data from cli8foo
+2026-10-06 05:11:47,481 __main__ INFO obtaining all client data (1)
+2026-10-06 05:11:47,481 __main__ INFO getting data from srv1
+2026-10-06 05:11:49,984 __main__ INFO getting data from srv2
+2026-10-06 05:11:52,488 __main__ INFO getting data from srv3
+2026-10-06 05:11:54,991 __main__ INFO getting data from srv4
+2026-10-06 05:11:57,495 __main__ INFO getting data from srv5
+2026-10-06 05:11:59,998 __main__ INFO getting data from srv6
+2026-10-06 05:12:02,501 __main__ INFO getting data from srv7
+2026-10-06 05:12:05,004 __main__ INFO getting data from cli8foo
+2026-10-06 05:12:07,508 TADA INFO assertion 4, l2-msg delivery: client data verified, passed
+2026-10-06 05:12:07,508 __main__ INFO publishing 'four' on l1-msg by pub4
+2026-10-06 05:12:08,009 __main__ INFO publishing 'five' on l1-msg by pub5
+2026-10-06 05:12:08,510 __main__ INFO publishing 'six' on l1-msg by pub6
+2026-10-06 05:12:09,011 __main__ INFO publishing 'seven' on l1-msg by pub7
+2026-10-06 05:12:09,512 __main__ INFO obtaining all client data (0)
+2026-10-06 05:12:09,512 __main__ INFO getting data from srv1
+2026-10-06 05:12:12,016 __main__ INFO getting data from srv2
+2026-10-06 05:12:14,519 __main__ INFO getting data from srv3
+2026-10-06 05:12:17,023 __main__ INFO getting data from srv4
+2026-10-06 05:12:19,527 __main__ INFO getting data from srv5
+2026-10-06 05:12:22,030 __main__ INFO getting data from srv6
+2026-10-06 05:12:24,534 __main__ INFO getting data from srv7
+2026-10-06 05:12:27,037 __main__ INFO getting data from cli8foo
+2026-10-06 05:12:29,541 __main__ INFO obtaining all client data (1)
+2026-10-06 05:12:29,541 __main__ INFO getting data from srv1
+2026-10-06 05:12:32,044 __main__ INFO getting data from srv2
+2026-10-06 05:12:34,547 __main__ INFO getting data from srv3
+2026-10-06 05:12:37,051 __main__ INFO getting data from srv4
+2026-10-06 05:12:39,554 __main__ INFO getting data from srv5
+2026-10-06 05:12:42,057 __main__ INFO getting data from srv6
+2026-10-06 05:12:44,560 __main__ INFO getting data from srv7
+2026-10-06 05:12:47,063 __main__ INFO getting data from cli8foo
+2026-10-06 05:12:49,567 TADA INFO assertion 5, l1-msg delivery: client data verified, passed
+2026-10-06 05:12:49,567 __main__ INFO publishing 'four' on x-msg by pub4
+2026-10-06 05:12:50,068 __main__ INFO publishing 'five' on x-msg by pub5
+2026-10-06 05:12:50,569 __main__ INFO publishing 'six' on x-msg by pub6
+2026-10-06 05:12:51,069 __main__ INFO publishing 'seven' on x-msg by pub7
+2026-10-06 05:12:51,570 __main__ INFO obtaining all client data (0)
+2026-10-06 05:12:51,570 __main__ INFO getting data from srv1
+2026-10-06 05:12:54,074 __main__ INFO getting data from srv2
+2026-10-06 05:12:56,577 __main__ INFO getting data from srv3
+2026-10-06 05:12:59,080 __main__ INFO getting data from srv4
+2026-10-06 05:13:01,583 __main__ INFO getting data from srv5
+2026-10-06 05:13:04,086 __main__ INFO getting data from srv6
+2026-10-06 05:13:06,589 __main__ INFO getting data from srv7
+2026-10-06 05:13:09,092 __main__ INFO getting data from cli8foo
+2026-10-06 05:13:11,596 __main__ INFO obtaining all client data (1)
+2026-10-06 05:13:11,596 __main__ INFO getting data from srv1
+2026-10-06 05:13:14,100 __main__ INFO getting data from srv2
+2026-10-06 05:13:16,603 __main__ INFO getting data from srv3
+2026-10-06 05:13:19,107 __main__ INFO getting data from srv4
+2026-10-06 05:13:21,611 __main__ INFO getting data from srv5
+2026-10-06 05:13:24,114 __main__ INFO getting data from srv6
+2026-10-06 05:13:26,617 __main__ INFO getting data from srv7
+2026-10-06 05:13:29,120 __main__ INFO getting data from cli8foo
+2026-10-06 05:13:31,624 TADA INFO assertion 6, x-msg delivery: client data verified, passed
+2026-10-06 05:13:31,624 __main__ INFO publishing 'four' on nada by pub4
+2026-10-06 05:13:32,125 __main__ INFO publishing 'five' on nada by pub5
+2026-10-06 05:13:32,626 __main__ INFO publishing 'six' on nada by pub6
+2026-10-06 05:13:33,126 __main__ INFO publishing 'seven' on nada by pub7
+2026-10-06 05:13:33,627 __main__ INFO obtaining all client data (0)
+2026-10-06 05:13:33,627 __main__ INFO getting data from srv1
+2026-10-06 05:13:36,130 __main__ INFO getting data from srv2
+2026-10-06 05:13:38,634 __main__ INFO getting data from srv3
+2026-10-06 05:13:41,137 __main__ INFO getting data from srv4
+2026-10-06 05:13:43,641 __main__ INFO getting data from srv5
+2026-10-06 05:13:46,144 __main__ INFO getting data from srv6
+2026-10-06 05:13:48,647 __main__ INFO getting data from srv7
+2026-10-06 05:13:51,151 __main__ INFO getting data from cli8foo
+2026-10-06 05:13:53,654 __main__ INFO obtaining all client data (1)
+2026-10-06 05:13:53,654 __main__ INFO getting data from srv1
+2026-10-06 05:13:56,157 __main__ INFO getting data from srv2
+2026-10-06 05:13:58,661 __main__ INFO getting data from srv3
+2026-10-06 05:14:01,164 __main__ INFO getting data from srv4
+2026-10-06 05:14:03,668 __main__ INFO getting data from srv5
+2026-10-06 05:14:06,172 __main__ INFO getting data from srv6
+2026-10-06 05:14:08,675 __main__ INFO getting data from srv7
+2026-10-06 05:14:11,179 __main__ INFO getting data from cli8foo
+2026-10-06 05:14:13,683 TADA INFO assertion 7, nada delivery: client data verified, passed
+2026-10-06 05:14:13,683 __main__ INFO publishing 'four' on l3-msg by pub4 (0400)
+2026-10-06 05:14:14,184 __main__ INFO publishing 'five' on l3-msg by pub5 (0400)
+2026-10-06 05:14:14,685 __main__ INFO publishing 'six' on l3-msg by pub6 (0400)
+2026-10-06 05:14:15,186 __main__ INFO publishing 'seven' on l3-msg by pub7 (0400)
+2026-10-06 05:14:15,687 __main__ INFO obtaining all client data (0)
+2026-10-06 05:14:15,687 __main__ INFO getting data from srv1
+2026-10-06 05:14:18,191 __main__ INFO getting data from srv2
+2026-10-06 05:14:20,694 __main__ INFO getting data from srv3
+2026-10-06 05:14:23,198 __main__ INFO getting data from srv4
+2026-10-06 05:14:25,701 __main__ INFO getting data from srv5
+2026-10-06 05:14:28,205 __main__ INFO getting data from srv6
+2026-10-06 05:14:30,709 __main__ INFO getting data from srv7
+2026-10-06 05:14:33,212 __main__ INFO getting data from cli8foo
+2026-10-06 05:14:35,715 __main__ INFO obtaining all client data (1)
+2026-10-06 05:14:35,715 __main__ INFO getting data from srv1
+2026-10-06 05:14:38,219 __main__ INFO getting data from srv2
+2026-10-06 05:14:40,722 __main__ INFO getting data from srv3
+2026-10-06 05:14:43,225 __main__ INFO getting data from srv4
+2026-10-06 05:14:45,728 __main__ INFO getting data from srv5
+2026-10-06 05:14:48,231 __main__ INFO getting data from srv6
+2026-10-06 05:14:50,734 __main__ INFO getting data from srv7
+2026-10-06 05:14:53,237 __main__ INFO getting data from cli8foo
+2026-10-06 05:14:55,740 __main__ INFO obtaining all client data (2)
+2026-10-06 05:14:55,740 __main__ INFO getting data from srv1
+2026-10-06 05:14:58,243 __main__ INFO getting data from srv2
+2026-10-06 05:15:00,746 __main__ INFO getting data from srv3
+2026-10-06 05:15:03,249 __main__ INFO getting data from srv4
+2026-10-06 05:15:05,753 __main__ INFO getting data from srv5
+2026-10-06 05:15:08,256 __main__ INFO getting data from srv6
+2026-10-06 05:15:10,760 __main__ INFO getting data from srv7
+2026-10-06 05:15:13,263 __main__ INFO getting data from cli8foo
+2026-10-06 05:15:15,767 __main__ INFO obtaining all client data (3)
+2026-10-06 05:15:15,767 __main__ INFO getting data from srv1
+2026-10-06 05:15:18,271 __main__ INFO getting data from srv2
+2026-10-06 05:15:20,774 __main__ INFO getting data from srv3
+2026-10-06 05:15:23,277 __main__ INFO getting data from srv4
+2026-10-06 05:15:25,781 __main__ INFO getting data from srv5
+2026-10-06 05:15:28,284 __main__ INFO getting data from srv6
+2026-10-06 05:15:30,788 __main__ INFO getting data from srv7
+2026-10-06 05:15:33,291 __main__ INFO getting data from cli8foo
+2026-10-06 05:15:35,795 TADA INFO assertion 8, l3-msg by 'root' with 0400 permission: client data verified, passed
+2026-10-06 05:15:35,795 __main__ INFO publishing 'four' on l3-msg by pub4 (0400) root as foo
+2026-10-06 05:15:36,296 __main__ INFO publishing 'five' on l3-msg by pub5 (0400) root as foo
+2026-10-06 05:15:36,797 __main__ INFO publishing 'six' on l3-msg by pub6 (0400) root as foo
+2026-10-06 05:15:37,298 __main__ INFO publishing 'seven' on l3-msg by pub7 (0400) root as foo
+2026-10-06 05:15:37,799 __main__ INFO obtaining all client data (0)
+2026-10-06 05:15:37,799 __main__ INFO getting data from srv1
+2026-10-06 05:15:40,302 __main__ INFO getting data from srv2
+2026-10-06 05:15:42,806 __main__ INFO getting data from srv3
+2026-10-06 05:15:45,310 __main__ INFO getting data from srv4
+2026-10-06 05:15:47,814 __main__ INFO getting data from srv5
+2026-10-06 05:15:50,318 __main__ INFO getting data from srv6
+2026-10-06 05:15:52,822 __main__ INFO getting data from srv7
+2026-10-06 05:15:55,326 __main__ INFO getting data from cli8foo
+2026-10-06 05:15:57,830 __main__ INFO obtaining all client data (1)
+2026-10-06 05:15:57,830 __main__ INFO getting data from srv1
+2026-10-06 05:16:00,334 __main__ INFO getting data from srv2
+2026-10-06 05:16:02,838 __main__ INFO getting data from srv3
+2026-10-06 05:16:05,342 __main__ INFO getting data from srv4
+2026-10-06 05:16:07,845 __main__ INFO getting data from srv5
+2026-10-06 05:16:10,348 __main__ INFO getting data from srv6
+2026-10-06 05:16:12,851 __main__ INFO getting data from srv7
+2026-10-06 05:16:15,354 __main__ INFO getting data from cli8foo
+2026-10-06 05:16:17,858 __main__ INFO obtaining all client data (2)
+2026-10-06 05:16:17,858 __main__ INFO getting data from srv1
+2026-10-06 05:16:20,361 __main__ INFO getting data from srv2
+2026-10-06 05:16:22,864 __main__ INFO getting data from srv3
+2026-10-06 05:16:25,367 __main__ INFO getting data from srv4
+2026-10-06 05:16:27,870 __main__ INFO getting data from srv5
+2026-10-06 05:16:30,373 __main__ INFO getting data from srv6
+2026-10-06 05:16:32,876 __main__ INFO getting data from srv7
+2026-10-06 05:16:35,379 __main__ INFO getting data from cli8foo
+2026-10-06 05:16:37,883 __main__ INFO obtaining all client data (3)
+2026-10-06 05:16:37,883 __main__ INFO getting data from srv1
+2026-10-06 05:16:40,386 __main__ INFO getting data from srv2
+2026-10-06 05:16:42,889 __main__ INFO getting data from srv3
+2026-10-06 05:16:45,392 __main__ INFO getting data from srv4
+2026-10-06 05:16:47,894 __main__ INFO getting data from srv5
+2026-10-06 05:16:50,397 __main__ INFO getting data from srv6
+2026-10-06 05:16:52,900 __main__ INFO getting data from srv7
+2026-10-06 05:16:55,403 __main__ INFO getting data from cli8foo
+2026-10-06 05:16:57,907 TADA INFO assertion 9, l3-msg by 'root' as 'foo' with 0400 permission: client data verified, passed
+2026-10-06 05:16:57,907 __main__ INFO publishing 'four' on l3-msg by pub4 (0400) root as bar
+2026-10-06 05:16:58,408 __main__ INFO publishing 'five' on l3-msg by pub5 (0400) root as bar
+2026-10-06 05:16:58,909 __main__ INFO publishing 'six' on l3-msg by pub6 (0400) root as bar
+2026-10-06 05:16:59,410 __main__ INFO publishing 'seven' on l3-msg by pub7 (0400) root as bar
+2026-10-06 05:16:59,911 __main__ INFO obtaining all client data (0)
+2026-10-06 05:16:59,911 __main__ INFO getting data from srv1
+2026-10-06 05:17:02,415 __main__ INFO getting data from srv2
+2026-10-06 05:17:04,919 __main__ INFO getting data from srv3
+2026-10-06 05:17:07,422 __main__ INFO getting data from srv4
+2026-10-06 05:17:09,926 __main__ INFO getting data from srv5
+2026-10-06 05:17:12,430 __main__ INFO getting data from srv6
+2026-10-06 05:17:14,934 __main__ INFO getting data from srv7
+2026-10-06 05:17:17,437 __main__ INFO getting data from cli8foo
+2026-10-06 05:17:19,940 __main__ INFO obtaining all client data (1)
+2026-10-06 05:17:19,940 __main__ INFO getting data from srv1
+2026-10-06 05:17:22,444 __main__ INFO getting data from srv2
+2026-10-06 05:17:24,948 __main__ INFO getting data from srv3
+2026-10-06 05:17:27,452 __main__ INFO getting data from srv4
+2026-10-06 05:17:29,954 __main__ INFO getting data from srv5
+2026-10-06 05:17:32,458 __main__ INFO getting data from srv6
+2026-10-06 05:17:34,961 __main__ INFO getting data from srv7
+2026-10-06 05:17:37,463 __main__ INFO getting data from cli8foo
+2026-10-06 05:17:39,966 __main__ INFO obtaining all client data (2)
+2026-10-06 05:17:39,967 __main__ INFO getting data from srv1
+2026-10-06 05:17:42,470 __main__ INFO getting data from srv2
+2026-10-06 05:17:44,974 __main__ INFO getting data from srv3
+2026-10-06 05:17:47,477 __main__ INFO getting data from srv4
+2026-10-06 05:17:49,980 __main__ INFO getting data from srv5
+2026-10-06 05:17:52,484 __main__ INFO getting data from srv6
+2026-10-06 05:17:54,987 __main__ INFO getting data from srv7
+2026-10-06 05:17:57,490 __main__ INFO getting data from cli8foo
+2026-10-06 05:17:59,993 __main__ INFO obtaining all client data (3)
+2026-10-06 05:17:59,993 __main__ INFO getting data from srv1
+2026-10-06 05:18:02,497 __main__ INFO getting data from srv2
+2026-10-06 05:18:05,000 __main__ INFO getting data from srv3
+2026-10-06 05:18:07,503 __main__ INFO getting data from srv4
+2026-10-06 05:18:10,006 __main__ INFO getting data from srv5
+2026-10-06 05:18:12,509 __main__ INFO getting data from srv6
+2026-10-06 05:18:15,013 __main__ INFO getting data from srv7
+2026-10-06 05:18:17,516 __main__ INFO getting data from cli8foo
+2026-10-06 05:18:20,019 TADA INFO assertion 10, l3-msg by 'root' as 'bar' with 0400 permission: client data verified, passed
+2026-10-06 05:18:20,019 __main__ INFO publishing 'four' on l3-msg by pub4 (0440) root as bar
+2026-10-06 05:18:20,520 __main__ INFO publishing 'five' on l3-msg by pub5 (0440) root as bar
+2026-10-06 05:18:21,021 __main__ INFO publishing 'six' on l3-msg by pub6 (0440) root as bar
+2026-10-06 05:18:21,522 __main__ INFO publishing 'seven' on l3-msg by pub7 (0440) root as bar
+2026-10-06 05:18:22,023 __main__ INFO obtaining all client data (0)
+2026-10-06 05:18:22,023 __main__ INFO getting data from srv1
+2026-10-06 05:18:24,527 __main__ INFO getting data from srv2
+2026-10-06 05:18:27,030 __main__ INFO getting data from srv3
+2026-10-06 05:18:29,534 __main__ INFO getting data from srv4
+2026-10-06 05:18:32,037 __main__ INFO getting data from srv5
+2026-10-06 05:18:34,541 __main__ INFO getting data from srv6
+2026-10-06 05:18:37,044 __main__ INFO getting data from srv7
+2026-10-06 05:18:39,547 __main__ INFO getting data from cli8foo
+2026-10-06 05:18:42,051 __main__ INFO obtaining all client data (1)
+2026-10-06 05:18:42,051 __main__ INFO getting data from srv1
+2026-10-06 05:18:44,554 __main__ INFO getting data from srv2
+2026-10-06 05:18:47,058 __main__ INFO getting data from srv3
+2026-10-06 05:18:49,562 __main__ INFO getting data from srv4
+2026-10-06 05:18:52,066 __main__ INFO getting data from srv5
+2026-10-06 05:18:54,569 __main__ INFO getting data from srv6
+2026-10-06 05:18:57,072 __main__ INFO getting data from srv7
+2026-10-06 05:18:59,576 __main__ INFO getting data from cli8foo
+2026-10-06 05:19:02,079 __main__ INFO obtaining all client data (2)
+2026-10-06 05:19:02,079 __main__ INFO getting data from srv1
+2026-10-06 05:19:04,583 __main__ INFO getting data from srv2
+2026-10-06 05:19:07,087 __main__ INFO getting data from srv3
+2026-10-06 05:19:09,591 __main__ INFO getting data from srv4
+2026-10-06 05:19:12,094 __main__ INFO getting data from srv5
+2026-10-06 05:19:14,598 __main__ INFO getting data from srv6
+2026-10-06 05:19:17,101 __main__ INFO getting data from srv7
+2026-10-06 05:19:19,604 __main__ INFO getting data from cli8foo
+2026-10-06 05:19:22,107 __main__ INFO obtaining all client data (3)
+2026-10-06 05:19:22,107 __main__ INFO getting data from srv1
+2026-10-06 05:19:24,611 __main__ INFO getting data from srv2
+2026-10-06 05:19:27,114 __main__ INFO getting data from srv3
+2026-10-06 05:19:29,617 __main__ INFO getting data from srv4
+2026-10-06 05:19:32,121 __main__ INFO getting data from srv5
+2026-10-06 05:19:34,624 __main__ INFO getting data from srv6
+2026-10-06 05:19:37,127 __main__ INFO getting data from srv7
+2026-10-06 05:19:39,631 __main__ INFO getting data from cli8foo
+2026-10-06 05:19:42,135 TADA INFO assertion 11, l3-msg by 'root' as 'bar' with 0440 permission: client data verified, passed
+2026-10-06 05:19:42,636 TADA INFO assertion 12, l3-msg by 'foo' as 'bar' results in an error: checking..., passed
+2026-10-06 05:19:42,636 __main__ INFO publishing 'four' on l3-msg by pub4foo (0440)
+2026-10-06 05:19:43,137 __main__ INFO obtaining all client data (0)
+2026-10-06 05:19:43,137 __main__ INFO getting data from srv1
+2026-10-06 05:19:45,641 __main__ INFO getting data from srv2
+2026-10-06 05:19:48,144 __main__ INFO getting data from srv3
+2026-10-06 05:19:50,647 __main__ INFO getting data from srv4
+2026-10-06 05:19:53,151 __main__ INFO getting data from srv5
+2026-10-06 05:19:55,654 __main__ INFO getting data from srv6
+2026-10-06 05:19:58,157 __main__ INFO getting data from srv7
+2026-10-06 05:20:00,660 __main__ INFO getting data from cli8foo
+2026-10-06 05:20:03,164 TADA INFO assertion 13, l3-msg by 'foo' with 0440 permission: client data verified, passed
+2026-10-06 05:20:03,165 __main__ INFO publishing 'four' on l3-msg by pub4bar (0440)
+2026-10-06 05:20:03,666 __main__ INFO obtaining all client data (0)
+2026-10-06 05:20:03,666 __main__ INFO getting data from srv1
+2026-10-06 05:20:06,169 __main__ INFO getting data from srv2
+2026-10-06 05:20:08,673 __main__ INFO getting data from srv3
+2026-10-06 05:20:11,176 __main__ INFO getting data from srv4
+2026-10-06 05:20:13,680 __main__ INFO getting data from srv5
+2026-10-06 05:20:16,183 __main__ INFO getting data from srv6
+2026-10-06 05:20:18,686 __main__ INFO getting data from srv7
+2026-10-06 05:20:21,188 __main__ INFO getting data from cli8foo
+2026-10-06 05:20:23,692 TADA INFO assertion 14, l3-msg by 'bar' with 0440 permission: client data verified, passed
+2026-10-06 05:20:27,196 TADA INFO assertion 15, Blocking client and asynchronous client have the same data: verified, passed
+2026-10-06 05:20:28,697 __main__ INFO publishing 'four' on l3-msg by srv4
+2026-10-06 05:20:29,198 __main__ INFO obtaining all client data (0)
+2026-10-06 05:20:29,199 __main__ INFO getting data from srv1
+2026-10-06 05:20:31,702 __main__ INFO getting data from srv2
+2026-10-06 05:20:34,205 __main__ INFO getting data from srv3
+2026-10-06 05:20:36,709 __main__ INFO getting data from srv4
+2026-10-06 05:20:39,212 __main__ INFO getting data from srv5
+2026-10-06 05:20:41,715 __main__ INFO getting data from srv6
+2026-10-06 05:20:44,218 __main__ INFO getting data from srv7
+2026-10-06 05:20:46,721 __main__ INFO getting data from cli8foo
+2026-10-06 05:20:49,224 TADA INFO assertion 20, l3-msg publish from L1 (srv4): client data verified, passed
+2026-10-06 05:20:49,225 __main__ INFO publishing 'four' on nada by srv4
+2026-10-06 05:20:49,725 __main__ INFO obtaining all client data (0)
+2026-10-06 05:20:49,725 __main__ INFO getting data from srv1
+2026-10-06 05:20:52,229 __main__ INFO getting data from srv2
+2026-10-06 05:20:54,732 __main__ INFO getting data from srv3
+2026-10-06 05:20:57,236 __main__ INFO getting data from srv4
+2026-10-06 05:20:59,739 __main__ INFO getting data from srv5
+2026-10-06 05:21:02,243 __main__ INFO getting data from srv6
+2026-10-06 05:21:04,746 __main__ INFO getting data from srv7
+2026-10-06 05:21:07,250 __main__ INFO getting data from cli8foo
+2026-10-06 05:21:09,753 TADA INFO assertion 21, nada publish from L1 (srv4): client data verified, passed
+2026-10-06 05:21:13,280 TADA INFO assertion 22, Check msg stats in each process: verified, passed
+2026-10-06 05:21:16,810 TADA INFO assertion 23, Check msg client stats in each process: verified, passed
+2026-10-06 05:21:19,313 TADA INFO assertion 16, srv-6 clean up properly after srv-3 exited: checking..., passed
+2026-10-06 05:21:19,313 TADA INFO assertion 17, srv-7 clean up properly after srv-3 exited: checking..., passed
+2026-10-06 05:21:19,313 TADA INFO assertion 18, srv-1 clean up properly after srv-3 exited: checking..., passed
+2026-10-06 05:21:19,313 __main__ INFO starting /tada-src/python/ldms_msg_server.py on ldms-test-ldms_msg_test-1bae85f-node-3 
+2026-10-06 05:21:22,018 __main__ INFO publishing 'seven' on l3-msg by pub7
+2026-10-06 05:21:22,519 __main__ INFO obtaining all client data (0)
+2026-10-06 05:21:22,519 __main__ INFO getting data from srv1
+2026-10-06 05:21:25,023 __main__ INFO getting data from srv2
+2026-10-06 05:21:27,526 __main__ INFO getting data from srv3
+2026-10-06 05:21:30,030 __main__ INFO getting data from srv4
+2026-10-06 05:21:32,533 __main__ INFO getting data from srv5
+2026-10-06 05:21:35,037 __main__ INFO getting data from srv6
+2026-10-06 05:21:37,540 __main__ INFO getting data from srv7
+2026-10-06 05:21:40,044 __main__ INFO getting data from cli8foo
+2026-10-06 05:21:42,548 TADA INFO assertion 19, l3-msg successfully delivered after srv-3 restarted: client data verified, passed
+2026-10-06 05:21:44,050 __main__ INFO getting data from srv1
+2026-10-06 05:21:46,553 __main__ INFO getting data from srv2
+2026-10-06 05:21:49,056 __main__ INFO getting data from srv3
+2026-10-06 05:21:51,559 __main__ INFO getting data from srv4
+2026-10-06 05:21:54,063 __main__ INFO getting data from srv5
+2026-10-06 05:21:56,566 __main__ INFO getting data from srv6
+2026-10-06 05:21:59,069 __main__ INFO getting data from srv7
+2026-10-06 05:22:01,572 __main__ INFO getting data from cli8foo
+2026-10-06 05:22:04,075 TADA INFO assertion 24, Check forged publishing block: client data verified, passed
+2026-10-06 05:22:07,577 TADA INFO assertion 25, pub-5 publish completed with a status after srv-5 disabled msg service: , passed
+2026-10-06 05:22:07,577 __main__ INFO getting data from srv1
+2026-10-06 05:22:10,080 __main__ INFO getting data from srv2
+2026-10-06 05:22:12,583 __main__ INFO getting data from srv3
+2026-10-06 05:22:15,087 __main__ INFO getting data from srv4
+2026-10-06 05:22:17,590 __main__ INFO getting data from srv5
+2026-10-06 05:22:20,093 __main__ INFO getting data from srv6
+2026-10-06 05:22:22,595 __main__ INFO getting data from srv7
+2026-10-06 05:22:25,099 __main__ INFO getting data from cli8foo
+2026-10-06 05:22:27,602 TADA INFO assertion 26, no data get propagated: , passed
+2026-10-06 05:22:28,103 TADA INFO assertion 27, pub-5 synchronously failed to publish afterward: , passed
+2026-10-06 05:22:28,103 __main__ INFO starting /tada-src/python/ldms_msg_publish.py on ldms-test-ldms_msg_test-1bae85f-node-5 
+2026-10-06 05:22:31,308 TADA INFO assertion 28, pub-5-new (new connection) synchronously failed to publish: , passed
+2026-10-06 05:22:31,309 TADA INFO test ldms_msg_test ended
