@@ -1,0 +1,34 @@
+2026-10-06 05:22:41,051 TADA INFO starting test `ldmsd_msg_test`
+2026-10-06 05:22:41,051 TADA INFO   test-id: 05ae0e5ae2c08032585a48202ed704eafd37507542a14c436716eddf71fa3cf2
+2026-10-06 05:22:41,051 TADA INFO   test-suite: LDMSD
+2026-10-06 05:22:41,051 TADA INFO   test-name: ldmsd_msg_test
+2026-10-06 05:22:41,051 TADA INFO   test-user: ldms-test
+2026-10-06 05:22:41,051 TADA INFO   commit-id: 1bae85ff4f1a062d3c94f82cd60fc0a8d3253e9b
+2026-10-06 05:22:41,051 __main__ INFO -- Get or create the cluster --
+2026-10-06 05:22:41,088 __main__ INFO -- Start daemons --
+2026-10-06 05:22:59,032 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-10-06 05:23:01,032 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldmsd_msg_test-1bae85f-new 
+2026-10-06 05:23:03,235 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldmsd_msg_test-1bae85f-agg-2 
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-test/ldmsd_msg_test", line 325, in <module>
+    old.exec_run("""echo '{"name":"data"}' > /db/data.json""")
+    ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'exec_run'
+2026-10-06 05:23:05,941 TADA INFO assertion 1, Check data from old ldmsd_stream at agg-1: skipped
+2026-10-06 05:23:05,942 TADA INFO assertion 2, Check data from old ldmsd_stream at agg-2: skipped
+2026-10-06 05:23:05,942 TADA INFO assertion 3, Check data from old ldmsd_stream at the last subscriber: skipped
+2026-10-06 05:23:05,942 TADA INFO assertion 4, Check data from the matching new ldms msg at agg-1: skipped
+2026-10-06 05:23:05,942 TADA INFO assertion 5, Check data from the matching new ldms msg at agg-2: skipped
+2026-10-06 05:23:05,942 TADA INFO assertion 6, Check data from the matching new ldms msg at the last subscriber: skipped
+2026-10-06 05:23:05,942 TADA INFO assertion 7, Check data from the non-matching new ldms stream at agg-1: skipped
+2026-10-06 05:23:05,942 TADA INFO assertion 8, Check data from the non-matching new ldms stream at agg-2: skipped
+2026-10-06 05:23:05,943 TADA INFO assertion 9, Check data from the non-matching new ldms stream at last subscriber: skipped
+2026-10-06 05:23:05,943 TADA INFO assertion 10, Check msg_stats before stream data transfer: skipped
+2026-10-06 05:23:05,943 TADA INFO assertion 11, Check msg_client_stats before stream data transfer: skipped
+2026-10-06 05:23:05,943 TADA INFO assertion 12, Check msg_stats after stream data transfer: skipped
+2026-10-06 05:23:05,943 TADA INFO assertion 13, Check msg_client_stats after stream data transfer: skipped
+2026-10-06 05:23:05,943 TADA INFO assertion 14, Publishing completed with a status after msg_disable: skipped
+2026-10-06 05:23:05,943 TADA INFO assertion 15, No data is propagated after msg_disable: skipped
+2026-10-06 05:23:05,943 TADA INFO assertion 16, Publisher synchronously failed afterward: skipped
+2026-10-06 05:23:05,944 TADA INFO assertion 17, New publisher synchronously failed: skipped
+2026-10-06 05:23:05,944 TADA INFO test ldmsd_msg_test ended
