@@ -1,0 +1,16 @@
+2026-10-07 02:41:18,426 __main__ INFO -- Get or create the cluster --
+2026-10-07 02:41:18,426 TADA INFO starting test `updtr_add test`
+2026-10-07 02:41:18,426 TADA INFO   test-id: 650041b3b24aef8e89ad6aef91e62baa8a4a11bc75ed42edb9d457b91df30e5b
+2026-10-07 02:41:18,426 TADA INFO   test-suite: LDMSD
+2026-10-07 02:41:18,426 TADA INFO   test-name: updtr_add test
+2026-10-07 02:41:18,426 TADA INFO   test-user: ldms-test
+2026-10-07 02:41:18,426 TADA INFO   commit-id: 3ee410fafc43e0243da4e2873dcaca379cb17269
+2026-10-07 02:41:30,358 __main__ INFO -- Start daemons --
+2026-10-07 02:41:53,126 __main__ INFO Waiting ... for all LDMSDs to start
+2026-10-07 02:41:53,275 __main__ INFO All LDMSDs are up.
+2026-10-07 02:41:53,430 TADA INFO assertion 1, updtr_del a non-existing updater: report(rc = 2) == expect(rc = 2), passed
+2026-10-07 02:41:53,584 TADA INFO assertion 2, updtr_del a running updater: report(rc = 16) == expect(rc = 16), passed
+2026-10-07 02:41:53,737 TADA INFO assertion 3, updtr_del a stopped updater: report(rc = 0) == expect(rc = 0), passed
+2026-10-07 02:41:53,890 TADA INFO assertion 4, updtr_del a just-added updater: report(rc = 0) == expect(rc = 0), passed
+2026-10-07 02:41:53,890 __main__ INFO --- done ---
+2026-10-07 02:41:53,891 TADA INFO test updtr_add test ended
