@@ -1,0 +1,21 @@
+2026-10-07 01:09:39,804 TADA INFO starting test `ldmsd_autointerval_test`
+2026-10-07 01:09:39,805 TADA INFO   test-id: 1bcf16424f1decc94703bb1b0f1fc7d825d5bbe42d29a392677733b2a1549f7d
+2026-10-07 01:09:39,805 TADA INFO   test-suite: LDMSD
+2026-10-07 01:09:39,805 TADA INFO   test-name: ldmsd_autointerval_test
+2026-10-07 01:09:39,805 TADA INFO   test-user: ldms-test
+2026-10-07 01:09:39,805 TADA INFO   commit-id: 3ee410fafc43e0243da4e2873dcaca379cb17269
+2026-10-07 01:09:39,805 __main__ INFO -- Get or create the cluster --
+2026-10-07 01:09:51,727 __main__ INFO -- Start daemons --
+2026-10-07 01:10:09,619 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-10-07 01:10:15,325 TADA INFO assertion 1, start all daemons and interactive controller: OK, passed
+2026-10-07 01:10:15,959 TADA INFO assertion 2, verify sampling interval and update hints: verified, passed
+2026-10-07 01:10:15,959 __main__ INFO Let them run for a while to collect data ...
+2026-10-07 01:10:25,959 __main__ INFO Setting sample interval to 1000000 ...
+2026-10-07 01:10:29,400 TADA INFO assertion 3, set and verify 2nd sampling interval / update hints: verified, passed
+2026-10-07 01:10:29,400 __main__ INFO Let them run for a while to collect data ...
+2026-10-07 01:10:39,401 __main__ INFO Setting sample interval to 2000000 ...
+2026-10-07 01:10:42,834 TADA INFO assertion 4, set and verify 3rd sampling interval / update hints: verified, passed
+2026-10-07 01:10:42,834 __main__ INFO Let them run for a while to collect data ...
+2026-10-07 01:10:52,918 TADA INFO assertion 5, verify SOS data: timestamp differences in SOS show all 3 intervals, passed
+2026-10-07 01:10:52,968 TADA INFO assertion 6, verify 'oversampled' in the agg2 log: OK, passed
+2026-10-07 01:10:52,969 TADA INFO test ldmsd_autointerval_test ended
