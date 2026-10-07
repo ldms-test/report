@@ -1,0 +1,60 @@
+2026-10-07 04:35:16,300 TADA INFO starting test `spank_notifier_test`
+2026-10-07 04:35:16,300 TADA INFO   test-id: f7a22b6c03e966c1ae5edd6fde40a88d1758c0f960172fdf2d8c101c6d4d6d44
+2026-10-07 04:35:16,301 TADA INFO   test-suite: Slurm_Plugins
+2026-10-07 04:35:16,301 TADA INFO   test-name: spank_notifier_test
+2026-10-07 04:35:16,301 TADA INFO   test-user: ldms-test
+2026-10-07 04:35:16,301 TADA INFO   commit-id: 1bae85ff4f1a062d3c94f82cd60fc0a8d3253e9b
+2026-10-07 04:35:16,301 __main__ INFO -- Create the cluster --
+2026-10-07 04:35:41,462 __main__ INFO -- Cleanup output --
+2026-10-07 04:35:41,603 __main__ INFO -- Test bad plugstack config --
+2026-10-07 04:35:41,603 __main__ INFO Starting slurm ...
+2026-10-07 04:35:47,065 __main__ INFO Starting slurm ... OK
+2026-10-07 04:36:07,265 __main__ INFO -- Submitting job with num_tasks 4 --
+2026-10-07 04:36:07,321 __main__ INFO   jobid = 1
+2026-10-07 04:36:07,418 __main__ INFO -- Submitting job with num_tasks 4 --
+2026-10-07 04:36:07,473 __main__ INFO   jobid = 2
+2026-10-07 04:36:07,573 __main__ INFO -- Submitting job with num_tasks 4 --
+2026-10-07 04:36:07,625 __main__ INFO   jobid = 3
+2026-10-07 04:36:07,723 __main__ INFO -- Submitting job with num_tasks 4 --
+2026-10-07 04:36:07,777 __main__ INFO   jobid = 4
+2026-10-07 04:37:08,553 __main__ INFO File checking timed out
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-test/spank_notifier_test", line 354, in <module>
+    out = headnode.read_file('/db/slurm_env_{jobid}.{procid}.out' \
+                         .format(jobid = j, procid=i))
+  File "/home/ldms-test/var/b4.5/ldms-test/runtime/docker.py", line 234, in read_file
+    raise RuntimeError("Error {} {}".format(rc, output))
+RuntimeError: Error 1 cat: /db/slurm_env_2.0.out: No such file or directory
+
+2026-10-07 04:37:08,799 TADA INFO assertion 0, Missing stream listener on node-1 does not affect job execution: skipped
+2026-10-07 04:37:08,799 TADA INFO assertion 1, Missing stream listener on node-2 does not affect job execution: skipped
+2026-10-07 04:37:08,799 TADA INFO assertion 2, 1-task job: first event is 'init': skipped
+2026-10-07 04:37:08,799 TADA INFO assertion 3, 1-task job: 'step_init' event contains subscriber data: skipped
+2026-10-07 04:37:08,799 TADA INFO assertion 4, 1-task job: second event is 'task_init_priv': skipped
+2026-10-07 04:37:08,799 TADA INFO assertion 5, 1-task job: third event is 'task_exit': skipped
+2026-10-07 04:37:08,800 TADA INFO assertion 6, 1-task job: fourth event is 'exit': skipped
+2026-10-07 04:37:08,800 TADA INFO assertion 7, 2-task job: first event is 'init': skipped
+2026-10-07 04:37:08,800 TADA INFO assertion 8, 2-task job: 'step_init' event contains subscriber data: skipped
+2026-10-07 04:37:08,800 TADA INFO assertion 9, 2-task job: second event is 'task_init_priv': skipped
+2026-10-07 04:37:08,800 TADA INFO assertion 10, 2-task job: third event is 'task_exit': skipped
+2026-10-07 04:37:08,800 TADA INFO assertion 11, 2-task job: fourth event is 'exit': skipped
+2026-10-07 04:37:08,800 TADA INFO assertion 12, 4-task job: first event is 'init': skipped
+2026-10-07 04:37:08,800 TADA INFO assertion 13, 4-task job: 'step_init' event contains subscriber data: skipped
+2026-10-07 04:37:08,800 TADA INFO assertion 14, 4-task job: second event is 'task_init_priv': skipped
+2026-10-07 04:37:08,801 TADA INFO assertion 15, 4-task job: third event is 'task_exit': skipped
+2026-10-07 04:37:08,801 TADA INFO assertion 16, 4-task job: fourth event is 'exit': skipped
+2026-10-07 04:37:08,801 TADA INFO assertion 17, 8-task job: first event is 'init': skipped
+2026-10-07 04:37:08,801 TADA INFO assertion 18, 8-task job: 'step_init' event contains subscriber data: skipped
+2026-10-07 04:37:08,801 TADA INFO assertion 19, 8-task job: second event is 'task_init_priv': skipped
+2026-10-07 04:37:08,801 TADA INFO assertion 20, 8-task job: third event is 'task_exit': skipped
+2026-10-07 04:37:08,801 TADA INFO assertion 21, 8-task job: fourth event is 'exit': skipped
+2026-10-07 04:37:08,801 TADA INFO assertion 22, 27-task job: first event is 'init': skipped
+2026-10-07 04:37:08,802 TADA INFO assertion 23, 27-task job: 'step_init' event contains subscriber data: skipped
+2026-10-07 04:37:08,802 TADA INFO assertion 24, 27-task job: second event is 'task_init_priv': skipped
+2026-10-07 04:37:08,802 TADA INFO assertion 25, 27-task job: third event is 'task_exit': skipped
+2026-10-07 04:37:08,802 TADA INFO assertion 26, 27-task job: fourth event is 'exit': skipped
+2026-10-07 04:37:08,802 TADA INFO assertion 50, Multi-tenant verification: skipped
+2026-10-07 04:37:08,802 TADA INFO assertion 51, Killing stream listener does not affect job execution on node-1: skipped
+2026-10-07 04:37:08,802 TADA INFO assertion 52, Killing stream listener does not affect job execution on node-2: skipped
+2026-10-07 04:37:08,802 TADA INFO assertion 60, Bad config does not affect jobs: skipped
+2026-10-07 04:37:08,803 TADA INFO test spank_notifier_test ended
