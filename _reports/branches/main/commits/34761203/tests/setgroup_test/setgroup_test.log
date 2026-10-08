@@ -1,0 +1,21 @@
+2026-10-08 02:32:14,655 TADA INFO starting test `setgroup_test`
+2026-10-08 02:32:14,655 TADA INFO   test-id: f780af7d873376b2d1ff9385d7d3e5959568a10de512656b0fe8bb9daa5ebc69
+2026-10-08 02:32:14,655 TADA INFO   test-suite: LDMSD
+2026-10-08 02:32:14,655 TADA INFO   test-name: setgroup_test
+2026-10-08 02:32:14,655 TADA INFO   test-user: ldms-test
+2026-10-08 02:32:14,655 TADA INFO   commit-id: 34761203324abffb843501597b5e161a896259a0
+2026-10-08 02:32:14,655 __main__ INFO -- Get or create the cluster --
+2026-10-08 02:32:28,293 __main__ INFO -- Start daemons --
+2026-10-08 02:32:46,382 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-10-08 02:32:51,382 __main__ INFO -- ldms_ls to agg-2 --
+2026-10-08 02:32:51,479 TADA INFO assertion 1, ldms_ls grp on agg-2: dir result verified, passed
+2026-10-08 02:32:54,160 TADA INFO assertion 2, members on agg-2 are being updated: data verified, passed
+2026-10-08 02:32:54,160 __main__ INFO -- Removing test_2 from grp --
+2026-10-08 02:32:54,640 TADA INFO assertion 3, test_2 is removed fom grp on sampler: expect {'node-1/grp', 'node-1/test_1'}, got {'node-1/grp', 'node-1/test_1'}, passed
+2026-10-08 02:32:58,902 TADA INFO assertion 4, test_2 is removed from grp on agg-1: expect {'node-1/grp', 'node-1/test_1'}, got {'node-1/grp', 'node-1/test_1'}, passed
+2026-10-08 02:33:03,157 TADA INFO assertion 5, test_2 is removed from grp on agg-2: expect {'node-1/grp', 'node-1/test_1'}, got {'node-1/grp', 'node-1/test_1'}, passed
+2026-10-08 02:33:07,158 __main__ INFO -- Adding test_2 back into grp --
+2026-10-08 02:33:07,718 TADA INFO assertion 6, test_2 is added back to grp on sampler: expect {'node-1/grp', 'node-1/test_2', 'node-1/test_1'}, got {'node-1/grp', 'node-1/test_2', 'node-1/test_1'}, passed
+2026-10-08 02:33:12,060 TADA INFO assertion 7, test_2 is added back to grp on agg-1: expect {'node-1/grp', 'node-1/test_2', 'node-1/test_1'}, got {'node-1/grp', 'node-1/test_2', 'node-1/test_1'}, passed
+2026-10-08 02:33:14,404 TADA INFO assertion 8, test_2 is added back to grp on agg-2: expect {'node-1/grp', 'node-1/test_2', 'node-1/test_1'}, got {'node-1/grp', 'node-1/test_2', 'node-1/test_1'}, passed
+2026-10-08 02:33:16,406 TADA INFO test setgroup_test ended
