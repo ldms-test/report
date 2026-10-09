@@ -1,0 +1,6 @@
+2026-10-09 17:30:04,242 TADA INFO starting test `prdcr_subscribe_test`
+2026-10-09 17:30:04,243 TADA INFO   test-id: 8bf65730562b52c1a506a078328e9ce4aa7dc308efcb76d9c6f0dbf3e4ea7978
+2026-10-09 17:30:04,243 TADA INFO   test-suite: LDMSD
+2026-10-09 17:30:04,243 TADA INFO   test-name: prdcr_subscribe_test
+2026-10-09 17:30:04,243 TADA INFO   test-user: ldms-test
+2026-10-09 17:30:04,243 TADA INFO   commit-id: 1bae85ff4f1a062d3c94f82cd60fc0a8d3253e9b
