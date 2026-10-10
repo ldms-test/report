@@ -1,0 +1,23 @@
+Sat Oct 10 02:42:16 AM CDT 2026 DEBUG TARGET_PID: 2493940
+Sat Oct 10 02:42:16 AM CDT 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/5850f48f//tests/updtr_match_del_test/updtr_match_del_test.log
+T_END: 1791619036
+2026-10-10 02:42:17,439 __main__ INFO -- Get or create the cluster --
+2026-10-10 02:42:17,439 TADA INFO starting test `updtr_add test`
+2026-10-10 02:42:17,439 TADA INFO   test-id: d81dfac5abf73c5cdaccb7db654f0079b8affeb5f358c568b7cbd7b3dbb2e37a
+2026-10-10 02:42:17,439 TADA INFO   test-suite: LDMSD
+2026-10-10 02:42:17,439 TADA INFO   test-name: updtr_add test
+2026-10-10 02:42:17,439 TADA INFO   test-user: ldms-test
+2026-10-10 02:42:17,440 TADA INFO   commit-id: 5850f48f2e28482ad05d797d6c567b2caf88dbb6
+2026-10-10 02:42:29,205 __main__ INFO -- Start daemons --
+2026-10-10 02:42:51,887 __main__ INFO Waiting ... for all LDMSDs to start
+2026-10-10 02:42:52,019 __main__ INFO All LDMSDs are up.
+2026-10-10 02:42:52,169 TADA INFO assertion 1, Send updtr_match_del with an invalid regex: report(rc = 2) == expect(rc = 22), passed
+2026-10-10 02:42:52,321 TADA INFO assertion 2, Send updtr_match_del to a non-existing updater: report(rc = 2) == expect(rc = 2), passed
+2026-10-10 02:42:52,476 TADA INFO assertion 3, Send updtr_match_del with a non-existing inst match: report(rc = 2) == expect(rc = 2), passed
+2026-10-10 02:42:52,628 TADA INFO assertion 4, Send updtr_match_del with a non-existing schema match: report(rc = 2) == expect(rc = 2), passed
+2026-10-10 02:42:52,774 TADA INFO assertion 5, Send updater_match_del with an invalid match type: report(rc = 22) == expect(rc = 22), passed
+2026-10-10 02:42:52,922 TADA INFO assertion 6, Send updater_match_del with a valid regex of the inst type: report(rc = 0) == expect(rc = 0), passed
+2026-10-10 02:42:53,073 TADA INFO assertion 7, Send updater_match_del with a valid regex of the schema type: report(rc = 0) == expect(rc = 0), passed
+2026-10-10 02:42:53,073 __main__ INFO --- done ---
+2026-10-10 02:42:53,074 TADA INFO test updtr_add test ended
+2493940 exited
