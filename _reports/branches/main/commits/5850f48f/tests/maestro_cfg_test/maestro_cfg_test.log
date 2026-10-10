@@ -1,0 +1,21 @@
+Sat Oct 10 02:08:55 AM CDT 2026 DEBUG TARGET_PID: 2332938
+Sat Oct 10 02:08:55 AM CDT 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/5850f48f//tests/maestro_cfg_test/maestro_cfg_test.log
+T_END: 1791617035
+2026-10-10 02:08:56,075 TADA INFO starting test `maestro_cfg_test`
+2026-10-10 02:08:56,075 TADA INFO   test-id: edb9dc7b8e136b39333a69ba966ba59309bba71ef956386613852bd0a5913945
+2026-10-10 02:08:56,075 TADA INFO   test-suite: LDMSD
+2026-10-10 02:08:56,075 TADA INFO   test-name: maestro_cfg_test
+2026-10-10 02:08:56,075 TADA INFO   test-user: ldms-test
+2026-10-10 02:08:56,075 TADA INFO   commit-id: 5850f48f2e28482ad05d797d6c567b2caf88dbb6
+2026-10-10 02:09:06,762 __main__ INFO -- Get or create cluster --
+2026-10-10 02:09:34,713 __main__ INFO -- Start daemons --
+2026-10-10 02:11:06,310 __main__ INFO ... make sure ldmsd's are up
+2026-10-10 02:11:12,299 TADA INFO assertion 1, load maestro etcd cluster: etcd cluster loaded successfully, passed
+2026-10-10 02:11:34,303 TADA INFO assertion 2, config ldmsd cluster with maestro: Maestro ldmsd configuration successful, passed
+2026-10-10 02:11:35,481 TADA INFO assertion 3, verify sampler daemons: OK, passed
+2026-10-10 02:11:35,930 TADA INFO assertion 4, verify L1 aggregator daemons: OK, passed
+2026-10-10 02:11:36,125 TADA INFO assertion 5, verify L2 aggregator daemon: OK, passed
+2026-10-10 02:11:36,403 TADA INFO assertion 6, verify data storage: OK, passed
+---Wait for config to write to file---
+2026-10-10 02:11:36,404 TADA INFO test maestro_cfg_test ended
+2332938 exited
