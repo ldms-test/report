@@ -1,0 +1,23 @@
+Sun Oct 11 01:05:45 AM CDT 2026 DEBUG TARGET_PID: 21137
+Sun Oct 11 01:05:45 AM CDT 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/5850f48f//tests/dump_cfg_test/dump_cfg_test.log
+T_END: 1791699645
+2026-10-11 01:05:46,864 TADA INFO starting test `dump_cfg_test`
+2026-10-11 01:05:46,864 TADA INFO   test-id: c7c853f3543f8391d0bf2644c93accfac65bdacb13da3d70b17316034ed0bdc6
+2026-10-11 01:05:46,864 TADA INFO   test-suite: LDMSD
+2026-10-11 01:05:46,864 TADA INFO   test-name: dump_cfg_test
+2026-10-11 01:05:46,864 TADA INFO   test-user: ldms-test
+2026-10-11 01:05:46,864 TADA INFO   commit-id: 5850f48f2e28482ad05d797d6c567b2caf88dbb6
+2026-10-11 01:05:46,864 __main__ INFO -- Get or create the cluster --
+2026-10-11 01:06:00,292 __main__ INFO -- Start daemons --
+2026-10-11 01:06:26,191 __main__ INFO -- Begin the test --
+2026-10-11 01:06:28,643 TADA INFO assertion 1.1, Specify the command-line options: The generated configuration is as expected., passed
+2026-10-11 01:06:31,027 TADA INFO assertion 1.2, Specify host at the command-line: The generated configuration is as expected., passed
+2026-10-11 01:06:33,422 TADA INFO assertion 1.3, Specify auth_opt at the command-line: The generated configuration is as expected., passed
+2026-10-11 01:06:35,874 TADA INFO assertion 2.1, Specify the command-line options in a configuration file: The generated configuration is as expected., passed
+2026-10-11 01:06:38,304 TADA INFO assertion 3.1, Sampler configuration commands: The generated configuration is as expected., passed
+2026-10-11 01:06:40,735 TADA INFO assertion 3.2, Sampler configuration commands with plugin-specific attributes: The generated configuration is as expected., passed
+2026-10-11 01:06:43,230 TADA INFO assertion 4.1, Simple aggregator configuration commands: The generated configuration is as expected., passed
+2026-10-11 01:06:45,661 TADA INFO assertion 5.1, prdcr_subscribe configuration commands: The generated configuration is as expected., passed
+2026-10-11 01:06:45,711 __main__ INFO --- done ---
+2026-10-11 01:06:45,713 TADA INFO test dump_cfg_test ended
+21137 exited
