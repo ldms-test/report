@@ -1,0 +1,22 @@
+Sun Oct 11 02:17:45 AM CDT 2026 DEBUG TARGET_PID: 353147
+Sun Oct 11 02:17:45 AM CDT 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/5850f48f//tests/ovis_ev_test/ovis_ev_test.log
+T_END: 1791703965
+2026-10-11 02:17:45,942 __main__ INFO -- Create the cluster -- 
+2026-10-11 02:17:58,560 TADA INFO starting test `ovis_ev_test`
+2026-10-11 02:17:58,560 TADA INFO   test-id: 854374a41feb87e683f356c26936981a7f1ec14938217c06e87c30c4fd3463cb
+2026-10-11 02:17:58,560 TADA INFO   test-suite: test_ovis_ev
+2026-10-11 02:17:58,560 TADA INFO   test-name: ovis_ev_test
+2026-10-11 02:17:58,560 TADA INFO   test-user: ldms-test
+2026-10-11 02:17:58,560 TADA INFO   commit-id: 5850f48f2e28482ad05d797d6c567b2caf88dbb6
+2026-10-11 02:17:58,561 TADA INFO assertion 1, Test posting an event without timeout: ovis_ev delivered the expected event., passed
+2026-10-11 02:17:58,561 TADA INFO assertion 2, Test posting an event with a current timeout: ovis_ev delivered the expected event., passed
+2026-10-11 02:17:58,561 TADA INFO assertion 3, Test posting an event with a future timeout: ovis_ev delivered the expected event., passed
+2026-10-11 02:17:58,561 TADA INFO assertion 4, Test reposting a posted event: ev_post returned EBUSY when posted an already posted event, passed
+2026-10-11 02:17:58,561 TADA INFO assertion 5, Test canceling a posted event: ovis_ev delivered the expected event., passed
+2026-10-11 02:17:58,561 TADA INFO assertion 6, Test rescheduling a posted event: ovis_ev delivered the expected event., passed
+2026-10-11 02:17:58,561 TADA INFO assertion 7, Test event deliver order: The event delivery order was correct., passed
+2026-10-11 02:17:58,561 TADA INFO assertion 8, Test flushing events: Expected status (1) == delivered status (1), passed
+2026-10-11 02:17:58,561 TADA INFO assertion 9, Test posting event on a flushed worker: Expected status (0) == delivered status (0), passed
+2026-10-11 02:17:58,562 TADA INFO assertion 10, Test the case that multiple threads post the same event: ev_post returned the expected return code., passed
+2026-10-11 02:17:58,562 TADA INFO test ovis_ev_test ended
+353147 exited
