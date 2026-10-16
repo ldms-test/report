@@ -1,0 +1,26 @@
+Fri Oct 16 02:42:26 AM CDT 2026 DEBUG TARGET_PID: 544990
+Fri Oct 16 02:42:26 AM CDT 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/fb354405//tests/store_list_record_test/store_list_record_test.log
+T_END: 1792137446
+2026-10-16 02:42:27,368 __main__ INFO -- Get or create the cluster --
+2026-10-16 02:42:27,368 TADA INFO starting test `store_sos_lists_test`
+2026-10-16 02:42:27,368 TADA INFO   test-id: 74eba2258602e394d42ed142dbaad312168b9ca84567f485f6d6144dc219ca58
+2026-10-16 02:42:27,368 TADA INFO   test-suite: LDMSD
+2026-10-16 02:42:27,368 TADA INFO   test-name: store_sos_lists_test
+2026-10-16 02:42:27,368 TADA INFO   test-user: ldms-test
+2026-10-16 02:42:27,368 TADA INFO   commit-id: fb35440586ec780cc3625f91482c30bd8bdbae82
+2026-10-16 02:42:39,272 __main__ INFO Waiting ... for all LDMSDs to start
+2026-10-16 02:43:02,998 __main__ INFO All sampler daemons are up.
+2026-10-16 02:43:03,047 TADA INFO assertion 1, aggregator with store_sos has started properly.: agg_sos.check_ldmsd(), passed
+2026-10-16 02:43:03,093 TADA INFO assertion 2, aggregator with store_csv has started properly.: agg_csv.check_ldmsd(), passed
+2026-10-16 02:43:04,236 TADA INFO assertion 3, store_sos is storing data.: file_exists(a) for a in supported_schema, passed
+2026-10-16 02:43:04,467 TADA INFO assertion 4, store_sos stores data correctly.: verify_data(db) for db in all_db, passed
+2026-10-16 02:43:11,966 TADA INFO assertion 5, store_sos stores data after restarted correctly.: verify_data(db) for db in all_db, passed
+2026-10-16 02:43:12,251 TADA INFO assertion 6, store_sos reports multiple list errror messages resulted by the config file.: store_sos reported the multiple list error messages., passed
+2026-10-16 02:43:15,299 TADA INFO assertion 7, store_sos reports multiple list errror messages resulted by ldmsd_controller.: store_sos reported the multiple list error messages., passed
+2026-10-16 02:43:15,440 TADA INFO assertion 8, store_csv is storing data.: file_exists(a) for a in supported_schema, passed
+2026-10-16 02:43:21,209 TADA INFO assertion 9, store_csv stores data correctly.: verify_data(db) for db in all_db, passed
+2026-10-16 02:43:29,692 TADA INFO assertion 10, store_csv stores data after restarted correctly.: verify_data(db) for db in all_db, passed
+2026-10-16 02:43:29,967 TADA INFO assertion 11, store_csv reports multiple list errror messages resulted by the config file.: store_csv reported the multiple list error messages., passed
+2026-10-16 02:43:33,033 TADA INFO assertion 12, store_csv reports multiple list errror messages resulted by ldmsd_controller.: store_csv reported the multiple list error messages., passed
+2026-10-16 02:43:33,035 TADA INFO test store_sos_lists_test ended
+544990 exited
