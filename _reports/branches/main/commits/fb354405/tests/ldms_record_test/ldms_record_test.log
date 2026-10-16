@@ -1,0 +1,62 @@
+Fri Oct 16 02:11:09 AM CDT 2026 DEBUG TARGET_PID: 396926
+Fri Oct 16 02:11:09 AM CDT 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/fb354405//tests/ldms_record_test/ldms_record_test.log
+T_END: 1792135569
+2026-10-16 02:11:10,114 TADA INFO starting test `ldms_record_test`
+2026-10-16 02:11:10,114 TADA INFO   test-id: a675e9477a8b2a2d40b43f13b6ab584688ebee8025e1659d348faad2d0c9038d
+2026-10-16 02:11:10,114 TADA INFO   test-suite: LDMSD
+2026-10-16 02:11:10,114 TADA INFO   test-name: ldms_record_test
+2026-10-16 02:11:10,114 TADA INFO   test-user: ldms-test
+2026-10-16 02:11:10,114 TADA INFO   commit-id: fb35440586ec780cc3625f91482c30bd8bdbae82
+2026-10-16 02:11:10,114 __main__ INFO -- Get or create the cluster --
+2026-10-16 02:11:18,328 __main__ INFO -- Start daemons --
+2026-10-16 02:11:25,865 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-10-16 02:11:27,865 __main__ INFO start record_samp.py and record_agg.py interactive sessions
+2026-10-16 02:11:32,272 TADA INFO assertion 1, check record_sampler on record_agg.py: OK, passed
+2026-10-16 02:11:32,272 TADA INFO assertion 2, (1st update) check set1 on record_samp.py: OK, passed
+2026-10-16 02:11:32,272 TADA INFO assertion 3, (1st update) check set3_p on record_samp.py: OK, passed
+2026-10-16 02:11:32,273 TADA INFO assertion 4, (1st update) check set3_c on record_samp.py: OK, passed
+2026-10-16 02:11:32,273 TADA INFO assertion 5, (1st update) check set1 on record_agg.py: OK, passed
+2026-10-16 02:11:32,273 TADA INFO assertion 6, (1st update) check set3_p on record_agg.py: OK, passed
+2026-10-16 02:11:32,273 TADA INFO assertion 7, (1st update) check set3_c on record_agg.py: OK, passed
+2026-10-16 02:11:32,273 __main__ INFO 2nd sampling on the sampler...
+2026-10-16 02:11:34,675 TADA INFO assertion 8, (2nd update) check set1 on record_samp.py: OK, passed
+2026-10-16 02:11:34,675 TADA INFO assertion 9, (2nd update) check set3_p on record_samp.py: OK, passed
+2026-10-16 02:11:34,675 TADA INFO assertion 10, (2nd update) check set3_c on record_samp.py: OK, passed
+2026-10-16 02:11:34,675 __main__ INFO 2nd update on the aggregator...
+2026-10-16 02:11:37,077 TADA INFO assertion 11, (2nd update) check set1 on record_agg.py: OK, passed
+2026-10-16 02:11:37,077 TADA INFO assertion 12, (2nd update) check set3_p on record_agg.py: OK, passed
+2026-10-16 02:11:37,077 TADA INFO assertion 13, (2nd update) check set3_c on record_agg.py: OK, passed
+2026-10-16 02:11:37,077 __main__ INFO 3rd sampling on the sampler...
+2026-10-16 02:11:39,479 TADA INFO assertion 14, (3rd update) check set1 on record_samp.py: OK, passed
+2026-10-16 02:11:39,479 TADA INFO assertion 15, (3rd update) check set3_p on record_samp.py: OK, passed
+2026-10-16 02:11:39,479 TADA INFO assertion 16, (3rd update) check set3_c on record_samp.py: OK, passed
+2026-10-16 02:11:39,479 __main__ INFO 3rd update on the aggregator...
+2026-10-16 02:11:41,881 TADA INFO assertion 17, (3rd update) check set1 on record_agg.py: OK, passed
+2026-10-16 02:11:41,881 TADA INFO assertion 18, (3rd update) check set3_p on record_agg.py: OK, passed
+2026-10-16 02:11:41,882 TADA INFO assertion 19, (3rd update) check set3_c on record_agg.py: OK, passed
+2026-10-16 02:11:41,882 __main__ INFO 4th sampling on the sampler...
+2026-10-16 02:11:44,283 TADA INFO assertion 20, (4th update; record uncahnged) check set1 on record_samp.py: OK, passed
+2026-10-16 02:11:44,284 TADA INFO assertion 21, (4th update; record uncahnged) check set3_p on record_samp.py: OK, passed
+2026-10-16 02:11:44,284 TADA INFO assertion 22, (4th update; record uncahnged) check set3_c on record_samp.py: OK, passed
+2026-10-16 02:11:44,284 __main__ INFO 4th update on the aggregator...
+2026-10-16 02:11:46,685 TADA INFO assertion 23, (4th update; record uncahnged) check set1 on record_agg.py: OK, passed
+2026-10-16 02:11:46,686 TADA INFO assertion 24, (4th update; record uncahnged) check set3_p on record_agg.py: OK, passed
+2026-10-16 02:11:46,686 TADA INFO assertion 25, (4th update; record uncahnged) check set3_c on record_agg.py: OK, passed
+2026-10-16 02:11:46,686 __main__ INFO 5th sampling on the sampler...
+2026-10-16 02:11:49,088 TADA INFO assertion 26, (5th update; record del) check set1 on record_samp.py: OK, passed
+2026-10-16 02:11:49,088 TADA INFO assertion 27, (5th update; record del) check set3_p on record_samp.py: OK, passed
+2026-10-16 02:11:49,088 TADA INFO assertion 28, (5th update; record del) check set3_c on record_samp.py: OK, passed
+2026-10-16 02:11:49,088 __main__ INFO 5th update on the aggregator...
+2026-10-16 02:11:51,490 TADA INFO assertion 29, (5th update; record del) check set1 on record_agg.py: OK, passed
+2026-10-16 02:11:51,490 TADA INFO assertion 30, (5th update; record del) check set3_p on record_agg.py: OK, passed
+2026-10-16 02:11:51,490 TADA INFO assertion 31, (5th update; record del) check set3_c on record_agg.py: OK, passed
+2026-10-16 02:11:51,490 __main__ INFO 6th sampling on the sampler...
+2026-10-16 02:11:53,892 TADA INFO assertion 32, (6th update; record unchanged) check set1 on record_samp.py: OK, passed
+2026-10-16 02:11:53,892 TADA INFO assertion 33, (6th update; record unchanged) check set3_p on record_samp.py: OK, passed
+2026-10-16 02:11:53,892 TADA INFO assertion 34, (6th update; record unchanged) check set3_c on record_samp.py: OK, passed
+2026-10-16 02:11:53,892 __main__ INFO 6th update on the updator...
+2026-10-16 02:11:56,294 TADA INFO assertion 35, (6th update; record unchanged) check set1 on record_agg.py: OK, passed
+2026-10-16 02:11:56,294 TADA INFO assertion 36, (6th update; record unchanged) check set3_p on record_agg.py: OK, passed
+2026-10-16 02:11:56,294 TADA INFO assertion 37, (6th update; record unchanged) check set3_c on record_agg.py: OK, passed
+2026-10-16 02:11:56,295 TADA INFO test ldms_record_test ended
+396926 exited
