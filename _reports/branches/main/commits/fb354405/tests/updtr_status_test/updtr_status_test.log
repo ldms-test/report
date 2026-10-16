@@ -1,0 +1,21 @@
+Fri Oct 16 02:50:03 AM CDT 2026 DEBUG TARGET_PID: 588614
+Fri Oct 16 02:50:03 AM CDT 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/fb354405//tests/updtr_status_test/updtr_status_test.log
+T_END: 1792137903
+2026-10-16 02:50:04,811 __main__ INFO -- Get or create the cluster --
+2026-10-16 02:50:04,811 TADA INFO starting test `updtr_status test`
+2026-10-16 02:50:04,811 TADA INFO   test-id: 8031d9068aaa933721050e08d1c47030b08d6e72e03ffc978ee98ad93c3577df
+2026-10-16 02:50:04,811 TADA INFO   test-suite: LDMSD
+2026-10-16 02:50:04,811 TADA INFO   test-name: updtr_status test
+2026-10-16 02:50:04,811 TADA INFO   test-user: ldms-test
+2026-10-16 02:50:04,811 TADA INFO   commit-id: fb35440586ec780cc3625f91482c30bd8bdbae82
+2026-10-16 02:50:18,449 __main__ INFO -- Start daemons --
+2026-10-16 02:50:38,647 __main__ INFO Waiting ... for all LDMSDs to start
+2026-10-16 02:50:38,832 __main__ INFO All LDMSDs are up.
+2026-10-16 02:50:38,983 TADA INFO assertion 1, Send 'updtr_status' to an LDMSD without any Updaters: [], passed
+2026-10-16 02:50:39,130 TADA INFO assertion 2, Send 'updtr_status name=foo', where updtr 'foo' doesn't exist.: report(updtr 'foo' doesn't exist.) == expect(updtr 'foo' doesn't exist.), passed
+2026-10-16 02:50:39,277 TADA INFO assertion 3, Send 'updtr_status name=all', where 'all' exists.: report([{'name': 'meminfo', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': [{'name': 'sampler-1', 'host': 'sampler-1', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}, {'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}]) == expect([{'name': 'meminfo', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': [{'name': 'sampler-1', 'host': 'sampler-1', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}, {'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}]), passed
+2026-10-16 02:50:39,424 TADA INFO assertion 4, Send 'updtr_status' to an LDMSD with a single Updater: report([{'name': 'agg11', 'interval': '1000000', 'offset': '200000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': [{'name': 'agg11', 'host': 'L1', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}]) == expect([{'name': 'agg11', 'interval': '1000000', 'offset': '200000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': [{'name': 'agg11', 'host': 'L1', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}]), passed
+2026-10-16 02:50:39,571 TADA INFO assertion 5, Send 'updtr_status' to an LDMSD with 2 updaters: report([{'name': 'meminfo', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': [{'name': 'sampler-1', 'host': 'sampler-1', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}, {'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}, {'name': 'sampler-2', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': [{'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}]) == expect([{'name': 'meminfo', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': [{'name': 'sampler-1', 'host': 'sampler-1', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}, {'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}, {'name': 'sampler-2', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': [{'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}]), passed
+2026-10-16 02:50:39,571 __main__ INFO --- done ---
+2026-10-16 02:50:39,572 TADA INFO test updtr_status test ended
+588614 exited
