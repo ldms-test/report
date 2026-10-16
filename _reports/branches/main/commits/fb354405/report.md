@@ -6,8 +6,8 @@ ldmsCommitId: fb35440586ec780cc3625f91482c30bd8bdbae82
 testCommitId: 
 ldmsCommitId8: fb354405
 testCommitId8: 
-status: "building"
-ts: 1792130449
+status: "build succeeded"
+ts: 1792130760
 ---
 
 {% include report.md %}
