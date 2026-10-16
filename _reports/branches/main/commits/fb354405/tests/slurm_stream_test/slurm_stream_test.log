@@ -1,0 +1,213 @@
+Fri Oct 16 02:36:05 AM CDT 2026 DEBUG TARGET_PID: 511597
+Fri Oct 16 02:36:05 AM CDT 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/fb354405//tests/slurm_stream_test/slurm_stream_test.log
+T_END: 1792137065
+2026-10-16 02:36:06,614 TADA INFO starting test `slurm_stream_test`
+2026-10-16 02:36:06,614 TADA INFO   test-id: 4e9b3b91c6ba81133cb178e06793127c8fbb664364343346e72f7c86a1a62fdf
+2026-10-16 02:36:06,614 TADA INFO   test-suite: LDMSD
+2026-10-16 02:36:06,614 TADA INFO   test-name: slurm_stream_test
+2026-10-16 02:36:06,614 TADA INFO   test-user: ldms-test
+2026-10-16 02:36:06,614 TADA INFO   commit-id: fb35440586ec780cc3625f91482c30bd8bdbae82
+2026-10-16 02:36:06,615 __main__ INFO -- Get or create the cluster --
+2026-10-16 02:36:16,635 __main__ INFO -- Start daemons --
+2026-10-16 02:36:31,858 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-10-16 02:36:48,004 TADA INFO assertion 1, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:48,005 __main__ INFO 12345
+2026-10-16 02:36:48,005 __main__ INFO 12345
+2026-10-16 02:36:48,005 TADA INFO assertion 2, job_start correctly represented in metric set: with mult jobs running for Job 12345, passed
+2026-10-16 02:36:48,005 TADA INFO assertion 3, job_end correctly represented in metric set: with mutl jobs running, for Job 12345, passed
+2026-10-16 02:36:48,005 TADA INFO assertion 4, task_pid correctly represented: with mult jobs running for Job 12345, passed
+2026-10-16 02:36:48,005 TADA INFO assertion 5, task_pid correctly represented: with mult jobs running for Job 12345, passed
+2026-10-16 02:36:48,005 TADA INFO assertion 6, task_pid correctly represented: with mult jobs running for Job 12345, passed
+2026-10-16 02:36:48,005 TADA INFO assertion 7, task_pid correctly represented: with mult jobs running for Job 12345, passed
+2026-10-16 02:36:48,177 TADA INFO assertion 8, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:48,177 __main__ INFO 12345
+2026-10-16 02:36:48,177 __main__ INFO 12345
+2026-10-16 02:36:48,178 TADA INFO assertion 9, job_start correctly represented in metric set: with mult jobs running for Job 12345, passed
+2026-10-16 02:36:48,178 TADA INFO assertion 10, job_end correctly represented in metric set: with mutl jobs running, for Job 12345, passed
+2026-10-16 02:36:48,178 TADA INFO assertion 11, task_pid correctly represented: with mult jobs running for Job 12345, passed
+2026-10-16 02:36:48,178 TADA INFO assertion 12, task_pid correctly represented: with mult jobs running for Job 12345, passed
+2026-10-16 02:36:48,178 TADA INFO assertion 13, task_pid correctly represented: with mult jobs running for Job 12345, passed
+2026-10-16 02:36:48,178 TADA INFO assertion 14, task_pid correctly represented: with mult jobs running for Job 12345, passed
+2026-10-16 02:36:48,346 TADA INFO assertion 15, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:48,346 __main__ INFO 12346
+2026-10-16 02:36:48,347 __main__ INFO 12346
+2026-10-16 02:36:48,347 TADA INFO assertion 16, job_start correctly represented in metric set: with mult jobs running for Job 12346, passed
+2026-10-16 02:36:48,347 TADA INFO assertion 17, job_end correctly represented in metric set: with mutl jobs running, for Job 12346, passed
+2026-10-16 02:36:48,347 TADA INFO assertion 18, task_pid correctly represented: with mult jobs running for Job 12346, passed
+2026-10-16 02:36:48,347 TADA INFO assertion 19, task_pid correctly represented: with mult jobs running for Job 12346, passed
+2026-10-16 02:36:48,347 TADA INFO assertion 20, task_pid correctly represented: with mult jobs running for Job 12346, passed
+2026-10-16 02:36:48,347 TADA INFO assertion 21, task_pid correctly represented: with mult jobs running for Job 12346, passed
+2026-10-16 02:36:48,516 TADA INFO assertion 22, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:48,516 __main__ INFO 12346
+2026-10-16 02:36:48,516 __main__ INFO 12346
+2026-10-16 02:36:48,516 TADA INFO assertion 23, job_start correctly represented in metric set: with mult jobs running for Job 12346, passed
+2026-10-16 02:36:48,516 TADA INFO assertion 24, job_end correctly represented in metric set: with mutl jobs running, for Job 12346, passed
+2026-10-16 02:36:48,516 TADA INFO assertion 25, task_pid correctly represented: with mult jobs running for Job 12346, passed
+2026-10-16 02:36:48,516 TADA INFO assertion 26, task_pid correctly represented: with mult jobs running for Job 12346, passed
+2026-10-16 02:36:48,516 TADA INFO assertion 27, task_pid correctly represented: with mult jobs running for Job 12346, passed
+2026-10-16 02:36:48,516 TADA INFO assertion 28, task_pid correctly represented: with mult jobs running for Job 12346, passed
+2026-10-16 02:36:48,680 TADA INFO assertion 29, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:48,680 __main__ INFO 12347
+2026-10-16 02:36:48,680 __main__ INFO 12347
+2026-10-16 02:36:48,681 TADA INFO assertion 30, job_start correctly represented in metric set: with mult jobs running for Job 12347, passed
+2026-10-16 02:36:48,681 TADA INFO assertion 31, job_end correctly represented in metric set: with mutl jobs running, for Job 12347, passed
+2026-10-16 02:36:48,681 TADA INFO assertion 32, task_pid correctly represented: with mult jobs running for Job 12347, passed
+2026-10-16 02:36:48,681 TADA INFO assertion 33, task_pid correctly represented: with mult jobs running for Job 12347, passed
+2026-10-16 02:36:48,681 TADA INFO assertion 34, task_pid correctly represented: with mult jobs running for Job 12347, passed
+2026-10-16 02:36:48,681 TADA INFO assertion 35, task_pid correctly represented: with mult jobs running for Job 12347, passed
+2026-10-16 02:36:48,852 TADA INFO assertion 36, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:48,852 __main__ INFO 12347
+2026-10-16 02:36:48,852 __main__ INFO 12347
+2026-10-16 02:36:48,852 TADA INFO assertion 37, job_start correctly represented in metric set: with mult jobs running for Job 12347, passed
+2026-10-16 02:36:48,852 TADA INFO assertion 38, job_end correctly represented in metric set: with mutl jobs running, for Job 12347, passed
+2026-10-16 02:36:48,853 TADA INFO assertion 39, task_pid correctly represented: with mult jobs running for Job 12347, passed
+2026-10-16 02:36:48,853 TADA INFO assertion 40, task_pid correctly represented: with mult jobs running for Job 12347, passed
+2026-10-16 02:36:48,853 TADA INFO assertion 41, task_pid correctly represented: with mult jobs running for Job 12347, passed
+2026-10-16 02:36:48,853 TADA INFO assertion 42, task_pid correctly represented: with mult jobs running for Job 12347, passed
+2026-10-16 02:36:49,027 TADA INFO assertion 43, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:49,027 __main__ INFO 12348
+2026-10-16 02:36:49,027 __main__ INFO 12348
+2026-10-16 02:36:49,027 TADA INFO assertion 44, job_start correctly represented in metric set: with mult jobs running for Job 12348, passed
+2026-10-16 02:36:49,027 TADA INFO assertion 45, job_end correctly represented in metric set: with mutl jobs running, for Job 12348, passed
+2026-10-16 02:36:49,027 TADA INFO assertion 46, task_pid correctly represented: with mult jobs running for Job 12348, passed
+2026-10-16 02:36:49,027 TADA INFO assertion 47, task_pid correctly represented: with mult jobs running for Job 12348, passed
+2026-10-16 02:36:49,027 TADA INFO assertion 48, task_pid correctly represented: with mult jobs running for Job 12348, passed
+2026-10-16 02:36:49,028 TADA INFO assertion 49, task_pid correctly represented: with mult jobs running for Job 12348, passed
+2026-10-16 02:36:49,195 TADA INFO assertion 50, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:49,195 __main__ INFO 12348
+2026-10-16 02:36:49,195 __main__ INFO 12348
+2026-10-16 02:36:49,195 TADA INFO assertion 51, job_start correctly represented in metric set: with mult jobs running for Job 12348, passed
+2026-10-16 02:36:49,195 TADA INFO assertion 52, job_end correctly represented in metric set: with mutl jobs running, for Job 12348, passed
+2026-10-16 02:36:49,195 TADA INFO assertion 53, task_pid correctly represented: with mult jobs running for Job 12348, passed
+2026-10-16 02:36:49,195 TADA INFO assertion 54, task_pid correctly represented: with mult jobs running for Job 12348, passed
+2026-10-16 02:36:49,195 TADA INFO assertion 55, task_pid correctly represented: with mult jobs running for Job 12348, passed
+2026-10-16 02:36:49,195 TADA INFO assertion 56, task_pid correctly represented: with mult jobs running for Job 12348, passed
+2026-10-16 02:36:49,363 TADA INFO assertion 57, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:49,363 __main__ INFO 12355
+2026-10-16 02:36:49,363 __main__ INFO 12355
+2026-10-16 02:36:49,364 TADA INFO assertion 58, job_start correctly represented in metric set: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,364 TADA INFO assertion 59, job_end correctly represented in metric set: with mutl jobs running, for Job 12355, passed
+2026-10-16 02:36:49,364 TADA INFO assertion 60, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,364 TADA INFO assertion 61, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,364 TADA INFO assertion 62, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,364 TADA INFO assertion 63, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,364 TADA INFO assertion 64, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,364 TADA INFO assertion 65, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,365 TADA INFO assertion 66, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,365 TADA INFO assertion 67, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,536 TADA INFO assertion 68, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:49,536 __main__ INFO 12355
+2026-10-16 02:36:49,536 __main__ INFO 12355
+2026-10-16 02:36:49,536 TADA INFO assertion 69, job_start correctly represented in metric set: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,536 TADA INFO assertion 70, job_end correctly represented in metric set: with mutl jobs running, for Job 12355, passed
+2026-10-16 02:36:49,536 TADA INFO assertion 71, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,536 TADA INFO assertion 72, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,537 TADA INFO assertion 73, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,537 TADA INFO assertion 74, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,537 TADA INFO assertion 75, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,537 TADA INFO assertion 76, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,537 TADA INFO assertion 77, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,537 TADA INFO assertion 78, task_pid correctly represented: with mult jobs running for Job 12355, passed
+2026-10-16 02:36:49,705 TADA INFO assertion 79, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:49,705 __main__ INFO 12356
+2026-10-16 02:36:49,705 __main__ INFO 12356
+2026-10-16 02:36:49,705 TADA INFO assertion 80, job_start correctly represented in metric set: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,705 TADA INFO assertion 81, job_end correctly represented in metric set: with mutl jobs running, for Job 12356, passed
+2026-10-16 02:36:49,706 TADA INFO assertion 82, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,706 TADA INFO assertion 83, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,706 TADA INFO assertion 84, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,706 TADA INFO assertion 85, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,706 TADA INFO assertion 86, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,706 TADA INFO assertion 87, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,706 TADA INFO assertion 88, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,706 TADA INFO assertion 89, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,874 TADA INFO assertion 90, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:49,874 __main__ INFO 12356
+2026-10-16 02:36:49,874 __main__ INFO 12356
+2026-10-16 02:36:49,874 TADA INFO assertion 91, job_start correctly represented in metric set: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,874 TADA INFO assertion 92, job_end correctly represented in metric set: with mutl jobs running, for Job 12356, passed
+2026-10-16 02:36:49,874 TADA INFO assertion 93, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,874 TADA INFO assertion 94, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,874 TADA INFO assertion 95, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,874 TADA INFO assertion 96, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,875 TADA INFO assertion 97, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,875 TADA INFO assertion 98, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,875 TADA INFO assertion 99, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:49,875 TADA INFO assertion 100, task_pid correctly represented: with mult jobs running for Job 12356, passed
+2026-10-16 02:36:50,044 TADA INFO assertion 101, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:50,044 __main__ INFO 12357
+2026-10-16 02:36:50,044 __main__ INFO 12357
+2026-10-16 02:36:50,044 TADA INFO assertion 102, job_start correctly represented in metric set: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,044 TADA INFO assertion 103, job_end correctly represented in metric set: with mutl jobs running, for Job 12357, passed
+2026-10-16 02:36:50,044 TADA INFO assertion 104, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,044 TADA INFO assertion 105, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,045 TADA INFO assertion 106, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,045 TADA INFO assertion 107, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,045 TADA INFO assertion 108, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,045 TADA INFO assertion 109, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,045 TADA INFO assertion 110, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,045 TADA INFO assertion 111, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,217 TADA INFO assertion 112, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:50,217 __main__ INFO 12357
+2026-10-16 02:36:50,218 __main__ INFO 12357
+2026-10-16 02:36:50,218 TADA INFO assertion 113, job_start correctly represented in metric set: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,218 TADA INFO assertion 114, job_end correctly represented in metric set: with mutl jobs running, for Job 12357, passed
+2026-10-16 02:36:50,218 TADA INFO assertion 115, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,218 TADA INFO assertion 116, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,218 TADA INFO assertion 117, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,218 TADA INFO assertion 118, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,218 TADA INFO assertion 119, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,219 TADA INFO assertion 120, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,219 TADA INFO assertion 121, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,219 TADA INFO assertion 122, task_pid correctly represented: with mult jobs running for Job 12357, passed
+2026-10-16 02:36:50,387 TADA INFO assertion 123, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:50,387 __main__ INFO 12358
+2026-10-16 02:36:50,387 __main__ INFO 12358
+2026-10-16 02:36:50,388 TADA INFO assertion 124, job_start correctly represented in metric set: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,388 TADA INFO assertion 125, job_end correctly represented in metric set: with mutl jobs running, for Job 12358, passed
+2026-10-16 02:36:50,388 TADA INFO assertion 126, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,388 TADA INFO assertion 127, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,388 TADA INFO assertion 128, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,388 TADA INFO assertion 129, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,388 TADA INFO assertion 130, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,388 TADA INFO assertion 131, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,389 TADA INFO assertion 132, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,389 TADA INFO assertion 133, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,557 TADA INFO assertion 134, Job properly assigned to correct slot: correct job_id fills next slot, passed
+2026-10-16 02:36:50,557 __main__ INFO 12358
+2026-10-16 02:36:50,557 __main__ INFO 12358
+2026-10-16 02:36:50,557 TADA INFO assertion 135, job_start correctly represented in metric set: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,557 TADA INFO assertion 136, job_end correctly represented in metric set: with mutl jobs running, for Job 12358, passed
+2026-10-16 02:36:50,557 TADA INFO assertion 137, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,557 TADA INFO assertion 138, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,557 TADA INFO assertion 139, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,558 TADA INFO assertion 140, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,558 TADA INFO assertion 141, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,558 TADA INFO assertion 142, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,558 TADA INFO assertion 143, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:50,558 TADA INFO assertion 144, task_pid correctly represented: with mult jobs running for Job 12358, passed
+2026-10-16 02:36:51,638 TADA INFO assertion 145, new job correctly replaces oldest slot: correct job_id fills next slot, passed
+2026-10-16 02:36:51,638 __main__ INFO 12353
+2026-10-16 02:36:51,638 __main__ INFO 12353
+2026-10-16 02:36:51,639 TADA INFO assertion 146, new job_start correctly represented in metric set: with mult jobs running for Job 12353, passed
+2026-10-16 02:36:51,639 TADA INFO assertion 147, new job_end correctly represented in metric set: with mutl jobs running, for Job 12353, passed
+2026-10-16 02:36:51,639 TADA INFO assertion 148, new job's task replaces oldest slot: with mult jobs running for Job 12353, passed
+2026-10-16 02:36:51,639 TADA INFO assertion 149, new job's task replaces oldest slot: with mult jobs running for Job 12353, passed
+2026-10-16 02:36:51,639 TADA INFO assertion 150, new job's task replaces oldest slot: with mult jobs running for Job 12353, passed
+2026-10-16 02:36:51,639 TADA INFO assertion 151, new job's task replaces oldest slot: with mult jobs running for Job 12353, passed
+2026-10-16 02:36:51,639 TADA INFO assertion 152, new job's task replaces oldest slot: with mult jobs running for Job 12353, passed
+2026-10-16 02:36:51,640 TADA INFO assertion 153, new job's task replaces oldest slot: with mult jobs running for Job 12353, passed
+2026-10-16 02:36:51,640 TADA INFO assertion 154, new job's task replaces oldest slot: with mult jobs running for Job 12353, passed
+2026-10-16 02:36:51,640 TADA INFO assertion 155, new job's task replaces oldest slot: with mult jobs running for Job 12353, passed
+2026-10-16 02:36:51,640 __main__ INFO -- Test Finished --
+Delivering events...
+Delivering events...
+Delivering events...
+Delivering events...
+Delivering events...
+Delivering events...
+Delivering events...
+Delivering events...
+Delivering events...
+2026-10-16 02:36:51,642 TADA INFO test slurm_stream_test ended
+511597 exited
