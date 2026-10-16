@@ -1,0 +1,21 @@
+Fri Oct 16 02:29:46 AM CDT 2026 DEBUG TARGET_PID: 484416
+Fri Oct 16 02:29:46 AM CDT 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/fb354405//tests/quick_set_add_rm_test/quick_set_add_rm_test.log
+T_END: 1792136686
+2026-10-16 02:29:47,356 TADA INFO starting test `quick_set_add_rm_test`
+2026-10-16 02:29:47,356 TADA INFO   test-id: 0654a3c75a3235f2841525f7a39017003c3d5355c553c265e53988969e87bda7
+2026-10-16 02:29:47,356 TADA INFO   test-suite: LDMSD
+2026-10-16 02:29:47,356 TADA INFO   test-name: quick_set_add_rm_test
+2026-10-16 02:29:47,356 TADA INFO   test-user: ldms-test
+2026-10-16 02:29:47,356 TADA INFO   commit-id: fb35440586ec780cc3625f91482c30bd8bdbae82
+2026-10-16 02:29:47,356 __main__ INFO -- Get or create the cluster --
+2026-10-16 02:29:59,026 __main__ INFO -- Start samp.py --
+2026-10-16 02:30:04,130 TADA INFO assertion 1, start samp.py: prompt checked, passed
+2026-10-16 02:30:04,130 __main__ INFO -- Start daemons --
+2026-10-16 02:30:12,372 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-10-16 02:30:17,932 TADA INFO assertion 2, verify data: verified, passed
+2026-10-16 02:30:21,861 TADA INFO assertion 3, samp.py adds set1 / verify data: verified, passed
+2026-10-16 02:30:25,624 TADA INFO assertion 4, samp.py removes set1 / verify data: verified, passed
+2026-10-16 02:30:29,381 TADA INFO assertion 5, samp.py quickly adds and removes set2 / verify data: verified, passed
+2026-10-16 02:30:34,435 TADA INFO assertion 6, agg-1 log stays empty: verified, passed
+2026-10-16 02:30:34,437 TADA INFO test quick_set_add_rm_test ended
+484416 exited
