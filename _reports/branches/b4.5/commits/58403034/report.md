@@ -3,11 +3,11 @@ layout: default
 type: report
 branch: b4.5
 ldmsCommitId: 584030343b8279ef4efbb1de9e2cd87c96c4ea48
-testCommitId: 
+testCommitId: 87039354b5fd9b996c947569561b15a45a3ea28c
 ldmsCommitId8: 58403034
-testCommitId8: 
-status: "build succeeded"
-ts: 1792476783
+testCommitId8: 87039354
+status: "testing"
+ts: 1792476789
 ---
 
 {% include report.md %}
