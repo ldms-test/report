@@ -1,0 +1,17 @@
+Tue Oct 20 01:17:53 AM CDT 2026 DEBUG TARGET_PID: 255521
+Tue Oct 20 01:17:53 AM CDT 2026 DEBUG LOG_FILE: /home/ldms-test/var/b4.5/report/_reports/branches/b4.5/commits/58403034//tests/papi_store_test/papi_store_test.log
+T_END: 1792477973
+2026-10-20 01:17:54,612 TADA INFO starting test `papi_store_test`
+2026-10-20 01:17:54,612 TADA INFO   test-id: ead351375e1afa2037479bc519f9d3d091ffdbe901398f74ca11cd1b883889d6
+2026-10-20 01:17:54,612 TADA INFO   test-suite: LDMSD
+2026-10-20 01:17:54,612 TADA INFO   test-name: papi_store_test
+2026-10-20 01:17:54,612 TADA INFO   test-user: ldms-test
+2026-10-20 01:17:54,612 TADA INFO   commit-id: 584030343b8279ef4efbb1de9e2cd87c96c4ea48
+2026-10-20 01:17:54,613 __main__ INFO -- Get or create the cluster --
+2026-10-20 01:18:06,950 __main__ INFO -- Start daemons --
+2026-10-20 01:18:51,006 TADA INFO assertion 1, Every job in the input data is represented in the output: {1, 2, 3, 4} = {1, 2, 3, 4}, passed
+2026-10-20 01:18:51,007 TADA INFO assertion 2, Every event in every job results in a separate row in the output: verified, passed
+2026-10-20 01:18:51,007 TADA INFO assertion 3, The schema name in the output matches the event name: verified, passed
+2026-10-20 01:18:51,007 TADA INFO assertion 4, Each rank in the job results in a row per event in the output: verified, passed
+2026-10-20 01:18:51,008 TADA INFO test papi_store_test ended
+255521 exited
