@@ -1,0 +1,32 @@
+Tue Oct 20 01:23:02 AM CDT 2026 DEBUG TARGET_PID: 310662
+Tue Oct 20 01:23:02 AM CDT 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/60010e7e//tests/ldmsd_ctrl_test/ldmsd_ctrl_test.log
+T_END: 1792478282
+/home/ldms-test/var/main/ldms-test/ldmsd_ctrl_test:381: SyntaxWarning: invalid escape sequence '\s'
+  if not re.match(".*\sCONNECTED.*", out[3]) \
+/home/ldms-test/var/main/ldms-test/ldmsd_ctrl_test:382: SyntaxWarning: invalid escape sequence '\s'
+  or not re.match("node-1/meminfo\s.*\sREADY\s*.*", out[4]):
+/home/ldms-test/var/main/ldms-test/ldmsd_ctrl_test:389: SyntaxWarning: invalid escape sequence '\s'
+  if not re.match("updtr\s+.*\sRUNNING\s*.*", out[3]) \
+/home/ldms-test/var/main/ldms-test/ldmsd_ctrl_test:390: SyntaxWarning: invalid escape sequence '\s'
+  or not re.match("prdcr\s+.*\sCONNECTED.*", out[4]):
+2026-10-20 01:23:03,047 TADA INFO starting test `ldmsd_ctrl_test`
+2026-10-20 01:23:03,047 TADA INFO   test-id: f1765692c9e81825d741881202515239f97ff664f8ef2a5547ddfe3673203b0f
+2026-10-20 01:23:03,047 TADA INFO   test-suite: LDMSD
+2026-10-20 01:23:03,047 TADA INFO   test-name: ldmsd_ctrl_test
+2026-10-20 01:23:03,047 TADA INFO   test-user: ldms-test
+2026-10-20 01:23:03,047 TADA INFO   commit-id: 60010e7e542a6f159f985d5febfc7544601fe323
+2026-10-20 01:23:03,047 __main__ INFO -- Get or create the cluster --
+2026-10-20 01:23:16,717 __main__ INFO -- Start daemons --
+2026-10-20 01:23:39,767 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-10-20 01:23:45,870 TADA INFO assertion 1, ldmsd_controller interactive session: connected, passed
+2026-10-20 01:23:46,974 TADA INFO assertion 2, ldmsctl interactive session: connected, passed
+2026-10-20 01:23:47,574 TADA INFO assertion 3, ldmsd_controller start bogus producer: expected output verified, passed
+2026-10-20 01:23:48,175 TADA INFO assertion 4, ldmsctl start bogus producer: expected output verified, passed
+2026-10-20 01:23:48,775 TADA INFO assertion 5, ldmsd_controller bogus command: expected output verified, passed
+2026-10-20 01:23:49,376 TADA INFO assertion 6, ldmsctl bogus command: expected output verified, passed
+2026-10-20 01:23:49,977 TADA INFO assertion 7, ldmsd_controller load bogus plugin: expected output verified, passed
+2026-10-20 01:23:50,577 TADA INFO assertion 8, ldmsctl load bogus plugin: expected output verified, passed
+2026-10-20 01:24:07,700 TADA INFO assertion 9, ldmsd_controller prdcr/updtr: verified, passed
+2026-10-20 01:24:24,821 TADA INFO assertion 10, ldmsctl prdcr/updtr: verified, passed
+2026-10-20 01:24:24,822 TADA INFO test ldmsd_ctrl_test ended
+310662 exited
