@@ -1,0 +1,25 @@
+Tue Oct 20 01:21:39 AM CDT 2026 DEBUG TARGET_PID: 296477
+Tue Oct 20 01:21:39 AM CDT 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/60010e7e//tests/ldmsd_autointerval_test/ldmsd_autointerval_test.log
+T_END: 1792478199
+2026-10-20 01:21:40,586 TADA INFO starting test `ldmsd_autointerval_test`
+2026-10-20 01:21:40,586 TADA INFO   test-id: efdd646269302c75bf1c31b1421e51d802dfe9df45b912693cf974249f5b60a2
+2026-10-20 01:21:40,586 TADA INFO   test-suite: LDMSD
+2026-10-20 01:21:40,586 TADA INFO   test-name: ldmsd_autointerval_test
+2026-10-20 01:21:40,586 TADA INFO   test-user: ldms-test
+2026-10-20 01:21:40,587 TADA INFO   commit-id: 60010e7e542a6f159f985d5febfc7544601fe323
+2026-10-20 01:21:40,587 __main__ INFO -- Get or create the cluster --
+2026-10-20 01:21:52,429 __main__ INFO -- Start daemons --
+2026-10-20 01:22:10,169 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-10-20 01:22:15,873 TADA INFO assertion 1, start all daemons and interactive controller: OK, passed
+2026-10-20 01:22:16,491 TADA INFO assertion 2, verify sampling interval and update hints: verified, passed
+2026-10-20 01:22:16,491 __main__ INFO Let them run for a while to collect data ...
+2026-10-20 01:22:26,491 __main__ INFO Setting sample interval to 1000000 ...
+2026-10-20 01:22:29,919 TADA INFO assertion 3, set and verify 2nd sampling interval / update hints: verified, passed
+2026-10-20 01:22:29,919 __main__ INFO Let them run for a while to collect data ...
+2026-10-20 01:22:39,920 __main__ INFO Setting sample interval to 2000000 ...
+2026-10-20 01:22:43,358 TADA INFO assertion 4, set and verify 3rd sampling interval / update hints: verified, passed
+2026-10-20 01:22:43,358 __main__ INFO Let them run for a while to collect data ...
+2026-10-20 01:22:53,427 TADA INFO assertion 5, verify SOS data: timestamp differences in SOS show all 3 intervals, passed
+2026-10-20 01:22:53,474 TADA INFO assertion 6, verify 'oversampled' in the agg2 log: OK, passed
+2026-10-20 01:22:53,475 TADA INFO test ldmsd_autointerval_test ended
+296477 exited
