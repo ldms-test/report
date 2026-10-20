@@ -1,0 +1,19 @@
+Tue Oct 20 02:58:32 AM CDT 2026 DEBUG TARGET_PID: 1196941
+Tue Oct 20 02:58:32 AM CDT 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/60010e7e//tests/updtr_stop_test/updtr_stop_test.log
+T_END: 1792484012
+2026-10-20 02:58:32,904 __main__ INFO -- Get or create the cluster --
+2026-10-20 02:58:32,904 TADA INFO starting test `updtr_add test`
+2026-10-20 02:58:32,904 TADA INFO   test-id: b8e793cba527aacd13ecf3cca598ce77252cabfcbad641507c2e2ba3e63fafe0
+2026-10-20 02:58:32,904 TADA INFO   test-suite: LDMSD
+2026-10-20 02:58:32,904 TADA INFO   test-name: updtr_add test
+2026-10-20 02:58:32,904 TADA INFO   test-user: ldms-test
+2026-10-20 02:58:32,905 TADA INFO   commit-id: 60010e7e542a6f159f985d5febfc7544601fe323
+2026-10-20 02:58:44,607 __main__ INFO -- Start daemons --
+2026-10-20 02:59:07,340 __main__ INFO Waiting ... for all LDMSDs to start
+2026-10-20 02:59:07,474 __main__ INFO All LDMSDs are up.
+2026-10-20 02:59:07,624 TADA INFO assertion 1, Send updtr_stop for a non-existing updater: report(rc = 2) == expect(rc = 2), passed
+2026-10-20 02:59:07,914 TADA INFO assertion 2, Send updtr_stop to a running updater: report(rc = 0, status = [{'name': 'running', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': [{'name': 'sampler-1', 'host': 'sampler-1', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}, {'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}]) == expect(rc = 0, status = [{'name': 'running', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': [{'name': 'sampler-1', 'host': 'sampler-1', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}, {'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}], passed
+2026-10-20 02:59:08,067 TADA INFO assertion 3, Send updtr_stop to a stopped updater: report(rc = 0) == expect(rc = 0), passed
+2026-10-20 02:59:08,067 __main__ INFO --- done ---
+2026-10-20 02:59:08,069 TADA INFO test updtr_add test ended
+1196941 exited
