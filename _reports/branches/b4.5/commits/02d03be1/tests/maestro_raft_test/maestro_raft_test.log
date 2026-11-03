@@ -1,0 +1,27 @@
+Tue Nov  3 02:03:40 AM CST 2026 DEBUG TARGET_PID: 797783
+Tue Nov  3 02:03:40 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/b4.5/report/_reports/branches/b4.5/commits/02d03be1//tests/maestro_raft_test/maestro_raft_test.log
+T_END: 1793693920
+2026-11-03 02:03:41,011 TADA INFO starting test `maestro_raft_test`
+2026-11-03 02:03:41,011 TADA INFO   test-id: c35de0c1bb85104aabb447cb7519b07e7f6485c8230cc8093ef341e20c0668b3
+2026-11-03 02:03:41,011 TADA INFO   test-suite: LDMSD
+2026-11-03 02:03:41,011 TADA INFO   test-name: maestro_raft_test
+2026-11-03 02:03:41,011 TADA INFO   test-user: ldms-test
+2026-11-03 02:03:41,011 TADA INFO   commit-id: 02d03be1509a913f596abc0270d423ef4a8c46b5
+2026-11-03 02:03:51,704 __main__ INFO -- Get or create cluster --
+2026-11-03 02:04:27,322 __main__ INFO -- Start daemons --
+2026-11-03 02:05:57,011 __main__ INFO -- making known hosts (ssh) --
+2026-11-03 02:06:00,443 __main__ INFO ... make sure ldmsd's are up
+---Wait for config to write to file---
+Traceback (most recent call last):
+  File "/home/ldms-test/var/b4.5/ldms-test/maestro_raft_test", line 392, in <module>
+    raise RuntimeError(f"maestro_ctl error rc: {rc}, out: {out}")
+RuntimeError: maestro_ctl error rc: 1, out: 
+2026-11-03 02:06:05,667 TADA INFO assertion 1, Statuses of maestros, 1 leader + 2 followers: skipped
+2026-11-03 02:06:05,667 TADA INFO assertion 2, All ldmsds are up and configured: skipped
+2026-11-03 02:06:05,667 TADA INFO assertion 3, Data are being stored: skipped
+2026-11-03 02:06:05,667 TADA INFO assertion 4, New leader elected: skipped
+2026-11-03 02:06:05,667 TADA INFO assertion 5, Restarted ldmsd is configured: skipped
+2026-11-03 02:06:05,667 TADA INFO assertion 6, New data are presented in the store: skipped
+2026-11-03 02:06:05,668 TADA INFO assertion 7, The restarted maestro becomes a follower: skipped
+2026-11-03 02:06:05,668 TADA INFO test maestro_raft_test ended
+797783 exited
