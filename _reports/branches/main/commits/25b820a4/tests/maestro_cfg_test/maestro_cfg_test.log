@@ -1,0 +1,23 @@
+Tue Nov  3 02:21:32 AM CST 2026 DEBUG TARGET_PID: 924858
+Tue Nov  3 02:21:32 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/25b820a4//tests/maestro_cfg_test/maestro_cfg_test.log
+T_END: 1793694992
+2026-11-03 02:21:33,176 TADA INFO starting test `maestro_cfg_test`
+2026-11-03 02:21:33,176 TADA INFO   test-id: 560b596d157da91a08d927947e25afa256700cd36413bb2fbd62a26463660481
+2026-11-03 02:21:33,176 TADA INFO   test-suite: LDMSD
+2026-11-03 02:21:33,176 TADA INFO   test-name: maestro_cfg_test
+2026-11-03 02:21:33,176 TADA INFO   test-user: ldms-test
+2026-11-03 02:21:33,176 TADA INFO   commit-id: 25b820a4b0e8de6bfff6a1916dead6ef3cbcc7cf
+2026-11-03 02:21:43,867 __main__ INFO -- Get or create cluster --
+2026-11-03 02:22:11,789 __main__ INFO -- Start daemons --
+2026-11-03 02:23:43,235 __main__ INFO ... make sure ldmsd's are up
+2026-11-03 02:23:48,451 TADA INFO assertion 1, load maestro etcd cluster: Unexpected output: TypeError: YamlCfg.__init__() takes 3 positional arguments but 5 were given
+, failed
+2026-11-03 02:24:00,454 TADA INFO assertion 2, config ldmsd cluster with maestro: Unexpected output: KeyError: 'headnode'
+, failed
+2026-11-03 02:24:00,603 TADA INFO assertion 3, verify sampler daemons: Expecting [ ['samp-1/meminfo'] ], but got [ [] ], failed
+2026-11-03 02:24:00,750 TADA INFO assertion 4, verify L1 aggregator daemons: Expecting [ ['samp-1/meminfo', 'samp-2/meminfo', 'samp-3/meminfo'] ], but got [ [] ], failed
+2026-11-03 02:24:00,894 TADA INFO assertion 5, verify L2 aggregator daemon: Expecting [ ['samp-1/meminfo', 'samp-2/meminfo', 'samp-3/meminfo', 'samp-4/meminfo', 'samp-5/meminfo', 'samp-6/meminfo', 'samp-7/meminfo', 'samp-8/meminfo'] ], but got [ [] ], failed
+2026-11-03 02:24:01,148 TADA INFO assertion 6, verify data storage: OK, passed
+---Wait for config to write to file---
+2026-11-03 02:24:01,149 TADA INFO test maestro_cfg_test ended
+924858 exited
