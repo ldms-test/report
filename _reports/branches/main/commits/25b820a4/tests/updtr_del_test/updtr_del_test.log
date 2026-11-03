@@ -1,0 +1,20 @@
+Tue Nov  3 02:51:34 AM CST 2026 DEBUG TARGET_PID: 1139366
+Tue Nov  3 02:51:34 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/25b820a4//tests/updtr_del_test/updtr_del_test.log
+T_END: 1793696794
+2026-11-03 02:51:34,944 __main__ INFO -- Get or create the cluster --
+2026-11-03 02:51:34,944 TADA INFO starting test `updtr_add test`
+2026-11-03 02:51:34,944 TADA INFO   test-id: 1035ef0fc55ba7d043cbb729fb9b17fd3b366e8ee205cadadf01af15f7c3646e
+2026-11-03 02:51:34,944 TADA INFO   test-suite: LDMSD
+2026-11-03 02:51:34,944 TADA INFO   test-name: updtr_add test
+2026-11-03 02:51:34,944 TADA INFO   test-user: ldms-test
+2026-11-03 02:51:34,944 TADA INFO   commit-id: 25b820a4b0e8de6bfff6a1916dead6ef3cbcc7cf
+2026-11-03 02:51:46,799 __main__ INFO -- Start daemons --
+2026-11-03 02:52:09,685 __main__ INFO Waiting ... for all LDMSDs to start
+2026-11-03 02:52:09,824 __main__ INFO All LDMSDs are up.
+2026-11-03 02:52:09,980 TADA INFO assertion 1, updtr_del a non-existing updater: report(rc = 2) == expect(rc = 2), passed
+2026-11-03 02:52:10,133 TADA INFO assertion 2, updtr_del a running updater: report(rc = 16) == expect(rc = 16), passed
+2026-11-03 02:52:10,293 TADA INFO assertion 3, updtr_del a stopped updater: report(rc = 0) == expect(rc = 0), passed
+2026-11-03 02:52:10,446 TADA INFO assertion 4, updtr_del a just-added updater: report(rc = 0) == expect(rc = 0), passed
+2026-11-03 02:52:10,446 __main__ INFO --- done ---
+2026-11-03 02:52:10,447 TADA INFO test updtr_add test ended
+1139366 exited
