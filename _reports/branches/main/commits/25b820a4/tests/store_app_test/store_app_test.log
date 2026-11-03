@@ -1,0 +1,20 @@
+Tue Nov  3 02:45:55 AM CST 2026 DEBUG TARGET_PID: 1096985
+Tue Nov  3 02:45:55 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/25b820a4//tests/store_app_test/store_app_test.log
+T_END: 1793696455
+2026-11-03 02:45:56,867 TADA INFO starting test `store_app_test`
+2026-11-03 02:45:56,867 TADA INFO   test-id: 97e9af8b6716161989ee65c947df1f83b7420223d48c219681a03bb25a7db602
+2026-11-03 02:45:56,867 TADA INFO   test-suite: LDMSD
+2026-11-03 02:45:56,867 TADA INFO   test-name: store_app_test
+2026-11-03 02:45:56,867 TADA INFO   test-user: ldms-test
+2026-11-03 02:45:56,867 TADA INFO   commit-id: 25b820a4b0e8de6bfff6a1916dead6ef3cbcc7cf
+2026-11-03 02:45:56,868 __main__ INFO -- Get or create the cluster --
+2026-11-03 02:46:14,860 __main__ INFO -- Preparing job script & programs --
+2026-11-03 02:46:15,102 __main__ INFO -- Start daemons --
+2026-11-03 02:46:55,742 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-03 02:47:00,743 __main__ INFO -- Submitting jobs --
+2026-11-03 02:47:00,809 __main__ INFO job_one: 1
+2026-11-03 02:47:05,921 __main__ INFO job_two: 2
+2026-11-03 02:47:16,537 __main__ INFO Verifying data ...
+2026-11-03 02:48:13,171 TADA INFO assertion 1, Verify data: sos data is not empty and sos data < ldms_ls data, passed
+2026-11-03 02:48:13,173 TADA INFO test store_app_test ended
+1096985 exited
