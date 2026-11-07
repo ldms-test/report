@@ -1,0 +1,45 @@
+Sat Nov  7 01:17:42 AM CST 2026 DEBUG TARGET_PID: 154219
+Sat Nov  7 01:17:42 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/d621958b//tests/ldmsd_decomp_no_fill_test/ldmsd_decomp_no_fill_test.log
+T_END: 1794036762
+2026-11-07 01:17:43,337 TADA INFO starting test `ldmsd_decomp__no_fill_test`
+2026-11-07 01:17:43,337 TADA INFO   test-id: c623f9dbec91ddca0a8a1e48274458dd2cf3bf53c2b8c08d8d9facc347b9f1ac
+2026-11-07 01:17:43,337 TADA INFO   test-suite: LDMSD
+2026-11-07 01:17:43,338 TADA INFO   test-name: ldmsd_decomp__no_fill_test
+2026-11-07 01:17:43,338 TADA INFO   test-user: ldms-test
+2026-11-07 01:17:43,338 TADA INFO   commit-id: d621958bed95c580f037bae741c02ec29d465348
+2026-11-07 01:17:43,338 __main__ INFO -- Get or create the cluster --
+2026-11-07 01:18:02,395 __main__ INFO -- Start daemons --
+2026-11-07 01:18:42,589 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-07 01:19:19,557 TADA INFO assertion 1, `as_is` decomposition, test_sampler_28da463 sos schema check: OK, passed
+2026-11-07 01:19:19,557 TADA INFO assertion 2, `as_is` decomposition, record_sampler_e1f021f sos schema check: OK, passed
+2026-11-07 01:19:19,557 TADA INFO assertion 3, `as_is` decomposition, fill sos schema check: OK, passed
+2026-11-07 01:19:19,558 TADA INFO assertion 4, `static` decomposition, filter sos schema check: OK, passed
+2026-11-07 01:19:19,558 TADA INFO assertion 5, `static` decomposition, record sos schema check: OK, passed
+2026-11-07 01:19:19,558 TADA INFO assertion 6, `as_is` decomposition, test_sampler_28da463 csv schema check: OK, passed
+2026-11-07 01:19:19,558 TADA INFO assertion 7, `as_is` decomposition, record_sampler_e1f021f csv schema check: OK, passed
+2026-11-07 01:19:19,558 TADA INFO assertion 8, `as_is` decomposition, fill csv schema check: OK, passed
+2026-11-07 01:19:19,558 TADA INFO assertion 9, `static` decomposition, filter csv schema check: OK, passed
+2026-11-07 01:19:19,558 TADA INFO assertion 10, `static` decomposition, record csv schema check: OK, passed
+2026-11-07 01:19:19,559 TADA INFO assertion 11, `as_is` decomposition, test_sampler_28da463 kafka schema check: OK, passed
+2026-11-07 01:19:19,559 TADA INFO assertion 12, `as_is` decomposition, record_sampler_e1f021f kafka schema check: OK, passed
+2026-11-07 01:19:19,559 TADA INFO assertion 13, `as_is` decomposition, fill kafka schema check: OK, passed
+2026-11-07 01:19:19,559 TADA INFO assertion 14, `static` decomposition, filter kafka schema check: OK, passed
+2026-11-07 01:19:19,559 TADA INFO assertion 15, `static` decomposition, record kafka schema check: OK, passed
+2026-11-07 01:19:19,560 TADA INFO assertion 16, `as_is` decomposition, test_sampler_28da463 sos data check: OK, passed
+2026-11-07 01:19:19,577 TADA INFO assertion 17, `as_is` decomposition, record_sampler_e1f021f sos data check: OK, passed
+2026-11-07 01:19:19,578 TADA INFO assertion 18, `as_is` decomposition, fill sos data check: OK, passed
+2026-11-07 01:19:19,578 TADA INFO assertion 19, `static` decomposition, filter sos data check: OK, passed
+2026-11-07 01:19:19,580 TADA INFO assertion 20, `static` decomposition, record sos data check: OK, passed
+2026-11-07 01:19:19,581 TADA INFO assertion 21, `as_is` decomposition, test_sampler_28da463 csv data check: OK, passed
+2026-11-07 01:19:19,596 TADA INFO assertion 22, `as_is` decomposition, record_sampler_e1f021f csv data check: OK, passed
+2026-11-07 01:19:19,597 TADA INFO assertion 23, `as_is` decomposition, fill csv data check: OK, passed
+2026-11-07 01:19:19,597 TADA INFO assertion 24, `static` decomposition, filter csv data check: OK, passed
+2026-11-07 01:19:19,599 TADA INFO assertion 25, `static` decomposition, record csv data check: OK, passed
+2026-11-07 01:19:19,599 TADA INFO assertion 26, `as_is` decomposition, test_sampler_28da463 kafka data check: OK, passed
+2026-11-07 01:19:19,604 TADA INFO assertion 27, `as_is` decomposition, record_sampler_e1f021f kafka data check: OK, passed
+2026-11-07 01:19:19,605 TADA INFO assertion 28, `as_is` decomposition, fill kafka data check: OK, passed
+2026-11-07 01:19:19,605 TADA INFO assertion 29, `static` decomposition, filter kafka data check: OK, passed
+2026-11-07 01:19:19,606 TADA INFO assertion 30, `static` decomposition, record kafka data check: OK, passed
+2026-11-07 01:19:19,606 TADA INFO test ldmsd_decomp__no_fill_test ended
+2026-11-07 01:19:19,607 TADA INFO test ldmsd_decomp__no_fill_test ended
+154219 exited
