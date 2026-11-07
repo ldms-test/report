@@ -1,0 +1,27 @@
+Sat Nov  7 02:42:00 AM CST 2026 DEBUG TARGET_PID: 547550
+Sat Nov  7 02:42:00 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/d621958b//tests/syspapi_test/syspapi_test.log
+T_END: 1794041820
+2026-11-07 02:42:01,723 TADA INFO starting test `syspapi_test`
+2026-11-07 02:42:01,723 TADA INFO   test-id: cb92835fddd76d2ce8c35a9ea854d0e154b64127398c6e7e58eb79b73c209bc3
+2026-11-07 02:42:01,723 TADA INFO   test-suite: LDMSD
+2026-11-07 02:42:01,724 TADA INFO   test-name: syspapi_test
+2026-11-07 02:42:01,724 TADA INFO   test-user: ldms-test
+2026-11-07 02:42:01,724 TADA INFO   commit-id: d621958bed95c580f037bae741c02ec29d465348
+2026-11-07 02:42:01,724 __main__ INFO -- Get or create the cluster --
+2026-11-07 02:42:17,235 __main__ INFO -- Write syspapi JSON config files --
+2026-11-07 02:42:17,235 __main__ INFO    - db/syspapi-1.json
+2026-11-07 02:42:17,239 __main__ INFO    - db/syspapi-bad.json
+2026-11-07 02:42:17,243 __main__ INFO -- Start daemons --
+2026-11-07 02:42:44,683 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-07 02:42:49,683 __main__ INFO -- Verifying --
+2026-11-07 02:42:49,853 TADA INFO assertion 1, verify set creation by cfg_file: set existed (with correct instance name), passed
+2026-11-07 02:42:49,853 TADA INFO assertion 2, verify schema name by cfg_file: verify schema name, passed
+2026-11-07 02:42:49,906 TADA INFO assertion 3, verify metrics (events) by cfg_file: verify events (metrics), passed
+2026-11-07 02:42:52,086 TADA INFO assertion 4, verify increment counters: verify increment of supported counters, passed
+2026-11-07 02:42:52,132 TADA INFO assertion 5, verify cfg_file syntax error report: verify JSON parse error, passed
+2026-11-07 02:42:52,175 TADA INFO assertion 6, verify cfg_file unsupported events report: verify unsupported event report, passed
+2026-11-07 02:43:01,092 TADA INFO assertion 7, verify cfg_file for many events: each event has either 'sucees' or 'failed' report, passed
+2026-11-07 02:43:01,092 __main__ INFO  events succeeded: 0
+2026-11-07 02:43:01,092 __main__ INFO  events failed: 191
+2026-11-07 02:43:01,093 TADA INFO test syspapi_test ended
+547550 exited
