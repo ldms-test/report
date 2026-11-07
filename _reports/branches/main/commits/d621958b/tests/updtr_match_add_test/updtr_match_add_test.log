@@ -1,0 +1,21 @@
+Sat Nov  7 02:44:39 AM CST 2026 DEBUG TARGET_PID: 564278
+Sat Nov  7 02:44:39 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/d621958b//tests/updtr_match_add_test/updtr_match_add_test.log
+T_END: 1794041979
+2026-11-07 02:44:40,493 __main__ INFO -- Get or create the cluster --
+2026-11-07 02:44:40,493 TADA INFO starting test `updtr_add test`
+2026-11-07 02:44:40,493 TADA INFO   test-id: 913ffa394e60c9b97ac50f1887c6a90990c64ee0a9894f3f196377f406d749a7
+2026-11-07 02:44:40,493 TADA INFO   test-suite: LDMSD
+2026-11-07 02:44:40,493 TADA INFO   test-name: updtr_add test
+2026-11-07 02:44:40,493 TADA INFO   test-user: ldms-test
+2026-11-07 02:44:40,493 TADA INFO   commit-id: d621958bed95c580f037bae741c02ec29d465348
+2026-11-07 02:44:52,492 __main__ INFO -- Start daemons --
+2026-11-07 02:45:15,015 __main__ INFO Waiting ... for all LDMSDs to start
+2026-11-07 02:45:15,143 __main__ INFO All LDMSDs are up.
+2026-11-07 02:45:15,290 TADA INFO assertion 1, updtr_match_add with an invalid regex: report(rc = 22) == expect(rc = 22), passed
+2026-11-07 02:45:15,443 TADA INFO assertion 2, updtr_match_add with an invalid match: report(rc = 22) == expect(rc = 22), passed
+2026-11-07 02:45:15,587 TADA INFO assertion 3, updtr_match_add of a non-existing updater: report(rc = 2) == expect(rc = 2), passed
+2026-11-07 02:45:15,734 TADA INFO assertion 4, A success updtr_match_add: report(rc = 0) == expect(rc = 0), passed
+2026-11-07 02:45:15,873 TADA INFO assertion 5, updtr_match_add of a running updater: report(rc = 16) == expect(rc = 16), passed
+2026-11-07 02:45:15,874 __main__ INFO --- done ---
+2026-11-07 02:45:15,875 TADA INFO test updtr_add test ended
+564278 exited
