@@ -1,0 +1,27 @@
+Sat Nov  7 02:13:11 AM CST 2026 DEBUG TARGET_PID: 401942
+Sat Nov  7 02:13:11 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/d621958b//tests/ldms_set_info_test/ldms_set_info_test.log
+T_END: 1794040091
+2026-11-07 02:13:26,568 TADA INFO starting test `ldms_set_info_test`
+2026-11-07 02:13:26,568 TADA INFO   test-id: c426b13947a3672ff5093d251a0f8e1c975a9dcdaa88260cd51706da0f6db7cc
+2026-11-07 02:13:26,568 TADA INFO   test-suite: LDMSD
+2026-11-07 02:13:26,568 TADA INFO   test-name: ldms_set_info_test
+2026-11-07 02:13:26,568 TADA INFO   test-user: ldms-test
+2026-11-07 02:13:26,568 TADA INFO   commit-id: d621958bed95c580f037bae741c02ec29d465348
+2026-11-07 02:13:26,569 TADA INFO assertion 1, Adding set info key value pairs : -, passed
+2026-11-07 02:13:26,569 TADA INFO assertion 2, Reset value of an existing pair : -, passed
+2026-11-07 02:13:26,569 TADA INFO assertion 3, Get a value : -, passed
+2026-11-07 02:13:26,569 TADA INFO assertion 4, Unset a pair : -, passed
+2026-11-07 02:13:26,569 TADA INFO assertion 5, Traverse the local set info : -, passed
+2026-11-07 02:13:26,569 TADA INFO assertion 6, Verifying the set info at the 1st level : -, passed
+2026-11-07 02:13:26,569 TADA INFO assertion 7, Server resetting a key : -, passed
+2026-11-07 02:13:26,570 TADA INFO assertion 8, Server unset a key : -, passed
+2026-11-07 02:13:26,570 TADA INFO assertion 9, Server add a key : -, passed
+2026-11-07 02:13:26,570 TADA INFO assertion 10, Adding a key : -, passed
+2026-11-07 02:13:26,570 TADA INFO assertion 11, Add a key that is already in the remote list : -, passed
+2026-11-07 02:13:26,570 TADA INFO assertion 12, Unset a key that appears in both local and remote list : -, passed
+2026-11-07 02:13:26,570 TADA INFO assertion 13, Verifying the set_info at the 2nd level : -, passed
+2026-11-07 02:13:26,570 TADA INFO assertion 14, Test set info propagation: resetting a key on the set origin : -, passed
+2026-11-07 02:13:26,570 TADA INFO assertion 15, Test set info propagation: unsetting a key on the set origin : -, passed
+2026-11-07 02:13:26,571 TADA INFO assertion 16, Test set info propagation: adding a key on the set origin : -, passed
+2026-11-07 02:13:26,573 TADA INFO test ldms_set_info_test ended
+401942 exited
