@@ -1,0 +1,34 @@
+Mon Nov  9 01:29:22 AM CST 2026 DEBUG TARGET_PID: 217263
+Mon Nov  9 01:29:22 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/dd19698d//tests/ldmsd_msg_test/ldmsd_msg_test.log
+T_END: 1794210262
+2026-11-09 01:29:23,154 TADA INFO starting test `ldmsd_msg_test`
+2026-11-09 01:29:23,154 TADA INFO   test-id: d4048b4c5c3374548b3fd5992da7acbfa1ee5ce66942fbfbf2e408bc294069e6
+2026-11-09 01:29:23,154 TADA INFO   test-suite: LDMSD
+2026-11-09 01:29:23,154 TADA INFO   test-name: ldmsd_msg_test
+2026-11-09 01:29:23,154 TADA INFO   test-user: ldms-test
+2026-11-09 01:29:23,154 TADA INFO   commit-id: dd19698da2ad7472fccf6c358fb943577c12f938
+2026-11-09 01:29:23,154 __main__ INFO -- Get or create the cluster --
+2026-11-09 01:29:36,980 __main__ INFO -- Start daemons --
+2026-11-09 01:29:55,674 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-09 01:29:57,674 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldmsd_msg_test-dd19698-new 
+2026-11-09 01:29:59,878 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldmsd_msg_test-dd19698-agg-2 
+2026-11-09 01:30:09,166 TADA INFO assertion 1, Check data from old ldmsd_stream at agg-1: , passed
+2026-11-09 01:30:09,166 TADA INFO assertion 2, Check data from old ldmsd_stream at agg-2: , passed
+2026-11-09 01:30:09,166 TADA INFO assertion 3, Check data from old ldmsd_stream at the last subscriber: , passed
+2026-11-09 01:30:09,166 TADA INFO assertion 4, Check data from the matching new ldms msg at agg-1: , passed
+2026-11-09 01:30:09,167 TADA INFO assertion 5, Check data from the matching new ldms msg at agg-2: , passed
+2026-11-09 01:30:09,167 TADA INFO assertion 6, Check data from the matching new ldms msg at the last subscriber: , passed
+2026-11-09 01:30:09,167 TADA INFO assertion 7, Check data from the non-matching new ldms stream at agg-1: , passed
+2026-11-09 01:30:09,167 TADA INFO assertion 8, Check data from the non-matching new ldms stream at agg-2: , passed
+2026-11-09 01:30:09,167 TADA INFO assertion 9, Check data from the non-matching new ldms stream at last subscriber: , passed
+2026-11-09 01:30:09,523 TADA INFO assertion 10, Check msg_stats before stream data transfer: , passed
+2026-11-09 01:30:09,523 TADA INFO assertion 11, Check msg_client_stats before stream data transfer: , passed
+2026-11-09 01:30:09,524 TADA INFO assertion 12, Check msg_stats after stream data transfer: , passed
+2026-11-09 01:30:09,524 TADA INFO assertion 13, Check msg_client_stats after stream data transfer: , passed
+2026-11-09 01:30:12,730 TADA INFO assertion 14, Publishing completed with a status after msg_disable: , passed
+2026-11-09 01:30:12,731 TADA INFO assertion 15, No data is propagated after msg_disable: , passed
+2026-11-09 01:30:13,232 TADA INFO assertion 16, Publisher synchronously failed afterward: , passed
+2026-11-09 01:30:13,232 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldmsd_msg_test-dd19698-new 
+2026-11-09 01:30:15,936 TADA INFO assertion 17, New publisher synchronously failed: , passed
+2026-11-09 01:30:15,937 TADA INFO test ldmsd_msg_test ended
+217263 exited
