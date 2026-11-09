@@ -1,0 +1,22 @@
+Mon Nov  9 02:12:29 AM CST 2026 DEBUG TARGET_PID: 398819
+Mon Nov  9 02:12:29 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/dd19698d//tests/ldms_schema_digest_test/ldms_schema_digest_test.log
+T_END: 1794212849
+2026-11-09 02:12:30,299 TADA INFO starting test `ldms_schema_digest_test`
+2026-11-09 02:12:30,300 TADA INFO   test-id: eb5b8e0fe51fab48b3c98559311c2bac915812aa1f469b92b8f1b27e67447a8d
+2026-11-09 02:12:30,300 TADA INFO   test-suite: LDMSD
+2026-11-09 02:12:30,300 TADA INFO   test-name: ldms_schema_digest_test
+2026-11-09 02:12:30,300 TADA INFO   test-user: ldms-test
+2026-11-09 02:12:30,300 TADA INFO   commit-id: dd19698da2ad7472fccf6c358fb943577c12f938
+2026-11-09 02:12:30,300 __main__ INFO -- Get or create the cluster --
+2026-11-09 02:12:42,072 __main__ INFO -- Start daemons --
+2026-11-09 02:12:57,444 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-09 02:13:02,542 TADA INFO assertion 1, No schema digest from ldms_ls -v sampler: verified, passed
+2026-11-09 02:13:02,635 TADA INFO assertion 2, Schema digest from ldms_ls -vv sampler is not empty: verified, passed
+2026-11-09 02:13:02,730 TADA INFO assertion 3, Schema digest from ldms_ls -vv agg-1 is not empty: verified, passed
+2026-11-09 02:13:02,858 TADA INFO assertion 4, Schema digest from Python ldms dir agg-1 is not empty: verified, passed
+2026-11-09 02:13:02,858 TADA INFO assertion 5, Schema digest from Python ldms lokoup agg-1 is not empty: verified, passed
+2026-11-09 02:13:02,858 TADA INFO assertion 6, All digests of the same set are the same: , passed
+2026-11-09 02:13:05,222 TADA INFO assertion 7, Sets of same schema yield the same digest: check, passed
+2026-11-09 02:13:05,222 TADA INFO assertion 8, Different schema (1-off metric) yield different digest: check, passed
+2026-11-09 02:13:05,223 TADA INFO test ldms_schema_digest_test ended
+398819 exited
