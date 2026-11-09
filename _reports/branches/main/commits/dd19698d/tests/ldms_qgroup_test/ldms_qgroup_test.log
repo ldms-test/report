@@ -1,0 +1,46 @@
+Mon Nov  9 02:03:26 AM CST 2026 DEBUG TARGET_PID: 384544
+Mon Nov  9 02:03:26 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/dd19698d//tests/ldms_qgroup_test/ldms_qgroup_test.log
+T_END: 1794212306
+2026-11-09 02:03:27,182 TADA INFO starting test `ldms_qgroup_test`
+2026-11-09 02:03:27,182 TADA INFO   test-id: e9e85a57424137c653667ebce204a34f175d319a7053ffcb6fb4d3998e731fc5
+2026-11-09 02:03:27,183 TADA INFO   test-suite: LDMSD
+2026-11-09 02:03:27,183 TADA INFO   test-name: ldms_qgroup_test
+2026-11-09 02:03:27,183 TADA INFO   test-user: ldms-test
+2026-11-09 02:03:27,183 TADA INFO   commit-id: dd19698da2ad7472fccf6c358fb943577c12f938
+2026-11-09 02:03:27,183 __main__ INFO -- Get or create the cluster --
+2026-11-09 02:03:51,226 __main__ INFO -- Start daemons --
+2026-11-09 02:03:58,048 __main__ INFO ... wait a bit to make sure daemons are up
+2026-11-09 02:04:00,048 root INFO starting python /tada-src/python/ldms_qgroup_samp.py on ldms-test-ldms_qgroup_test-dd19698-samp1 
+2026-11-09 02:04:02,251 root INFO starting python /tada-src/python/ldms_qgroup_samp.py on ldms-test-ldms_qgroup_test-dd19698-samp2 
+2026-11-09 02:04:04,454 root INFO starting python /tada-src/python/ldms_qgroup_samp.py on ldms-test-ldms_qgroup_test-dd19698-samp3 
+2026-11-09 02:04:06,658 root INFO starting python /tada-src/python/ldms_qgroup_samp.py on ldms-test-ldms_qgroup_test-dd19698-samp4 
+2026-11-09 02:04:08,861 root INFO starting python /tada-src/python/ldms_qgroup_samp.py on ldms-test-ldms_qgroup_test-dd19698-samp5 
+2026-11-09 02:04:11,064 root INFO starting python /tada-src/python/ldms_qgroup_samp.py on ldms-test-ldms_qgroup_test-dd19698-samp6 
+2026-11-09 02:04:14,267 root INFO starting python /tada-src/python/ldms_qgroup_agg1.py on ldms-test-ldms_qgroup_test-dd19698-agg11 
+2026-11-09 02:04:16,470 root INFO starting python /tada-src/python/ldms_qgroup_agg1.py on ldms-test-ldms_qgroup_test-dd19698-agg12 
+2026-11-09 02:04:18,674 root INFO starting python /tada-src/python/ldms_qgroup_agg1.py on ldms-test-ldms_qgroup_test-dd19698-agg13 
+2026-11-09 02:04:21,879 root INFO starting python /tada-src/python/ldms_qgroup_agg2.py on ldms-test-ldms_qgroup_test-dd19698-agg2 
+2026-11-09 02:04:25,082 root INFO starting python /tada-src/python/ldms_qgroup_app.py on ldms-test-ldms_qgroup_test-dd19698-samp1 
+2026-11-09 02:04:27,285 root INFO starting python /tada-src/python/ldms_qgroup_app.py on ldms-test-ldms_qgroup_test-dd19698-samp2 
+2026-11-09 02:04:29,488 root INFO starting python /tada-src/python/ldms_qgroup_app.py on ldms-test-ldms_qgroup_test-dd19698-samp3 
+2026-11-09 02:04:31,692 root INFO starting python /tada-src/python/ldms_qgroup_app.py on ldms-test-ldms_qgroup_test-dd19698-samp4 
+2026-11-09 02:04:33,895 root INFO starting python /tada-src/python/ldms_qgroup_app.py on ldms-test-ldms_qgroup_test-dd19698-samp5 
+2026-11-09 02:04:36,098 root INFO starting python /tada-src/python/ldms_qgroup_app.py on ldms-test-ldms_qgroup_test-dd19698-samp6 
+2026-11-09 02:04:39,301 __main__ INFO -- starting app publisher --
+2026-11-09 02:04:42,305 __main__ INFO -- Wait a minute to get data flow (without limit) --
+2026-11-09 02:05:47,310 __main__ INFO -- Wait a minute to get data flow (with limit) --
+2026-11-09 02:07:17,811 __main__ INFO -- stopping app publisher --
+2026-11-09 02:07:20,814 __main__ INFO -- wait a bit to make sure the published data is flushed --
+2026-11-09 02:07:25,815 __main__ INFO -- collecting logs --
+2026-11-09 02:07:26,173 TADA INFO assertion 1, Throughput without limit: bps: 1740.0, OK, passed
+2026-11-09 02:07:26,173 TADA INFO assertion 2, Data received after quota: OK, passed
+2026-11-09 02:07:26,173 TADA INFO assertion 3, Throughput with limit: bps: 680.4333333333333, limit: 768.0, OK, passed
+2026-11-09 02:07:26,173 TADA INFO assertion 4, Check data loss: No data missing, passed
+2026-11-09 02:07:26,173 TADA INFO assertion 5, Check starvation: OK, passed
+2026-11-09 02:07:26,173 __main__ INFO -- ramp up app1 for saturation test --
+2026-11-09 02:07:26,674 __main__ INFO -- starting app1 publisher again (for saturation test) --
+2026-11-09 02:07:27,175 __main__ INFO -- Wait a minute to get data flow (with limit) --
+2026-11-09 02:08:27,676 __main__ INFO -- stopping app1 publisher --
+2026-11-09 02:08:28,177 TADA INFO assertion 6, Single publisher saturation test: good saturation bps: 446.0 in expected range [409.6, 512.0] (cfg_bps: 768.0), passed
+2026-11-09 02:08:28,178 TADA INFO test ldms_qgroup_test ended
+384544 exited
