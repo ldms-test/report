@@ -1,0 +1,21 @@
+Tue Nov 10 02:01:17 AM CST 2026 DEBUG TARGET_PID: 814564
+Tue Nov 10 02:01:17 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/b4.5/report/_reports/branches/b4.5/commits/a1324c4f//tests/updtr_prdcr_add_test/updtr_prdcr_add_test.log
+T_END: 1794298577
+2026-11-10 02:01:18,046 __main__ INFO -- Get or create the cluster --
+2026-11-10 02:01:18,047 TADA INFO starting test `updtr_add test`
+2026-11-10 02:01:18,047 TADA INFO   test-id: 047fbb14529f45dd786fc55966ff6dd6296798b8d4cd3e4dd7c8528b5e826f98
+2026-11-10 02:01:18,047 TADA INFO   test-suite: LDMSD
+2026-11-10 02:01:18,047 TADA INFO   test-name: updtr_add test
+2026-11-10 02:01:18,047 TADA INFO   test-user: ldms-test
+2026-11-10 02:01:18,047 TADA INFO   commit-id: a1324c4f7d0c2283d6f207f8073cac1d5c612de5
+2026-11-10 02:01:29,803 __main__ INFO -- Start daemons --
+2026-11-10 02:01:52,549 __main__ INFO Waiting ... for all LDMSDs to start
+2026-11-10 02:01:52,681 __main__ INFO All LDMSDs are up.
+2026-11-10 02:01:52,829 TADA INFO assertion 1, Send updtr_prdcr_add with an invalid regex: report(rc = 22) == expect(rc = 22), passed
+2026-11-10 02:01:53,121 TADA INFO assertion 2, Send updtr_prdcr_add with a regex matching no prdcrs: report(rc = 0, status = [{'name': 'all', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': []}]) == expect(rc = 0, status = [{'name': 'all', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': []}]), passed
+2026-11-10 02:01:53,411 TADA INFO assertion 3, Send updtr_prdcdr_add with a regex matching some prdcrs: report(rc = 0, status = [{'name': 'all', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': [{'name': 'sampler-1', 'host': 'sampler-1', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}]) == expect(rc = 0, status = [{'name': 'all', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': [{'name': 'sampler-1', 'host': 'sampler-1', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}]), passed
+2026-11-10 02:01:53,554 TADA INFO assertion 4, Send updtr_prdcdr_add to a running updtr: report(rc = 16) == expect(rc = 16), passed
+2026-11-10 02:01:53,695 TADA INFO assertion 5, Send updtr_prdcr_add to a not-existing updtr: report(rc = 2) == expect(rc = 2), passed
+2026-11-10 02:01:53,695 __main__ INFO --- done ---
+2026-11-10 02:01:53,697 TADA INFO test updtr_add test ended
+814564 exited
