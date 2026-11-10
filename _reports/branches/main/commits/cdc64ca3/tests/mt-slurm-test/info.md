@@ -3,5 +3,5 @@ type: test
 branch: main
 ldmsCommitId8: cdc64ca3
 name: mt-slurm-test
-status: queued
+status: passed
 ---
