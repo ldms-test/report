@@ -1,0 +1,23 @@
+Tue Nov 10 01:23:18 AM CST 2026 DEBUG TARGET_PID: 358221
+Tue Nov 10 01:23:18 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/cdc64ca3//tests/ldmsd_decomp_static_rowcache_test/ldmsd_decomp_static_rowcache_test.log
+T_END: 1794296298
+/home/ldms-test/var/main/ldms-test/ldmsd_decomp_static_rowcache_test:471: SyntaxWarning: invalid escape sequence '\['
+  VA_RE = re.compile('([^[]+)\[(.*)\]')
+2026-11-10 01:23:19,152 TADA INFO starting test `ldmsd_decomp_static_rowcache_test`
+2026-11-10 01:23:19,152 TADA INFO   test-id: 511d3f982bd0d7960d466a7e6a6455b502dbba373303de90b06e35490977454d
+2026-11-10 01:23:19,152 TADA INFO   test-suite: LDMSD
+2026-11-10 01:23:19,152 TADA INFO   test-name: ldmsd_decomp_static_rowcache_test
+2026-11-10 01:23:19,152 TADA INFO   test-user: ldms-test
+2026-11-10 01:23:19,152 TADA INFO   commit-id: cdc64ca3667ce9d3b6dabe0ca088647816109269
+2026-11-10 01:23:19,153 __main__ INFO -- Get or create the cluster --
+2026-11-10 01:23:38,377 __main__ INFO -- Start daemons --
+2026-11-10 01:24:18,779 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-10 01:25:11,347 TADA INFO assertion 1, `static` decomposition, ldms_test_small_op sos schema check: OK, passed
+2026-11-10 01:25:11,347 TADA INFO assertion 2, `static` decomposition, ldms_test_small_op csv schema check: OK, passed
+2026-11-10 01:25:11,347 TADA INFO assertion 3, `static` decomposition, ldms_test_small_op kafka schema check: OK, passed
+2026-11-10 01:25:11,348 TADA INFO assertion 4, `static` decomposition, ldms_test_small_op sos data check: OK, passed
+2026-11-10 01:25:11,349 TADA INFO assertion 5, `static` decomposition, ldms_test_small_op csv data check: OK, passed
+2026-11-10 01:25:11,349 TADA INFO assertion 6, `static` decomposition, ldms_test_small_op kafka data check: OK, passed
+2026-11-10 01:25:11,349 TADA INFO test ldmsd_decomp_static_rowcache_test ended
+2026-11-10 01:25:11,350 TADA INFO test ldmsd_decomp_static_rowcache_test ended
+358221 exited
