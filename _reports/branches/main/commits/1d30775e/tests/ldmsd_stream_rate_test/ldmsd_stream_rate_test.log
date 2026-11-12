@@ -1,0 +1,20 @@
+Thu Nov 12 01:45:29 AM CST 2026 DEBUG TARGET_PID: 586138
+Thu Nov 12 01:45:29 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/1d30775e//tests/ldmsd_stream_rate_test/ldmsd_stream_rate_test.log
+T_END: 1794470429
+2026-11-12 01:45:30,028 TADA INFO starting test `ldmsd_stream_rate_test`
+2026-11-12 01:45:30,028 TADA INFO   test-id: 42b8c8ffcaa722d7a6e1928fd32e1d49d4d802b5a305e68a70ba97c49dee118b
+2026-11-12 01:45:30,028 TADA INFO   test-suite: LDMSD
+2026-11-12 01:45:30,028 TADA INFO   test-name: ldmsd_stream_rate_test
+2026-11-12 01:45:30,028 TADA INFO   test-user: ldms-test
+2026-11-12 01:45:30,028 TADA INFO   commit-id: 1d30775e35d77388a38628d72cf403520cd9cc17
+2026-11-12 01:45:30,029 __main__ INFO -- Get or create the cluster --
+2026-11-12 01:45:40,532 __main__ INFO -- Start daemons --
+2026-11-12 01:45:55,879 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-12 01:45:57,879 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldmsd_stream_rate_test-1d30775-samp 
+2026-11-12 01:46:00,082 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldmsd_stream_rate_test-1d30775-agg-1 
+2026-11-12 01:46:12,793 TADA INFO assertion 1, Sampler cannot publish all data (prdcr rate limit): received msg data 34 is limited by prdcr rx_rate, passed
+2026-11-12 01:46:12,793 TADA INFO assertion 2, After the wait, the sampler can publish: msg data received, passed
+2026-11-12 01:46:12,793 TADA INFO assertion 3, Sampler cannot publish all data (msg rate limit): received msg data 34 is limited by msg rx_rate, passed
+2026-11-12 01:46:12,793 TADA INFO assertion 4, After the wait, the sampler can publish: msg data received, passed
+2026-11-12 01:46:12,794 TADA INFO test ldmsd_stream_rate_test ended
+586138 exited
