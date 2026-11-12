@@ -1,0 +1,23 @@
+Thu Nov 12 01:55:12 AM CST 2026 DEBUG TARGET_PID: 746002
+Thu Nov 12 01:55:12 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/1d30775e//tests/ldms_ipv6_test/ldms_ipv6_test.log
+T_END: 1794471012
+2026-11-12 01:55:12,991 TADA INFO starting test `ldms_ipv6_test`
+2026-11-12 01:55:12,992 TADA INFO   test-id: 07f1a005c42b58db01bb626f8e7c0c35d36a895c47b28d0e7b22dcdf555054d2
+2026-11-12 01:55:12,992 TADA INFO   test-suite: LDMSD
+2026-11-12 01:55:12,992 TADA INFO   test-name: ldms_ipv6_test
+2026-11-12 01:55:12,992 TADA INFO   test-user: ldms-test
+2026-11-12 01:55:12,992 TADA INFO   commit-id: 1d30775e35d77388a38628d72cf403520cd9cc17
+2026-11-12 01:55:12,992 __main__ INFO -- Get or create the cluster --
+2026-11-12 01:55:25,031 __main__ INFO -- Start daemons --
+2026-11-12 01:55:48,635 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-12 01:55:50,635 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldms_ipv6_test-1d30775-samp 
+2026-11-12 01:55:52,839 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldms_ipv6_test-1d30775-agg-2 
+2026-11-12 01:55:57,133 TADA INFO assertion 1, ldms_ls to samp using IPv6: expecting ['fdf9:db0c:4963::5'], got ['fdf9:db0c:4963::5'], passed
+2026-11-12 01:55:57,219 TADA INFO assertion 2, ldms_ls to agg-2 using IPv6: expecting ['fdf9:db0c:4963::5'], got ['fdf9:db0c:4963::5'], passed
+2026-11-12 01:55:57,220 TADA INFO assertion 3, ldms_ls to agg-2 contains 'samp/meminfo': samp/meminfo found, passed
+2026-11-12 01:56:00,222 TADA INFO assertion 4, python msg publish using IPv6: verified, passed
+2026-11-12 01:56:03,224 TADA INFO assertion 5, python msg subscribe using IPv6: verified, passed
+2026-11-12 01:56:03,725 TADA INFO assertion 6, steam data contain IPv6 addressing: expecting fdf9:db0c:4963::5, got fdf9:db0c:4963::5, passed
+2026-11-12 01:56:03,908 TADA INFO assertion 7, msg stats reported IPv6 addresses: Expecting fdf9:db0c:4963::3, got fdf9:db0c:4963::3, passed
+2026-11-12 01:56:03,909 TADA INFO test ldms_ipv6_test ended
+746002 exited
