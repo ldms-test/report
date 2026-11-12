@@ -1,0 +1,29 @@
+Thu Nov 12 02:43:05 AM CST 2026 DEBUG TARGET_PID: 1054813
+Thu Nov 12 02:43:05 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/b4.5/report/_reports/branches/b4.5/commits/edce7972//tests/ldmsd_decomp_static_omit_test/ldmsd_decomp_static_omit_test.log
+T_END: 1794473885
+/home/ldms-test/var/b4.5/ldms-test/ldmsd_decomp_static_omit_test:477: SyntaxWarning: invalid escape sequence '\['
+  VA_RE = re.compile('([^[]+)\[(.*)\]')
+2026-11-12 02:43:05,991 TADA INFO starting test `ldmsd_decomp_static_omit_test`
+2026-11-12 02:43:05,991 TADA INFO   test-id: 1b2c1f13aab3de4f00e0e8c90c46f052d38bce07f8f0de360ab2317d8a11d013
+2026-11-12 02:43:05,991 TADA INFO   test-suite: LDMSD
+2026-11-12 02:43:05,991 TADA INFO   test-name: ldmsd_decomp_static_omit_test
+2026-11-12 02:43:05,991 TADA INFO   test-user: ldms-test
+2026-11-12 02:43:05,992 TADA INFO   commit-id: edce79726a3c800a2273d0edbe4eaebfe92dbd28
+2026-11-12 02:43:05,992 __main__ INFO -- Get or create the cluster --
+2026-11-12 02:43:25,280 __main__ INFO -- Start daemons --
+2026-11-12 02:44:05,778 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-12 02:44:33,977 TADA INFO assertion 1, `static` decomposition, filter sos schema check: OK, passed
+2026-11-12 02:44:33,977 TADA INFO assertion 2, `static` decomposition, record sos schema check: OK, passed
+2026-11-12 02:44:33,977 TADA INFO assertion 3, `static` decomposition, filter csv schema check: OK, passed
+2026-11-12 02:44:33,977 TADA INFO assertion 4, `static` decomposition, record csv schema check: OK, passed
+2026-11-12 02:44:33,978 TADA INFO assertion 5, `static` decomposition, filter kafka schema check: OK, passed
+2026-11-12 02:44:33,978 TADA INFO assertion 6, `static` decomposition, record kafka schema check: OK, passed
+2026-11-12 02:44:33,978 TADA INFO assertion 7, `static` decomposition, filter sos data check: OK, passed
+2026-11-12 02:44:33,980 TADA INFO assertion 8, `static` decomposition, record sos data check: OK, passed
+2026-11-12 02:44:33,981 TADA INFO assertion 9, `static` decomposition, filter csv data check: OK, passed
+2026-11-12 02:44:33,982 TADA INFO assertion 10, `static` decomposition, record csv data check: OK, passed
+2026-11-12 02:44:33,982 TADA INFO assertion 11, `static` decomposition, filter kafka data check: OK, passed
+2026-11-12 02:44:33,983 TADA INFO assertion 12, `static` decomposition, record kafka data check: OK, passed
+2026-11-12 02:44:33,983 TADA INFO test ldmsd_decomp_static_omit_test ended
+2026-11-12 02:44:33,984 TADA INFO test ldmsd_decomp_static_omit_test ended
+1054813 exited
