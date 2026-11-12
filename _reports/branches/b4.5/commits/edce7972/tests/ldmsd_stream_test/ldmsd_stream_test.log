@@ -1,0 +1,55 @@
+Thu Nov 12 01:31:14 AM CST 2026 DEBUG TARGET_PID: 382984
+Thu Nov 12 01:31:14 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/b4.5/report/_reports/branches/b4.5/commits/edce7972//tests/ldmsd_stream_test/ldmsd_stream_test.log
+T_END: 1794469574
+/home/ldms-test/var/b4.5/ldms-test/ldmsd_stream_test:220: SyntaxWarning: invalid escape sequence '\<'
+  grep ':\<{port:04x}\>' /proc/net/tcp
+2026-11-12 01:31:15,530 TADA INFO starting test `ldmsd_stream_test`
+2026-11-12 01:31:15,530 TADA INFO   test-id: e0d9384c308fc919a8fc582aacf4c2318c0989c368d9520b29378c0394ba6b75
+2026-11-12 01:31:15,530 TADA INFO   test-suite: LDMSD
+2026-11-12 01:31:15,530 TADA INFO   test-name: ldmsd_stream_test
+2026-11-12 01:31:15,530 TADA INFO   test-user: ldms-test
+2026-11-12 01:31:15,530 TADA INFO   commit-id: edce79726a3c800a2273d0edbe4eaebfe92dbd28
+2026-11-12 01:31:30,225 __main__ INFO waiting for libraries to be available across all containers...
+2026-11-12 01:31:30,601 __main__ INFO _lib_avail: True
+2026-11-12 01:32:50,789 __main__ INFO test ldmsd_stream_subscribe with large json streams
+2026-11-12 01:32:56,847 __main__ INFO --- Sending stream to ldmsd_stream_subscriber
+2026-11-12 01:33:03,419 __main__ INFO --- Verifying the received streams
+2026-11-12 01:33:05,458 TADA INFO assertion 1, ldmsd_stream_subscribe receives large json streams: Verify all streams were received correctly, passed
+2026-11-12 01:33:05,965 __main__ INFO test LDMSD with large json streams
+2026-11-12 01:33:11,806 __main__ INFO --- Sending stream to samplerd
+2026-11-12 01:33:26,570 __main__ INFO --- Verifying the streams received by samplerd
+2026-11-12 01:33:28,683 TADA INFO assertion 2, samplerd receives large json streams: Verify all streams were received correctly, passed
+2026-11-12 01:33:28,683 __main__ INFO --- Verifying the streams received by samplerd
+2026-11-12 01:33:30,680 TADA INFO assertion 3, agg receives large json streams: Verify all streams were received correctly, passed
+2026-11-12 01:33:39,606 __main__ INFO test ldmsd_stream_subscribe with small json streams
+2026-11-12 01:33:45,661 __main__ INFO --- Sending stream to ldmsd_stream_subscriber
+2026-11-12 01:34:41,357 __main__ INFO --- Verifying the received streams
+2026-11-12 01:34:43,350 TADA INFO assertion 4, ldmsd_stream_subscribe receives small json streams: Verify all streams were received correctly, passed
+2026-11-12 01:34:44,234 __main__ INFO test LDMSD with small json streams
+2026-11-12 01:34:49,960 __main__ INFO --- Sending stream to samplerd
+2026-11-12 01:35:54,510 __main__ INFO --- Verifying the streams received by samplerd
+2026-11-12 01:35:56,638 TADA INFO assertion 5, samplerd receives small json streams: Verify all streams were received correctly, passed
+2026-11-12 01:35:56,638 __main__ INFO --- Verifying the streams received by samplerd
+2026-11-12 01:35:58,846 TADA INFO assertion 6, agg receives small json streams: Verify all streams were received correctly, passed
+2026-11-12 01:36:12,359 __main__ INFO test ldmsd_stream_subscribe with large string streams
+2026-11-12 01:36:18,408 __main__ INFO --- Sending stream to ldmsd_stream_subscriber
+2026-11-12 01:36:24,458 __main__ INFO --- Verifying the received streams
+2026-11-12 01:36:26,399 TADA INFO assertion 7, ldmsd_stream_subscribe receives large string streams: Verify all streams were received correctly, passed
+2026-11-12 01:36:26,861 __main__ INFO test LDMSD with large string streams
+2026-11-12 01:36:32,582 __main__ INFO --- Sending stream to samplerd
+2026-11-12 01:36:44,930 __main__ INFO --- Verifying the streams received by samplerd
+2026-11-12 01:36:46,937 TADA INFO assertion 8, samplerd receives large string streams: Verify all streams were received correctly, passed
+2026-11-12 01:36:46,937 __main__ INFO --- Verifying the streams received by samplerd
+2026-11-12 01:36:49,402 TADA INFO assertion 9, agg receives large string streams: Verify all streams were received correctly, passed
+2026-11-12 01:36:57,890 __main__ INFO test ldmsd_stream_subscribe with small string streams
+2026-11-12 01:37:03,949 __main__ INFO --- Sending stream to ldmsd_stream_subscriber
+2026-11-12 01:37:57,513 __main__ INFO --- Verifying the received streams
+2026-11-12 01:37:58,533 TADA INFO assertion 10, ldmsd_stream_subscribe receives small string streams: Verify all streams were received correctly, passed
+2026-11-12 01:37:58,926 __main__ INFO test LDMSD with small string streams
+2026-11-12 01:38:04,620 __main__ INFO --- Sending stream to samplerd
+2026-11-12 01:39:06,589 __main__ INFO --- Verifying the streams received by samplerd
+2026-11-12 01:39:06,908 TADA INFO assertion 11, samplerd receives small string streams: Verify all streams were received correctly, passed
+2026-11-12 01:39:06,909 __main__ INFO --- Verifying the streams received by samplerd
+2026-11-12 01:39:07,204 TADA INFO assertion 12, agg receives small string streams: Verify all streams were received correctly, passed
+2026-11-12 01:39:20,734 TADA INFO test ldmsd_stream_test ended
+382984 exited
