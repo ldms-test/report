@@ -1,0 +1,17 @@
+Thu Nov 12 02:39:40 AM CST 2026 DEBUG TARGET_PID: 1030421
+Thu Nov 12 02:39:40 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/1d30775e//tests/set_array_test/set_array_test.log
+T_END: 1794473680
+2026-11-12 02:39:41,383 TADA INFO starting test `set_array_test`
+2026-11-12 02:39:41,383 TADA INFO   test-id: 2859f0cb257a92b8ecb374b3f39fe0ad82dec5485b544260c3fe063a71b3b965
+2026-11-12 02:39:41,383 TADA INFO   test-suite: LDMSD
+2026-11-12 02:39:41,383 TADA INFO   test-name: set_array_test
+2026-11-12 02:39:41,383 TADA INFO   test-user: ldms-test
+2026-11-12 02:39:41,384 TADA INFO   commit-id: 1d30775e35d77388a38628d72cf403520cd9cc17
+2026-11-12 02:39:41,384 __main__ INFO -- Get or create the cluster --
+2026-11-12 02:39:51,455 __main__ INFO -- Start daemons --
+2026-11-12 02:39:59,382 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-12 02:40:25,518 TADA INFO assertion 1, 1st update got some callbacks: verified hunk of 4 snapshots, passed
+2026-11-12 02:40:25,518 TADA INFO assertion 2, 2nd update got N callbacks: verified hunk of 5 snapshots, passed
+2026-11-12 02:40:25,518 TADA INFO assertion 3, 3nd update got N callbacks: verified hunk of 5 snapshots, passed
+2026-11-12 02:40:25,520 TADA INFO test set_array_test ended
+1030421 exited
