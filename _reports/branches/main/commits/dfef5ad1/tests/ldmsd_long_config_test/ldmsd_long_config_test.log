@@ -1,0 +1,16 @@
+Fri Nov 13 01:28:56 AM CST 2026 DEBUG TARGET_PID: 213203
+Fri Nov 13 01:28:56 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/dfef5ad1//tests/ldmsd_long_config_test/ldmsd_long_config_test.log
+T_END: 1794555836
+2026-11-13 01:28:57,517 TADA INFO starting test `ldmsd_long_config_line`
+2026-11-13 01:28:57,517 TADA INFO   test-id: 2bc61ee0f3a04b70d46f814d6438a79cf71aebfa7b8e6ca1fa893ba7d358a304
+2026-11-13 01:28:57,517 TADA INFO   test-suite: LDMSD
+2026-11-13 01:28:57,517 TADA INFO   test-name: ldmsd_long_config_line
+2026-11-13 01:28:57,517 TADA INFO   test-user: ldms-test
+2026-11-13 01:28:57,517 TADA INFO   commit-id: dfef5ad1148204340c97764dd9c9c2e9af7647d7
+2026-11-13 01:28:57,518 __main__ INFO ---Get or create the cluster --
+2026-11-13 01:29:09,296 __main__ INFO --- Start daemons ---
+2026-11-13 01:29:32,916 TADA INFO assertion 1, LDMSD correctly processes a config line in a config file: LDMSD processed the long config line in the config file correctly., passed
+2026-11-13 01:29:33,236 TADA INFO assertion 2, LDMSD correctly handle a config line from ldmsd_controller: LDMSD receives the correct message from ldmsd_controller., passed
+2026-11-13 01:29:33,509 TADA INFO assertion 3, LDMSD correctly handle a config line from ldmsctl: LDMSD receives the correct message from ldmsctl., passed
+2026-11-13 01:29:33,511 TADA INFO test ldmsd_long_config_line ended
+213203 exited
