@@ -1,0 +1,25 @@
+Sat Nov 14 02:35:27 AM CST 2026 DEBUG TARGET_PID: 1026391
+Sat Nov 14 02:35:27 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/b4.5/report/_reports/branches/b4.5/commits/607be9ee//tests/ldms_ipv6_test/ldms_ipv6_test.log
+T_END: 1794646227
+/home/ldms-test/var/b4.5/ldms-test/ldms_ipv6_test:277: SyntaxWarning: invalid escape sequence '\s'
+  ADDR_RE = re.compile("Address\s+:\s+([^\n]+)\n")
+2026-11-14 02:35:27,953 TADA INFO starting test `ldms_ipv6_test`
+2026-11-14 02:35:27,953 TADA INFO   test-id: f0f9262178b0ab0c942425326c050f0f0c520381c7bb3cea1e91fe7a5f62eff5
+2026-11-14 02:35:27,953 TADA INFO   test-suite: LDMSD
+2026-11-14 02:35:27,954 TADA INFO   test-name: ldms_ipv6_test
+2026-11-14 02:35:27,954 TADA INFO   test-user: ldms-test
+2026-11-14 02:35:27,954 TADA INFO   commit-id: 607be9ee00df1eefaa461f978f78e87552ed0a91
+2026-11-14 02:35:27,954 __main__ INFO -- Get or create the cluster --
+2026-11-14 02:35:40,219 __main__ INFO -- Start daemons --
+2026-11-14 02:36:03,877 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-14 02:36:05,877 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldms_ipv6_test-607be9e-samp 
+2026-11-14 02:36:08,081 root INFO starting python /tada-src/python/pypubsub.py on ldms-test-ldms_ipv6_test-607be9e-agg-2 
+2026-11-14 02:36:12,383 TADA INFO assertion 1, ldms_ls to samp using IPv6: expecting ['fdf9:db0c:4963::5'], got ['fdf9:db0c:4963::5'], passed
+2026-11-14 02:36:12,474 TADA INFO assertion 2, ldms_ls to agg-2 using IPv6: expecting ['fdf9:db0c:4963::5'], got ['fdf9:db0c:4963::5'], passed
+2026-11-14 02:36:12,474 TADA INFO assertion 3, ldms_ls to agg-2 contains 'samp/meminfo': samp/meminfo found, passed
+2026-11-14 02:36:15,477 TADA INFO assertion 4, python msg publish using IPv6: verified, passed
+2026-11-14 02:36:18,479 TADA INFO assertion 5, python msg subscribe using IPv6: verified, passed
+2026-11-14 02:36:18,980 TADA INFO assertion 6, steam data contain IPv6 addressing: expecting fdf9:db0c:4963::5, got fdf9:db0c:4963::5, passed
+2026-11-14 02:36:19,184 TADA INFO assertion 7, msg stats reported IPv6 addresses: Expecting fdf9:db0c:4963::3, got fdf9:db0c:4963::3, passed
+2026-11-14 02:36:19,186 TADA INFO test ldms_ipv6_test ended
+1026391 exited
