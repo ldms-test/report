@@ -1,0 +1,24 @@
+Sat Nov 14 02:01:13 AM CST 2026 DEBUG TARGET_PID: 801541
+Sat Nov 14 02:01:13 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/b4.5/report/_reports/branches/b4.5/commits/607be9ee//tests/updtr_add_test/updtr_add_test.log
+T_END: 1794644173
+2026-11-14 02:01:14,686 __main__ INFO -- Get or create the cluster --
+2026-11-14 02:01:14,686 TADA INFO starting test `updtr_add test`
+2026-11-14 02:01:14,686 TADA INFO   test-id: 5673231528f3d916e02cbc65deac5f775b976b8e41ae34269102d79e3a63d8ee
+2026-11-14 02:01:14,686 TADA INFO   test-suite: LDMSD
+2026-11-14 02:01:14,686 TADA INFO   test-name: updtr_add test
+2026-11-14 02:01:14,686 TADA INFO   test-user: ldms-test
+2026-11-14 02:01:14,686 TADA INFO   commit-id: 607be9ee00df1eefaa461f978f78e87552ed0a91
+2026-11-14 02:01:26,573 __main__ INFO -- Start daemons --
+2026-11-14 02:01:49,224 __main__ INFO Waiting ... for all LDMSDs to start
+2026-11-14 02:01:49,352 __main__ INFO All LDMSDs are up.
+2026-11-14 02:01:49,502 TADA INFO assertion 1, Add an updater with a negative interval: report(rc = 22) == expect(rc = 22), passed
+2026-11-14 02:01:49,646 TADA INFO assertion 2, Add an updater with a zero interval: report(rc = 22) == expect(rc = 22), passed
+2026-11-14 02:01:49,795 TADA INFO assertion 3, Add an updater with an alphabet interval: report(rc = 22) == expect(rc = 22), passed
+2026-11-14 02:01:49,941 TADA INFO assertion 4, Add an updater with a negative offset: report(rc = 0) == expect(rc = 0), passed
+2026-11-14 02:01:50,086 TADA INFO assertion 5, Add an updater with an alphabet offset: report(rc = 22) == expect(rc = 22), passed
+2026-11-14 02:01:50,381 TADA INFO assertion 6, Add an updater without an offset: report(rc = 0, status = [{'name': 'without_offset', 'interval': '1000000', 'offset': '0', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': []}]) == expect(rc = 0, status = [{'name': 'without_offset', 'interval': '1000000', 'offset': '0', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': []}]), passed
+2026-11-14 02:01:50,671 TADA INFO assertion 7, Add an updater with a valid offset: report(rc = 0, status = [{'name': 'with_offset', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': []}]) == expect(rc = 0, status = [{'name': 'with_offset', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': []}]), passed
+2026-11-14 02:01:50,815 TADA INFO assertion 8, Add an updater with an existing name: report(rc = 17) == expect(rc = 17), passed
+2026-11-14 02:01:50,815 __main__ INFO --- done ---
+2026-11-14 02:01:50,816 TADA INFO test updtr_add test ended
+801541 exited
