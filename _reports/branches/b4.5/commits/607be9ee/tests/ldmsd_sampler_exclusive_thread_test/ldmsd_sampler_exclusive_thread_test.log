@@ -1,0 +1,19 @@
+Sat Nov 14 02:53:36 AM CST 2026 DEBUG TARGET_PID: 1184114
+Sat Nov 14 02:53:36 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/b4.5/report/_reports/branches/b4.5/commits/607be9ee//tests/ldmsd_sampler_exclusive_thread_test/ldmsd_sampler_exclusive_thread_test.log
+T_END: 1794647316
+2026-11-14 02:53:37,902 TADA INFO starting test `ldmsd_sampler_exclusive_thread_test`
+2026-11-14 02:53:37,902 TADA INFO   test-id: d6e3bc9b61cfa069e2ac11204a3f68405e59e3f6f20bbafa63588323360ec302
+2026-11-14 02:53:37,902 TADA INFO   test-suite: LDMSD
+2026-11-14 02:53:37,902 TADA INFO   test-name: ldmsd_sampler_exclusive_thread_test
+2026-11-14 02:53:37,902 TADA INFO   test-user: ldms-test
+2026-11-14 02:53:37,902 TADA INFO   commit-id: 607be9ee00df1eefaa461f978f78e87552ed0a91
+2026-11-14 02:53:37,902 __main__ INFO -- Get or create the cluster --
+2026-11-14 02:53:46,268 __main__ INFO -- Start daemons --
+2026-11-14 02:53:53,876 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-14 02:53:58,876 root INFO starting python  on ldms-test-ldmsd_sampler_exclusive_thread_test-607be9e-node-1 
+2026-11-14 02:54:05,733 TADA INFO assertion 1, meminfo run with exclusive thread: verified, passed
+2026-11-14 02:54:09,880 TADA INFO assertion 2, meminfo stop; exclusive thread exited: verified, passed
+2026-11-14 02:54:13,531 TADA INFO assertion 3, meminfo start with exclusive_thread=0: verified, passed
+2026-11-14 02:54:18,179 TADA INFO assertion 4, meminfo restart with exclusive_thread=1: verified, passed
+2026-11-14 02:54:18,181 TADA INFO test ldmsd_sampler_exclusive_thread_test ended
+1184114 exited
