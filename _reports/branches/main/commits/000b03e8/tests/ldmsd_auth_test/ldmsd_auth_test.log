@@ -1,0 +1,19 @@
+Sat Nov 14 01:13:44 AM CST 2026 DEBUG TARGET_PID: 262627
+Sat Nov 14 01:13:44 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/000b03e8//tests/ldmsd_auth_test/ldmsd_auth_test.log
+T_END: 1794641324
+2026-11-14 01:13:45,767 TADA INFO starting test `ldmsd_auth_test`
+2026-11-14 01:13:45,767 TADA INFO   test-id: 1147275e6241d4ed40990673221f6de675d3bd6a18ca9183ba73d846444a7771
+2026-11-14 01:13:45,767 TADA INFO   test-suite: LDMSD
+2026-11-14 01:13:45,767 TADA INFO   test-name: ldmsd_auth_test
+2026-11-14 01:13:45,767 TADA INFO   test-user: ldms-test
+2026-11-14 01:13:45,767 TADA INFO   commit-id: 000b03e8833abd8c80a2335405dfb73676e66097
+2026-11-14 01:13:45,768 __main__ INFO -- Get or create the cluster --
+2026-11-14 01:14:07,479 __main__ INFO -- Start daemons --
+2026-11-14 01:15:06,234 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-14 01:15:11,330 TADA INFO assertion 1, root@agg-2(dom3) ldms_ls to agg-2:10000: see all sets, passed
+2026-11-14 01:15:11,428 TADA INFO assertion 2, user@agg-2(dom3) ldms_ls to agg-2:10000: see only meminfo, passed
+2026-11-14 01:15:11,528 TADA INFO assertion 3, root@headnode(dom4) ldms_ls to agg-2:10001: see all sets, passed
+2026-11-14 01:15:11,619 TADA INFO assertion 4, user@headnode(dom4) ldms_ls to agg-2:10001: see only meminfo, passed
+2026-11-14 01:15:11,671 TADA INFO assertion 5, root@headnode(dom4) ldms_ls to agg-11:10000: connection rejected, passed
+2026-11-14 01:15:11,673 TADA INFO test ldmsd_auth_test ended
+262627 exited
