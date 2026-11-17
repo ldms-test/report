@@ -1,0 +1,7 @@
+---
+type: test
+branch: main
+ldmsCommitId8: 0f1c5578
+name: ldmsd_long_config_test
+status: queued
+---
