@@ -3,5 +3,5 @@ type: test
 branch: main
 ldmsCommitId8: 0f1c5578
 name: libovis_log_test
-status: queued
+status: passed
 ---
