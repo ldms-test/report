@@ -1,0 +1,27 @@
+Wed Nov 25 02:50:55 AM CST 2026 DEBUG TARGET_PID: 1172007
+Wed Nov 25 02:50:55 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/57fbc742//tests/updtr_start_test/updtr_start_test.log
+T_END: 1795597555
+2026-11-25 02:50:56,388 __main__ INFO -- Get or create the cluster --
+2026-11-25 02:50:56,388 TADA INFO starting test `updtr_add test`
+2026-11-25 02:50:56,388 TADA INFO   test-id: 9f93f109b15b6e9d32dc63c3461fdc08734ee801cca04bdd22e7784447e5f8ce
+2026-11-25 02:50:56,388 TADA INFO   test-suite: LDMSD
+2026-11-25 02:50:56,388 TADA INFO   test-name: updtr_add test
+2026-11-25 02:50:56,388 TADA INFO   test-user: ldms-test
+2026-11-25 02:50:56,388 TADA INFO   commit-id: 57fbc742c94029a5175638a5774fd90c01b2404b
+2026-11-25 02:51:08,235 __main__ INFO -- Start daemons --
+2026-11-25 02:51:30,857 __main__ INFO Waiting ... for all LDMSDs to start
+2026-11-25 02:51:30,998 __main__ INFO All LDMSDs are up.
+2026-11-25 02:51:31,144 TADA INFO assertion 1, updtr_start with a negative interval: report(rc = 22) == expect(rc = 22), passed
+2026-11-25 02:51:31,294 TADA INFO assertion 2, updtr_start with an alphabet interval: report(rc = 22) == expect(rc = 22), passed
+2026-11-25 02:51:31,446 TADA INFO assertion 3, updtr_start with a negative offset: report(rc = 0) == expect(rc = 0), passed
+2026-11-25 02:51:31,594 TADA INFO assertion 4, updtr_start with an alphabet offset: report(rc = 22) == expect(rc = 22), passed
+2026-11-25 02:51:31,739 TADA INFO assertion 5, updtr_start without an offset larger than interval: report(rc = 22) == expect(rc = 22), passed
+2026-11-25 02:51:32,026 TADA INFO assertion 6, updtr_start that changes offset to no offset: report(rc = 0, status = [{'name': 'offset2none', 'interval': '1000000', 'offset': '0', 'sync': 'false', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': []}]) == expect(rc = 0, status = [{'name': 'offset2none', 'interval': '1000000', 'offset': '0', 'sync': 'false', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': []}], passed
+2026-11-25 02:51:32,178 TADA INFO assertion 7, updtr_start of a non-existing updater: report(rc = 2) == expect(rc = 2), passed
+2026-11-25 02:51:32,474 TADA INFO assertion 8, updtr_start with a valid interval: report(rc = 0, status = [{'name': 'valid_int', 'interval': '2000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': []}]) == expect(rc = 0, status = [{'name': 'valid_int', 'interval': '2000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': []}], passed
+2026-11-25 02:51:32,772 TADA INFO assertion 9, updtr_start with a valid offset: report(rc = 0, status = [{'name': 'valid_offset', 'interval': '1000000', 'offset': '200000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': []}]) == expect(rc = 0, status = [{'name': 'valid_offset', 'interval': '1000000', 'offset': '200000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': []}], passed
+2026-11-25 02:51:33,063 TADA INFO assertion 10, updtr_start without giving interval and offset: report(rc = 0, status = [{'name': 'all', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': []}]) == expect(rc = 0, status = [{'name': 'all', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'RUNNING', 'producers': []}], passed
+2026-11-25 02:51:33,213 TADA INFO assertion 11, updtr_start a running updater: report(rc = 16) == expect(rc = 16), passed
+2026-11-25 02:51:33,213 __main__ INFO --- done ---
+2026-11-25 02:51:33,215 TADA INFO test updtr_add test ended
+1172007 exited

@@ -1,0 +1,20 @@
+Wed Nov 25 02:50:10 AM CST 2026 DEBUG TARGET_PID: 1167604
+Wed Nov 25 02:50:10 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/57fbc742//tests/updtr_prdcr_del_test/updtr_prdcr_del_test.log
+T_END: 1795597510
+2026-11-25 02:50:11,501 __main__ INFO -- Get or create the cluster --
+2026-11-25 02:50:11,501 TADA INFO starting test `updtr_add test`
+2026-11-25 02:50:11,501 TADA INFO   test-id: da30df95f11f36d4df2566966a03108cc0dbc91dde19462274a43f8348dac028
+2026-11-25 02:50:11,501 TADA INFO   test-suite: LDMSD
+2026-11-25 02:50:11,501 TADA INFO   test-name: updtr_add test
+2026-11-25 02:50:11,501 TADA INFO   test-user: ldms-test
+2026-11-25 02:50:11,501 TADA INFO   commit-id: 57fbc742c94029a5175638a5774fd90c01b2404b
+2026-11-25 02:50:23,550 __main__ INFO -- Start daemons --
+2026-11-25 02:50:46,290 __main__ INFO Waiting ... for all LDMSDs to start
+2026-11-25 02:50:46,427 __main__ INFO All LDMSDs are up.
+2026-11-25 02:50:46,574 TADA INFO assertion 1, Send updtr_prdcr_del with an invalid regex: report(rc = 22) == expect(rc = 22), passed
+2026-11-25 02:50:46,730 TADA INFO assertion 2, Send updtr_prdcr_del to a running updater: report(rc = 16) == expect(rc = 16), passed
+2026-11-25 02:50:46,874 TADA INFO assertion 3, Send updtr_prdcr_del to a non-existing updater: report(rc = 2) == expect(rc = 2), passed
+2026-11-25 02:50:47,173 TADA INFO assertion 4, Send updtr_prdcr_del successfully: report(rc = 0, status = [{'name': 'all', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': [{'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}]) == expect(rc = 0, status = [{'name': 'all', 'interval': '1000000', 'offset': '100000', 'sync': 'true', 'mode': 'Pull', 'auto': 'false', 'state': 'STOPPED', 'producers': [{'name': 'sampler-2', 'host': 'sampler-2', 'port': 10000, 'transport': 'sock', 'state': 'CONNECTED'}]}], passed
+2026-11-25 02:50:47,173 __main__ INFO --- done ---
+2026-11-25 02:50:47,176 TADA INFO test updtr_add test ended
+1167604 exited
