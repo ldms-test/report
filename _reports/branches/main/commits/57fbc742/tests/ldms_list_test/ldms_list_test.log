@@ -1,0 +1,62 @@
+Wed Nov 25 01:49:13 AM CST 2026 DEBUG TARGET_PID: 735635
+Wed Nov 25 01:49:13 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/57fbc742//tests/ldms_list_test/ldms_list_test.log
+T_END: 1795593853
+2026-11-25 01:49:14,442 TADA INFO starting test `ldms_list_test`
+2026-11-25 01:49:14,442 TADA INFO   test-id: 795d706fa0603ab155fe8e3465a77afeafcca7cea259015c2d7dc4029e38bb75
+2026-11-25 01:49:14,442 TADA INFO   test-suite: LDMSD
+2026-11-25 01:49:14,442 TADA INFO   test-name: ldms_list_test
+2026-11-25 01:49:14,442 TADA INFO   test-user: ldms-test
+2026-11-25 01:49:14,442 TADA INFO   commit-id: 57fbc742c94029a5175638a5774fd90c01b2404b
+2026-11-25 01:49:14,442 __main__ INFO -- Get or create the cluster --
+2026-11-25 01:49:22,701 __main__ INFO -- Start daemons --
+2026-11-25 01:49:30,291 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-25 01:49:32,291 __main__ INFO start list_samp.py and list_agg.py interactive sessions
+2026-11-25 01:49:36,697 TADA INFO assertion 1, check list_sampler on list_agg.py: OK, passed
+2026-11-25 01:49:36,697 TADA INFO assertion 2, (1st update) check set1 on list_samp.py: OK, passed
+2026-11-25 01:49:36,697 TADA INFO assertion 3, (1st update) check set3_p on list_samp.py: OK, passed
+2026-11-25 01:49:36,698 TADA INFO assertion 4, (1st update)check set3_c on list_samp.py: OK, passed
+2026-11-25 01:49:36,698 TADA INFO assertion 5, (1st update)check set1 on list_agg.py: OK, passed
+2026-11-25 01:49:36,698 TADA INFO assertion 6, (1st update)check set3_p on list_agg.py: OK, passed
+2026-11-25 01:49:36,698 TADA INFO assertion 7, (1st update)check set3_c on list_agg.py: OK, passed
+2026-11-25 01:49:36,698 __main__ INFO 2nd sampling on the sampler...
+2026-11-25 01:49:39,100 TADA INFO assertion 8, (2nd update) check set1 on list_samp.py: OK, passed
+2026-11-25 01:49:39,100 TADA INFO assertion 9, (2nd update) check set3_p on list_samp.py: OK, passed
+2026-11-25 01:49:39,101 TADA INFO assertion 10, (2nd update) check set3_c on list_samp.py: OK, passed
+2026-11-25 01:49:39,101 __main__ INFO 2nd update on the aggregator...
+2026-11-25 01:49:41,502 TADA INFO assertion 11, (2nd update) check set1 on list_agg.py: OK, passed
+2026-11-25 01:49:41,503 TADA INFO assertion 12, (2nd update) check set3_p on list_agg.py: OK, passed
+2026-11-25 01:49:41,503 TADA INFO assertion 13, (2nd update) check set3_c on list_agg.py: OK, passed
+2026-11-25 01:49:41,503 __main__ INFO 3rd sampling on the sampler...
+2026-11-25 01:49:43,904 TADA INFO assertion 14, (3rd update) check set1 on list_samp.py: OK, passed
+2026-11-25 01:49:43,904 TADA INFO assertion 15, (3rd update) check set3_p on list_samp.py: OK, passed
+2026-11-25 01:49:43,905 TADA INFO assertion 16, (3rd update) check set3_c on list_samp.py: OK, passed
+2026-11-25 01:49:43,905 __main__ INFO 3rd update on the aggregator...
+2026-11-25 01:49:46,306 TADA INFO assertion 17, (3rd update) check set1 on list_agg.py: OK, passed
+2026-11-25 01:49:46,306 TADA INFO assertion 18, (3rd update) check set3_p on list_agg.py: OK, passed
+2026-11-25 01:49:46,307 TADA INFO assertion 19, (3rd update) check set3_c on list_agg.py: OK, passed
+2026-11-25 01:49:46,307 __main__ INFO 4th sampling on the sampler...
+2026-11-25 01:49:48,708 TADA INFO assertion 20, (4th update; list uncahnged) check set1 on list_samp.py: OK, passed
+2026-11-25 01:49:48,708 TADA INFO assertion 21, (4th update; list uncahnged) check set3_p on list_samp.py: OK, passed
+2026-11-25 01:49:48,709 TADA INFO assertion 22, (4th update; list uncahnged) check set3_c on list_samp.py: OK, passed
+2026-11-25 01:49:48,709 __main__ INFO 4th update on the aggregator...
+2026-11-25 01:49:51,110 TADA INFO assertion 23, (4th update; list uncahnged) check set1 on list_agg.py: OK, passed
+2026-11-25 01:49:51,110 TADA INFO assertion 24, (4th update; list uncahnged) check set3_p on list_agg.py: OK, passed
+2026-11-25 01:49:51,111 TADA INFO assertion 25, (4th update; list uncahnged) check set3_c on list_agg.py: OK, passed
+2026-11-25 01:49:51,111 __main__ INFO 5th sampling on the sampler...
+2026-11-25 01:49:53,512 TADA INFO assertion 26, (5th update; list del) check set1 on list_samp.py: OK, passed
+2026-11-25 01:49:53,512 TADA INFO assertion 27, (5th update; list del) check set3_p on list_samp.py: OK, passed
+2026-11-25 01:49:53,513 TADA INFO assertion 28, (5th update; list del) check set3_c on list_samp.py: OK, passed
+2026-11-25 01:49:53,513 __main__ INFO 5th update on the aggregator...
+2026-11-25 01:49:55,914 TADA INFO assertion 29, (5th update; list del) check set1 on list_agg.py: OK, passed
+2026-11-25 01:49:55,914 TADA INFO assertion 30, (5th update; list del) check set3_p on list_agg.py: OK, passed
+2026-11-25 01:49:55,915 TADA INFO assertion 31, (5th update; list del) check set3_c on list_agg.py: OK, passed
+2026-11-25 01:49:55,915 __main__ INFO 6th sampling on the sampler...
+2026-11-25 01:49:58,316 TADA INFO assertion 32, (6th update; list unchanged) check set1 on list_samp.py: OK, passed
+2026-11-25 01:49:58,316 TADA INFO assertion 33, (6th update; list unchanged) check set3_p on list_samp.py: OK, passed
+2026-11-25 01:49:58,317 TADA INFO assertion 34, (6th update; list unchanged) check set3_c on list_samp.py: OK, passed
+2026-11-25 01:49:58,317 __main__ INFO 6th update on the updator...
+2026-11-25 01:50:00,718 TADA INFO assertion 35, (6th update; list unchanged) check set1 on list_agg.py: OK, passed
+2026-11-25 01:50:00,719 TADA INFO assertion 36, (6th update; list unchanged) check set3_p on list_agg.py: OK, passed
+2026-11-25 01:50:00,719 TADA INFO assertion 37, (6th update; list unchanged) check set3_c on list_agg.py: OK, passed
+2026-11-25 01:50:00,721 TADA INFO test ldms_list_test ended
+735635 exited
