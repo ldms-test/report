@@ -1,0 +1,20 @@
+Wed Nov 25 02:32:01 AM CST 2026 DEBUG TARGET_PID: 1008600
+Wed Nov 25 02:32:01 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/57fbc742//tests/set_array_hang_test/set_array_hang_test.log
+T_END: 1795596421
+2026-11-25 02:32:02,629 TADA INFO starting test `set_array_hang_test`
+2026-11-25 02:32:02,629 TADA INFO   test-id: 0cc48d7a044bbcd1dcb883f7108cb4040d97db51ed5a72719e4e948474bb55ed
+2026-11-25 02:32:02,629 TADA INFO   test-suite: LDMSD
+2026-11-25 02:32:02,629 TADA INFO   test-name: set_array_hang_test
+2026-11-25 02:32:02,629 TADA INFO   test-user: ldms-test
+2026-11-25 02:32:02,629 TADA INFO   commit-id: 57fbc742c94029a5175638a5774fd90c01b2404b
+2026-11-25 02:32:02,630 __main__ INFO -- Get or create the cluster --
+2026-11-25 02:32:11,080 __main__ INFO -- Start processes --
+2026-11-25 02:32:11,080 __main__ INFO starting interactive set_array_samp.py
+2026-11-25 02:32:13,284 TADA INFO assertion 1, start set_array_samp.py: data verified, passed
+2026-11-25 02:32:15,486 TADA INFO assertion 2, start set_array_agg.py: data verified, passed
+2026-11-25 02:32:17,888 TADA INFO assertion 3, agg update before the 1st sample: data verified, passed
+2026-11-25 02:32:20,290 TADA INFO assertion 4, sampling 2 times then agg update: data verified, passed
+2026-11-25 02:32:21,491 TADA INFO assertion 5, agg update w/o new sampling: data verified, passed
+2026-11-25 02:32:23,893 TADA INFO assertion 6, sampling 5 times then agg update: data verified, passed
+2026-11-25 02:32:23,895 TADA INFO test set_array_hang_test ended
+1008600 exited
