@@ -1,0 +1,33 @@
+Wed Nov 25 02:53:50 AM CST 2026 DEBUG TARGET_PID: 1187619
+Wed Nov 25 02:53:50 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/b4.5/report/_reports/branches/b4.5/commits/5cc2e30f//tests/peer_daemon_advertisement_test/peer_daemon_advertisement_test.log
+T_END: 1795597730
+2026-11-25 02:53:50,970 TADA INFO starting test `advertisement_passive_test`
+2026-11-25 02:53:50,970 TADA INFO   test-id: 2670d81894b3f8749f9e458c703a551233746e7bc70f90521b8ecea475458b1a
+2026-11-25 02:53:50,971 TADA INFO   test-suite: LDMSD
+2026-11-25 02:53:50,971 TADA INFO   test-name: advertisement_passive_test
+2026-11-25 02:53:50,971 TADA INFO   test-user: ldms-test
+2026-11-25 02:53:50,971 TADA INFO   commit-id: 5cc2e30fff162f30ae20f35ec4385e3f8a946936
+2026-11-25 02:53:50,971 __main__ INFO -- Get or create the cluster --
+2026-11-25 02:54:09,776 __main__ INFO -- Start daemons --
+2026-11-25 02:54:57,428 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-25 02:55:02,280 TADA INFO assertion start_1, node-1's Advertiser starts before agg11's prdcr_listen starts.: Advertised producer 'node-1' exists on agg11 and is in the correct state., passed
+2026-11-25 02:55:02,370 TADA INFO assertion agg21-aggregation-1, agg21 sees and updates node-1's sets.: ['node-1/meminfo', 'node-1/vmstat'] exist on agg21, passed
+2026-11-25 02:55:06,070 TADA INFO assertion start_2, node-2's Advertiser starts after agg11's prdcr_listen starts.: Advertised producer 'node-2' exists on agg11 and is in the correct state., passed
+2026-11-25 02:55:06,163 TADA INFO assertion agg21-aggregation-2, agg21 sees and updates node-2's sets.: ['node-1/meminfo', 'node-1/vmstat', 'node-2/meminfo', 'node-2/vmstat'] exist on agg21, passed
+2026-11-25 02:55:07,297 TADA INFO assertion agg11-remove-sets-1, Sets removed from agg11 after disconnecting from sampler daemon.: agg11 doesn't have ['node-1/meminfo', 'node-1/vmstat']., passed
+2026-11-25 02:55:07,382 TADA INFO assertion agg21-remove-sets-1, Sets removed from agg21 after agg11 disconnecting from sampler daemon.: agg21 doesn't have ['node-1/meminfo', 'node-1/vmstat']., passed
+2026-11-25 02:55:13,860 TADA INFO assertion sampler-revive-1, Agg11 collects sets from node-2 after reviving sampler daemon.: Agg11 starts updating node-1's sets after node-1's ldmsd gets revived., passed
+2026-11-25 02:55:13,948 TADA INFO assertion sampler-revive-2, Agg21 collects sets from agg11 after reviving sampler daemon.: Agg21 starts updating node-1's sets after node-1's ldmsd gets revived., passed
+2026-11-25 02:55:15,091 TADA INFO assertion agg21-remove-sets-2, Agg21 removed all sets after disconnecting from agg11.: agg21 doesn't have ['node-1/meminfo', 'node-1/vmstat']., passed
+2026-11-25 02:55:25,974 TADA INFO assertion agg11-revive-1, Agg11 collects all sets after restarting.: Agg11 connected to ldmsd on node-1., passed
+2026-11-25 02:55:27,062 TADA INFO assertion agg11-revive-2, Agg21 collects all sets after agg11 get restarted.: agg21 collects the sets from agg11., passed
+2026-11-25 02:55:28,748 TADA INFO assertion prdcr_listen_not_start, Agg12 doesn't collect any sets before prdcr_listen start.: Agg12 doesn't collect any sets., passed
+2026-11-25 02:55:32,447 TADA INFO assertion prdcr_listen_limit_hostname, Agg12 collects node-1's sets after prdcr_listen accepting only node-1's hostname starts.: Agg12 collects sets from node-3., passed
+2026-11-25 02:55:36,139 TADA INFO assertion prdcr_listen_limit_ip, Agg12 collects node-2's sets after prdcr_listen accepting only node-1's IP starts.: Agg12 collects sets from node-4., passed
+2026-11-25 02:55:36,285 TADA INFO assertion advertiser_status, 'advertiser_status' correctly reports the output: [{'name': 'node-1', 'type': 'advertiser', 'host': 'agg11', 'port': 10000, 'transport': 'sock', 'auth': 'DEFAULT', 'rail': '1', 'quota': '-1', 'rx_rate': '-1', 'reconnect_us': '200000', 'state': 'CONNECTED', 'sets': []}] == [{'name': 'node-1', 'host': 'agg11', 'port': 10000, 'transport': 'sock', 'reconnect_us': '200000', 'type': 'advertiser', 'state': 'CONNECTED', 'auth': 'DEFAULT', 'rail': '1', 'quota': '-1', 'rx_rate': '-1', 'sets': []}], passed
+2026-11-25 02:55:36,432 TADA INFO assertion prdcr_listen_status-1, 'prdcr_listen_status' correctly report the single prdcr_listen.: [{'name': 'wildcard', 'state': 'running', 'regex': '-', 'IP range': '-', 'quota': '-1', 'rx_rate': '-1', 'type': 'passive', 'producers': ['node-1:10000', 'node-2:10000']}] == [{'name': 'wildcard', 'state': 'running', 'regex': '-', 'IP range': '-', 'type': 'passive', 'rx_rate': '-1', 'quota': '-1', 'producers': ['node-1:10000', 'node-2:10000']}], passed
+2026-11-25 02:55:36,575 TADA INFO assertion prdcr_listen_status-2, 'prdcr_listen_status' correctly report the two prdcr_listen objects.: [{'name': 'limit_hostname', 'state': 'running', 'regex': '^node-3$', 'IP range': '-', 'quota': '-1', 'rx_rate': '-1', 'type': 'passive', 'producers': ['node-3:10000']}, {'name': 'limit_ip', 'state': 'running', 'regex': '-', 'IP range': '10.0.1.0/8', 'quota': '-1', 'rx_rate': '-1', 'type': 'passive', 'producers': ['node-4:10000']}] == [{'name': 'limit_hostname', 'regex': '^node-3$', 'state': 'running', 'IP range': '-', 'type': 'passive', 'rx_rate': '-1', 'quota': '-1', 'producers': ['node-3:10000']}, {'name': 'limit_ip', 'IP range': '10.0.1.0/8', 'regex': '-', 'state': 'running', 'type': 'passive', 'rx_rate': '-1', 'quota': '-1', 'producers': ['node-4:10000']}], passed
+2026-11-25 02:55:38,870 TADA INFO assertion restart_advertised_prdcr-1, Stopping an advertised producer: Advertised producer is in STANDBY as expected., passed
+2026-11-25 02:55:42,173 TADA INFO assertion restart_advertised_prdcr-2, Restarting an advertised producer: Advertised producer is in CONNECTED as expected, passed
+2026-11-25 02:55:42,174 TADA INFO test advertisement_passive_test ended
+1187619 exited
