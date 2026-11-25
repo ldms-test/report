@@ -1,0 +1,29 @@
+Wed Nov 25 01:06:48 AM CST 2026 DEBUG TARGET_PID: 205725
+Wed Nov 25 01:06:48 AM CST 2026 DEBUG LOG_FILE: /home/ldms-test/var/main/report/_reports/branches/main/commits/57fbc742//tests/agg_slurm_test/agg_slurm_test.log
+T_END: 1795591308
+2026-11-25 01:06:50,262 TADA INFO starting test `agg_slurm_test`
+2026-11-25 01:06:50,262 TADA INFO   test-id: 56dc106b8a8e60706b4e2ebfa6f692a7243408999b70f0c4ba5738dcbdc7da14
+2026-11-25 01:06:50,262 TADA INFO   test-suite: LDMSD
+2026-11-25 01:06:50,263 TADA INFO   test-name: agg_slurm_test
+2026-11-25 01:06:50,263 TADA INFO   test-user: ldms-test
+2026-11-25 01:06:50,263 TADA INFO   commit-id: 57fbc742c94029a5175638a5774fd90c01b2404b
+2026-11-25 01:06:50,263 __main__ INFO -- Get or create the cluster --
+2026-11-25 01:07:08,084 __main__ INFO -- Preparing syspapi JSON file --
+2026-11-25 01:07:08,132 __main__ INFO -- Preparing jobpapi JSON file --
+2026-11-25 01:07:08,175 __main__ INFO -- Preparing job script & programs --
+2026-11-25 01:07:08,703 __main__ INFO -- Start daemons --
+2026-11-25 01:07:48,911 __main__ INFO ... wait a bit to make sure ldmsd's are up
+2026-11-25 01:07:53,911 __main__ INFO -- ldms_ls to agg-2 --
+2026-11-25 01:07:54,003 TADA INFO assertion 1, ldms_ls agg-2: dir result verified, passed
+2026-11-25 01:07:54,047 __main__ INFO -- Give syspapi some time to work before submitting job --
+2026-11-25 01:07:59,047 __main__ INFO -- Submitting jobs --
+2026-11-25 01:07:59,103 __main__ INFO job_one: 1
+2026-11-25 01:07:59,153 __main__ INFO job_two: 2
+2026-11-25 01:08:09,154 __main__ INFO -- Cancelling jobs --
+2026-11-25 01:08:09,154 __main__ INFO job_one: 1
+2026-11-25 01:08:09,206 __main__ INFO job_two: 2
+2026-11-25 01:09:20,051 TADA INFO assertion 2, slurm data verification: get expected data from store, passed
+2026-11-25 01:09:20,052 TADA INFO assertion 3, meminfo data verification: checked, passed
+2026-11-25 01:09:20,052 TADA INFO assertion 4, (SYS/JOB) PAPI data verification: No data missing, passed
+2026-11-25 01:09:20,053 TADA INFO test agg_slurm_test ended
+205725 exited
